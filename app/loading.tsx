@@ -1,10 +1,12 @@
 "use client";
 import { PacmanLoader } from "react-spinners";
+import { Flex } from "@chakra-ui/react"
 
-export default function loading() {
+
+export default function Loading() {
   return (
-    <div className="-z-50 flex flex-col justify-center items-center h-screen">
+    <Flex  bgColor={"red"} justifyContent={"center"} alignItems={"center"}>
       <PacmanLoader color="#000000" size={50} />
-    </div>
+    </Flex>
   );
 }

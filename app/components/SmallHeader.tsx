@@ -8,6 +8,7 @@ import HamburgerIcon from "./HamburgerIcon";
 import SideNavBar from "./SideNavBar";
 import { useAtom } from "jotai";
 import { SmallHeaderAtom } from "../../atoms";
+import { Flex } from "@chakra-ui/react";
 
 export default function SmallHeader() {
   const [isOpen, setIsOpen] = useAtom(SmallHeaderAtom);
@@ -22,8 +23,9 @@ export default function SmallHeader() {
   }
 
   return (
-    <div className="flex justify-center items-center mt-16">
-      <div className="p-5 w-11/12 flex flex-row justify-between items-center rounded-2xl bg-opacity-85 h-20 fixed bg-white shadow-lg border border-white/20 bg-white/30 backdrop-blur-lg">
+    <Flex justify={"center"} alignItems={"center"} margin={16}>
+      <Flex p={5} w="11/12" rounded={"2xl"} h={20} opacity={"90%"} position={"fixed"} bgColor={"white"} shadow={"lg"} borderColor="white" backdropBlur={"xl"}>
+
         <Link href="/">
           <Image
             className="hover:opacity-90 transition-all duration-200 ease-in-out"
@@ -37,10 +39,10 @@ export default function SmallHeader() {
         <div ref={toggleRef}>
           <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
-      </div>
+      </Flex>
       <AnimatePresence>
         {isOpen && <SideNavBar toggleRef={toggleRef} />}
       </AnimatePresence>
-    </div>
+    </Flex>
   );
 }
