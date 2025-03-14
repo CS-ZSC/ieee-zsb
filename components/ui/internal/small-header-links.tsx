@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { Chapters } from "./Chapters";
-import { Links } from "./Links";
+import { Chapters } from "./chapters";
+import { Links } from "./links";
 import { useSetAtom, useAtom } from "jotai";
-import { SmallHeaderAtom, SmallHeaderChaptersAccordionAtom } from "../../atoms";
+import { SmallHeaderAtom, SmallHeaderChaptersAccordionAtom } from "../../../atoms";
 
 export default function SmallHeaderLinks() {
   const pathname = usePathname();

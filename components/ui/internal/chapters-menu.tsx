@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { Chapters } from "./Chapters";
+import { Chapters } from "./chapters";
 
 interface ChaptersMenuProps {
   onLinkClick: () => void;
