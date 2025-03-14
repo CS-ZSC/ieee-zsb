@@ -3,9 +3,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import SmallHeaderLinks from "./SmallHeaderLinks";
+import SmallHeaderLinks from "./small-header-links";
 import { useAtom } from "jotai";
-import { SmallHeaderAtom } from "../../atoms";
+import { SmallHeaderAtom } from "../../../atoms";
 import { ColorModeButton } from "@/components/ui/color-mode"
 
 

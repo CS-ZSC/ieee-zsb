@@ -14,11 +14,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
-import ChaptersMenu from './ChaptersMenu';
+import ChaptersMenu from './chapters-menu';
 import { useColorModeValue } from '@/components/ui/color-mode';
 import { ColorModeButton } from "@/components/ui/color-mode"
 import Logo from './logo';
-import { Links } from "./Links"
+import { Links } from "./links"
 
 
 function FullHeader() {
@@ -135,7 +135,7 @@ function LinksNavigator() {
   return (
     <HStack spaceX={6} w="full">
       {Links.map((item) => (
-        <Button colorPalette={"black"} size="sm" variant={"ghost"} fontWeight={"bold"} onClick={() => router.push(item.path)}>
+        <Button key={item.id} colorPalette={"black"} size="sm" variant={"ghost"} fontWeight={"bold"} onClick={() => router.push(item.path)}>
           {item.name}
         </Button>
       ))}

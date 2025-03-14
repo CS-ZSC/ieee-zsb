@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import FullHeader from "./FullHeader";
-import SmallHeader from "./SmallHeader";
+import FullHeader from "./full-header";
+import SmallHeader from "./small-header";
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState<number>(0);

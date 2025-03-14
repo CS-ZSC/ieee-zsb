@@ -3,11 +3,11 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
-import HamburgerIcon from "./HamburgerIcon";
-import SideNavBar from "./SideNavBar";
+import HamburgerIcon from "./hamburger-icon";
+import SideNavBar from "./side-navbar";
 import { useAtom } from "jotai";
-import { SmallHeaderAtom } from "../../atoms";
-import { Flex, Image } from "@chakra-ui/react";
+import { SmallHeaderAtom } from "../../../atoms";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import Logo from "./logo";
 
 export default function SmallHeader() {
@@ -26,7 +26,9 @@ export default function SmallHeader() {
     <Flex justify={"center"} alignItems={"center"} margin={16}>
       <Flex p={5} w="11/12" rounded={"2xl"} h={20} opacity={"90%"} position={"fixed"} bgColor={"white"} shadow={"lg"} borderColor="white" backdropBlur={"xl"}>
 
-        <Logo />
+        <Box>
+          <Logo />
+        </Box>
         {/* Wrap HamburgerIcon with a div that has the toggleRef */}
         <div ref={toggleRef}>
           <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
