@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import SmallHeaderLinks from "./SmallHeaderLinks";
 import { useAtom } from "jotai";
 import { SmallHeaderAtom } from "../../atoms";
-import ThemeIcon from "./ThemeIcon";
+import { ColorModeButton } from "@/components/ui/color-mode"
+
 
 type SideNavBarProps = {
   toggleRef: React.RefObject<HTMLDivElement | null>;
@@ -50,7 +51,7 @@ export default function SideNavBar({ toggleRef }: SideNavBarProps) {
       className="z-50 flex justify-center fixed top-28 left-0 right-0 w-11/12 mx-auto p-5 rounded-2xl bg-opacity-90 shadow-lg border border-white/20 bg-white/30 backdrop-blur-lg"
     >
       <div className="absolute right-7 hover:opacity-90 transition-all duration-200 ease-in-out">
-        <ThemeIcon />
+        <ColorModeButton />
       </div>
       <SmallHeaderLinks />
     </motion.div>
