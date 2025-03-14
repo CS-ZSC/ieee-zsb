@@ -1,111 +1,146 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { Icon } from "@iconify/react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import ChaptersMenu from "./ChaptersMenu";
-import { Links } from "./Links";
-import ThemeIcon from "./ThemeIcon";
+import React, { useRef, useState } from 'react';
+import {
+  Box,
+  Flex,
+  Link as ChakraLink,
+  List,
+  ListItem,
+  Image,
+  Text,
+  HStack,
+  Button,
+} from '@chakra-ui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Icon } from '@iconify/react';
+import ChaptersMenu from './ChaptersMenu';
+import { useColorModeValue } from '@/components/ui/color-mode';
+import { ColorModeButton } from "@/components/ui/color-mode"
+import Logo from './logo';
+import { Links } from "./Links"
 
-export default function FullHeader() {
-  const pathname = usePathname();
-  const [chaptersOpen, setChaptersOpen] = useState<boolean>(false);
-  const chaptersContainerRef = useRef<HTMLLIElement | null>(null);
 
-  function handleChaptersClick() {
-    setChaptersOpen((prev) => !prev);
-  }
+function FullHeader() {
+  const { pathname } = useRouter();
+  const [chaptersOpen, setChaptersOpen] = useState(false);
+  const chaptersContainerRef = useRef(null);
 
-  function handleLinkClick() {
+  const MotionBox = motion(Box);
+  const MotionFlex = motion(Flex);
+
+
+  const handleChaptersClick = () => {
+    setChaptersOpen(!chaptersOpen);
+  };
+
+  const handleLinkClick = () => {
     setChaptersOpen(false);
-  }
+  };
 
-  function handleClickOutside(event: MouseEvent) {
-    if (
-      chaptersContainerRef.current &&
-      !chaptersContainerRef.current.contains(event.target as Node)
-    ) {
-      setChaptersOpen(false);
-    }
-  }
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // Glass effect colors
+  const glassBackground = useColorModeValue('rgba(255, 255, 255, 0.3)', 'rgba(0, 0, 0, 0.3)');
+  const borderColor = useColorModeValue('rgba(255, 255, 255, 0.2)', 'rgba(255, 255, 255, 0.1)');
+  const textColor = useColorModeValue('gray.900', 'white');
 
   return (
-    <div className="flex justify-center items-center mt-16">
-      <div className="p-5 m-5 mx-auto flex flex-row justify-between items-center rounded-2xl bg-opacity-85 h-20 max-w-[var(--main-max-width)] fixed bg-white w-full shadow-lg border border-white/20 bg-white/30 backdrop-blur-lg">
-        <div className="flex flex-row justify-between items-center w-full">
-          <Link href="/">
-            <Image
-              className="hover:opacity-90 transition-all duration-200 ease-in-out"
-              src="/Images/IEEE/IEEE Black.png"
-              alt="IEEE Logo"
-              width={85}
-              height={50}
-            />
-          </Link>
-          <ul className="flex flex-row gap-7 font-bold">
-            <li
+    <Flex justify="center" align="center" margin="16">
+      <Box
+        p="5"
+        m="5"
+        mx="auto"
+        as="nav"
+        position="fixed"
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center"
+        borderRadius="2xl"
+        bgColor={glassBackground}
+        height="20"
+        maxWidth="var(--main-max-width)"
+        width="full"
+        marginX={16}
+        boxShadow="lg"
+        border="1px"
+        borderColor={borderColor}
+        backdropFilter="blur(16px)"
+      >
+        <HStack justifyContent="space-between" alignItems="center" width="full">
+          <Logo />
+
+          <HStack>
+
+            <Box
               ref={chaptersContainerRef}
-              className="flex justify-center items-center relative"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              position="relative"
             >
-              <div
-                className="flex flex-row justify-center items-center gap-1 cursor-pointer"
+              <Flex
+                flexDirection="row"
+                justifyContent="center"
+                alignItems="center"
+                gap="1"
+                cursor="pointer"
                 onClick={handleChaptersClick}
               >
-                <span>Chapters</span>
-                <Icon
+                <Button variant={"ghost"} fontWeight={"bold"} color={textColor}>Chapters</Button>
+                <Box
+                  as={Icon}
                   icon="lucide:chevron-down"
-                  width={20}
-                  height={20}
-                  className={`${
-                    chaptersOpen ? "rotate-180" : ""
-                  } transition-all ease-in-out`}
+                  w="20px"
+                  h="20px"
+                  transform={chaptersOpen ? "rotate(180deg)" : "rotate(0deg)"}
+                  transition="all ease-in-out"
                 />
-              </div>
+              </Flex>
+
               <AnimatePresence>
                 {chaptersOpen && (
-                  <motion.div
-                    className="absolute top-16"
+                  <MotionBox
+                    position="absolute"
+                    top="16"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ type: "spring", stiffness: 250, damping: 25 }}
                   >
                     <ChaptersMenu onLinkClick={handleLinkClick} />
-                  </motion.div>
+                  </MotionBox>
                 )}
               </AnimatePresence>
-            </li>
-            {Links.map((item) => (
-              <li key={item.id} className="relative">
-                <Link
-                  id={item.path}
-                  href={item.path}
-                  className="text-gray-900 hover:opacity-85 transition-all duration-300 ease-in-out"
-                  onClick={handleLinkClick}
-                >
-                  {item.name}
-                </Link>
-                {pathname === item.path && (
-                  <motion.div
-                    layoutId="active-underline"
-                    className="absolute bottom-0 left-0 w-full h-[3px] bg-black rounded-full"
-                    transition={{ type: "spring", stiffness: 250, damping: 20 }}
-                  />
-                )}
-              </li>
-            ))}
-          </ul>
-          <ThemeIcon />
-        </div>
-      </div>
-    </div>
+            </Box>
+
+
+            <LinksNavigator />
+          </HStack>
+
+
+          <ColorModeButton />
+        </HStack>
+      </Box>
+    </Flex>
+  );
+};
+
+
+function LinksNavigator() {
+
+
+
+  const router = useRouter();
+
+  return (
+    <HStack spaceX={6} w="full">
+      {Links.map((item) => (
+        <Button colorPalette={"black"} size="sm" variant={"ghost"} fontWeight={"bold"} onClick={() => router.push(item.path)}>
+          {item.name}
+        </Button>
+      ))}
+    </HStack>
   );
 }
+
+export default FullHeader;
