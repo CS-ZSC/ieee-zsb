@@ -9,9 +9,9 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
+      if (typeof window == "undefined") return;
       setWindowWidth(window.innerWidth);
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
