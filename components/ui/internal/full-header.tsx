@@ -1,31 +1,15 @@
-import React, { useRef, useState } from "react";
-import {
-  Box,
-  Flex,
-  Link as ChakraLink,
-  List,
-  ListItem,
-  Image,
-  Text,
-  HStack,
-  Button,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { motion, AnimatePresence, px } from "framer-motion";
-import { Icon } from "@iconify/react";
+import React, { useEffect, useRef, useState } from "react";
+import { Box, Flex, HStack, Button } from "@chakra-ui/react";
+import { usePathname, useRouter } from "next/navigation";
 import ChaptersMenu from "./chapters-menu";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import Logo from "./logo";
 import { Links } from "./links";
+import { motion } from "framer-motion";
 
 function FullHeader() {
-  // const { pathname } = useRouter();
-  const [chaptersOpen, setChaptersOpen] = useState(false);
-  const chaptersContainerRef = useRef(null);
 
-  // Glass effect colors
   const glassBackground = useColorModeValue(
     "rgba(255, 255, 255, 0.3)",
     "rgba(0, 0, 0, 0.3)"
@@ -37,10 +21,9 @@ function FullHeader() {
   const textColor = useColorModeValue("gray.900", "white");
 
   return (
-    <Flex justify="center" align="center" margin={16} padding={2}>
+    <Flex justify="center" align="center" margin={16}>
       <Box
         p={5}
-        m={5}
         mx="15px"
         as="nav"
         position="fixed"
@@ -58,10 +41,10 @@ function FullHeader() {
         border="1px"
         borderColor={borderColor}
         backdropFilter="blur(16px)"
+        top={4}
       >
         <HStack justifyContent="space-between" alignItems="center" width="full">
           <Logo />
-
           <HStack>
             <ChaptersMenu />
             <LinksNavigator />
@@ -76,21 +59,68 @@ function FullHeader() {
 
 function LinksNavigator() {
   const router = useRouter();
+  const pathname = usePathname();
+  const indicatorColor = useColorModeValue("black", "white");
+
+  const [activeRect, setActiveRect] = useState<{
+    left: number;
+    width: number;
+  } | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  useEffect(() => {
+    const activeIndex = Links.findIndex((link) => link.path === pathname);
+    if (activeIndex !== -1 && buttonRefs.current[activeIndex]) {
+      const btn = buttonRefs.current[activeIndex]!;
+      setActiveRect({ left: btn.offsetLeft, width: btn.offsetWidth });
+    } else {
+      setActiveRect(null);
+    }
+  }, [pathname]);
 
   return (
-    <HStack w="full">
-      {Links.map((item) => (
+    <HStack ref={containerRef} position="relative" spacing={6}>
+      {Links.map((item, index) => (
         <Button
           key={item.id}
-          colorPalette={"black"}
+          ref={(el) => (buttonRefs.current[index] = el)}
+          colorPalette="black"
           size="sm"
-          variant={"ghost"}
-          fontWeight={"bold"}
+          variant="ghost"
+          fontWeight="bold"
+          outline={0}
+          fontSize={16}
           onClick={() => router.push(item.path)}
+          _hover={{
+            color: "gray.700",
+            backgroundColor: "transparent",
+            transition: "all 0.2s ease-in-out",
+          }}
         >
           {item.name}
         </Button>
       ))}
+
+      {activeRect && (
+        <Box colorPalette="black">
+          {activeRect && (
+            <motion.div
+              layout
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: activeRect.left + 16,
+                width: activeRect.width - 32,
+                height: "3px",
+                borderRadius: "8px",
+                backgroundColor: indicatorColor,
+              }}
+            />
+          )}
+        </Box>
+      )}
     </HStack>
   );
 }

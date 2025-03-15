@@ -1,9 +1,15 @@
-import React from 'react'
+import { Box, Flex } from "@chakra-ui/react";
+import React from "react";
 
 export default function page() {
   return (
-    <div className='text-3xl m-20 mx-auto w-fit'>
+    <Flex
+      marginTop={20}
+      fontWeight={"bold"}
+      fontSize={44}
+      justifyContent={"center"}
+    >
       WIE
-    </div>
-  )
+    </Flex>
+  );
 }
