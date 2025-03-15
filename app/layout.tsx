@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/ui/internal/header";
-import Loading from "./loading";
-
-import { Provider } from "@/components/ui/provider"
-import { Box } from "@chakra-ui/react";
-
+import { Provider } from "@/components/ui/provider";
 
 export const metadata: Metadata = {
   title: "IEEE ZSB",
@@ -19,8 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-      >
+      <body>
         <Provider>
           <Header />
           {children}

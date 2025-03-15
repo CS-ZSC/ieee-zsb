@@ -32,26 +32,29 @@ export default function SmallHeader() {
   );
 
   return (
-    <Flex justify={"betwen"} alignItems={"center"} margin={16}>
+    <Flex justify="center" align="center" margin={16}>
       <Flex
+        justify="between"
+        align="center"
         p={5}
         w="11/12"
-        rounded={"2xl"}
+        rounded="2xl"
         h={20}
-        opacity={"90%"}
-        position={"fixed"}
-        shadow={"lg"}
-        backdropBlur={"xl"}
+        position="fixed"
+        shadow="lg"
+        backdropBlur="xl"
         boxShadow="lg"
         border="1px"
         borderColor={borderColor}
         backdropFilter="blur(16px)"
         bgColor={glassBackground}
+        left="50%"
+        transform="translateX(-50%)"
+        top={4}
       >
         <Box>
           <Logo />
         </Box>
-        {/* Wrap HamburgerIcon with a div that has the toggleRef */}
         <div ref={toggleRef}>
           <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
         </div>
@@ -59,7 +62,6 @@ export default function SmallHeader() {
       <AnimatePresence>
         {isOpen && <SideNavBar toggleRef={toggleRef} />}
       </AnimatePresence>
-
     </Flex>
   );
 }
