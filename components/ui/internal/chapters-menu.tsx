@@ -14,10 +14,8 @@ import {
   Stack,
   HStack,
   Button,
-  Portal
+  Portal,
 } from "@chakra-ui/react";
-
-
 
 export default function ChaptersMenu() {
   const pathname = usePathname();
@@ -25,9 +23,13 @@ export default function ChaptersMenu() {
 
   return (
     <Menu.Root>
-
       <Menu.Trigger asChild>
-        <Button colorPalette={"black"} variant="ghost" size="sm">
+        <Button
+          colorPalette={"black"}
+          variant="ghost"
+          size="sm"
+          fontWeight={"bold"}
+        >
           Chapters
         </Button>
       </Menu.Trigger>
@@ -37,19 +39,23 @@ export default function ChaptersMenu() {
           <Menu.Content spaceY={2}>
             {Chapters.map((chapter) => (
               <Menu.Item
-                value={chapter.id}
                 cursor={"button"}
                 borderRadius={"lg"}
-                >
-
+                value={chapter.href}
+                key={chapter.id}
+              >
                 <Stack
                   onClick={() => router.push(chapter.href)}
-                  bg={chapter.secondsaryColor}
+                  bg={chapter.secondaryColor}
                   margin={2}
                   h="auto"
                   w="full"
                 >
-                  <HStack justifyContent="space-between" width="100%" alignItems="center">
+                  <HStack
+                    justifyContent="space-between"
+                    width="100%"
+                    alignItems="center"
+                  >
                     <HStack alignItems="center" gap="4">
                       <Box>
                         <Image
@@ -59,14 +65,10 @@ export default function ChaptersMenu() {
                           height={40}
                         />
                       </Box>
-                      <Text
-                        fontSize="xl"
-                        color={chapter.identityColor}
-                      >
+                      <Text fontSize="xl" color={chapter.identityColor}>
                         {chapter.name}
                       </Text>
                     </HStack>
-                   
                   </HStack>
 
                   <Text
@@ -76,17 +78,12 @@ export default function ChaptersMenu() {
                   >
                     {chapter.description}
                   </Text>
-
                 </Stack>
-
-
               </Menu.Item>
             ))}
-
-
           </Menu.Content>
         </Menu.Positioner>
       </Portal>
-    </Menu.Root >
+    </Menu.Root>
   );
 }
