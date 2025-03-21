@@ -9,7 +9,6 @@ import { Links } from "./links";
 import { motion } from "framer-motion";
 
 function FullHeader() {
-
   const glassBackground = useColorModeValue(
     "rgba(255, 255, 255, 0.3)",
     "rgba(0, 0, 0, 0.3)"
@@ -18,7 +17,6 @@ function FullHeader() {
     "rgba(255, 255, 255, 0.2)",
     "rgba(255, 255, 255, 0.1)"
   );
-  const textColor = useColorModeValue("gray.900", "white");
 
   return (
     <Flex justify="center" align="center" margin={16}>
@@ -80,25 +78,27 @@ function LinksNavigator() {
   }, [pathname]);
 
   return (
-    <HStack ref={containerRef} position="relative" spacing={6}>
-      {Links.map((item, index) => (
+    <HStack ref={containerRef} position="relative">
+      {Links.map((link, index) => (
         <Button
-          key={item.id}
-          ref={(el) => (buttonRefs.current[index] = el)}
+          key={link.id}
+          ref={(el) => {
+            if (el) buttonRefs.current[index] = el;
+          }}
           colorPalette="black"
           size="sm"
           variant="ghost"
           fontWeight="bold"
           outline={0}
           fontSize={16}
-          onClick={() => router.push(item.path)}
+          onClick={() => router.push(link.path)}
           _hover={{
             color: "gray.700",
             backgroundColor: "transparent",
             transition: "all 0.2s ease-in-out",
           }}
         >
-          {item.name}
+          {link.name}
         </Button>
       ))}
 
