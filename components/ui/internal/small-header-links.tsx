@@ -8,12 +8,18 @@ import { motion } from "framer-motion";
 import { Chapters } from "./chapters";
 import { Links } from "./links";
 import { useSetAtom, useAtom } from "jotai";
-import { SmallHeaderAtom, SmallHeaderChaptersAccordionAtom } from "../../../atoms";
+import {
+  SmallHeaderAtom,
+  SmallHeaderChaptersAccordionAtom,
+} from "../../../app/atoms/atoms";
+import { Box, Flex } from "@chakra-ui/react";
+import { useColorModeValue } from "@/components/ui/color-mode";
 
 export default function SmallHeaderLinks() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useAtom(SmallHeaderChaptersAccordionAtom);
   const setSmallHeaderAtom = useSetAtom(SmallHeaderAtom);
+  const indicatorColor = useColorModeValue("black", "white");
 
   function toggleChaptersAccordion() {
     setIsOpen((prev) => {
@@ -35,71 +41,113 @@ export default function SmallHeaderLinks() {
   }
 
   return (
-    <div className="flex flex-col gap-2 text-xl rounded-xl mt-12 font-semibold cursor-pointer">
-      <span
+    <Flex
+      flexDirection="column"
+      alignSelf={"flex-start"}
+      gap={3}
+      marginTop={3}
+      fontWeight="bold"
+    >
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        gap={2}
+        cursor="pointer"
         onClick={toggleChaptersAccordion}
-        className="flex justify-between items-center w-36 rounded-l transition"
       >
-        <span className="ml-4">Chapters</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <Icon icon="lucide:chevron-down" width={20} height={20} />
-        </motion.div>
-      </span>
+        <span>Chapters</span>
+        <Box marginTop={1}>
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Icon icon="lucide:chevron-down" width={20} height={20} />
+          </motion.div>
+        </Box>
+      </Flex>
 
       <motion.div
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
+        transition={{ duration: 0.2 }}
       >
-        <div className="flex flex-col gap-1">
+        <Flex
+          flexDirection="column"
+          gap={2}
+          paddingLeft={4}
+          fontWeight="normal"
+          zIndex={-50}
+        >
           {Chapters.map((chapter) => (
             <Link
               key={chapter.id}
               href={chapter.href}
-              style={{ color: chapter.identityColor }}
               onClick={handleLinkClick}
             >
-              <motion.div className="relative pl-4">
+              <motion.div
+                style={{
+                  position: "relative",
+                  transition: "all 0.3s ease-in-out",
+                }}
+              >
                 {pathname === chapter.href && (
                   <motion.div
                     layoutId="activeLinkBorder"
-                    className="absolute left-0 top-0 h-full w-1 rounded-full"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "100%" }}
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    style={{ backgroundColor: chapter.identityColor }}
+                    style={{
+                      position: "absolute",
+                      left: -10,
+                      top: 0,
+                      bottom: 0,
+                      width: "3px",
+                      backgroundColor: indicatorColor,
+                      borderRadius: "5px",
+                    }}
                   />
                 )}
                 {chapter.name}
               </motion.div>
             </Link>
           ))}
-        </div>
+        </Flex>
       </motion.div>
 
       {Links.map((link) => (
-        <Link
+        <Box
           key={link.path}
-          href={link.path}
-          className={`relative ${
-            !isOpen && link.path == "/committees" && "-mt-2"
-          }`}
-          onClick={handleLinkClick}
+          marginTop={!isOpen && link.path === "/committees" ? "-3" : "0"}
         >
-          <motion.div className="relative pl-4">
-            {pathname === link.path && (
-              <motion.div
-                layoutId="activeLinkBorder"
-                className="absolute left-0 top-0 h-full w-1 bg-black rounded-full"
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-            )}
-            {link.name}
-          </motion.div>
-        </Link>
+          <Link href={link.path} onClick={handleLinkClick}>
+            <motion.div
+              style={{
+                position: "relative",
+                transition: "all 0.3s ease-in-out",
+              }}
+            >
+              {pathname === link.path && (
+                <motion.div
+                  layoutId="activeLinkBorder"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "100%" }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  style={{
+                    position: "absolute",
+                    left: -10,
+                    top: 0,
+                    bottom: 0,
+                    width: "3px",
+                    backgroundColor: indicatorColor,
+                    borderRadius: "5px",
+                  }}
+                />
+              )}
+              {link.name}
+            </motion.div>
+          </Link>
+        </Box>
       ))}
-    </div>
+    </Flex>
   );
 }
