@@ -4,7 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import ChaptersMenu from "./chapters-menu";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { ColorModeButton } from "@/components/ui/color-mode";
-import Logo from "./logo";
+import Logo from "@/components/ui/internal/logo"
 import { Links } from "./links";
 import { motion } from "framer-motion";
 

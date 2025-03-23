@@ -8,10 +8,7 @@ import { motion } from "framer-motion";
 import { Chapters } from "./chapters";
 import { Links } from "./links";
 import { useSetAtom, useAtom } from "jotai";
-import {
-  SmallHeaderAtom,
-  SmallHeaderChaptersAccordionAtom,
-} from "../../../app/atoms/atoms";
+import { SmallHeaderAtom, SmallHeaderChaptersAccordionAtom } from "@/app/atoms/atoms";
 import { Box, Flex } from "@chakra-ui/react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 

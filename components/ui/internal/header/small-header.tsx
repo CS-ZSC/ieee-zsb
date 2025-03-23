@@ -3,10 +3,10 @@
 import React, { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAtom } from "jotai";
-import { SmallHeaderAtom } from "../../../app/atoms/atoms";
+import { SmallHeaderAtom } from "@/app/atoms/atoms";
 import { Flex } from "@chakra-ui/react";
-import HamburgerIcon from "./hamburger-icon";
-import Logo from "./logo";
+import HamburgerIcon from "@/components/ui/internal/hamburger-icon";
+import Logo from "@/components/ui/internal/logo"
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import SmallHeaderLinks from "./small-header-links";
