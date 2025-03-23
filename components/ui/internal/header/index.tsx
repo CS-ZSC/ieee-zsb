@@ -5,6 +5,7 @@ import FullHeader from "./full-header";
 import SmallHeader from "./small-header";
 
 export default function Header() {
+  //TODO: implement hook for responsive stuff
   const [windowWidth, setWindowWidth] = useState<number>(0);
 
   useEffect(() => {
