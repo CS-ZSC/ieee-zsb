@@ -3,22 +3,10 @@
 import React, { useState, useEffect } from "react";
 import FullHeader from "./full-header";
 import SmallHeader from "./small-header";
+import { useWindowType } from "@/hooks/use-window-type";
 
 export default function Header() {
-  //TODO: implement hook for responsive stuff
-  const [windowWidth, setWindowWidth] = useState<number>(0);
+  const { isDesktop } = useWindowType();
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (typeof window == "undefined") return;
-      setWindowWidth(window.innerWidth);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  return <div>{windowWidth >= 1250 ? <FullHeader /> : <SmallHeader />}</div>;
+  return <div>{isDesktop ? <FullHeader /> : <SmallHeader />}</div>;
 }
