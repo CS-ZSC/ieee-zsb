@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/ui/internal/header";
 import { Provider } from "@/components/ui/provider";
 import { Box } from "@chakra-ui/react";
+import Footer from "@/components/ui/internal/footer";
 
 export const metadata: Metadata = {
   title: "IEEE ZSB",
@@ -20,6 +21,7 @@ export default function RootLayout({
           <Box margin={"auto"} maxWidth={"3000px"} padding={"15px"}>
             <Header />
             {children}
+            <Footer />
           </Box>
         </Provider>
       </body>
