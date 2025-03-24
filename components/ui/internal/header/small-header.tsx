@@ -38,6 +38,7 @@ export default function SmallHeader() {
         isOpen
       ) {
         setIsOpen(false);
+        localStorage.setItem("SmallHeaderAtom", "false");
       }
     };
 
