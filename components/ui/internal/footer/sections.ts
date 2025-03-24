@@ -1,17 +1,14 @@
-
-
-
 interface Section {
   title: string;
-  links: SectionContentLink[]
+  links: SectionContentLink[];
 }
 
-interface SectionContent {
-}
+// interface SectionContent {
+// }
 
 interface SectionContentLink {
-  name: string,
-  href: string
+  name: string;
+  href: string;
 }
 
 export const sections: Section[] = [
@@ -19,106 +16,104 @@ export const sections: Section[] = [
     title: "Quick Access",
     links: [
       {
-        name: "Chapters",
-        href: ""
-      },
-      {
         name: "Committees",
-        href: ""
+        href: "/committees",
       },
       {
-        name: "Competitions",
-        href: ""
+        name: "Events",
+        href: "/events",
       },
       {
         name: "News",
-        href: ""
+        href: "/news",
       },
       {
         name: "About",
-        href: ""
+        href: "/about",
       },
     ],
-  }, {
+  },
+  {
     title: "CS",
     links: [
       {
         name: "Front-End",
-        href: ""
+        href: "/cs/#frontend",
       },
       {
         name: "Back-End",
-        href: ""
+        href: "/cs/#backend",
       },
       {
         name: "Basic AI",
-        href: ""
+        href: "/cs/#basic-ai",
       },
       {
         name: "Advanced AI",
-        href: ""
+        href: "/cs/#advanced-ai",
       },
       {
         name: "Mobile",
-        href: ""
+        href: "/cs/#mobile",
       },
       {
         name: "Cyber Security",
-        href: ""
+        href: "/cs/#cyber-security",
       },
     ],
-  }, {
+  },
+  {
     title: "RAS",
     links: [
       {
         name: "Embedded Systems",
-        href: ""
+        href: "/ras/#embedded-systems",
       },
       {
         name: "ROS",
-        href: ""
+        href: "/ras/#ros",
       },
       {
         name: "PCB Design",
-        href: ""
+        href: "/ras/#pcb-design",
       },
       {
         name: "Mechanical",
-        href: ""
-      },
-
-    ],
-  }, {
-    title: "PES",
-    links: [
-      {
-        name: "Basic Automation ",
-        href: ""
-      },
-      {
-        name: "Advanced Automation",
-        href: ""
-      },
-      {
-        name: "Basic Distribution",
-        href: ""
-      },
-      {
-        name: "Advanced Distribution",
-        href: ""
-      },
-      {
-        name: "Smart Home",
-        href: ""
-      },
-      {
-        name: "E - Mobility",
-        href: ""
-      },
-      {
-        name: "Mechanical",
-        href: ""
+        href: "/ras/#mechanical",
       },
     ],
   },
-]
+  {
+    title: "PES",
+    links: [
+      {
+        name: "Basic Automation",
+        href: "/pes/#basic-automation",
+      },
+      {
+        name: "Advanced Automation",
+        href: "/pes/#advanced-utomation",
+      },
+      {
+        name: "Basic Distribution",
+        href: "/pes/#basic-distribution",
+      },
+      {
+        name: "Advanced Distribution",
+        href: "/pes/#advanced-distribution",
+      },
+      {
+        name: "Smart Home",
+        href: "/pes/#smart-home",
+      },
+      {
+        name: "E-Mobility",
+        href: "/pes/#e-mobility",
+      },
+      {
+        name: "Mechanical",
+        href: "/pes/#mechanical",
+      },
+    ],
+  },
+];
