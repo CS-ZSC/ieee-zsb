@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import FullHeader from "./full-header";
 import SmallHeader from "./small-header";
 import { useWindowType } from "@/hooks/use-window-type";
