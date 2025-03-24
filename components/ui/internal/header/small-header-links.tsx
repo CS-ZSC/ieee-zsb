@@ -8,26 +8,18 @@ import { motion } from "framer-motion";
 import { Chapters } from "./chapters";
 import { Links } from "./links";
 import { useSetAtom, useAtom } from "jotai";
-import { SmallHeaderAtom, SmallHeaderChaptersAccordionAtom } from "@/app/atoms/atoms";
+import {
+  SmallHeaderAtom,
+  SmallHeaderChaptersAccordionAtom,
+} from "@/atoms/atoms";
 import { Box, Flex } from "@chakra-ui/react";
 import { useColorModeValue } from "@/components/ui/color-mode";
 
 export default function SmallHeaderLinks() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useAtom(SmallHeaderChaptersAccordionAtom);
+  const [isOpen] = useAtom(SmallHeaderChaptersAccordionAtom);
   const setSmallHeaderAtom = useSetAtom(SmallHeaderAtom);
   const indicatorColor = useColorModeValue("black", "white");
-
-  function toggleChaptersAccordion() {
-    setIsOpen((prev) => {
-      const newValue = !prev;
-      localStorage.setItem(
-        "SmallHeaderChaptersAccordionAtom",
-        newValue.toString()
-      );
-      return newValue;
-    });
-  }
 
   function handleLinkClick() {
     setSmallHeaderAtom((prev) => {
@@ -45,23 +37,7 @@ export default function SmallHeaderLinks() {
       marginTop={3}
       fontWeight="bold"
     >
-      <Flex
-        justifyContent="center"
-        alignItems="center"
-        gap={2}
-        cursor="pointer"
-        onClick={toggleChaptersAccordion}
-      >
-        <span>Chapters</span>
-        <Box marginTop={1}>
-          <motion.div
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Icon icon="lucide:chevron-down" width={20} height={20} />
-          </motion.div>
-        </Box>
-      </Flex>
+      <ChaptersAccordion />
 
       <motion.div
         initial={{ height: 0, opacity: 0 }}
@@ -145,6 +121,40 @@ export default function SmallHeaderLinks() {
           </Link>
         </Box>
       ))}
+    </Flex>
+  );
+}
+
+function ChaptersAccordion() {
+  const [isOpen, setIsOpen] = useAtom(SmallHeaderChaptersAccordionAtom);
+
+  function toggleChaptersAccordion() {
+    setIsOpen((prev) => {
+      const newValue = !prev;
+      localStorage.setItem(
+        "SmallHeaderChaptersAccordionAtom",
+        newValue.toString()
+      );
+      return newValue;
+    });
+  }
+  return (
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      gap={2}
+      cursor="pointer"
+      onClick={toggleChaptersAccordion}
+    >
+      <span>Chapters</span>
+      <Box marginTop={1}>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          <Icon icon="lucide:chevron-down" width={20} height={20} />
+        </motion.div>
+      </Box>
     </Flex>
   );
 }
