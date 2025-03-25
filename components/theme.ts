@@ -1,15 +1,15 @@
-import { defineConfig, createSystem } from '@chakra-ui/react'
+import { defineConfig, createSystem, SystemConfig } from '@chakra-ui/react'
 
 const defaultConfig = {}
 
-const config = defineConfig({
+const config: SystemConfig = defineConfig({
   colors: {
     light: {
       bg: "#f9fdff",
       fg: "#e0f2fa",
       primary: "#00669c",
       secondary: "#ffc000",
-      
+
       // Button colors
       btnBg1: "#004164",
       btnText1: "#e0f2fa",
@@ -17,19 +17,19 @@ const config = defineConfig({
       btnText2: "#00669c",
       btnBg3: "#e0f2fa",
       btnText3: "#005481",
-      
+
       // Card colors
       cardBg1: "#00669c",
       cardBorder1: "#1187c9",
       cardBg2: "rgba(6, 62, 91, 0.8)",
       cardBorder2: "#004b75",
-      
+
       // Chip colors
       chipBg1: "#ffc100",
       chipBorder1: "#664f00",
       chipBg2: "#a0d4eb",
       chipBorder2: "#00669c",
-      
+
       // Semantic color scales
       brand: {
         50: "#e6f2ff",
@@ -44,7 +44,7 @@ const config = defineConfig({
         900: "#00101a",
         950: "#000000"
       },
-      
+
       // Status colors
       cs1: "#354a5f",
       cs2: "#d3d6db",
@@ -60,7 +60,7 @@ const config = defineConfig({
       fg: "#e0f2fa",
       primary: "#00669c",
       secondary: "#ffc000",
-      
+
       // Button colors
       btnBg1: "#00669c",
       btnText1: "#e0f2fa",
@@ -68,19 +68,19 @@ const config = defineConfig({
       btnText2: "#00669c",
       btnBg3: "#e0f2fa",
       btnText3: "#005481",
-      
+
       // Card colors
       cardBg1: "#002235",
       cardBorder1: "#003a5a",
       cardBg2: "rgba(0, 102, 156, 0.8)",
       cardBorder2: "#0076b8",
-      
+
       // Chip colors
       chipBg1: "#ffc100",
       chipBorder1: "#664f00",
       chipBg2: "#a0d4eb",
       chipBorder2: "#00669c",
-      
+
       // Semantic color scales
       brand: {
         50: "#e6f2ff",
@@ -95,7 +95,7 @@ const config = defineConfig({
         900: "#00101a",
         950: "#000000"
       },
-      
+
       // Status colors
       cs1: "#354a5f",
       cs2: "#d3d6db",
@@ -117,7 +117,7 @@ const config = defineConfig({
       "light.brand.subtle": { value: "{colors.light.brand.200}" },
       "light.brand.emphasized": { value: "{colors.light.brand.300}" },
       "light.brand.focusRing": { value: "{colors.light.brand.500}" },
-      
+
       // Dark mode semantic tokens
       "dark.brand.solid": { value: "{colors.dark.brand.500}" },
       "dark.brand.contrast": { value: "{colors.dark.brand.100}" },
