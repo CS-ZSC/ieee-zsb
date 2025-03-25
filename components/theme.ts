@@ -1,141 +1,67 @@
-import { defineConfig, createSystem, SystemConfig } from '@chakra-ui/react'
+import { defineConfig, createSystem, SystemConfig, defaultConfig } from '@chakra-ui/react'
 
-const defaultConfig = {}
 
 const config: SystemConfig = defineConfig({
-  colors: {
-    light: {
-      bg: "#f9fdff",
-      fg: "#e0f2fa",
-      primary: "#00669c",
-      secondary: "#ffc000",
-
-      // Button colors
-      btnBg1: "#004164",
-      btnText1: "#e0f2fa",
-      btnBg2: "#a0d4eb",
-      btnText2: "#00669c",
-      btnBg3: "#e0f2fa",
-      btnText3: "#005481",
-
-      // Card colors
-      cardBg1: "#00669c",
-      cardBorder1: "#1187c9",
-      cardBg2: "rgba(6, 62, 91, 0.8)",
-      cardBorder2: "#004b75",
-
-      // Chip colors
-      chipBg1: "#ffc100",
-      chipBorder1: "#664f00",
-      chipBg2: "#a0d4eb",
-      chipBorder2: "#00669c",
-
-      // Semantic color scales
-      brand: {
-        50: "#e6f2ff",
-        100: "#a0d4eb",
-        200: "#1187c9",
-        300: "#00669c",
-        400: "#004b75",
-        500: "#00669c",
-        600: "#004164",
-        700: "#003a5a",
-        800: "#002235",
-        900: "#00101a",
-        950: "#000000"
+  theme: {
+    tokens: {
+      colors: {
+        // Brand color scales with mode-specific values
+        brand: {
+          "50": { value: { _light: "#e6f2ff", _dark: "#e6f2ff" } },
+          "100": { value: { _light: "#a0d4eb", _dark: "#a0d4eb" } },
+          "200": { value: { _light: "#1187c9", _dark: "#1187c9" } },
+          "500": { value: { _light: "#00669c", _dark: "#00669c" } },
+          "900": { value: { _light: "#00101a", _dark: "#00101a" } }
+        },
       },
-
-      // Status colors
-      cs1: "#354a5f",
-      cs2: "#d3d6db",
-      ras1: "#f08114",
-      ras2: "#f8e2cb",
-      pes1: "#6eb43f",
-      pes2: "#e1ead5",
-      wie1: "#802c92",
-      wie2: "#e2d1e4"
     },
-    dark: {
-      bg: "#00101a",
-      fg: "#e0f2fa",
-      primary: "#00669c",
-      secondary: "#ffc000",
+    semanticTokens: {
+      colors: {
+        // Background colors
+        "background": {
+          "primary": { value: { _light: "#f9fdff", _dark: "#00101a" } },
+          "secondary": { value: { _light: "#e0f2fa", _dark: "#e0f2fa" } }
+        },
 
-      // Button colors
-      btnBg1: "#00669c",
-      btnText1: "#e0f2fa",
-      btnBg2: "#a0d4eb",
-      btnText2: "#00669c",
-      btnBg3: "#e0f2fa",
-      btnText3: "#005481",
+        // Button colors
+        "button": {
+          "bg-primary": { value: { _light: "#004164", _dark: "#00669c" } },
+          "text-primary": { value: { _light: "#e0f2fa", _dark: "#e0f2fa" } },
+          "bg-secondary": { value: { _light: "#a0d4eb", _dark: "#a0d4eb" } },
+          "text-secondary": { value: { _light: "#00669c", _dark: "#00669c" } }
+        },
 
-      // Card colors
-      cardBg1: "#002235",
-      cardBorder1: "#003a5a",
-      cardBg2: "rgba(0, 102, 156, 0.8)",
-      cardBorder2: "#0076b8",
+        // Card colors
+        "card": {
+          "bg": {
 
-      // Chip colors
-      chipBg1: "#ffc100",
-      chipBorder1: "#664f00",
-      chipBg2: "#a0d4eb",
-      chipBorder2: "#00669c",
+            "primary": { value: { _light: "#00669c", _dark: "#002235" } },
+            "secondary": { value: { _light: "rgba(6, 62, 91, 0.8)", _dark: "rgba(0, 102, 156, 0.8)" } }
+          },
+          "border.primary": { value: { _light: "#1187c9", _dark: "#003a5a" } },
+        },
 
-      // Semantic color scales
-      brand: {
-        50: "#e6f2ff",
-        100: "#a0d4eb",
-        200: "#1187c9",
-        300: "#00669c",
-        400: "#004b75",
-        500: "#00669c",
-        600: "#004164",
-        700: "#003a5a",
-        800: "#002235",
-        900: "#00101a",
-        950: "#000000"
-      },
+        // Chip colors
+        "chip": {
+          "bg.primary": { value: { _light: "#ffc100", _dark: "#ffc100" } },
+          "border.primary": { value: { _light: "#664f00", _dark: "#664f00" } }
+        },
 
-      // Status colors
-      cs1: "#354a5f",
-      cs2: "#d3d6db",
-      ras1: "#f08114",
-      ras2: "#f8e2cb",
-      pes1: "#6eb43f",
-      pes2: "#e1ead5",
-      wie1: "#802c92",
-      wie2: "#e2d1e4"
-    }
-  },
-  semanticTokens: {
-    colors: {
-      // Light mode semantic tokens
-      "light.brand.solid": { value: "{colors.light.brand.500}" },
-      "light.brand.contrast": { value: "{colors.light.brand.100}" },
-      "light.brand.fg": { value: "{colors.light.brand.700}" },
-      "light.brand.muted": { value: "{colors.light.brand.100}" },
-      "light.brand.subtle": { value: "{colors.light.brand.200}" },
-      "light.brand.emphasized": { value: "{colors.light.brand.300}" },
-      "light.brand.focusRing": { value: "{colors.light.brand.500}" },
-
-      // Dark mode semantic tokens
-      "dark.brand.solid": { value: "{colors.dark.brand.500}" },
-      "dark.brand.contrast": { value: "{colors.dark.brand.100}" },
-      "dark.brand.fg": { value: "{colors.dark.brand.700}" },
-      "dark.brand.muted": { value: "{colors.dark.brand.100}" },
-      "dark.brand.subtle": { value: "{colors.dark.brand.200}" },
-      "dark.brand.emphasized": { value: "{colors.dark.brand.300}" },
-      "dark.brand.focusRing": { value: "{colors.dark.brand.500}" }
-    }
-  },
-  styles: {
-    global: {
-      body: {
-        bg: "light.bg",
-        color: "light.text-2"
+        // Status colors
+        "status": {
+          "neutral.primary": { value: { _light: "#354a5f", _dark: "#354a5f" } },
+          "neutral.secondary": { value: { _light: "#d3d6db", _dark: "#d3d6db" } },
+          "alert.primary": { value: { _light: "#f08114", _dark: "#f08114" } },
+          "alert.secondary": { value: { _light: "#f8e2cb", _dark: "#f8e2cb" } },
+          "success.primary": { value: { _light: "#6eb43f", _dark: "#6eb43f" } },
+          "success.secondary": { value: { _light: "#e1ead5", _dark: "#e1ead5" } },
+          "highlight.primary": { value: { _light: "#802c92", _dark: "#802c92" } },
+          "highlight.secondary": { value: { _light: "#e2d1e4", _dark: "#e2d1e4" } }
+        },
       }
-    }
+    },
+
   }
 })
 
-export const system = createSystem(defaultConfig, config)
+export const system = createSystem(defaultConfig, config);

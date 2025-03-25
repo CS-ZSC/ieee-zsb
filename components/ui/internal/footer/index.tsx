@@ -43,7 +43,7 @@ export default function Footer() {
       w="full"
       align={"center"}
       justify={"center"}
-      bg={"#006699"}
+      bg={"card.bg.primary"}
       color={"white"}
       paddingY={7}
       paddingX={10}
