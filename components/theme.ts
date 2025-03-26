@@ -1,5 +1,4 @@
-import { defineConfig, createSystem, SystemConfig, defaultConfig } from '@chakra-ui/react'
-
+import { defineConfig, createSystem, SystemConfig, defaultConfig } from '@chakra-ui/react';
 
 const config: SystemConfig = defineConfig({
   theme: {
@@ -25,7 +24,7 @@ const config: SystemConfig = defineConfig({
             "primary": { value: { _light: "#00669c", _dark: "#002235" } },
             "secondary": { value: { _light: "rgba(6, 62, 91, 0.8)", _dark: "rgba(0, 102, 156, 0.8)" } }
           },
-          "border.primary": { value: { _light: "#1187c9", _dark: "#003a5a" } },
+          "border.primary": { value: { _light: "#1187c9", _dark: "#003a5a" } }
         },
 
         // Chip colors
@@ -34,7 +33,7 @@ const config: SystemConfig = defineConfig({
           "border.primary": { value: { _light: "#664f00", _dark: "#664f00" } }
         },
 
-        // Status colors
+        // Status colors 
         "status": {
           "neutral.primary": { value: { _light: "#354a5f", _dark: "#354a5f" } },
           "neutral.secondary": { value: { _light: "#d3d6db", _dark: "#d3d6db" } },
@@ -43,12 +42,26 @@ const config: SystemConfig = defineConfig({
           "success.primary": { value: { _light: "#6eb43f", _dark: "#6eb43f" } },
           "success.secondary": { value: { _light: "#e1ead5", _dark: "#e1ead5" } },
           "highlight.primary": { value: { _light: "#802c92", _dark: "#802c92" } },
-          "highlight.secondary": { value: { _light: "#e2d1e4", _dark: "#e2d1e4" } }
+          "highlight.secondary": { value: { _light: "#e2d1e4", _dark: "#e2d1e4" } },
         },
+        pes: {
+          "secondary": { value: { _light: "#e1ead5", _dark: "#e1ead5" } }, // pes-2
+        },
+        cs: {
+          "primary": { value: { _light: "#354a5f", _dark: "#354a5f" } }, // cs-1
+          "secondary": { value: { _light: "#d3d6db", _dark: "#d3d6db" } }, // cs-2
+        },
+        ras: {
+          "primary": { value: { _light: "#f08114", _dark: "#f08114" } }, // ras-1
+          "secondary": { value: { _light: "#f8e2cb", _dark: "#f8e2cb" } }, // ras-2
+        },
+        wie: {
+          "primary": { value: { _light: "#802c92", _dark: "#802c92" } }, // wie-1
+          "secondary": { value: { _light: "#e2d1e4", _dark: "#e2d1e4" } } // wie-2
+        }
       }
-    },
-
+    }
   }
-})
+});
 
 export const system = createSystem(defaultConfig, config);
