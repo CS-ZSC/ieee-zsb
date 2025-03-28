@@ -14,7 +14,6 @@ export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
   const gradientRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const gradientSize = isDesktop ? 300 : 150;
 
   useEffect(() => {
     setIsMounted(true);
@@ -75,12 +74,12 @@ export default function HeroSection() {
       rounded="2xl"
       color="natural-2"
       width="full"
-      height={isDesktop ? `calc(100vh - 120px)` : "auto"}
-    >
+      height={isDesktop ? `calc(100vh)` : "auto"}
+      marginTop={isDesktop ? `calc(-100px - var(--global-spacing))` : "-60px"}
+      >
       {colorMode === "dark" && (
         <>
           <Box
-            marginTop={`calc(-100px - var(--global-spacing))`}
             position="absolute"
             borderRadius="full"
             pointerEvents="none"
@@ -89,8 +88,8 @@ export default function HeroSection() {
             transform="translate(50%, -50%)"
             zIndex={-1}
             opacity={0.8}
-            boxShadow="0 0 30vw 15vw #79D2FA"
-          />
+            boxShadow="0 0 30vw 10vw #79D2FA99"
+            />
           <Box
             position="absolute"
             borderRadius="full"
@@ -100,12 +99,12 @@ export default function HeroSection() {
             transform="translateY(-50%)"
             zIndex={-1}
             opacity={0.8}
-            boxShadow="0 0 30vw 10vw #79D2FA"
-          />
+            boxShadow="0 0 30vw 10vw #79D2FA99"
+            />
           <Box
             ref={gradientRef}
             position="absolute"
-            boxShadow="0 0 20vw 5vw #79D2FA"
+            boxShadow="0 0 20vw 5vw #79D2FA99"
             borderRadius="full"
             pointerEvents="none"
             left={0}
@@ -114,11 +113,12 @@ export default function HeroSection() {
             willChange="transform"
             opacity={0}
             transition="opacity 0.1s ease-out"
-          />
+            />
         </>
       )}
       <Box
         width={isDesktop ? "40vw" : "60vw"}
+        marginTop={isDesktop ? "110px" : "60px"}
         maxWidth="1200px"
         position="relative"
         flex={1}
