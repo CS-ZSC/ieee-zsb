@@ -5,6 +5,7 @@ import { Text, Flex, Button } from "@chakra-ui/react";
 import HeroSection from "@/components/ui/internal/home/hero-section";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";
+import { Carousel } from "@/components/ui/internal/carousel";
 
 // import data from "../fakedata.json";
 // import Image from "next/image";
@@ -16,7 +17,11 @@ export default function Home() {
   return (
     <PageWrapper>
       <HeroSection />
-      <Flex flexDirection={"column"} padding={"var(--global-spacing)"}>
+      <Flex
+        flexDirection={"column"}
+        padding={"var(--global-spacing)"}
+        gap={"var(--global-spacing)"}
+      >
         <Flex
           flexDirection={"column"}
           alignItems={isDesktop ? "" : "center"}
@@ -49,7 +54,7 @@ export default function Home() {
             color="btn-text-1"
             borderRadius="5px"
             width="fit-content"
-            paddingX={isDesktop ? "5" : "7"}
+            paddingX={"5"}
             paddingY={isDesktop ? "5" : "3"}
             _hover={{ opacity: "0.8" }}
             onClick={() => router.push("/about")}
@@ -57,12 +62,7 @@ export default function Home() {
             More about us
           </Button>
         </Flex>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-          maiores. Consectetur enim fugiat reiciendis dicta facilis, ipsa quis
-          perferendis debitis voluptatibus quibusdam reprehenderit unde eum
-          nemo! Officia temporibus laborum magnam.
-        </div>
+        <Carousel />
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
           maiores. Consectetur enim fugiat reiciendis dicta facilis, ipsa quis
