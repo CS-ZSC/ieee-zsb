@@ -7,14 +7,12 @@ export default function Card({ children }: { children: React.ReactNode }) {
             w="full"
             align={"center"}
             justify={"center"}
-            bg={"card.bg.primary"}
+            bgColor={"card-bg-3"}
             color={"white"}
-            paddingY={7}
-            paddingX={10}
+            border="1px solid"
+            borderColor="card-border-3"
+            padding="var(--card-padding)"
             borderRadius={20}
-            borderColor={"card.border.primary"}
-            borderWidth={1}
-            borderStyle={"solid"}
             gapY={10}
         >
             {children}
