@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import Logo from "@/components/ui/internal/logo";
+import Card from "@/components/ui/internal/card";
 import { LogoType } from "@/components/ui/internal/logo";
 import { useWindowType } from "@/hooks/use-window-type";
 import { SocialMediaLinks } from "../socialmedialinks";
@@ -39,17 +40,8 @@ export default function Footer() {
 
   const textopacity = 0.8;
   return (
-    <Stack
-      w="full"
-      align={"center"}
-      justify={"center"}
-      bg={"card.bg.primary"}
-      color={"white"}
-      paddingY={7}
-      paddingX={10}
-      borderRadius={20}
-      gapY={10}
-    >
+    <Card>
+
       <Logo
         logoType={LogoType.White}
         width={isDesktop ? 180 : 110}
@@ -199,7 +191,7 @@ export default function Footer() {
           All rights reserved to IEEE-ZSB
         </Text>
       </Stack>
-    </Stack>
+    </Card>
   );
 }
 
