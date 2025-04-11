@@ -16,11 +16,11 @@ import Logo from "@/components/ui/internal/logo";
 import Card from "@/components/ui/internal/card";
 import { LogoType } from "@/components/ui/internal/logo";
 import { useWindowType } from "@/hooks/use-window-type";
-import { SocialMediaLinks } from "../socialmedialinks";
+import { SocialMediaLinks } from "@/components/ui/internal/social-media-links";
+import { Chapters } from "@/components/ui/internal/header/chapters";
 import { useAtom } from "jotai";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
-import { Chapters } from "../header/chapters";
 import { FooterChaptersAccordionAtom } from "@/atoms/atoms";
 import { useColorMode } from "@/components/ui/color-mode";
 
