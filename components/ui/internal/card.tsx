@@ -15,7 +15,7 @@ export default function Card({ children }: { children: React.ReactNode }) {
                 padding="var(--card-padding)"
                 borderRadius={20}
                 gapY={10}
-                m={"var(--global-spacing)/2"}
+                mx={"var(--global-spacing)"}
             >
                 {children}
             </Stack>
