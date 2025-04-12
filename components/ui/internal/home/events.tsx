@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Stack, SimpleGrid, Text, Box, Heading, Button, HStack } from "@chakra-ui/react";
+import { Stack, Text, Heading, Button, HStack } from "@chakra-ui/react";
 import Card from "@/components/ui/internal/card";
-import { image } from "framer-motion/client";
 import { HiOutlineExternalLink, HiOutlineLocationMarker, HiOutlineClock } from "react-icons/hi";
 import { useWindowType } from "@/hooks/use-window-type";
 import Link from "next/link";
