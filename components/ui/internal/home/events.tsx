@@ -20,7 +20,7 @@ export default function Events() {
             >
 
                 {fake_events.map((ev, i) => {
-                    return (<Stack key={i} spaceY={10} borderRadius={"lg"} bgSize={"auto"}
+                    return (<Stack key={i} spaceY={10} borderRadius={"lg"} bgSize={"cover"}
                         bgRepeat={"no-repeat"} bgPos={"center"} padding={4} justify={"space-between"} bgImage={`url(${ev.image})`}>
                         <Stack
                             spaceY={3}
