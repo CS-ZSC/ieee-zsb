@@ -7,6 +7,7 @@ import SloganTypingEffect from "@/components/ui/internal/home/slogan-typing-effe
 import { useWindowType } from "@/hooks/use-window-type";
 import { useEffect, useRef } from "react";
 import Events from "@/components/ui/internal/home/events";
+import Board from "@/components/ui/internal/board";
 // import data from "../fakedata.json";
 // import Image from "next/image";
 
@@ -126,6 +127,7 @@ export default function Home() {
         <SloganTypingEffect />
       </Flex>
       <Events />
+      <Board />
 
     </PageWrapper>
   );

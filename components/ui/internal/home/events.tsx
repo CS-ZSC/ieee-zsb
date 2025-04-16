@@ -10,7 +10,7 @@ export default function Events() {
     const { isDesktop } = useWindowType();
     return (
         <Card>
-            <Heading fontWeight={"bold"} size={isDesktop ? "5xl" : "2xl"} color={"text-3"}>
+            <Heading fontWeight={"bold"} size={isDesktop ? "4xl" : "2xl"} color={"text-3"}>
                 Events
             </Heading>
             <Stack
