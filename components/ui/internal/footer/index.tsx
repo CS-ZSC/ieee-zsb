@@ -41,7 +41,6 @@ export default function Footer() {
 
   const textopacity = 0.8;
   return (
-    <Flex px={"var(--global-spacing)"}>
       <Card>
         <Logo
           logoType={LogoType.White}
@@ -193,7 +192,6 @@ export default function Footer() {
           </Text>
         </Stack>
       </Card>
-    </Flex>
   );
 }
 
