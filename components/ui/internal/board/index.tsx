@@ -51,7 +51,7 @@ export default function Board({ }: BoardProps) {
                             <Stack w="full" justify={"center"}>
 
                                 <Heading textAlign={"center"} size={isDesktop ? "lg" : "md"}>{position.name}</Heading>
-                                <Text textAlign={"center"} size={isDesktop ? "md" : "sm"}>{position.position}</Text>
+                                <Text textAlign={"center"} fontSize={isDesktop ? "md" : "sm"}>{position.position}</Text>
                             </Stack>
                         </Stack>
                     )
