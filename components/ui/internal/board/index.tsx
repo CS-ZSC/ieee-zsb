@@ -1,5 +1,5 @@
 import { useWindowType } from "@/hooks/use-window-type";
-import { Avatar, Box, Heading, HStack, Separator, Skeleton, Stack, Text, Wrap } from "@chakra-ui/react";
+import { Avatar, Heading, Separator, Stack, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
 import Card from "@/components/ui/internal/card";
 
@@ -16,7 +16,7 @@ interface BoardProps {
 }
 
 
-export default function Board({ description, title }: BoardProps) {
+export default function Board({ }: BoardProps) {
     const { isDesktop } = useWindowType();
     return (
         <Card>
@@ -33,7 +33,7 @@ export default function Board({ description, title }: BoardProps) {
                 <Separator size={"lg"} borderColor={"secondary"} />
             </Stack>
 
-            <Wrap  gap={2} padding={8}  justify={"space-around"} borderColor={"text-5"} borderWidth={"4px"} borderRadius={"2xl"} borderStyle={"dashed"} w="full" >
+            <Wrap gap={2} padding={8} justify={"space-around"} borderColor={"text-5"} borderWidth={"4px"} borderRadius={"2xl"} borderStyle={"dashed"} w="full" >
                 {positions.map((position, i) => {
                     return (
                         <Stack w={isDesktop ? "240px" : "90px"} align={"center"} key={i} spaceY={-2}>
@@ -50,8 +50,8 @@ export default function Board({ description, title }: BoardProps) {
                             </Avatar.Root>
                             <Stack w="full" justify={"center"}>
 
-                            <Heading textAlign={"center"} size={isDesktop ? "lg" : "md"}>{position.name}</Heading>
-                            <Text textAlign={"center"} size={isDesktop ? "md" : "sm"}>{position.position}</Text>
+                                <Heading textAlign={"center"} size={isDesktop ? "lg" : "md"}>{position.name}</Heading>
+                                <Text textAlign={"center"} size={isDesktop ? "md" : "sm"}>{position.position}</Text>
                             </Stack>
                         </Stack>
                     )
