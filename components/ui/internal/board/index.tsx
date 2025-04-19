@@ -46,7 +46,7 @@ export default function Board({ }: BoardProps) {
 }
 
 
-function PositionCard({ position }: { Position }) {
+function PositionCard({ position }: { position: Position }) {
     const { isDesktop } = useWindowType();
     const clipboard = useClipboard({ value: position.email, timeout: 2000 });
     return (
