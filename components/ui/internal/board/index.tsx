@@ -65,12 +65,12 @@ function PositionCard({ position }: { Position }) {
                     />
                 </Avatar.Root>
             </Box>
-            <Stack w="full" justify={"center"} spaceY={-2} m={2}>
+            <Stack w="full" align={"center"} justify={"center"} spaceY={-2} m={2}>
                 <Heading textAlign={"center"} size={isDesktop ? "lg" : "md"}>{position.name}</Heading>
-                <HStack w="full" justify={"center"} spaceX={2} align={"center"}>
+                <HStack w="full" justify={"center"} spaceX={1} align={"center"}>
                     <Text textAlign={"center"} fontSize={isDesktop ? "sm" : "xs"}>{position.position}</Text>
                     <Tooltip content={position.email} interactive openDelay={100} showArrow closeDelay={100}>
-                        <IconButton variant={"ghost"} colorPalette={"black"} size={"xs"} onClick={() => {
+                        <IconButton variant={"plain"} color={"white"} p={1} size={"xs"} onClick={() => {
                             clipboard.copy();
                             toaster.create({
                                 title: "Email Copied",
@@ -78,11 +78,10 @@ function PositionCard({ position }: { Position }) {
                                 type: "success",
                                 duration: 2000,
                                 placement: "top",
-                                // icon: <HiCheck color={"white"} />
                             });
 
                         }} aria-label="Search database">
-                            {clipboard.copied ? <HiCheck color={"white"} /> : <HiOutlineMail color={"white"} />}
+                            {clipboard.copied ? <HiCheck  /> : <HiOutlineMail  />}
                         </IconButton>
                     </Tooltip>
                 </HStack>
