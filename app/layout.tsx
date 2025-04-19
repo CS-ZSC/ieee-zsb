@@ -5,6 +5,7 @@ import Header from "@/components/ui/internal/header";
 import Footer from "@/components/ui/internal/footer";
 import "./global.css";
 import { AnimatePresence } from "framer-motion";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "IEEE ZSB",
@@ -25,6 +26,7 @@ export default function RootLayout({
             <AnimatePresence mode="wait">{children}</AnimatePresence>
             <Footer />
           </Stack>
+          <Toaster />
         </Provider>
       </body>
     </html>

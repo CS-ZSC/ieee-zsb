@@ -10,7 +10,7 @@ export default function Events() {
     const { isDesktop } = useWindowType();
     return (
         <Card>
-            <Heading fontWeight={"bold"} size={isDesktop ? "5xl" : "2xl"} color={"text-3"}>
+            <Heading fontWeight={"bold"} size={isDesktop ? "4xl" : "2xl"} color={"text-3"}>
                 Events
             </Heading>
             <Stack
@@ -20,7 +20,7 @@ export default function Events() {
             >
 
                 {fake_events.map((ev, i) => {
-                    return (<Stack key={i} spaceY={10} borderRadius={"lg"} bgSize={"auto"}
+                    return (<Stack key={i} spaceY={10} borderRadius={"lg"} bgSize={"cover"}
                         bgRepeat={"no-repeat"} bgPos={"center"} padding={4} justify={"space-between"} bgImage={`url(${ev.image})`}>
                         <Stack
                             spaceY={3}
