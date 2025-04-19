@@ -28,7 +28,7 @@ export default function Board({ }: BoardProps) {
                     Board
                 </Heading>
                 <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic blanditiis nihil asperiores ex quae voluptates accusantium quam? Officia placeat ratione soluta excepturi delectus officiis. Rem quae tempore reprehenderit corporis nihil.
+                    Meet the heart and soul behind this website — a team of passionate and dedicated students who pour their energy and creativity into making it extraordinary. Here are our amazing Executive Board members!
                 </Text>
             </Stack>
             <Stack w="full">
