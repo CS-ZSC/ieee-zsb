@@ -281,15 +281,13 @@ function SmallCarousel({
       >
         <motion.div
           drag="x"
-          dragConstraints={{
-            left: 0,
-            right: 0,
-          }}
+          dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.8}
           style={{
             x: dragX,
             display: "flex",
-            width: `${newsItems.length * 100}%`,
+            gap: "16px",
+            width: `calc(${newsItems.length * 100}% + ${(newsItems.length - 1) * 5}px)`,
           }}
           onDragStart={onDragStart}
           onDragEnd={onDragEnd}
@@ -298,52 +296,53 @@ function SmallCarousel({
             <motion.div
               key={index}
               style={{
-                width: "100%",
-                translateX: `-${currentIndex * 100}%`,
+                width: `calc(100%)`,
                 transformOrigin: "center",
               }}
               animate={{
-                translateX: `-${currentIndex * 100}%`,
+                translateX: `calc(-${currentIndex * 100}% - ${currentIndex * 16}px)`,
               }}
               transition={{ type: "spring", stiffness: 400, damping: 40 }}
             >
-              <Flex
-                flexDirection={"column"}
-                position={"absolute"}
-                width={"fit"}
-                padding={"var(--card-padding)"}
-                margin={"var(--global-spacing)"}
-                bgColor={"card-bg-2"}
-                color={"text-2"}
-                rounded={"xl"}
-                overflow={"hidden"}
-              >
-                <Text fontSize="1.8rem" fontWeight="semibold" color="text-1">
-                  {newsItems[currentIndex].title}
-                </Text>
-                <Text
-                  fontSize="1.2rem"
-                  color="text-2"
-                  width={"full"}
-                  lineClamp={4}
-                  textOverflow={"ellipsis"}
-                >
-                  {newsItems[currentIndex].description}
-                </Text>
-              </Flex>
               <Box
-                w="full"
+                w={"calc(100% + 8px)"}
                 h="full"
+                position={"relative"}
                 bgImage={`url(${item.image})`}
                 bgSize="cover"
-                rounded="xl"
+                rounded="2xl"
                 border="1px solid"
                 borderColor="card-border-1"
                 style={{
                   aspectRatio: "1/1",
                   maxHeight: "400px",
                 }}
-              />
+              >
+                <Flex
+                  flexDirection={"column"}
+                  position={"absolute"}
+                  width={"fit"}
+                  padding={"var(--card-padding)"}
+                  margin={"var(--global-spacing)"}
+                  bgColor={"card-bg-2"}
+                  color={"text-2"}
+                  rounded={"xl"}
+                  overflow={"hidden"}
+                >
+                  <Text fontSize="1.8rem" fontWeight="semibold" color="text-1">
+                    {newsItems[currentIndex].title}
+                  </Text>
+                  <Text
+                    fontSize="1.2rem"
+                    color="text-2"
+                    width={"full"}
+                    lineClamp={4}
+                    textOverflow={"ellipsis"}
+                  >
+                    {newsItems[currentIndex].description}
+                  </Text>
+                </Flex>
+              </Box>
             </motion.div>
           ))}
         </motion.div>
