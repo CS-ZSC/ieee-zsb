@@ -1,10 +1,11 @@
 "use client";
 
 import PageWrapper from "@/components/ui/internal/page-wrapper";
-import { Flex } from "@chakra-ui/react";
+import { Text, Flex, Button } from "@chakra-ui/react";
 import HeroSection from "@/components/ui/internal/home/hero-section";
-import SloganTypingEffect from "@/components/ui/internal/home/slogan-typing-effect";
 import { useWindowType } from "@/hooks/use-window-type";
+import { useRouter } from "next/navigation";
+import { Carousel } from "@/components/ui/internal/carousel";
 import { useEffect, useRef } from "react";
 import Events from "@/components/ui/internal/home/events";
 import Board from "@/components/ui/internal/board";
@@ -13,49 +14,65 @@ import Board from "@/components/ui/internal/board";
 
 export default function Home() {
   const { isDesktop } = useWindowType();
-  const gradientRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const gradientSize = isDesktop ? 300 : 150;
-  const requestRef = useRef<number>(0);
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!containerRef.current || !gradientRef.current) return;
-
-    const containerRect = containerRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - containerRect.left;
-    const mouseY = e.clientY - containerRect.top;
-
-    const isInside =
-      e.clientX >= containerRect.left &&
-      e.clientX <= containerRect.right &&
-      e.clientY >= containerRect.top &&
-      e.clientY <= containerRect.bottom;
-
-    if (isInside) {
-      gradientRef.current.style.opacity = "1";
-      gradientRef.current.style.left = `${mouseX}px`;
-      gradientRef.current.style.top = `${mouseY}px`;
-    } else {
-      gradientRef.current.style.opacity = "0";
-    }
-  };
-
-  useEffect(() => {
-    const currentRequestRef = requestRef;
-
-    window.addEventListener("mousemove", handleMouseMove, { passive: true });
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      if (currentRequestRef.current) {
-        cancelAnimationFrame(currentRequestRef.current);
-      }
-    };
-  }, []);
+  const router = useRouter();
 
   return (
     <PageWrapper>
+      <HeroSection />
       <Flex
+        flexDirection={"column"}
+        padding={"var(--global-spacing)"}
+        gap={"var(--global-spacing)"}
+      >
+        <Flex
+          flexDirection={"column"}
+          alignItems={isDesktop ? "" : "center"}
+          gap={"calc(1.5 * var(--global-spacing))"}
+          bgColor={"card-bg-1"}
+          border={"1px solid"}
+          borderColor={"card-border-1"}
+          p={"var(--card-padding)"}
+          rounded={"2xl"}
+        >
+          <Text color={"text-2"}>
+            A legacy of over 26 years positions IEEE Zagazig University Student
+            Branch (ZSB) as one of the first and most impactful in Egypt. We
+            extend our reach beyond Zagazig University, serving students
+            nationwide through workshops, events, and initiatives that explore
+            technology&apos;s influence on all aspects of life, from its latest
+            applications to its intersection with business in our signature
+            &quot;MUTEX&quot; event, the Delta region&apos;s largest gathering
+            focused on technology and entrepreneurship. Our commitment goes
+            beyond technical expertise, fostering well-rounded graduates through
+            six managerial committees and three technical chapters, alongside
+            the Women In Engineering (WIE) Affinity Group. This comprehensive
+            approach creates a professional environment where students can
+            cultivate essential skills like leadership, teamwork, and
+            management, ensuring they&apos;re prepared for the demands of the
+            modern workforce.
+          </Text>
+          <Button
+            backgroundColor="btn-bg-1"
+            color="btn-text-1"
+            borderRadius="5px"
+            width="fit-content"
+            paddingX={"5"}
+            paddingY={isDesktop ? "5" : "3"}
+            _hover={{ opacity: "0.8" }}
+            onClick={() => router.push("/about")}
+          >
+            More about us
+          </Button>
+        </Flex>
+        <Carousel />
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+          maiores. Consectetur enim fugiat reiciendis dicta facilis, ipsa quis
+          perferendis debitis voluptatibus quibusdam reprehenderit unde eum
+          nemo! Officia temporibus laborum magnam.
+        </div>
+      </Flex>
+
         ref={containerRef}
         flexDirection="column"
         justifyContent="center"
@@ -128,6 +145,7 @@ export default function Home() {
       </Flex>
       <Events />
       <Board />
+
 
     </PageWrapper>
   );
