@@ -21,7 +21,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Provider>
-          <Stack spaceY={"var(--global-spacing)"} margin={"auto"} maxWidth={"3000px"} color={"natural-2"}>
+          <Stack
+            gap={0}
+            margin={"auto"}
+            maxWidth={"3000px"}
+            color={"natural-2"}
+          >
             <Header />
             <AnimatePresence mode="wait">{children}</AnimatePresence>
             <Footer />
