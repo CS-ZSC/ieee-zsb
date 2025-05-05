@@ -34,15 +34,27 @@ export default function Events() {
                             <Text>{ev.description}</Text>
                         </Stack>
 
-                        <HStack>
-                            <Button border={"1px solid"} cursor={"default"} borderRadius={"lg"} borderColor={"chip-border-1"} color={"chip-border-1"} bgColor={"chip-bg-1"}>
+                        <HStack flexWrap={"wrap"} align={"center"}>
+                            <Button
+                                border={"1px solid"}
+                                size={isDesktop ? "lg" : "xs"}
+                                cursor={"default"}
+                                borderRadius={"lg"}
+                                borderColor={"chip-border-1"}
+                                color={"chip-border-1"}
+                                bgColor={"chip-bg-1"}
+                            >
                                 <HiOutlineLocationMarker /> {ev.location}
                             </Button>
                             <Button
                                 border={"1px solid"}
+                                size={isDesktop ? "lg" : "xs"}
                                 cursor={"default"}
                                 borderRadius={"lg"}
-                                color={"chip-border-3"} borderColor={"chip-border-3"} bgColor={"chip-bg-2"}>
+                                color={"chip-border-3"}
+                                borderColor={"chip-border-3"}
+                                bgColor={"chip-bg-2"}
+                            >
                                 <HiOutlineClock /> {ev.time}
                             </Button>
                         </HStack>
