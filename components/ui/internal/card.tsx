@@ -3,7 +3,7 @@ import { Flex, Stack } from "@chakra-ui/react";
 
 export default function Card({ children }: { children: React.ReactNode }) {
     return (
-        <Flex p={"var(--global-spacing)"} w="full" h="full">
+        <Flex w="full" h="full">
             <Stack
                 w="full"
                 align={"center"}
@@ -13,9 +13,8 @@ export default function Card({ children }: { children: React.ReactNode }) {
                 border="1px solid"
                 borderColor="card-border-3"
                 padding="var(--card-padding)"
-                borderRadius={20}
+                rounded={"2xl"}
                 gapY={10}
-                mx={"var(--global-spacing)"}
             >
                 {children}
             </Stack>
