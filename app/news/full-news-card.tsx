@@ -7,7 +7,6 @@ import Tag from "@/components/ui/internal/tag";
 import type { NewsItem } from "@/app/news/news";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useWindowType } from "@/hooks/use-window-type";
-import { newsData } from "./news";
 import { useRouter } from "next/navigation";
 import Description from "./description";
 

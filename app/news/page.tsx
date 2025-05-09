@@ -30,9 +30,7 @@ export default function Page() {
           {isDesktop ? (
             <FullNewsCard newsObject={newsData.highlightedNews} />
           ) : (
-            <Link href={`/news/${newsData.highlightedNews.id}`}>
-              <NewsCard newsObject={newsData.highlightedNews} />
-            </Link>
+            <NewsCard newsObject={newsData.highlightedNews} />
           )}
         </Flex>
       </Flex>

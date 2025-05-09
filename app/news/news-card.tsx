@@ -1,9 +1,12 @@
+"use client";
+
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useWindowType } from "@/hooks/use-window-type";
 import type { NewsItem } from "@/app/news/news";
 import Tag from "@/components/ui/internal/tag";
 import Heading from "@/components/ui/internal/heading";
+import { useRouter } from "next/navigation";
 
 type Props = {
   newsObject: NewsItem;
@@ -11,12 +14,12 @@ type Props = {
 
 export default function NewsCard({ newsObject }: Props) {
   const { isDesktop } = useWindowType();
-
-  function handleNewsCardClick() {}
+  const router = useRouter();
 
   return (
     <Flex
-    //   onClick={handleNewsCardClick}
+      onClick={() => router.push(`/news/${newsObject.id}`)}
+      cursor={"pointer"}
       flexDirection={"column"}
       width="full"
       align={"center"}
