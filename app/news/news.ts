@@ -11,6 +11,7 @@ export interface NewsItem {
   title: string;
   description: string;
   dateCreated: string;
+  author: string;
   tags: string[];
   mainPhoto: string;
   sections: Section[];
@@ -31,7 +32,8 @@ export const newsData: NewsData = {
     title: "Hello from CS",
     description:
       "Computer science is a scientific and practical approach specialized in computing and its applications, the aim of which is to study the feasibility, the structure, and a lot of terms, phrases and algorithms that aim to store and process data and then make connections and presentations to access the required information. Computing, specializing in the computer world, and designing computer systems, which is an important field because it is concerned with Web Development, Mobile Development, Cloud, IOT, Machine Learning, Data Analysis, Networking, and many more.",
-    dateCreated: "2025-05-08",
+    dateCreated: "7 May, 2025",
+    author: "Omar",
     tags: ["AI", "Backend", "Innovation"],
     mainPhoto: "/Fake-Images/4.jpg",
     sections: [
@@ -62,9 +64,10 @@ export const newsData: NewsData = {
       id: 1,
       title: "Hello from CS",
       description:
-        "Welcome to the greatest Chapter in the IEEE ZSB with the passionate coders, developers and engineering having tracks like frontend, backend, mobile development, basic ai, advanced ai, cybersecurity and game development",
-      dateCreated: "2025-05-08",
-      tags: ["AI", "Healthcare", "Innovation"],
+        "Computer science is a scientific and practical approach specialized in computing and its applications, the aim of which is to study the feasibility, the structure, and a lot of terms, phrases and algorithms that aim to store and process data and then make connections and presentations to access the required information. Computing, specializing in the computer world, and designing computer systems, which is an important field because it is concerned with Web Development, Mobile Development, Cloud, IOT, Machine Learning, Data Analysis, Networking, and many more.",
+      dateCreated: "7 May, 2025",
+      author: "Omar",
+      tags: ["AI", "Innovation"],
       mainPhoto: "/Fake-Images/4.jpg",
       sections: [
         {
@@ -93,8 +96,9 @@ export const newsData: NewsData = {
       id: 2,
       title: "Hello from RAS",
       description:
-        "Welcome to the greatest Chapter in the IEEE ZSB with the passionate coders, developers and engineering having tracks like frontend, backend, mobile development, basic ai, advanced ai, cybersecurity and game development",
-      dateCreated: "2025-05-07",
+        "Welcome to the oldest Chapter in the IEEE ZSB with the passionate coders, developers and engineering having tracks like frontend, backend, mobile development, basic ai, advanced ai, cybersecurity and game development",
+      dateCreated: "7 May, 2025",
+      author: "Sherbiny",
       tags: ["Electric Vehicles", "Green Tech"],
       mainPhoto: "/Fake-Images/8.jpg",
       sections: [
