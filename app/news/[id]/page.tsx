@@ -6,10 +6,15 @@ import Heading from "@/components/ui/internal/heading";
 import Description from "@/app/news/description";
 import ImageBox from "../image-box";
 import Tag from "@/components/ui/internal/tag";
+import { use } from "react";
 
-export default async function NewsPage({ params }: { params: { id: string } }) {
-  const newsId = Number(params.id);
-
+export default function NewsPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = use(params);
+  const newsId = Number(id);
   if (isNaN(newsId)) {
     return notFound();
   }

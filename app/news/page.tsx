@@ -8,7 +8,6 @@ import { newsData } from "./news";
 import { useWindowType } from "@/hooks/use-window-type";
 import NewsCard from "./news-card";
 import FullNewsCard from "@/app/news/full-news-card";
-import Link from "next/link";
 
 export default function Page() {
   const { isDesktop } = useWindowType();
