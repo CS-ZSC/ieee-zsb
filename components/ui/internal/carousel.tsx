@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";
 import newsItems from "./news-items";
+import Heading from "@/components/ui/internal/heading";
 
 // const ONE_SECOND = 1000;
 // const AUTO_DELAY = ONE_SECOND * 10;
@@ -268,10 +269,7 @@ function SmallCarousel({
       padding="var(--global-spacing)"
       gap="16px"
     >
-      <Text fontSize="2rem" fontWeight="bold" color="text-3" textAlign="center">
-        News
-      </Text>
-
+      <Heading text={"News"} color="text-3" />
       <Flex
         flexDirection={"column"}
         overflow="hidden"
