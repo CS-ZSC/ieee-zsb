@@ -8,6 +8,7 @@ import { newsData } from "./news";
 import { useWindowType } from "@/hooks/use-window-type";
 import NewsCard from "./news-card";
 import FullNewsCard from "@/app/news/full-news-card";
+import NewsDisplayControl from "./display-control/news-display-control";
 
 export default function Page() {
   const { isDesktop } = useWindowType();
@@ -30,6 +31,14 @@ export default function Page() {
             <FullNewsCard newsObject={newsData.highlightedNews} />
           ) : (
             <NewsCard newsObject={newsData.highlightedNews} />
+          )}
+          <NewsDisplayControl />
+          {newsData.news.map((newsItem) =>
+            isDesktop ? (
+              <FullNewsCard key={newsItem.id} newsObject={newsItem} />
+            ) : (
+              <NewsCard key={newsItem.id} newsObject={newsItem} />
+            )
           )}
         </Flex>
       </Flex>

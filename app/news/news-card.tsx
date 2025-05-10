@@ -20,6 +20,8 @@ export default function NewsCard({ newsObject }: Props) {
     <Flex
       onClick={() => router.push(`/news/${newsObject.id}`)}
       cursor={"pointer"}
+      _hover={{ transform: "scale(0.98)" }}
+      transition="all 0.2s ease-in-out"
       flexDirection={"column"}
       width="full"
       align={"center"}
@@ -50,9 +52,13 @@ export default function NewsCard({ newsObject }: Props) {
         padding={"calc(var(--global-spacing) * 3)"}
       >
         <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
-          <Text color={"text-5"}>{newsObject.dateCreated}</Text>
-          <Tag text={newsObject.tags[0]} />
-          <Tag text={newsObject.tags[1]} />
+          <Text color={"text-5"}>
+            {newsObject.dateCreated} - {newsObject.author}
+          </Text>
+          <Flex flexWrap={"wrap"} gap={2}>
+            <Tag text={newsObject.tags[0]} />
+            {/* <Tag text={newsObject.tags[1]} /> */}
+          </Flex>
         </Flex>
         <Flex>
           <Heading text={newsObject.title} color={"text-2"}></Heading>

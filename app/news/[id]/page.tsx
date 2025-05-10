@@ -7,6 +7,7 @@ import Description from "@/app/news/description";
 import ImageBox from "../image-box";
 import Tag from "@/components/ui/internal/tag";
 import { use } from "react";
+import VerticalDivider from "../vertical-divider";
 
 export default function NewsPage({
   params,
@@ -55,8 +56,8 @@ export default function NewsPage({
             position={"absolute"}
             left={"var(--global-spacing)"}
             bottom={"var(--global-spacing)"}
-            paddingY={"calc(var(--global-spacing) * 0.8)"}
-            paddingX={"calc(var(--global-spacing) * 1.5)"}
+            paddingY={"8px"}
+            paddingX={"15px"}
             rounded={"lg"}
             border={"1px solid"}
             borderColor={"card-border-3"}
@@ -64,12 +65,16 @@ export default function NewsPage({
             justifyContent={"center"}
             alignItems={"center"}
             gap={3}
+            maxWidth={`calc(100% - 2 * var(--global-spacing))`}
           >
             <Text color={"text-4"}>
               {newsItem.dateCreated} - {newsItem.author}
             </Text>
-            <Box height="2.2rem" width="1px" backgroundColor="text-5" />
-            <Tag text={newsItem.tags[0]} />
+            <VerticalDivider />
+            <Flex flexWrap={"wrap"} gap={2}>
+              <Tag text={newsItem.tags[0]} />
+              {/* <Tag text={newsItem.tags[1]} /> */}
+            </Flex>
           </Flex>
         </Box>
 
@@ -84,7 +89,11 @@ export default function NewsPage({
               {section.photo && (
                 <Flex flexDirection={"column"} gap={2}>
                   <ImageBox path={section.photo} maxWidth="600px" />
-                  <Text textAlign={"center"} color={"text-5"}>
+                  <Text
+                    textAlign={"center"}
+                    color={"natural-2"}
+                    opacity={"0.8"}
+                  >
                     Figure {index + 1}: {section.photoDescription}
                   </Text>
                 </Flex>

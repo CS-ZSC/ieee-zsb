@@ -22,6 +22,8 @@ export default function FullNewsCard({ newsObject }: Props) {
       width={"full"}
       cursor={"pointer"}
       onClick={() => router.push(`/news/${newsObject.id}`)}
+      _hover={{ transform: "scale(0.98)" }}
+      transition="all 0.2s ease-in-out"
     >
       <Card>
         <Flex
@@ -38,7 +40,9 @@ export default function FullNewsCard({ newsObject }: Props) {
             paddingLeft={"calc(var(--global-spacing) * 1.5)"}
           >
             <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
-              <Text color={"text-5"}>{newsObject.dateCreated}</Text>
+              <Text color={"text-5"}>
+                {newsObject.dateCreated} - {newsObject.author}
+              </Text>
               <Tag text={newsObject.tags[0]} />
               <Tag text={newsObject.tags[1]} />
             </Flex>
