@@ -1,9 +1,8 @@
 "use client";
 
 import PageWrapper from "@/components/ui/internal/page-wrapper";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import Heading from "@/components/ui/internal/heading";
 import { newsData } from "./news";
 import { useWindowType } from "@/hooks/use-window-type";
 import NewsCard from "./news-card";
@@ -22,24 +21,36 @@ export default function Page() {
         gap={8}
       >
         <Flex flexDirection={"column"} justifyContent={"center"}>
-          <Heading text={newsData.mainTitle} color="natural-2" />
-          <Text textAlign={"center"}>{newsData.mainDescription}</Text>
+          <Flex fontWeight={"bold"} fontSize={"3rem"} justifyContent={"center"}>
+            {newsData.mainTitle}
+          </Flex>
+          <Text textAlign={"center"} fontSize={"1.3rem"}>
+            {newsData.mainDescription}
+          </Text>
         </Flex>
         <Flex flexDirection={"column"} gap={"var(--global-spacing)"}>
           {/* Highlighted News */}
-          {isDesktop ? (
-            <FullNewsCard newsObject={newsData.highlightedNews} />
-          ) : (
-            <NewsCard newsObject={newsData.highlightedNews} />
+          {newsData.news.map((newsItem) =>
+            newsItem.highlightedItem ? (
+              isDesktop ? (
+                <FullNewsCard key={newsItem.id} newsObject={newsItem} />
+              ) : (
+                <NewsCard key={newsItem.id} newsObject={newsItem} />
+              )
+            ) : null
           )}
           <NewsDisplayControl />
-          {newsData.news.map((newsItem) =>
-            isDesktop ? (
-              <FullNewsCard key={newsItem.id} newsObject={newsItem} />
-            ) : (
+          {/* News Cards */}
+          <SimpleGrid
+            columns={isDesktop ? 2 : 1}
+            paddingX={isDesktop ? 20 : "0px"}
+            width={"full"}
+            gap={"var(--global-spacing)"}
+          >
+            {newsData.news.map((newsItem) => (
               <NewsCard key={newsItem.id} newsObject={newsItem} />
-            )
-          )}
+            ))}
+          </SimpleGrid>
         </Flex>
       </Flex>
     </PageWrapper>

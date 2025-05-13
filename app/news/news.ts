@@ -8,6 +8,7 @@ export interface Section {
 
 export interface NewsItem {
   id: number;
+  highlightedItem?: boolean;
   title: string;
   description: string;
   dateCreated: string;
@@ -20,48 +21,17 @@ export interface NewsItem {
 export interface NewsData {
   mainTitle: string;
   mainDescription: string;
-  highlightedNews: NewsItem;
   news: NewsItem[];
 }
+
+let idCounter: number = 1;
 
 export const newsData: NewsData = {
   mainTitle: "News",
   mainDescription: "Discover the latest news about us!",
-  highlightedNews: {
-    id: 3,
-    title: "Penguins Shine in MATE ROV Egypt Competition 2025",
-    description:
-      "Our team, Penguins, proudly participated in the MATE ROV Egypt Regional Competition at AASTMT and achieved remarkable success, winning 3rd Place in the Pioneer Class among teams from across Egypt, along with the Best Team Spirit and Best Marketing Display awards. This accomplishment came after three months of dedicated effort, with 28 committed engineering students from various departments working together with high levels of passion, collaboration, and perseverance.",
-    dateCreated: "26 April, 2025",
-    author: "Ahmed Elsherbiny",
-    tags: ["General", "Competitions", "Innovation"],
-    mainPhoto: "/News/mate-rov/1.png",
-    sections: [
-      {
-        id: 1,
-        heading: "Penguins Team Formation",
-        descriptions: [
-          "Our team is led by a group of dedicated members, each with a clear role. The CEO keeps everyone aligned and focused, making sure things run smoothly. The CTO leads the technical side, helping build and improve the ROV. The CAO keeps us organized, handling schedules and team coordination. The CFO takes care of our budget and works on getting sponsorships. The Accounting Manager manages our financial records and ensures everything is tracked accurately. The PR Leader handles communication with judges, sponsors, and other teams, while the Marketing & Media Leader shares our journey through social media, videos, and design. Together, we make a strong, balanced team.",
-          "The technical team is divided into three specialized sub-teams, each responsible for a key area of the ROV's development. The Mechanical Team designs the frame, enclosure, and buoyancy, ensuring the ROV is both durable and functional. The Electrical Team handles the power system, circuits, sensors, and PCB containment, ensuring the ROV operates efficiently and reliably. The Software Team focuses on image processing with the ROV’s cameras, developing the GUI for user-friendly operation, and creating control systems to enhance the ROV’s maneuverability and performance. Together, these three teams form the backbone of the ROV's technical capabilities.",
-        ],
-        photo: "/News/mate-rov/2.png",
-        photoDescription: "Penguins Team.",
-      },
-      {
-        id: 2,
-        heading: "Artificial Intelligence",
-        descriptions: [
-          "In the AI track, we are learning the foundational skills in Python programming essential for AI development. We are learning comprehensive data preparation, cleaning, visualization, and advanced processing techniques. We are creating robust data models and programming machines for autonomous decision-making. We are exploring advanced neural network algorithms enabling autonomous learning and adaptation. This track provided essential skills in Python programming, data analysis, machine learning, and deep learning, empowering us to innovate in AI applications across diverse industries.",
-          "In the Mobile Application Development track, we are learning the foundational skills in mobile programming languages like Swift for iOS or Flutter for cross-platform development. We are learning comprehensive techniques for designing intuitive and user-friendly mobile interfaces. We are exploring popular mobile frameworks such as Flutter or React Native for cross-platform development. We are understanding the process of deploying mobile applications to app stores and managing updates. This track provided essential skills in mobile programming, UI design, mobile frameworks, and app deployment, empowering us to develop and launch innovative mobile applications across various platforms.",
-        ],
-        photo: "/News/mate-rov/3.png",
-        photoDescription: "Penguins Awards",
-      },
-    ],
-  },
   news: [
     {
-      id: 1,
+      id: idCounter++,
       title: "Hello from CS",
       description:
         "Computer science is a scientific and practical approach specialized in computing and its applications, the aim of which is to study the feasibility, the structure, and a lot of terms, phrases and algorithms that aim to store and process data and then make connections and presentations to access the required information. Computing, specializing in the computer world, and designing computer systems, which is an important field because it is concerned with Web Development, Mobile Development, Cloud, IOT, Machine Learning, Data Analysis, Networking, and many more.",
@@ -93,48 +63,18 @@ export const newsData: NewsData = {
       ],
     },
     {
-      id: 2,
-      title: "Hello from RAS",
-      description:
-        "Welcome to the oldest Chapter in the IEEE ZSB with the passionate coders, developers and engineering having tracks like frontend, backend, mobile development, basic ai, advanced ai, cybersecurity and game development",
-      dateCreated: "7 May, 2025",
-      author: "Ahmed Elsherbiny",
-      tags: ["RAS"],
-      mainPhoto: "/Fake-Images/8.jpg",
-      sections: [
-        {
-          id: 1,
-          heading: "Fast Charging Tech",
-          descriptions: [
-            "New EV models can now charge to 80% in under 10 minutes.",
-            "Battery manufacturers are collaborating with automakers to deploy high-speed charging stations.",
-          ],
-          photo: "/Fake-Images/7.jpg",
-          photoDescription:
-            "A new generation EV plugged into a high-speed charger.",
-        },
-        {
-          id: 2,
-          heading: "Industry Impact",
-          descriptions: [
-            "Automakers are rapidly adopting this tech to improve road trip convenience.",
-            "This shift could significantly reduce range anxiety among consumers.",
-          ],
-        },
-      ],
-    },
-    {
-      id: 3,
+      id: idCounter++,
+      highlightedItem: true,
       title: "Penguins Shine in MATE ROV Egypt Competition 2025",
       description:
         "Our team, Penguins, proudly participated in the MATE ROV Egypt Regional Competition at AASTMT and achieved remarkable success, winning 3rd Place in the Pioneer Class among teams from across Egypt, along with the Best Team Spirit and Best Marketing Display awards. This accomplishment came after three months of dedicated effort, with 28 committed engineering students from various departments working together with high levels of passion, collaboration, and perseverance.",
       dateCreated: "26 April, 2025",
       author: "Ahmed Elsherbiny",
-      tags: ["General", "Competitions", "Innovation"],
+      tags: ["Competitions"],
       mainPhoto: "/News/mate-rov/1.png",
       sections: [
         {
-          id: 1,
+          id: 0,
           heading: "Penguins Team Formation",
           descriptions: [
             "Our team is led by a group of dedicated members, each with a clear role. The CEO keeps everyone aligned and focused, making sure things run smoothly. The CTO leads the technical side, helping build and improve the ROV. The CAO keeps us organized, handling schedules and team coordination. The CFO takes care of our budget and works on getting sponsorships. The Accounting Manager manages our financial records and ensures everything is tracked accurately. The PR Leader handles communication with judges, sponsors, and other teams, while the Marketing & Media Leader shares our journey through social media, videos, and design. Together, we make a strong, balanced team.",
@@ -144,174 +84,146 @@ export const newsData: NewsData = {
           photoDescription: "Penguins Team.",
         },
         {
-          id: 2,
-          heading: "Artificial Intelligence",
+          id: 1,
+          heading: "What is Egypt ROV competition?",
           descriptions: [
-            "In the AI track, we are learning the foundational skills in Python programming essential for AI development. We are learning comprehensive data preparation, cleaning, visualization, and advanced processing techniques. We are creating robust data models and programming machines for autonomous decision-making. We are exploring advanced neural network algorithms enabling autonomous learning and adaptation. This track provided essential skills in Python programming, data analysis, machine learning, and deep learning, empowering us to innovate in AI applications across diverse industries.",
-            "In the Mobile Application Development track, we are learning the foundational skills in mobile programming languages like Swift for iOS or Flutter for cross-platform development. We are learning comprehensive techniques for designing intuitive and user-friendly mobile interfaces. We are exploring popular mobile frameworks such as Flutter or React Native for cross-platform development. We are understanding the process of deploying mobile applications to app stores and managing updates. This track provided essential skills in mobile programming, UI design, mobile frameworks, and app deployment, empowering us to develop and launch innovative mobile applications across various platforms.",
+            "MATE Egypt ROV competition is an annual regional competition held at the Arab Academy for Science, Technology and Maritime Transport (AASTMT) for undergraduates interested in remotely operated underwater vehicles (ROVs). These ROVs perform specific underwater missions according to the competition rules and guidelines. The competition was first launched in 2012 by Delta Square International LLC in association with AASTMT.",
+            "This competition serves as a regional qualifier for the international competition organized by the Marine Advanced Technology Education (MATE) Center and MATE Inspiration for Innovation, where winning teams represent Egypt at the MATE International ROV Competition.",
           ],
           photo: "/News/mate-rov/3.png",
           photoDescription: "Penguins Awards",
         },
+        {
+          id: 2,
+          heading: "What is ROV?",
+          descriptions: [
+            "A Remotely Operated underwater Vehicle (ROV) is a tethered mobile robot commonly used to perform dangerous missions in submarine industries such as offshore hydrocarbon extraction and subsea installations, as well as in military and scientific services. Due to its sophisticated design, an ROV can maneuver efficiently in deep ocean environments.",
+            "ROVs use thrusters for movement and rely on sensory systems to make informed decisions during missions. These systems may include LIDAR, SONAR, or cameras to provide vision and spatial awareness.",
+          ],
+        },
       ],
     },
     {
-      id: 4,
-      title: "RAS Workshop: Robotics for Beginners",
+      id: idCounter++,
+      title: "Robotiva Finals Triumph",
       description:
-        "Our RAS chapter successfully conducted the 'Robotics for Beginners' workshop, introducing participants to the fundamentals of robotics through engaging sessions and hands-on practice. Over two days, attendees explored sensors, actuators, and microcontrollers, building simple robots and gaining valuable insights into embedded systems. The event fostered teamwork, curiosity, and innovation, inspiring many students to pursue further learning in robotics.",
-      dateCreated: "2 May, 2025",
-      author: "Ahmed Elsherbiny",
-      tags: ["RAS"],
-      mainPhoto: "/News/mate-rov/1.png",
+        "Our IEEE RAS chapter sent five teams to the prestigious Robotiva competition, and all five teams made it to the finals! With SOUL winning 1st place and Intellibots securing 2nd, RAS once again proved that dedication, teamwork, and relentless learning lead to excellence. This victory isn't just a trophy—it's a statement of what we stand for.",
+      dateCreated: "27 Feb, 2025",
+      author: "Marwan Tamer",
+      tags: ["RAS", "Robotiva", "Competition"],
+      mainPhoto: "/Fake-Images/5.jpg",
       sections: [
         {
-          id: 1,
-          heading: "Workshop Overview",
+          id: 0,
+          heading: "A Competition That Put Us to the Test",
           descriptions: [
-            "The workshop began with an introduction to the basics of robotics, covering essential components such as sensors, motors, microcontrollers, and the logic behind robotic movement. Through engaging presentations and interactive demonstrations, participants were able to grasp the core concepts in a short time.",
-            "Participants were divided into teams, allowing for collaborative learning and practical application. Using Arduino-based kits, they built simple line-following and obstacle-avoiding robots. Mentors from the RAS team guided each group, answering questions and helping troubleshoot technical issues.",
+            "Robotiva wasn’t just any competition—it was a proving ground for creativity, engineering skill, and realworld problem solving. The challenge tasked participants with building a fully functional robot that could handle three distinct missions: line following, obstacle avoidance, and a pick-and-place task using a robotic arm. Each functionality required tight integration between hardware and software, and every team had to deal with sensor calibration issues, motor control precision, path-planning logic, and gripper mechanics.",
+            "From electrical noise on sensor inputs to debugging edge cases in autonomous logic, the teams faced wave after wave of technical hurdles. But as always—this is RAS. We don’t back down from problems; we grow stronger because of them. Each team worked tirelessly, sharing designs, testing day and night, and fine-tuning their code to meet competition standards. The result? Five finalist teams from one chapter—a statistic that speaks volumes.",
           ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Hands-on robot building session.",
+        },
+        {
+          id: 1,
+          heading: "Meet the Winners: SOUL and Intellibots",
+          descriptions: [
+            "Among the five RAS finalist teams, two rose above the rest. SOUL, led by a core of experienced members, demonstrated flawless execution across all three challenges. Their robot maintained steady performance with highly optimized PID control and an impressively stable robotic arm mechanism. Their design was not just technically superior, but also elegant—earning praise from both judges and spectators alike",
+            "Intellibots , on the other hand, stood out for their advanced path-planning algorithms and robust error-handling capabilities. Their robot showed remarkable resilience under pressure, with quick adaptations mid-run that reflected the team’s deep understanding of both hardware constraints and real-time software logic. These two victories mark a historical achievement for our chapter and set a new benchmark for future competitions.",
+          ],
+          photo: "/News/robotiva/soul.jpg",
+          photoDescription: "Soul Team",
         },
         {
           id: 2,
-          heading: "Impact and Future Plans",
+          heading: "More Than Just Winners",
           descriptions: [
-            "The success of this workshop highlighted the growing interest in robotics among students. Many participants expressed a desire to continue learning and join the RAS chapter’s upcoming projects and competitions.",
-            "Moving forward, the RAS team plans to launch an intermediate robotics track, focusing on autonomous systems, computer vision, and participation in national robotics competitions. The team is committed to building a strong robotics community within the university.",
+            "While the podium finishes are worth celebrating, the true success lies in the journey. Every RAS participant walked away with real engineering experience—learning not just how to build robots, but how to work under pressure, debug collaboratively, and face failure with determination.",
+            "From late-night brainstorming sessions to emergency soldering repairs, this experience became a high-impact learning ground. These lessons were shared throughout the chapter—transforming mistakes into mentorship and individual struggles into collective growth. The effects were clear during later events like The Rockies Final Competition, where the influence of Robotiva showed in the confidence, preparedness, and innovation of our members.",
           ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Group photo with participants and mentors.",
+          photo: "/News/robotiva/soul.jpg",
+          photoDescription: "Intellibots Team",
         },
       ],
     },
     {
-      id: 5,
-      title: "CS Bootcamp: Full-Stack Web Development",
+      id: idCounter++,
+      title: "Introducing Our First-Ever PCB Track",
       description:
-        "The CS committee recently held a two-week bootcamp focused on full-stack web development. Participants were guided through modern technologies including React, Node.js, MongoDB, and REST APIs. By the end, each team had deployed a fully functional web application, gaining practical experience in team-based software development.",
-      dateCreated: "29 April, 2025",
-      author: "Ahmed Elsherbiny",
-      tags: ["CS"],
-      mainPhoto: "/News/mate-rov/1.png",
+        "This season marks the launch of our brand-new PCB track—a major milestone for the IEEE RAS chapter. Recognizing the growing importance of PCB design in robotics and hardware development, we opened this track to empower our members with vital skills needed to build complete electronic systems.",
+      dateCreated: "4 Mar, 2025",
+      author: "Marwan Tamer",
+      tags: ["RAS", "PCB", "New Track"],
+      mainPhoto: "/Fake-Images/7.jpg",
       sections: [
         {
-          id: 1,
-          heading: "Comprehensive Curriculum",
+          id: 0,
+          heading: "Why a PCB Track",
           descriptions: [
-            "The bootcamp covered HTML, CSS, and JavaScript fundamentals, followed by React for frontend development. Participants learned how to structure modern frontend applications and manage component state effectively.",
-            "Backend sessions introduced Express.js and MongoDB, teaching students how to build RESTful APIs, manage databases, and implement user authentication.",
+            "As our chapter took on increasingly complex robotics challenges, especially in competitions like ROV and autonomous navigation, it became clear that we needed to strengthen our internal hardware capabilities. Software and mechanical designs alone couldn’t complete the picture—real-world systems rely heavily on robust, compact, and optimized electronic boards to tie everything together. This need gave birth to our PCB track.",
+            "The track was envisioned as a space for members to master circuit theory, schematic design, PCB layout, and even delve into aspects like electromagnetic compatibility and thermal management. By launching it, we unlocked new potential: members can now design and fabricate custom boards instead of relying on off-the-shelf components, giving our chapter a major competitive advantage in building efficient, mission-ready robotic systems.",
           ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Team coding session.",
         },
         {
-          id: 2,
-          heading: "Demo Day and Outcomes",
+          id: 1,
+          heading: "Looking Ahead",
           descriptions: [
-            "Teams showcased their projects on the final day, receiving feedback from a panel of experienced developers. Projects included task managers, event planning tools, and educational platforms.",
-            "The bootcamp concluded with certificates and internship opportunities for outstanding performers.",
+            "This track isn’t just a one-time experiment. It’s an investment in our future. We aim to integrate PCB designers into every major project—from autonomous bots to underwater vehicles—ensuring close collaboration with embedded systems and mechanical teams.",
+            "Over time, we plan to introduce advanced modules such as multilayer PCB design, high-speed signal handling, and power electronics. With mentorship, real-world use cases, and access to fabrication resources, this track will empower members to become fully capable electronics engineers, contributing to competitions and even entrepreneurial initiatives from within the chapter.",
           ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Project presentations.",
         },
       ],
     },
     {
-      id: 6,
-      title: "PES Energy Hackathon 2025",
+      id: idCounter++,
+      title: "Hands-On PCB Workshops: From Schematic to Soldering",
       description:
-        "The PES chapter hosted a 48-hour Energy Hackathon, inviting students to develop innovative solutions for sustainable energy challenges. With themes like smart grids, renewable integration, and energy-efficient systems, the event encouraged collaboration and real-world problem-solving.",
-      dateCreated: "21 April, 2025",
-      author: "Ahmed Elsherbiny",
-      tags: ["PES"],
-      mainPhoto: "/News/mate-rov/1.png",
-      sections: [
-        {
-          id: 1,
-          heading: "Hackathon Themes and Mentorship",
-          descriptions: [
-            "Participants could choose from several energy-focused challenges. Mentors from industry and academia guided teams through ideation, feasibility analysis, and prototyping.",
-            "Workshops on IoT, renewable energy data analysis, and simulation tools like MATLAB and Simulink supported the development process.",
-          ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Mentorship in action.",
-        },
-        {
-          id: 2,
-          heading: "Awards and Recognition",
-          descriptions: [
-            "Winning teams were recognized for their innovation and technical execution. The top solution proposed an AI-powered load management system for small-scale solar farms.",
-            "Participants left the event with new skills, contacts, and ideas for future energy projects.",
-          ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Winners with judges.",
-        },
-      ],
-    },
-    {
-      id: 7,
-      title: "IEEE Committees Induction Day 2025",
-      description:
-        "To welcome new members and introduce them to IEEE's vibrant community, the Committees organized an Induction Day featuring presentations, networking sessions, and interactive booths for each committee. New students explored opportunities in technical development, event planning, and leadership roles.",
-      dateCreated: "15 April, 2025",
-      author: "Ahmed Elsherbiny",
-      tags: ["Committees"],
-      mainPhoto: "/News/mate-rov/1.png",
-      sections: [
-        {
-          id: 1,
-          heading: "Interactive Booths and Presentations",
-          descriptions: [
-            "Each committee prepared booths showcasing their recent activities and future plans. Attendees interacted with seniors, learned about past events, and signed up for interviews.",
-            "Live presentations introduced the structure of IEEE, benefits of joining, and the impact of student-led initiatives.",
-          ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Committee booths.",
-        },
-        {
-          id: 2,
-          heading: "Team Building and Future Planning",
-          descriptions: [
-            "New members participated in icebreaker games and group activities designed to foster team spirit. Organizers emphasized collaboration, creativity, and communication as key values for success in IEEE.",
-            "Future training sessions and project kickoffs were announced to keep the momentum going.",
-          ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "New members networking.",
-        },
-      ],
-    },
-    {
-      id: 8,
-      title: "WIE Panel: Women Leading Innovation",
-      description:
-        "WIE organized a thought-provoking panel titled 'Women Leading Innovation,' bringing together engineers, researchers, and tech leaders to share their experiences and discuss the importance of diversity in engineering. The session highlighted the roles of women in advancing technology and breaking stereotypes.",
+        "To support our new PCB track, we conducted a series of practical workshops that walked members through the complete process of electronics development—from schematics to final soldered prototypes. These workshops were a major stepping stone in cultivating in-house hardware expertise in the IEEE RAS chapter.",
       dateCreated: "1 May, 2025",
-      author: "Ahmed Elsherbiny",
-      tags: ["WIE"],
-      mainPhoto: "/News/mate-rov/1.png",
+      author: "Marwan Tamer",
+      tags: ["RAS", "PCB", "Workshops"],
+      mainPhoto: "/Fake-Images/8.jpg",
       sections: [
         {
-          id: 1,
-          heading: "Panel Highlights",
+          id: 0,
+          heading: "Session Content",
           descriptions: [
-            "Speakers discussed their career journeys, challenges faced, and strategies to overcome them. Topics included leadership in STEM, fostering inclusivity, and promoting female role models in tech.",
-            "The session emphasized the importance of mentorship and building supportive communities for aspiring women engineers.",
+            "The workshop series was carefully structured to simulate the full product design lifecycle. We started with an introduction to schematic design using Altium Designer, where members learned how to build circuits using verified libraries, manage net connections, and plan their power distribution logic. The workshops then progressed to PCB layout, where topics like trace routing strategies, ground plane optimization, and design rules for manufacturability (DRM) were tackled hands-on.",
+            "Members explored both single-layer and double-layer board configurations, gained exposure to layout tools and DRC checks, and understood how board geometry affects signal integrity and thermal performance. Each participant worked on designing a functioning circuit—such as a sensor interface, power regulator module, or basic microcontroller breakout. After completing the design, we simulated manufacturing constraints and prepared files for fabrication. The sessions concluded with real soldering practice using those very boards, giving members tactile experience in hardware assembly and debugging.",
           ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "WIE panel in session.",
         },
         {
-          id: 2,
-          heading: "Student Reflections",
+          id: 1,
+          heading: "Member Experience",
           descriptions: [
-            "Attendees shared their takeaways, noting increased motivation and confidence to pursue leadership roles and tech initiatives.",
-            "The event concluded with networking opportunities, encouraging collaboration across gender and disciplines.",
+            "For many participants, this was their first time moving from theory to a fully fabricated electronic board. The excitement of seeing their designs come to life—physically soldered and powered—was unmatched. They encountered and overcame real-world problems like component selection mismatches, pad misalignments, and short-circuit detection.",
+            "This hands-on journey didn’t just teach design principles; it also fostered critical engineering soft skills such as documentation, revision control, teamwork, and debugging under time constraints. With these workshops, we created the first generation of homegrown PCB designers in the chapter, laying a foundation for future innovation and leadership in hardware development.",
           ],
-          photo: "/News/mate-rov/1.png",
-          photoDescription: "Networking after the panel.",
+        },
+      ],
+    },
+    {
+      id: idCounter++,
+      title: "Embedded Systems Masterclass with Eng. Mamdouh",
+      description:
+        "To push our embedded systems learning to the next level, we invited Eng. Mamdouh, a senior embedded software engineer at Arrow Electronics, to host a deep-dive session into practical embedded systems development. This was one of the most anticipated events in our technical calendar, bridging the gap between academic knowledge and real-world embedded applications.",
+      dateCreated: "19 April, 2025",
+      author: "Marwan Tamer",
+      tags: ["RAS", "Embedded Systems", "Guest Speaker"],
+      mainPhoto: "/News/embedded-session/1.jpg",
+      sections: [
+        {
+          id: 0,
+          heading: "Industry Insight from Arrow Electronics",
+          descriptions: [
+            "Eng. Mamdouh brought a wealth of industry experience from his work in embedded product development and microcontroller integration at Arrow Electronics. His session didn’t just focus on textbooks—it was built on years of real-world firmware development, system debugging, and embedded software optimization.",
+            "He walked our members through the life cycle of an embedded project: starting from system requirement analysis, hardware-software interfacing, RTOS basics, and moving up to testing strategies for real-time systems. He also shared stories from major commercial projects, highlighting how embedded systems form the backbone of devices across automotive, industrial, and IoT applications.",
+          ],
+        },
+        {
+          id: 1,
+          heading: "What Our Members Gained",
+          descriptions: [
+            "Participants were deeply engaged throughout the session. They asked questions about low-level memory management, interrupt-driven design, and integrating embedded systems with high-level applications. Eng. Mamdouh responded with clear, actionable explanations—demonstrating debugging tools, IDE tricks, and peripheral handling strategies that are often overlooked in university curriculums.",
+            "By the end of the session, members not only understood how embedded systems operate in professional environments, but also walked away with a clearer roadmap on how to grow into embedded engineering careers. This session served as both inspiration and a technical boost, energizing our track as we prepare for more advanced projects and national competitions",
+          ],
         },
       ],
     },

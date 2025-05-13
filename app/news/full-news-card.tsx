@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Heading from "@/components/ui/internal/heading";
 import Card from "@/components/ui/internal/card";
 import Tag from "@/components/ui/internal/tag";
 import type { NewsItem } from "@/app/news/news";
@@ -27,7 +26,7 @@ export default function FullNewsCard({ newsObject }: Props) {
     >
       <Card>
         <Flex
-          flexDirection={isDesktop ? "row" : "column"}
+          flexDirection={"row"}
           justifyContent={"space-between"}
           width={"full"}
           gap={10}
@@ -36,7 +35,7 @@ export default function FullNewsCard({ newsObject }: Props) {
             flexDirection={"column"}
             gap={isDesktop ? 2 : 1}
             justifyContent={"center"}
-            maxWidth={"50%"}
+            maxWidth={"40%"}
             paddingLeft={"calc(var(--global-spacing) * 1.5)"}
           >
             <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
@@ -44,17 +43,23 @@ export default function FullNewsCard({ newsObject }: Props) {
                 {newsObject.dateCreated} - {newsObject.author}
               </Text>
               <Tag text={newsObject.tags[0]} />
-              <Tag text={newsObject.tags[1]} />
             </Flex>
             <Flex>
-              <Heading text={newsObject.title} color={"text-2"}></Heading>
+              <Text
+                fontSize="2rem"
+                fontWeight="bold"
+                color={"text-2"}
+                textAlign="left"
+              >
+                {newsObject.title}
+              </Text>
             </Flex>
-            <Description description={newsObject.description} />
+            <Description description={newsObject.description} lineClamp="8" />
           </Flex>
           <Box
-            width={"700px"}
-            h="full"
-            position={"relative"}
+            width="100%"
+            maxWidth="60%"
+            position="relative"
             bgImage={`url(${newsObject.mainPhoto})`}
             bgSize="cover"
             rounded="2xl"

@@ -5,12 +5,14 @@ interface DescriptionProps {
   description: string;
   color?: string;
   maxWidth?: string;
+  lineClamp?: string;
 }
 
 export default function Description({
   description,
   color = "text-2",
   maxWidth = "1000px",
+  lineClamp = "inherit"
 }: DescriptionProps) {
   return (
     <Text
@@ -18,7 +20,7 @@ export default function Description({
       fontWeight={"light"}
       color={color}
       lineHeight={"1.8"}
-      lineClamp={8}
+      lineClamp={lineClamp}
       textOverflow={"ellipsis"}
       maxWidth={maxWidth}
     >

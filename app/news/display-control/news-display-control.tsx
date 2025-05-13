@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Grid, Input } from "@chakra-ui/react";
+import { Flex, Grid } from "@chakra-ui/react";
 import Category from "./category";
 import Search from "./Search";
 
@@ -28,17 +28,6 @@ export default function NewsDisplayControl() {
       <Category text={"All News"} />
       <Flex gridArea="search">
         <Search />
-        {/* <Input
-          placeholder="Search"
-          width="full"
-          color={"text-4"}
-          outline={"none"}
-          border="1px solid"
-          borderColor="card-border-3"
-          padding="calc(var(--card-padding) / 1.5)"
-          rounded={"xl"}
-          fontSize={"lg"}
-        /> */}
       </Flex>
       <Flex justifyContent={"flex-end"} gridArea="actions" gap={2}>
         Helllo

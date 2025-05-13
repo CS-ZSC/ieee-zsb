@@ -5,8 +5,8 @@ import React from "react";
 import { useWindowType } from "@/hooks/use-window-type";
 import type { NewsItem } from "@/app/news/news";
 import Tag from "@/components/ui/internal/tag";
-import Heading from "@/components/ui/internal/heading";
 import { useRouter } from "next/navigation";
+import Description from "./description";
 
 type Props = {
   newsObject: NewsItem;
@@ -24,8 +24,7 @@ export default function NewsCard({ newsObject }: Props) {
       transition="all 0.2s ease-in-out"
       flexDirection={"column"}
       width="full"
-      align={"center"}
-      justify={"center"}
+      alignItems={"center"}
       bgColor={"card-bg-3"}
       color={"white"}
       border="1px solid"
@@ -34,7 +33,6 @@ export default function NewsCard({ newsObject }: Props) {
     >
       <Box
         width="full"
-        height="full"
         position={"relative"}
         bgImage={`url(${newsObject.mainPhoto})`}
         bgSize="cover"
@@ -49,7 +47,7 @@ export default function NewsCard({ newsObject }: Props) {
         flexDirection={"column"}
         gap={isDesktop ? 2 : 1}
         justifyContent={"center"}
-        padding={"calc(var(--global-spacing) * 3)"}
+        padding={"calc(var(--card-padding) * 1.1)"}
       >
         <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
           <Text color={"text-5"}>
@@ -61,18 +59,21 @@ export default function NewsCard({ newsObject }: Props) {
           </Flex>
         </Flex>
         <Flex>
-          <Heading text={newsObject.title} color={"text-2"}></Heading>
+          <Text
+            fontSize="2rem"
+            fontWeight="bold"
+            color={"text-2"}
+            textAlign="left"
+          >
+            {newsObject.title}
+          </Text>
         </Flex>
-        <Text
-          fontSize={"lg"}
-          fontWeight={"light"}
+        <Description
           color={"text-2"}
-          lineHeight={"1.8"}
-          lineClamp={8}
-          textOverflow={"ellipsis"}
-        >
-          {newsObject.description}
-        </Text>
+          lineClamp={isDesktop ? "4" : "8"}
+          maxWidth="auto"
+          description={newsObject.description}
+        ></Description>
       </Flex>
     </Flex>
   );

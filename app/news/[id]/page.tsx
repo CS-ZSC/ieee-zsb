@@ -22,6 +22,7 @@ export default function NewsPage({
 
   const allNews = newsData.news;
   const newsItem = allNews.find((item) => item.id === newsId);
+  let photoCounter = 1;
 
   if (!newsItem) {
     return notFound();
@@ -33,58 +34,63 @@ export default function NewsPage({
         justifyContent={"center"}
         flexDirection={"column"}
         padding={"var(--global-spacing)"}
-        gap={"calc(var(--card-padding) * 1.5)"}
+        gap={"calc(var(--global-spacing) * 3)"}
         maxWidth={"1050px"}
         mx={"auto"}
       >
-        <Heading text={newsItem.title} color="natural-2" />
-        <Box
-          width={"full"}
-          maxWidth={"850px"}
-          mx={"auto"}
-          position={"relative"}
-          bgImage={`url(${newsItem.mainPhoto})`}
-          bgSize="cover"
-          rounded="2xl"
-          border="1px solid"
-          borderColor="card-border-1"
-          style={{
-            aspectRatio: "16/9",
-          }}
+        <Flex
+          justifyContent={"center"}
+          flexDirection={"column"}
+          gap={"calc(var(--global-spacing) * 1.5)"}
         >
-          <Flex
-            position={"absolute"}
-            left={"var(--global-spacing)"}
-            bottom={"var(--global-spacing)"}
-            paddingY={"8px"}
-            paddingX={"15px"}
-            rounded={"lg"}
-            border={"1px solid"}
-            borderColor={"card-border-3"}
-            backgroundColor={"card-bg-3"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            gap={3}
-            maxWidth={`calc(100% - 2 * var(--global-spacing))`}
+          <Heading text={newsItem.title} color="natural-2" />
+          <Box
+            width={"full"}
+            // maxWidth={"850px"}
+            mx={"auto"}
+            position={"relative"}
+            bgImage={`url(${newsItem.mainPhoto})`}
+            bgSize="cover"
+            rounded="2xl"
+            border="1px solid"
+            borderColor="card-border-1"
+            style={{
+              aspectRatio: "16/9",
+            }}
           >
-            <Text color={"text-4"}>
-              {newsItem.dateCreated} - {newsItem.author}
-            </Text>
-            <VerticalDivider />
-            <Flex flexWrap={"wrap"} gap={2}>
-              <Tag text={newsItem.tags[0]} />
-              {/* <Tag text={newsItem.tags[1]} /> */}
+            <Flex
+              position={"absolute"}
+              left={"var(--global-spacing)"}
+              bottom={"var(--global-spacing)"}
+              paddingY={"8px"}
+              paddingX={"15px"}
+              rounded={"lg"}
+              border={"1px solid"}
+              borderColor={"card-border-3"}
+              backgroundColor={"card-bg-3"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              gap={3}
+              maxWidth={`calc(100% - 2 * var(--global-spacing))`}
+            >
+              <Text color={"text-4"}>
+                {newsItem.dateCreated} - {newsItem.author}
+              </Text>
+              <VerticalDivider />
+              <Flex flexWrap={"wrap"} gap={2}>
+                <Tag text={newsItem.tags[0]} />
+                {/* <Tag text={newsItem.tags[1]} /> */}
+              </Flex>
             </Flex>
-          </Flex>
-        </Box>
+          </Box>
 
-        <Description
-          description={newsItem.description}
-          color={"natural-2"}
-          maxWidth="1050px"
-        />
-        <Flex flexDirection={"column"} gap={"calc(var(--global-spacing) * 4)"}>
-          {newsItem.sections.map((section, index) => (
+          <Description
+            description={newsItem.description}
+            color={"natural-2"}
+            maxWidth="1050px"
+          />
+        </Flex>
+          {newsItem.sections.map((section) => (
             <div key={section.id}>
               {section.photo && (
                 <Flex flexDirection={"column"} gap={2}>
@@ -93,17 +99,13 @@ export default function NewsPage({
                     textAlign={"center"}
                     color={"natural-2"}
                     opacity={"0.8"}
+                    marginBottom={4}
                   >
-                    Figure {index + 1}: {section.photoDescription}
+                    Figure {photoCounter++}: {section.photoDescription}
                   </Text>
                 </Flex>
               )}
-              <Text
-                fontWeight={"bold"}
-                fontSize={"1.4rem"}
-                marginTop={6}
-                marginBottom={2}
-              >
+              <Text fontWeight={"bold"} fontSize={"1.4rem"} marginBottom={2}>
                 {section.heading}
               </Text>
               <Flex flexDirection={"column"} fontSize={"2rem"} gap={4}>
@@ -118,7 +120,6 @@ export default function NewsPage({
               </Flex>
             </div>
           ))}
-        </Flex>
       </Flex>
     </PageWrapper>
   );
