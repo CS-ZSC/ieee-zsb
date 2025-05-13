@@ -138,7 +138,7 @@ export const newsData: NewsData = {
             "While the podium finishes are worth celebrating, the true success lies in the journey. Every RAS participant walked away with real engineering experience—learning not just how to build robots, but how to work under pressure, debug collaboratively, and face failure with determination.",
             "From late-night brainstorming sessions to emergency soldering repairs, this experience became a high-impact learning ground. These lessons were shared throughout the chapter—transforming mistakes into mentorship and individual struggles into collective growth. The effects were clear during later events like The Rockies Final Competition, where the influence of Robotiva showed in the confidence, preparedness, and innovation of our members.",
           ],
-          photo: "/News/robotiva/soul.jpg",
+          photo: "/News/robotiva/intellibots.jpg",
           photoDescription: "Intellibots Team",
         },
       ],
