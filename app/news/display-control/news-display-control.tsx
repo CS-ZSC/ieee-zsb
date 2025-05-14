@@ -2,6 +2,9 @@ import React from "react";
 import { Flex, Grid } from "@chakra-ui/react";
 import Category from "./category";
 import Search from "./Search";
+import { Icon } from "@iconify/react";
+import VerticalDivider from "../vertical-divider";
+import Filter from "./filter";
 
 export default function NewsDisplayControl() {
   return (
@@ -10,7 +13,7 @@ export default function NewsDisplayControl() {
       color={"white"}
       border="1px solid"
       borderColor="card-border-3"
-      padding="calc(var(--global-spacing))"
+      padding="calc(var(--card-padding) / 2)"
       rounded={"2xl"}
       gap={4}
       width="full"
@@ -26,11 +29,23 @@ export default function NewsDisplayControl() {
       }}
     >
       <Category text={"All News"} />
-      <Flex gridArea="search">
+      <Flex
+        gridArea="search"
+        justifyContent={"center"}
+        alignItems={"center"}
+        padding="calc(var(--card-padding) / 3)"
+        rounded={"xl"}
+        color={"text-4"}
+        border="1px solid"
+        borderColor="card-border-3"
+        gap={3}
+      >
+        <Icon icon={"majesticons:search-line"} width={"2.2rem"}></Icon>
+        <VerticalDivider backgroundColor="text-4" width="2px" height="1.8rem" />
         <Search />
       </Flex>
       <Flex justifyContent={"flex-end"} gridArea="actions" gap={2}>
-        Helllo
+        <Filter />
       </Flex>
     </Grid>
   );

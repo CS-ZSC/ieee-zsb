@@ -7,14 +7,13 @@ export default function Search() {
     // <Flex>
     <Input
       placeholder="Search"
+      _placeholder={{ color: "text-5" }}
       width="full"
-      color={"text-4"}
       outline={"none"}
-      border="1px solid"
-      borderColor="card-border-3"
-      padding="calc(var(--card-padding) / 1.5)"
-      rounded={"xl"}
-      fontSize={"lg"}
+      border="none"
+      fontSize={"1.2rem"}
+      // color={"text-5"}
+      padding={0}
     />
     // </Flex>
   );
