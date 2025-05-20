@@ -110,7 +110,7 @@ export const newsData: NewsData = {
         "Our IEEE RAS chapter sent five teams to the prestigious Robotiva competition, and all five teams made it to the finals! With SOUL winning 1st place and Intellibots securing 2nd, RAS once again proved that dedication, teamwork, and relentless learning lead to excellence. This victory isn't just a trophy—it's a statement of what we stand for.",
       dateCreated: "27 Feb, 2025",
       author: "Marwan Tamer",
-      tags: ["RAS", "Robotiva", "Competition"],
+      tags: ["RAS", "Robotiva", "Competitions"],
       mainPhoto: "/Fake-Images/5.jpg",
       sections: [
         {

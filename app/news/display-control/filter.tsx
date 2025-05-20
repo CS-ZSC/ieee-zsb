@@ -1,19 +1,15 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
-import { chakra, Box, Button } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { chakra, Box, Text, Button, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
+import { useAtom } from "jotai";
 import {
-  FiEdit,
-  FiChevronDown,
-  FiTrash,
-  FiShare,
-  FiPlusSquare,
-} from "react-icons/fi";
-import { IconType } from "react-icons";
+  newsFilterCheckedItemsAtom,
+  newsFilterLabelsAtom,
+} from "@/atoms/atoms";
 
 const MotionBox = chakra(motion.div);
-
 const MotionList = chakra(motion.ul);
-const MotionListItem = chakra(motion.li);
 
 const wrapperVariants = {
   open: {
@@ -25,97 +21,79 @@ const wrapperVariants = {
     transition: { when: "afterChildren", staggerChildren: 0.1 },
   },
 };
-const itemVariants = {
-  open: { opacity: 1, y: 0, transition: { when: "beforeChildren" } },
-  closed: { opacity: 0, y: -15, transition: { when: "afterChildren" } },
-};
-
-
-interface OptionProps {
-  text: string;
-  Icon: IconType;
-  setOpen: Dispatch<SetStateAction<boolean>>;
-}
-
-const Option: React.FC<OptionProps> = ({ text, Icon, setOpen }) => {
-  return (
-    <MotionListItem
-      variants={itemVariants}
-      onClick={() => setOpen(false)}
-      listStyleType="none"
-      display="flex"
-      alignItems="center"
-      gap={2}
-      w="full"
-      p={2}
-      fontSize="xs"
-      fontWeight="medium"
-      rounded="md"
-      cursor="pointer"
-      //   _hover={{ backgroundColor: hoverBg, color: hoverColor }}
-      //   color={textColor}
-    >
-      <chakra.span>
-        <Icon />
-      </chakra.span>
-      <Box as="span">{text}</Box>
-    </MotionListItem>
-  );
-};
 
 export default function Filter() {
   const [open, setOpen] = useState(false);
+  const [checkedNewsItems, setCheckedNewsItems] = useAtom(
+    newsFilterCheckedItemsAtom
+  );
+  const [filterItems] = useAtom(newsFilterLabelsAtom);
+
+  const filterNewsItems: string[] = filterItems;
+
+  const handleCheckboxChange = (index: number) => {
+    const updatedItems = [...checkedNewsItems];
+    updatedItems[index] = !updatedItems[index];
+    setCheckedNewsItems(updatedItems);
+  };
 
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      //   bg={bg}
-    >
+    <Box display="flex" alignItems="center" justifyContent="center">
       <MotionBox animate={open ? "open" : "closed"} position="relative">
         <Button
           onClick={() => setOpen((prev) => !prev)}
-          bg="indigo.500"
-          color="indigo.50"
-          _hover={{ bg: "indigo.600" }}
           transition="all"
+          backgroundColor={"transparent"}
+          padding={0}
         >
-          <Box
-            as="span"
-            fontWeight="medium"
-            fontSize="sm"
-            // color={open ? "text-3" : "w"}
+          <Flex
+            gap={2}
+            backgroundColor={"transparent"}
+            color={open ? "text-3" : "white"}
+            transition={"all"}
           >
-            Post actions
-          </Box>
-          <chakra.span as={motion.span}>
-            <FiChevronDown />
-          </chakra.span>
+            <Text fontSize={"1.2rem"}>Filter</Text>
+            <Icon icon={"lucide:filter"}></Icon>
+          </Flex>
         </Button>
 
         <MotionList
           initial={wrapperVariants.closed}
           variants={wrapperVariants}
-          style={{ originY: "top", translateX: "-50%" }}
+          style={{ originY: "top", translateX: "-65%" }}
           display="flex"
           flexDirection="column"
           gap={2}
-          p={2}
-          rounded="lg"
-          //   bg={bg}
-          //   boxShadow={shadow}
+          p={"var(--global-spacing)"}
+          rounded="2xl"
           position="absolute"
-          top="120%"
-          left="50%"
-          w="48"
+          top="100%"
+          left="40%"
           overflow="hidden"
           zIndex={2}
+          backgroundColor={"card-bg-3"}
+          border={"1px solid"}
+          borderColor={"card-border-3"}
         >
-          <Option setOpen={setOpen} Icon={FiEdit} text="Edit" />
-          <Option setOpen={setOpen} Icon={FiPlusSquare} text="Duplicate" />
-          <Option setOpen={setOpen} Icon={FiShare} text="Share" />
-          <Option setOpen={setOpen} Icon={FiTrash} text="Remove" />
+          {checkedNewsItems.map((isChecked, index) => (
+            <label key={index}>
+              <Flex
+                alignItems={"center"}
+                gap={4}
+                cursor={"pointer"}
+                className="checkboxes-container"
+                position={"relative"}
+              >
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={() => handleCheckboxChange(index)}
+                />
+                <span className="checkbox-container"></span>
+                <Text>{filterNewsItems[index]}</Text>
+              </Flex>
+            </label>
+          ))}
         </MotionList>
       </MotionBox>
     </Box>

@@ -6,7 +6,11 @@ import { Icon } from "@iconify/react";
 import VerticalDivider from "../vertical-divider";
 import Filter from "./filter";
 
-export default function NewsDisplayControl() {
+interface Props {
+  onSearch: (value: string) => void;
+}
+
+export default function NewsDisplayControl({ onSearch }: Props) {
   return (
     <Grid
       bgColor={"card-bg-3"}
@@ -20,7 +24,7 @@ export default function NewsDisplayControl() {
       alignItems="center"
       templateAreas={{
         base: `"title actions" 
-                 "search search"`,
+               "search search"`,
         lg: `"title search actions"`,
       }}
       gridTemplateColumns={{
@@ -28,23 +32,23 @@ export default function NewsDisplayControl() {
         lg: "1fr 3fr 1fr",
       }}
     >
-      <Category text={"All News"} />
+      <Category />
       <Flex
         gridArea="search"
-        justifyContent={"center"}
-        alignItems={"center"}
+        justifyContent="center"
+        alignItems="center"
         padding="calc(var(--card-padding) / 3)"
-        rounded={"xl"}
-        color={"text-4"}
+        rounded="xl"
+        color="text-4"
         border="1px solid"
         borderColor="card-border-3"
         gap={3}
       >
-        <Icon icon={"majesticons:search-line"} width={"2.2rem"}></Icon>
+        <Icon icon="majesticons:search-line" width="2.2rem" />
         <VerticalDivider backgroundColor="text-4" width="2px" height="1.8rem" />
-        <Search />
+        <Search onSearch={onSearch} />
       </Flex>
-      <Flex justifyContent={"flex-end"} gridArea="actions" gap={2}>
+      <Flex justifyContent="flex-end" gridArea="actions" gap={2}>
         <Filter />
       </Flex>
     </Grid>
