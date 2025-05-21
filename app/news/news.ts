@@ -85,9 +85,9 @@ export const newsData: NewsData = {
         },
         {
           id: 1,
-          heading: "What is Egypt ROV competition?",
+          heading: "What is MATE ROV Egypt competition?",
           descriptions: [
-            "MATE Egypt ROV competition is an annual regional competition held at the Arab Academy for Science, Technology and Maritime Transport (AASTMT) for undergraduates interested in remotely operated underwater vehicles (ROVs). These ROVs perform specific underwater missions according to the competition rules and guidelines. The competition was first launched in 2012 by Delta Square International LLC in association with AASTMT.",
+            "This is an annual regional competition held at the Arab Academy for Science, Technology and Maritime Transport (AASTMT) for undergraduates interested in remotely operated underwater vehicles (ROVs). These ROVs perform specific underwater missions according to the competition rules and guidelines. The competition was first launched in 2012 by Delta Square International LLC in association with AASTMT.",
             "This competition serves as a regional qualifier for the international competition organized by the Marine Advanced Technology Education (MATE) Center and MATE Inspiration for Innovation, where winning teams represent Egypt at the MATE International ROV Competition.",
           ],
           photo: "/News/mate-rov/3.png",
@@ -151,7 +151,7 @@ export const newsData: NewsData = {
       dateCreated: "4 Mar, 2025",
       author: "Marwan Tamer",
       tags: ["RAS", "PCB", "New Track"],
-      mainPhoto: "/Fake-Images/7.jpg",
+      mainPhoto: "/News/pcb-track/1.png",
       sections: [
         {
           id: 0,
