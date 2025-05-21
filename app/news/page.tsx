@@ -21,6 +21,7 @@ export default function Page() {
   const [checkedItems] = useAtom(newsFilterCheckedItemsAtom);
   const [filterItems] = useAtom(newsFilterLabelsAtom);
   const selectedTags = filterItems.filter((_, index) => checkedItems[index]);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   const filteredNews = newsData.news.filter((item) => {
     const matchesSearch =
@@ -39,6 +40,12 @@ export default function Page() {
   useEffect(() => {
     localStorage.setItem("newsCounter", String(filteredNews.length));
   }, [filteredNews]);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  if (!isHydrated) return null;
 
   return (
     <PageWrapper>

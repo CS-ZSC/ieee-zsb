@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Text } from "@chakra-ui/react";
 import { useAtom } from "jotai";
 import {
@@ -11,7 +11,14 @@ import {
 export default function Category() {
   const [checkedItems] = useAtom(newsFilterCheckedItemsAtom);
   const [filterItems] = useAtom(newsFilterLabelsAtom);
+  const [isHydrated, setIsHydrated] = useState(false);
 
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  if (!isHydrated) return null;
+  
   const getCategoryText = () => {
     const checkedCount = checkedItems.slice(1).filter(Boolean).length;
     const isAllChecked = checkedItems[0];
