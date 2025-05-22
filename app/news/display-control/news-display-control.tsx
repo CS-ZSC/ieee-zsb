@@ -1,10 +1,14 @@
 import React from "react";
 import { Flex, Grid } from "@chakra-ui/react";
-import Category from "./category";
 import Search from "./Search";
 import { Icon } from "@iconify/react";
 import VerticalDivider from "../vertical-divider";
 import Filter from "./filter";
+import dynamic from "next/dynamic";
+
+const Category = dynamic(() => import("./category"), {
+  ssr: false,
+});
 
 interface Props {
   onSearch: (value: string) => void;
@@ -23,7 +27,7 @@ export default function NewsDisplayControl({ onSearch }: Props) {
       width="full"
       alignItems="center"
       templateAreas={{
-        base: `"title actions" 
+        base: `"title actions"
                "search search"`,
         lg: `"title search actions"`,
       }}

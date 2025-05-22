@@ -14,14 +14,16 @@ import {
   newsFilterCheckedItemsAtom,
   newsFilterLabelsAtom,
 } from "@/atoms/atoms";
+import Loading from "./loading";
 
 export default function Page() {
   const { isDesktop } = useWindowType();
   const [searchQuery, setSearchQuery] = useState("");
   const [checkedItems] = useAtom(newsFilterCheckedItemsAtom);
   const [filterItems] = useAtom(newsFilterLabelsAtom);
+  const [isMounted, setIsMounted] = useState(false);
+
   const selectedTags = filterItems.filter((_, index) => checkedItems[index]);
-  const [isHydrated, setIsHydrated] = useState(false);
 
   const filteredNews = newsData.news.filter((item) => {
     const matchesSearch =
@@ -42,16 +44,15 @@ export default function Page() {
   }, [filteredNews]);
 
   useEffect(() => {
-    setIsHydrated(true);
+    setIsMounted(true);
   }, []);
 
-  if (!isHydrated) return null;
+  if (!isMounted) return <Loading />;
 
   return (
     <PageWrapper>
       <Flex
         flexDirection="column"
-        padding="var(--global-spacing)"
         paddingBottom={0}
         gap={"var(--global-spacing)"}
       >
