@@ -14,7 +14,6 @@ export default function Home() {
       <HeroSection />
       <Flex
         flexDirection={"column"}
-        padding={"var(--global-spacing)"}
         paddingBottom={"0px"}
         gap={"var(--global-spacing)"}
       >

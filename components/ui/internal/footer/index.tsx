@@ -42,7 +42,7 @@ export default function Footer() {
   const textopacity = 0.8;
   return (
     <Flex
-      padding="var(--global-spacing)"
+      paddingTop="var(--global-spacing)"
     >
       <Card>
         <Logo

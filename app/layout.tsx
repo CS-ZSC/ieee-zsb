@@ -24,7 +24,8 @@ export default function RootLayout({
           <Stack
             gap={0}
             margin={"auto"}
-            maxWidth={"3000px"}
+            maxWidth={"3040px"}
+            padding={"var(--global-spacing)"}
             color={"natural-2"}
           >
             <Header />
