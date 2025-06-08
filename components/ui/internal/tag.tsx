@@ -15,6 +15,8 @@ export default function Tag({ text }: TagProps) {
       border="1px solid"
       padding="0px 12px"
       textAlign="center"
+      transition={"all"}
+      _hover={{ backgroundColor: "white", color: "var(--main-identity-color)" }}
     >
       {text}
     </Text>
