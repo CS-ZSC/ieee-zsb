@@ -32,33 +32,63 @@ export const newsData: NewsData = {
   news: [
     {
       id: idCounter++,
-      title: "Hello from CS",
+      title: "Knowva attained the glory in Hackathon Banha 2025",
       description:
-        "Computer science is a scientific and practical approach specialized in computing and its applications, the aim of which is to study the feasibility, the structure, and a lot of terms, phrases and algorithms that aim to store and process data and then make connections and presentations to access the required information. Computing, specializing in the computer world, and designing computer systems, which is an important field because it is concerned with Web Development, Mobile Development, Cloud, IOT, Machine Learning, Data Analysis, Networking, and many more.",
-      dateCreated: "7 May, 2025",
-      author: "Omar Salama",
-      tags: ["CS", "Innovation"],
-      mainPhoto: "/Fake-Images/4.jpg",
+        "Knowva proudly secured second place in the Language Learning Platforms track at Hackathon Banha 2025. After four intense days of dedication, collaboration, and tireless effort, our team successfully developed and presented a compelling concept that showcased innovative ways to demonstrate the role of artificial intelligence in language education. We explored how AI can be effectively integrated into learning processes to enhance engagement, personalization, and accessibility.",
+      dateCreated: "11 Feb, 2025",
+      author: "Ahmed Elsherbiny",
+      tags: ["Competitions", "General"],
+      mainPhoto: "/News/knowva/1.jpg",
       sections: [
         {
           id: 1,
-          heading: "Front-End Development",
+          heading: "What is Knowva?",
           descriptions: [
-            "In the Front-End Development track, we are learning the foundational skills in HTML, CSS, and JavaScript essential for front-end development. We are learning comprehensive techniques for creating responsive and user-friendly web interfaces. We are exploring popular frameworks and libraries like React, Angular, or Vue.js for efficient front-end development. We are understanding methods to enhance web performance, ensuring fast and smooth user experiences. This track provided essential skills in HTML, CSS, JavaScript, responsive design, and modern frameworks, empowering us to create dynamic and engaging user interfaces for web applications.",
-            "In the Back-End Development track, we are learning the foundational skills in server-side programming languages like Node.js, Python, or Java essential for back-end development. We are learning comprehensive techniques for designing, managing, and optimizing databases. We are creating robust APIs for communication between front-end and back-end systems. We are exploring advanced methods for securing web applications and implementing authentication mechanisms. This track provided essential skills in server-side programming, database management, API development, and web security, empowering us to build and maintain scalable and secure back-end systems.",
+            "Knowva is an AI-driven language learning platform that transforms the often overwhelming journey of picking up a new language into a personalized and engaging experience. It’s designed to adapt to each learner’s unique pace, preferences, and goals—making the path to fluency feel more intuitive and motivating.",
+            "Through intelligent features like adaptive placement testing, dynamically tailored content, skill-building exercises, and a responsive AI chatbot, Knowva offers a truly holistic and immersive learning environment. The AI chatbot acts as your personal language coach—ready to answer questions, adjust your learning roadmap, provide guidance, and simulate realistic conversations. It doesn’t just teach you words—it helps you understand context, refine pronunciation, and receive real-time feedback, ensuring steady improvement with every interaction.",
           ],
-          photo: "/Fake-Images/5.jpg",
-          photoDescription: "Frontend ultimate session.",
+          photo: "/News/knowva/2.jpg",
+          photoDescription: "IEEE ZSB supporters.",
+        },
+      ],
+    },
+    {
+      id: idCounter++,
+      title: "Robotiva Finals Triumph",
+      description:
+        "Our IEEE RAS chapter sent five teams to the prestigious Robotiva competition, and all five teams made it to the finals! With SOUL winning 1st place and Intellibots securing 2nd, RAS once again proved that dedication, teamwork, and relentless learning lead to excellence. This victory isn't just a trophy—it's a statement of what we stand for.",
+      dateCreated: "27 Feb, 2025",
+      author: "Marwan Tamer",
+      tags: ["RAS", "Robotiva", "Competitions"],
+      mainPhoto: "/Fake-Images/5.jpg",
+      sections: [
+        {
+          id: 0,
+          heading: "A Competition That Put Us to the Test",
+          descriptions: [
+            "Robotiva wasn’t just any competition—it was a proving ground for creativity, engineering skill, and realworld problem solving. The challenge tasked participants with building a fully functional robot that could handle three distinct missions: line following, obstacle avoidance, and a pick-and-place task using a robotic arm. Each functionality required tight integration between hardware and software, and every team had to deal with sensor calibration issues, motor control precision, path-planning logic, and gripper mechanics.",
+            "From electrical noise on sensor inputs to debugging edge cases in autonomous logic, the teams faced wave after wave of technical hurdles. But as always—this is RAS. We don’t back down from problems; we grow stronger because of them. Each team worked tirelessly, sharing designs, testing day and night, and fine-tuning their code to meet competition standards. The result? Five finalist teams from one chapter—a statistic that speaks volumes.",
+          ],
+        },
+        {
+          id: 1,
+          heading: "Meet the Winners: SOUL and Intellibots",
+          descriptions: [
+            "Among the five RAS finalist teams, two rose above the rest. SOUL, led by a core of experienced members, demonstrated flawless execution across all three challenges. Their robot maintained steady performance with highly optimized PID control and an impressively stable robotic arm mechanism. Their design was not just technically superior, but also elegant—earning praise from both judges and spectators alike",
+            "Intellibots , on the other hand, stood out for their advanced path-planning algorithms and robust error-handling capabilities. Their robot showed remarkable resilience under pressure, with quick adaptations mid-run that reflected the team’s deep understanding of both hardware constraints and real-time software logic. These two victories mark a historical achievement for our chapter and set a new benchmark for future competitions.",
+          ],
+          photo: "/News/robotiva/soul.jpg",
+          photoDescription: "Soul Team",
         },
         {
           id: 2,
-          heading: "Artificial Intelligence",
+          heading: "More Than Just Winners",
           descriptions: [
-            "In the AI track, we are learning the foundational skills in Python programming essential for AI development. We are learning comprehensive data preparation, cleaning, visualization, and advanced processing techniques. We are creating robust data models and programming machines for autonomous decision-making. We are exploring advanced neural network algorithms enabling autonomous learning and adaptation. This track provided essential skills in Python programming, data analysis, machine learning, and deep learning, empowering us to innovate in AI applications across diverse industries.",
-            "In the Mobile Application Development track, we are learning the foundational skills in mobile programming languages like Swift for iOS or Flutter for cross-platform development. We are learning comprehensive techniques for designing intuitive and user-friendly mobile interfaces. We are exploring popular mobile frameworks such as Flutter or React Native for cross-platform development. We are understanding the process of deploying mobile applications to app stores and managing updates. This track provided essential skills in mobile programming, UI design, mobile frameworks, and app deployment, empowering us to develop and launch innovative mobile applications across various platforms.",
+            "While the podium finishes are worth celebrating, the true success lies in the journey. Every RAS participant walked away with real engineering experience—learning not just how to build robots, but how to work under pressure, debug collaboratively, and face failure with determination.",
+            "From late-night brainstorming sessions to emergency soldering repairs, this experience became a high-impact learning ground. These lessons were shared throughout the chapter—transforming mistakes into mentorship and individual struggles into collective growth. The effects were clear during later events like The Rockies Final Competition, where the influence of Robotiva showed in the confidence, preparedness, and innovation of our members.",
           ],
-          photo: "/Fake-Images/6.jpg",
-          photoDescription: "AI is the future.",
+          photo: "/News/robotiva/intellibots.jpg",
+          photoDescription: "Intellibots Team",
         },
       ],
     },
@@ -100,46 +130,6 @@ export const newsData: NewsData = {
             "A Remotely Operated underwater Vehicle (ROV) is a tethered mobile robot commonly used to perform dangerous missions in submarine industries such as offshore hydrocarbon extraction and subsea installations, as well as in military and scientific services. Due to its sophisticated design, an ROV can maneuver efficiently in deep ocean environments.",
             "ROVs use thrusters for movement and rely on sensory systems to make informed decisions during missions. These systems may include LIDAR, SONAR, or cameras to provide vision and spatial awareness.",
           ],
-        },
-      ],
-    },
-    {
-      id: idCounter++,
-      title: "Robotiva Finals Triumph",
-      description:
-        "Our IEEE RAS chapter sent five teams to the prestigious Robotiva competition, and all five teams made it to the finals! With SOUL winning 1st place and Intellibots securing 2nd, RAS once again proved that dedication, teamwork, and relentless learning lead to excellence. This victory isn't just a trophy—it's a statement of what we stand for.",
-      dateCreated: "27 Feb, 2025",
-      author: "Marwan Tamer",
-      tags: ["RAS", "Robotiva", "Competitions"],
-      mainPhoto: "/Fake-Images/5.jpg",
-      sections: [
-        {
-          id: 0,
-          heading: "A Competition That Put Us to the Test",
-          descriptions: [
-            "Robotiva wasn’t just any competition—it was a proving ground for creativity, engineering skill, and realworld problem solving. The challenge tasked participants with building a fully functional robot that could handle three distinct missions: line following, obstacle avoidance, and a pick-and-place task using a robotic arm. Each functionality required tight integration between hardware and software, and every team had to deal with sensor calibration issues, motor control precision, path-planning logic, and gripper mechanics.",
-            "From electrical noise on sensor inputs to debugging edge cases in autonomous logic, the teams faced wave after wave of technical hurdles. But as always—this is RAS. We don’t back down from problems; we grow stronger because of them. Each team worked tirelessly, sharing designs, testing day and night, and fine-tuning their code to meet competition standards. The result? Five finalist teams from one chapter—a statistic that speaks volumes.",
-          ],
-        },
-        {
-          id: 1,
-          heading: "Meet the Winners: SOUL and Intellibots",
-          descriptions: [
-            "Among the five RAS finalist teams, two rose above the rest. SOUL, led by a core of experienced members, demonstrated flawless execution across all three challenges. Their robot maintained steady performance with highly optimized PID control and an impressively stable robotic arm mechanism. Their design was not just technically superior, but also elegant—earning praise from both judges and spectators alike",
-            "Intellibots , on the other hand, stood out for their advanced path-planning algorithms and robust error-handling capabilities. Their robot showed remarkable resilience under pressure, with quick adaptations mid-run that reflected the team’s deep understanding of both hardware constraints and real-time software logic. These two victories mark a historical achievement for our chapter and set a new benchmark for future competitions.",
-          ],
-          photo: "/News/robotiva/soul.jpg",
-          photoDescription: "Soul Team",
-        },
-        {
-          id: 2,
-          heading: "More Than Just Winners",
-          descriptions: [
-            "While the podium finishes are worth celebrating, the true success lies in the journey. Every RAS participant walked away with real engineering experience—learning not just how to build robots, but how to work under pressure, debug collaboratively, and face failure with determination.",
-            "From late-night brainstorming sessions to emergency soldering repairs, this experience became a high-impact learning ground. These lessons were shared throughout the chapter—transforming mistakes into mentorship and individual struggles into collective growth. The effects were clear during later events like The Rockies Final Competition, where the influence of Robotiva showed in the confidence, preparedness, and innovation of our members.",
-          ],
-          photo: "/News/robotiva/intellibots.jpg",
-          photoDescription: "Intellibots Team",
         },
       ],
     },
