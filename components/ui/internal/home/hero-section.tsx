@@ -130,9 +130,9 @@ export default function HeroSection() {
           <Image
             alt="IEEE-ZSB Logo"
             src={imageSrc}
-            layout="responsive"
             width={700}
             height={450}
+            priority
           />
         )}
       </Box>
