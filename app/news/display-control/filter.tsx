@@ -76,23 +76,25 @@ export default function Filter() {
           borderColor={"card-border-3"}
         >
           {checkedNewsItems.map((isChecked, index) => (
-            <label key={index}>
-              <Flex
-                alignItems={"center"}
-                gap={4}
-                cursor={"pointer"}
-                className="checkboxes-container"
-                position={"relative"}
-              >
-                <input
-                  type="checkbox"
-                  checked={isChecked}
-                  onChange={() => handleCheckboxChange(index)}
-                />
-                <span className="checkbox-container"></span>
-                <Text>{filterNewsItems[index]}</Text>
-              </Flex>
-            </label>
+            <chakra.li key={index} listStyleType="none">
+              <label>
+                <Flex
+                  alignItems={"center"}
+                  gap={4}
+                  cursor={"pointer"}
+                  className="checkboxes-container"
+                  position={"relative"}
+                >
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={() => handleCheckboxChange(index)}
+                  />
+                  <span className="checkbox-container"></span>
+                  <Text>{filterNewsItems[index]}</Text>
+                </Flex>
+              </label>
+            </chakra.li>
           ))}
         </MotionList>
       </MotionBox>
