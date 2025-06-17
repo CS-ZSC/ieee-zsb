@@ -4,14 +4,17 @@ import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";
-import newsItems from "./news-items";
 import Heading from "@/components/ui/internal/heading";
+import type { NewsItem } from "@/app/news/news";
+import NewsCard from "@/app/news/news-card";
+import Description from "@/app/news/description";
 
 // const ONE_SECOND = 1000;
 // const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
 
 interface CarouselProps {
+  newsItems: NewsItem[];
   currentIndex: number;
   setCurrentIndex: Dispatch<React.SetStateAction<number>>;
   direction: "left" | "right";
@@ -21,10 +24,12 @@ interface CarouselProps {
   handleDotLeft: (index: number) => void;
 }
 
-export function Carousel() {
+export function Carousel({ newsItems }: { newsItems: NewsItem[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const { isDesktop } = useWindowType();
+
+  newsItems = newsItems.filter((item) => item.homeItem == true);
 
   function handleNext() {
     setDirection("right");
@@ -50,6 +55,7 @@ export function Carousel() {
     <div>
       {isDesktop ? (
         <FullCarousel
+          newsItems={newsItems}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
           direction={direction}
@@ -60,6 +66,7 @@ export function Carousel() {
         />
       ) : (
         <SmallCarousel
+          newsItems={newsItems}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
           direction={direction}
@@ -73,7 +80,10 @@ export function Carousel() {
   );
 }
 
+const FlexMotion = motion.create(Flex);
+
 function FullCarousel({
+  newsItems,
   currentIndex,
   direction,
   handleNext,
@@ -93,8 +103,13 @@ function FullCarousel({
       padding="var(--card-padding)"
       gap="16px"
     >
-      <Text fontSize="3rem" fontWeight="bold" color="text-3" textAlign="center">
-        News
+      <Text
+        fontSize="2.5rem"
+        fontWeight="bold"
+        color="text-1"
+        textAlign="center"
+      >
+        Latest News
       </Text>
       <Flex
         onClick={handlePrev}
@@ -162,12 +177,18 @@ function FullCarousel({
               style={{ width: "100%" }}
             >
               <VStack align="start">
-                <Text fontSize="2rem" fontWeight="semibold" color="text-1">
+                <Text
+                  fontSize="2rem"
+                  fontWeight="bold"
+                  color={"text-2"}
+                  textAlign="left"
+                >
                   {newsItems[currentIndex].title}
                 </Text>
-                <Text color="text-2" lineHeight={2}>
-                  {newsItems[currentIndex].description}
-                </Text>
+                <Description
+                  description={newsItems[currentIndex].description}
+                  lineClamp="8"
+                />
               </VStack>
             </motion.div>
           </AnimatePresence>
@@ -177,11 +198,12 @@ function FullCarousel({
           flex={1}
           display="flex"
           justifyContent="flex-end"
+          alignItems={"center"}
           overflow="hidden"
           rounded={"2xl"}
         >
           <AnimatePresence custom={direction} mode="wait">
-            <motion.div
+            <FlexMotion
               key={currentIndex}
               custom={direction}
               variants={imageVariants}
@@ -193,19 +215,21 @@ function FullCarousel({
                 width: "100%",
                 maxHeight: "400px",
                 maxWidth: "600px",
-                aspectRatio: "1/1",
               }}
             >
               <Box
-                w="full"
-                h="full"
-                bgImage={`url(${newsItems[currentIndex].image})`}
+                width="100%"
+                position="relative"
+                bgImage={`url(${newsItems[currentIndex].mainPhoto})`}
                 bgSize="cover"
                 rounded="2xl"
                 border="1px solid"
                 borderColor="card-border-1"
+                style={{
+                  aspectRatio: "16/9",
+                }}
               />
-            </motion.div>
+            </FlexMotion>
           </AnimatePresence>
         </Flex>
       </HStack>
@@ -220,6 +244,7 @@ function FullCarousel({
 }
 
 function SmallCarousel({
+  newsItems,
   currentIndex,
   // setCurrentIndex,
   handleNext,
@@ -269,9 +294,10 @@ function SmallCarousel({
       padding="var(--global-spacing)"
       gap="16px"
     >
-      <Heading text={"News"} color="text-3" />
+      <Heading text={"Latest News"} color="text-1" />
       <Flex
         flexDirection={"column"}
+        gap={5}
         overflow="hidden"
         rounded="2xl"
         position="relative"
@@ -285,7 +311,7 @@ function SmallCarousel({
             x: dragX,
             display: "flex",
             gap: "16px",
-            width: `calc(${newsItems.length * 100}% + ${(newsItems.length - 1) * 5}px)`,
+            width: `calc(${newsItems.length * 100}% + ${(newsItems.length - 1) * 16}px)`,
           }}
           onDragStart={onDragStart}
           onDragEnd={onDragEnd}
@@ -302,56 +328,11 @@ function SmallCarousel({
               }}
               transition={{ type: "spring", stiffness: 400, damping: 40 }}
             >
-              <Box
-                w={"calc(100% + 8px)"}
-                h="full"
-                position={"relative"}
-                bgImage={`url(${item.image})`}
-                bgSize="cover"
-                rounded="2xl"
-                border="1px solid"
-                borderColor="card-border-1"
-                style={{
-                  aspectRatio: "1/1",
-                  maxHeight: "400px",
-                }}
-              >
-                <Flex
-                  flexDirection={"column"}
-                  position={"absolute"}
-                  width={"fit"}
-                  padding={"var(--card-padding)"}
-                  margin={"var(--global-spacing)"}
-                  bgColor={"card-bg-2"}
-                  color={"text-2"}
-                  rounded={"xl"}
-                  overflow={"hidden"}
-                >
-                  <Text fontSize="1.8rem" fontWeight="semibold" color="text-1">
-                    {newsItems[currentIndex].title}
-                  </Text>
-                  <Text
-                    fontSize="1.2rem"
-                    color="text-2"
-                    width={"full"}
-                    lineClamp={4}
-                    textOverflow={"ellipsis"}
-                  >
-                    {newsItems[currentIndex].description}
-                  </Text>
-                </Flex>
-              </Box>
+              <NewsCard newsObject={item} />
             </motion.div>
           ))}
         </motion.div>
-        <Flex
-          position={"absolute"}
-          bottom={4}
-          zIndex={10}
-          cursor={"pointer"}
-          left={"50%"}
-          transform={"translate(-50%, 0)"}
-        >
+        <Flex>
           <Dots
             currentIndex={currentIndex}
             itemCount={newsItems.length}

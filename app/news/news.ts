@@ -9,6 +9,7 @@ export interface Section {
 export interface NewsItem {
   id: number;
   highlightedItem?: boolean;
+  homeItem?: boolean;
   title: string;
   description: string;
   dateCreated: string;
@@ -32,13 +33,14 @@ export const newsData: NewsData = {
   news: [
     {
       id: idCounter++,
+      homeItem: true,
       title: "Knowva attained the glory in Hackathon Banha 2025",
       description:
         "Knowva proudly secured second place in the Language Learning Platforms track at Hackathon Banha 2025. After four intense days of dedication, collaboration, and tireless effort, our team successfully developed and presented a compelling concept that showcased innovative ways to demonstrate the role of artificial intelligence in language education. We explored how AI can be effectively integrated into learning processes to enhance engagement, personalization, and accessibility.",
       dateCreated: "11 Feb, 2025",
       author: "Ahmed Elsherbiny",
       tags: ["Competitions", "General"],
-      mainPhoto: "/News/knowva/1.jpg",
+      mainPhoto: "/News/knowva/1.webp",
       sections: [
         {
           id: 1,
@@ -47,20 +49,21 @@ export const newsData: NewsData = {
             "Knowva is an AI-driven language learning platform that transforms the often overwhelming journey of picking up a new language into a personalized and engaging experience. It’s designed to adapt to each learner’s unique pace, preferences, and goals—making the path to fluency feel more intuitive and motivating.",
             "Through intelligent features like adaptive placement testing, dynamically tailored content, skill-building exercises, and a responsive AI chatbot, Knowva offers a truly holistic and immersive learning environment. The AI chatbot acts as your personal language coach—ready to answer questions, adjust your learning roadmap, provide guidance, and simulate realistic conversations. It doesn’t just teach you words—it helps you understand context, refine pronunciation, and receive real-time feedback, ensuring steady improvement with every interaction.",
           ],
-          photo: "/News/knowva/2.jpg",
+          photo: "/News/knowva/2.webp",
           photoDescription: "IEEE ZSB supporters.",
         },
       ],
     },
     {
       id: idCounter++,
+      homeItem: true,
       title: "Robotiva Finals Triumph",
       description:
         "Our IEEE RAS chapter sent five teams to the prestigious Robotiva competition, and all five teams made it to the finals! With SOUL winning 1st place and Intellibots securing 2nd, RAS once again proved that dedication, teamwork, and relentless learning lead to excellence. This victory isn't just a trophy—it's a statement of what we stand for.",
       dateCreated: "27 Feb, 2025",
       author: "Marwan Tamer",
       tags: ["RAS", "Robotiva", "Competitions"],
-      mainPhoto: "/Fake-Images/5.jpg",
+      mainPhoto: "/Fake-Images/5.webp",
       sections: [
         {
           id: 0,
@@ -77,7 +80,7 @@ export const newsData: NewsData = {
             "Among the five RAS finalist teams, two rose above the rest. SOUL, led by a core of experienced members, demonstrated flawless execution across all three challenges. Their robot maintained steady performance with highly optimized PID control and an impressively stable robotic arm mechanism. Their design was not just technically superior, but also elegant—earning praise from both judges and spectators alike",
             "Intellibots , on the other hand, stood out for their advanced path-planning algorithms and robust error-handling capabilities. Their robot showed remarkable resilience under pressure, with quick adaptations mid-run that reflected the team’s deep understanding of both hardware constraints and real-time software logic. These two victories mark a historical achievement for our chapter and set a new benchmark for future competitions.",
           ],
-          photo: "/News/robotiva/soul.jpg",
+          photo: "/News/robotiva/soul.webp",
           photoDescription: "Soul Team",
         },
         {
@@ -87,7 +90,7 @@ export const newsData: NewsData = {
             "While the podium finishes are worth celebrating, the true success lies in the journey. Every RAS participant walked away with real engineering experience—learning not just how to build robots, but how to work under pressure, debug collaboratively, and face failure with determination.",
             "From late-night brainstorming sessions to emergency soldering repairs, this experience became a high-impact learning ground. These lessons were shared throughout the chapter—transforming mistakes into mentorship and individual struggles into collective growth. The effects were clear during later events like The Rockies Final Competition, where the influence of Robotiva showed in the confidence, preparedness, and innovation of our members.",
           ],
-          photo: "/News/robotiva/intellibots.jpg",
+          photo: "/News/robotiva/intellibots.webp",
           photoDescription: "Intellibots Team",
         },
       ],
@@ -95,13 +98,14 @@ export const newsData: NewsData = {
     {
       id: idCounter++,
       highlightedItem: true,
+      homeItem: true,
       title: "Penguins Shine in MATE ROV Egypt Competition 2025",
       description:
         "Our team, Penguins, proudly participated in the MATE ROV Egypt Regional Competition at AASTMT and achieved remarkable success, winning 3rd Place in the Pioneer Class among teams from across Egypt, along with the Best Team Spirit and Best Marketing Display awards. This accomplishment came after three months of dedicated effort, with 28 committed engineering students from various departments working together with high levels of passion, collaboration, and perseverance.",
       dateCreated: "26 April, 2025",
       author: "Ahmed Elsherbiny",
       tags: ["Competitions"],
-      mainPhoto: "/News/mate-rov/1.png",
+      mainPhoto: "/News/mate-rov/1.webp",
       sections: [
         {
           id: 0,
@@ -110,7 +114,7 @@ export const newsData: NewsData = {
             "Our team is led by a group of dedicated members, each with a clear role. The CEO keeps everyone aligned and focused, making sure things run smoothly. The CTO leads the technical side, helping build and improve the ROV. The CAO keeps us organized, handling schedules and team coordination. The CFO takes care of our budget and works on getting sponsorships. The Accounting Manager manages our financial records and ensures everything is tracked accurately. The PR Leader handles communication with judges, sponsors, and other teams, while the Marketing & Media Leader shares our journey through social media, videos, and design. Together, we make a strong, balanced team.",
             "The technical team is divided into three specialized sub-teams, each responsible for a key area of the ROV's development. The Mechanical Team designs the frame, enclosure, and buoyancy, ensuring the ROV is both durable and functional. The Electrical Team handles the power system, circuits, sensors, and PCB containment, ensuring the ROV operates efficiently and reliably. The Software Team focuses on image processing with the ROV’s cameras, developing the GUI for user-friendly operation, and creating control systems to enhance the ROV’s maneuverability and performance. Together, these three teams form the backbone of the ROV's technical capabilities.",
           ],
-          photo: "/News/mate-rov/2.png",
+          photo: "/News/mate-rov/2.webp",
           photoDescription: "Penguins Team.",
         },
         {
@@ -120,7 +124,7 @@ export const newsData: NewsData = {
             "This is an annual regional competition held at the Arab Academy for Science, Technology and Maritime Transport (AASTMT) for undergraduates interested in remotely operated underwater vehicles (ROVs). These ROVs perform specific underwater missions according to the competition rules and guidelines. The competition was first launched in 2012 by Delta Square International LLC in association with AASTMT.",
             "This competition serves as a regional qualifier for the international competition organized by the Marine Advanced Technology Education (MATE) Center and MATE Inspiration for Innovation, where winning teams represent Egypt at the MATE International ROV Competition.",
           ],
-          photo: "/News/mate-rov/3.png",
+          photo: "/News/mate-rov/3.webp",
           photoDescription: "Penguins Awards",
         },
         {
@@ -141,7 +145,7 @@ export const newsData: NewsData = {
       dateCreated: "4 Mar, 2025",
       author: "Marwan Tamer",
       tags: ["RAS", "PCB", "New Track"],
-      mainPhoto: "/News/pcb-track/1.png",
+      mainPhoto: "/News/pcb-track/1.webp",
       sections: [
         {
           id: 0,
@@ -169,7 +173,7 @@ export const newsData: NewsData = {
       dateCreated: "1 May, 2025",
       author: "Marwan Tamer",
       tags: ["RAS", "PCB", "Workshops"],
-      mainPhoto: "/Fake-Images/8.jpg",
+      mainPhoto: "/Fake-Images/8.webp",
       sections: [
         {
           id: 0,
@@ -197,7 +201,7 @@ export const newsData: NewsData = {
       dateCreated: "19 April, 2025",
       author: "Marwan Tamer",
       tags: ["RAS", "Embedded Systems", "Guest Speaker"],
-      mainPhoto: "/News/embedded-session/1.jpg",
+      mainPhoto: "/News/embedded-session/1.webp",
       sections: [
         {
           id: 0,
