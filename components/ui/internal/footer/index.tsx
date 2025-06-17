@@ -41,9 +41,7 @@ export default function Footer() {
 
   const textopacity = 0.8;
   return (
-    <Flex
-      padding="var(--global-spacing)"
-    >
+    <Flex paddingTop="var(--global-spacing)">
       <Card>
         <Logo
           logoType={LogoType.White}
@@ -170,6 +168,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={link.name}
                 >
                   <MediaLinks path={link.path} />
                 </Link>

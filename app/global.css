@@ -2,6 +2,7 @@
 
 :root {
   --font-primary: "Kanit", sans-serif;
+  --main-identity-color: #006699;
   --scrollbar-track: #002235;
   --scrollbar-thumb: #006699;
   --scrollbar-hover: #006699dd;
@@ -54,4 +55,50 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-hover);
+}
+
+::selection {
+  background-color: #00669999;
+}
+
+.checkboxes-container input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checkbox-container {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+}
+
+.checkboxes-container:hover input ~ .checkbox-container {
+  background-color: white;
+}
+
+.checkboxes-container input:checked ~ .checkbox-container {
+  background-color: white;
+}
+
+.checkbox-container::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 0px;
+  width: 6px;
+  height: 12px;
+  border: solid var(--main-identity-color);
+  border-width: 0 2px 2px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  transition: all;
+}
+
+.checkboxes-container input:checked ~ .checkbox-container::after {
+  display: block;
 }
