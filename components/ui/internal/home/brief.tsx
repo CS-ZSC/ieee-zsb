@@ -15,7 +15,7 @@ export default function Brief() {
         gap={"calc(1.5 * var(--global-spacing))"}
       >
         <Text color={"text-2"}>
-          A legacy of over 26 years positions IEEE Zagazig University Student
+          A legacy of over {new Date().getFullYear() - 1999} years positions IEEE Zagazig University Student
           Branch (ZSB) as one of the first and most impactful in Egypt. We
           extend our reach beyond Zagazig University, serving students
           nationwide through workshops, events, and initiatives that explore

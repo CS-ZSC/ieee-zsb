@@ -5,9 +5,9 @@ import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";
 import Heading from "@/components/ui/internal/heading";
-import type { NewsItem } from "@/app/news/news";
-import NewsCard from "@/app/news/news-card";
-import Description from "@/app/news/description";
+import type { NewsItem } from "@/components/ui/internal/news/news";
+import NewsCard from "@/components/ui/internal/news/news-card";
+import Description from "@/components/ui/internal/news/description";
 
 // const ONE_SECOND = 1000;
 // const AUTO_DELAY = ONE_SECOND * 10;
