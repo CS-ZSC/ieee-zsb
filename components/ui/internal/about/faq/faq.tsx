@@ -5,6 +5,7 @@ import Container from "../container";
 import faqs from "./faqs";
 import Question from "./question";
 import Answer from "./answer";
+import AnimatedCard from "../../animatedCard";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -18,12 +19,14 @@ export default function Faq() {
       <Flex direction="column" gap={4} w="full">
         {faqs.map((faq, index) => (
           <Flex key={index} direction="column" gap={2} w="full">
-            <Question
-              question={faq.question}
-              isOpen={openIndex === index}
-              onClick={() => toggleIndex(index)}
-            />
-            <Answer answer={faq.answer} isOpen={openIndex === index} />
+            <AnimatedCard>
+              <Question
+                question={faq.question}
+                isOpen={openIndex === index}
+                onClick={() => toggleIndex(index)}
+              />
+              <Answer answer={faq.answer} isOpen={openIndex === index} />
+            </AnimatedCard>
           </Flex>
         ))}
       </Flex>

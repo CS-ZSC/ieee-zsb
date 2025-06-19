@@ -5,6 +5,7 @@ import positions from "./positions";
 import PositionCard from "./positionCard";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useWindowType } from "@/hooks/use-window-type";
+import AnimatedCard from "../../animatedCard";
 
 export default function Board() {
   const { isDesktop } = useWindowType();
@@ -17,8 +18,14 @@ export default function Board() {
       mx="auto"
       justifyItems="center"
     >
-      <GridItem colSpan={[1, 1, 1, 2]} w="full" maxW={isDesktop ? "50%" : "500px"}>
-        <PositionCard position={positions[0]} />
+      <GridItem
+        colSpan={[1, 1, 1, 2]}
+        w="full"
+        maxW={isDesktop ? "50%" : "500px"}
+      >
+        <AnimatedCard>
+          <PositionCard position={positions[0]} />
+        </AnimatedCard>
       </GridItem>
 
       {positions.slice(1).map((position, index) => (
@@ -37,7 +44,9 @@ export default function Board() {
             index == positions.length - 2 && index % 2 == 0 ? [1, 1, 1, 2] : []
           }
         >
-          <PositionCard position={position} />
+          <AnimatedCard>
+            <PositionCard position={position} />
+          </AnimatedCard>
         </GridItem>
       ))}
     </Grid>

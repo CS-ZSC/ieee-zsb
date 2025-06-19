@@ -1,33 +1,37 @@
+"use client";
+
 import React from "react";
-import Card from "../../card";
-import { Flex, Stack } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
+import SocialMediaLinks from "../../social-media-links";
+import SocialMediaLinkItem from "./socialMediaLinkItem";
+import AnimatedCard from "../../animatedCard";
 
 export default function SocialMedia() {
   return (
-    <Flex
-      w="fit"
-      align="center"
-      justify="center"
-      alignSelf={"center"}
-      bgColor="card-bg-3"
-      color="white"
-      border="1px solid"
-      borderColor="card-border-3"
-      rounded="2xl"
-      padding={2}
-      gap={2}
-    >
-      <Flex
-        bgColor="primary-2"
+    <AnimatedCard>
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: `repeat(${Math.min(SocialMediaLinks.length, 5)}, 1fr)`,
+        }}
+        justifyContent="center"
+        alignItems="center"
+        bgColor="card-bg-3"
+        color="white"
         border="1px solid"
         borderColor="card-border-3"
-        paddingY={"calc(var(--card-padding) * 2)"}
-        rounded="xl"
-        width={"200px"}
-        justifyContent={"center"}
+        rounded="2xl"
+        padding={2}
+        gap={2}
+        width="fit-content"
+        marginX="auto"
+        marginBottom={16}
       >
-        few
-      </Flex>
-    </Flex>
+        {SocialMediaLinks.map((link, index) => (
+          <SocialMediaLinkItem key={index} link={link} />
+        ))}
+      </Grid>
+    </AnimatedCard>
   );
 }
