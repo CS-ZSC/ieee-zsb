@@ -16,7 +16,7 @@ import Logo from "@/components/ui/internal/logo";
 import Card from "@/components/ui/internal/card";
 import { LogoType } from "@/components/ui/internal/logo";
 import { useWindowType } from "@/hooks/use-window-type";
-import { SocialMediaLinks } from "@/components/ui/internal/social-media-links";
+import SocialMediaLinks from "@/components/ui/internal/social-media-links";
 import { Chapters } from "@/components/ui/internal/header/chapters";
 import { useAtom } from "jotai";
 import { motion } from "framer-motion";
