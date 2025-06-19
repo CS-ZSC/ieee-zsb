@@ -32,6 +32,12 @@ const config: SystemConfig = defineConfig({
             _dark: "rgba(255, 255, 255, 0.5)",
           },
         },
+        "text-6": {
+          value: {
+            _light: "rgba(0, 0, 0, 0.8)",
+            _dark: "rgba(255, 255, 255, 0.8)",
+          },
+        },
 
         // Card colors
         "card-bg-1": { value: { _light: "#006699", _dark: "#002235" } },
