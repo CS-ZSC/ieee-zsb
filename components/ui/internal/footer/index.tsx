@@ -22,7 +22,6 @@ import { useAtom } from "jotai";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { FooterChaptersAccordionAtom } from "@/atoms/atoms";
-import { useColorMode } from "@/components/ui/color-mode";
 
 export default function Footer() {
   const { isDesktop } = useWindowType();
@@ -146,7 +145,7 @@ export default function Footer() {
           <Grid
             templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
             gapX={6}
-            gapY={2}
+            gapY={3}
             alignItems="center"
             marginBottom={2}
           >
@@ -158,8 +157,7 @@ export default function Footer() {
             </Heading>
             <Flex
               justifyContent="center"
-              gap={5}
-              marginY={4}
+              gap={3}
               gridRow={{ base: 2, md: "auto" }}
             >
               {SocialMediaLinks.map((link) => (
@@ -170,7 +168,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={link.name}
                 >
-                  <MediaLinks path={link.path} />
+                  <MediaLinks icon={link.icon} />
                 </Link>
               ))}
             </Flex>
@@ -198,26 +196,18 @@ export default function Footer() {
   );
 }
 
-function MediaLinks({ path }: { path: string }) {
-  const { colorMode } = useColorMode();
+function MediaLinks({ icon }: { icon: string }) {
   return (
     <Flex
       justifyContent="center"
       alignItems="center"
-      backgroundColor="white"
       padding={1}
       borderRadius={10}
-      transition="transform 0.2s ease-in-out"
-      _hover={{ transform: "scale(1.06)" }}
+      transition="all"
+      color="text-1"
+      _hover={{ color: "text-4" }}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-        width={30}
-        height={30}
-      >
-        <path fill={colorMode === "light" ? "#006699" : "#002235"} d={path} />
-      </svg>
+      <Icon icon={icon} width={35} height={35} />
     </Flex>
   );
 }
