@@ -1,14 +1,13 @@
 import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Flex } from "@chakra-ui/react";
 import React from "react";
+import PageTitle from "@/components/ui/internal/pageTitle";
 
 export default function page() {
   return (
     <PageWrapper>
       <Flex flexDirection={"column"} padding={"var(--global-spacing)"}>
-        <Flex fontWeight={"bold"} fontSize={44} justifyContent={"center"}>
-          Events
-        </Flex>
+        <PageTitle title="Events" />
       </Flex>
     </PageWrapper>
   );
