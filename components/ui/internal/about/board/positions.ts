@@ -16,14 +16,14 @@ const positions: Position[] = [
   },
   {
     name: "Amr Yasser Saber",
-    position: "Vice Technical Chairman",
+    position: "Vice Technical Chairperson",
     avatarSrc: "/Images/board/vice-technical.webp",
     linkedin: "https://www.linkedin.com/in/amr-yasser-559b59228",
     email: "amr.yasser@ieee-zsb.org",
   },
   {
     name: "Mustafa Mohamed",
-    position: "Vice Managerial Chairman",
+    position: "Vice Managerial Chairperson",
     avatarSrc: "/Images/board/vice-managerial.webp",
     linkedin: "https://www.linkedin.com/in/mustafa-mohamed-",
     email: "mustafa.mohammed@ieee-zsb.org",
