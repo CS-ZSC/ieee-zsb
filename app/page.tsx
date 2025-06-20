@@ -4,7 +4,6 @@ import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Flex } from "@chakra-ui/react";
 import HeroSection from "@/components/ui/internal/home/hero-section";
 import Events from "@/components/ui/internal/home/events";
-import Board from "@/components/ui/internal/board";
 import Brief from "@/components/ui/internal/home/brief";
 import News from "@/components/ui/internal/home/news";
 
@@ -20,7 +19,6 @@ export default function Home() {
         <Brief />
         <News />
         <Events />
-        <Board />
       </Flex>
     </PageWrapper>
   );

@@ -3,18 +3,19 @@
 import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { newsData } from "./news";
+import { newsData } from "../../components/ui/internal/news/news";
 import { useWindowType } from "@/hooks/use-window-type";
-import NewsCard from "./news-card";
-import FullNewsCard from "@/app/news/full-news-card";
-import NewsDisplayControl from "./display-control/news-display-control";
+import NewsCard from "../../components/ui/internal/news/news-card";
+import FullNewsCard from "@/components/ui/internal/news/full-news-card";
+import NewsDisplayControl from "@/components/ui/internal/news/display-control/news-display-control";
 import Card from "@/components/ui/internal/card";
 import { useAtom } from "jotai";
 import {
   newsFilterCheckedItemsAtom,
   newsFilterLabelsAtom,
 } from "@/atoms/atoms";
-import Loading from "./loading";
+import Loading from "../../components/ui/internal/news/loading";
+import PageTitle from "@/components/ui/internal/pageTitle";
 
 export default function Page() {
   const { isDesktop } = useWindowType();
@@ -57,9 +58,7 @@ export default function Page() {
         gap={"var(--global-spacing)"}
       >
         <Flex flexDirection="column" justifyContent="center">
-          <Flex fontWeight="bold" fontSize="3rem" justifyContent="center">
-            {newsData.mainTitle}
-          </Flex>
+          <PageTitle title="News" />
           <Text textAlign="center" fontSize="1.3rem">
             {newsData.mainDescription}
           </Text>

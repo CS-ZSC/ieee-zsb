@@ -3,7 +3,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useWindowType } from "@/hooks/use-window-type";
-import type { NewsItem } from "@/app/news/news";
+import type { NewsItem } from "@/components/ui/internal/news/news";
 import Tag from "@/components/ui/internal/tag";
 import { useRouter } from "next/navigation";
 import Description from "./description";
@@ -60,7 +60,7 @@ export default function NewsCard({ newsObject }: Props) {
         </Flex>
         <Flex>
           <Text
-            fontSize="2rem"
+            fontSize="1.6rem"
             fontWeight="bold"
             color={"text-2"}
             textAlign="left"

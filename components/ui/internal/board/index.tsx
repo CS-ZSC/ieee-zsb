@@ -95,37 +95,37 @@ const positions: Position[] = [
     {
         name: "Shahd Elbendary",
         position: "Chairperson",
-        avatarSrc: "/Images/board/chairperson.jpeg",
+        avatarSrc: "/Images/board/chairperson.webp",
         email: "shahd.elbendary@ieee-zsb.org"
     },
     {
         name: "Amr Yasser Saber",
         position: "Vice Technical Chairman",
-        avatarSrc: "/Images/board/vice-technical.jpeg",
+        avatarSrc: "/Images/board/vice-technical.webp",
         email: "amr.yasser@ieee-zsb.org"
     },
     {
         name: "Mustafa Mohamed",
         position: "Vice Managerial Chairman",
-        avatarSrc: "/Images/board/vice-managerial.jpeg",
+        avatarSrc: "/Images/board/vice-managerial.webp",
         email: "mustafa.mohammed@ieee-zsb.org"
     },
     {
         name: "Samar Nafea",
         position: "Secretary",
-        avatarSrc: "/Images/board/secretary.jpeg",
+        avatarSrc: "/Images/board/secretary.webp",
         email: "samar.nafea@ieee-zsb.org"
     },
     {
         name: "Mohamed Tarek",
         position: "Branding Officer",
-        avatarSrc: "/Images/board/branding-officer.jpeg",
+        avatarSrc: "/Images/board/branding-officer.webp",
         email: "mohamed.tarek@ieee-zsb.org"
     },
     {
         name: "Sarah Kahwash",
         position: "Treasurer",
-        avatarSrc: "/Images/board/treasurer.jpeg",
+        avatarSrc: "/Images/board/treasurer.webp",
         email: "sarah.kahwash@ieee-zsb.org"
     },
 ];

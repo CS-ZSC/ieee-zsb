@@ -1,13 +1,13 @@
 import { notFound } from "next/navigation";
-import { newsData } from "../news";
+import { newsData } from "../../../components/ui/internal/news/news";
 import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Heading from "@/components/ui/internal/heading";
-import Description from "@/app/news/description";
-import ImageBox from "../image-box";
+import Description from "@/components/ui/internal/news/description";
+import ImageBox from "../../../components/ui/internal/news/image-box";
 import Tag from "@/components/ui/internal/tag";
 import { use } from "react";
-import VerticalDivider from "../vertical-divider";
+import VerticalDivider from "../../../components/ui/internal/news/vertical-divider";
 
 export default function NewsPage({
   params,
@@ -90,36 +90,36 @@ export default function NewsPage({
             maxWidth="1050px"
           />
         </Flex>
-          {newsItem.sections.map((section) => (
-            <div key={section.id}>
-              {section.photo && (
-                <Flex flexDirection={"column"} gap={2}>
-                  <ImageBox path={section.photo} maxWidth="600px" />
-                  <Text
-                    textAlign={"center"}
-                    color={"natural-2"}
-                    opacity={"0.8"}
-                    marginBottom={4}
-                  >
-                    Figure {photoCounter++}: {section.photoDescription}
-                  </Text>
-                </Flex>
-              )}
-              <Text fontWeight={"bold"} fontSize={"1.4rem"} marginBottom={2}>
-                {section.heading}
-              </Text>
-              <Flex flexDirection={"column"} fontSize={"2rem"} gap={4}>
-                {section.descriptions.map((description, index) => (
-                  <Description
-                    key={index}
-                    description={description}
-                    color={"natural-2"}
-                    maxWidth="1050px"
-                  />
-                ))}
+        {newsItem.sections.map((section) => (
+          <div key={section.id}>
+            {section.photo && (
+              <Flex flexDirection={"column"} gap={2}>
+                <ImageBox path={section.photo} maxWidth="600px" />
+                <Text
+                  textAlign={"center"}
+                  color={"natural-2"}
+                  opacity={"0.8"}
+                  marginBottom={4}
+                >
+                  Figure {photoCounter++}: {section.photoDescription}
+                </Text>
               </Flex>
-            </div>
-          ))}
+            )}
+            <Text fontWeight={"bold"} fontSize={"1.4rem"} marginBottom={2}>
+              {section.heading}
+            </Text>
+            <Flex flexDirection={"column"} fontSize={"2rem"} gap={4}>
+              {section.descriptions.map((description, index) => (
+                <Description
+                  key={index}
+                  description={description}
+                  color={"natural-2"}
+                  maxWidth="1050px"
+                />
+              ))}
+            </Flex>
+          </div>
+        ))}
       </Flex>
     </PageWrapper>
   );

@@ -3,7 +3,7 @@
 import React from "react";
 import Card from "@/components/ui/internal/card";
 import Tag from "@/components/ui/internal/tag";
-import type { NewsItem } from "@/app/news/news";
+import type { NewsItem } from "@/components/ui/internal/news/news";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";

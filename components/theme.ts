@@ -16,6 +16,13 @@ const config: SystemConfig = defineConfig({
         "natural-1": { value: { _light: "#FFFFFF", _dark: "#000000" } },
         "natural-2": { value: { _light: "#000000", _dark: "#FFFFFF" } },
 
+        "primary-2": {
+          value: {
+            _light: "rgba(6, 62, 91, 0.5)",
+            _dark: "rgba(0, 102, 156, 0.3)",
+          },
+        },
+
         // Text colors
         "text-1": { value: { _light: "#FFFFFF", _dark: "#FFFFFF" } },
         "text-2": { value: { _light: "#E0F2FA", _dark: "#E0F2FA" } },
@@ -30,6 +37,12 @@ const config: SystemConfig = defineConfig({
           value: {
             _light: "rgba(255, 255, 255, 0.5)",
             _dark: "rgba(255, 255, 255, 0.5)",
+          },
+        },
+        "text-6": {
+          value: {
+            _light: "rgba(0, 0, 0, 0.8)",
+            _dark: "rgba(255, 255, 255, 0.8)",
           },
         },
 
