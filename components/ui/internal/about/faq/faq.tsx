@@ -25,8 +25,8 @@ export default function Faq() {
                 isOpen={openIndex === index}
                 onClick={() => toggleIndex(index)}
               />
-              <Answer answer={faq.answer} isOpen={openIndex === index} />
             </AnimatedCard>
+            <Answer answer={faq.answer} isOpen={openIndex === index} />
           </Flex>
         ))}
       </Flex>
