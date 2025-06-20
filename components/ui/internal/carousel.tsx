@@ -100,7 +100,7 @@ function FullCarousel({
       border="1px solid"
       borderColor="card-border-1"
       bgColor="card-bg-1"
-      padding="var(--card-padding)"
+      padding="var(--global-spacing)"
       gap="16px"
     >
       <Text

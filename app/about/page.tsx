@@ -2,7 +2,7 @@ import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 import PageTitle from "@/components/ui/internal/pageTitle";
-import Container from "@/components/ui/internal/about/container";
+import Container from "@/components/ui/internal/container";
 import About from "@/components/ui/internal/about/about";
 import Faq from "@/components/ui/internal/about/faq/faq";
 import Board from "@/components/ui/internal/about/board/board";

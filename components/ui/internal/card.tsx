@@ -4,11 +4,13 @@ import { Flex, Stack } from "@chakra-ui/react";
 interface CardProps {
   children: React.ReactNode;
   padding?: string | number;
+  gap?: string | number;
 }
 
 export default function Card({
   children,
   padding = "var(--card-padding)",
+  gap = 10,
 }: CardProps) {
   return (
     <Flex w="full" h="full">
@@ -22,7 +24,7 @@ export default function Card({
         borderColor="card-border-3"
         padding={padding}
         rounded="2xl"
-        gapY={10}
+        gapY={gap}
       >
         {children}
       </Stack>

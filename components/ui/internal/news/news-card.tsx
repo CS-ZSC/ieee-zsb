@@ -60,7 +60,7 @@ export default function NewsCard({ newsObject }: Props) {
         </Flex>
         <Flex>
           <Text
-            fontSize="2rem"
+            fontSize="1.6rem"
             fontWeight="bold"
             color={"text-2"}
             textAlign="left"
