@@ -9,7 +9,7 @@ export default function PageTitle({ title }: { title: string }) {
     <AnimatedCard>
       <Text fontWeight={"bold"} fontSize={"3rem"} textAlign={"center"}>
         {title}
-      </Text>{" "}
+      </Text>
     </AnimatedCard>
   );
 }
