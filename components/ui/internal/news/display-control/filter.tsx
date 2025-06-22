@@ -43,13 +43,15 @@ export default function Filter() {
         <Button
           onClick={() => setOpen((prev) => !prev)}
           transition="all"
-          backgroundColor={"transparent"}
-          padding={0}
+          backgroundColor={open ? "primary-11" : "transparent"}
+          padding={"12px 14px"}
+          outlineColor={"primary-3"}
+          rounded={"10px"}
         >
           <Flex
             gap={2}
             backgroundColor={"transparent"}
-            color={open ? "text-3" : "white"}
+            color={"neutral-1"}
             transition={"all"}
           >
             <Text fontSize={"1.2rem"}>Filter</Text>
@@ -67,13 +69,13 @@ export default function Filter() {
           p={"var(--global-spacing)"}
           rounded="2xl"
           position="absolute"
-          top="100%"
-          left="40%"
+          top="140%"
+          left="50%"
           overflow="hidden"
           zIndex={2}
-          backgroundColor={"card-bg-3"}
+          backgroundColor={"primary-5"}
           border={"1px solid"}
-          borderColor={"card-border-3"}
+          borderColor={"primary-3"}
         >
           {checkedNewsItems.map((isChecked, index) => (
             <chakra.li key={index} listStyleType="none">

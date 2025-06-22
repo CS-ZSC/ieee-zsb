@@ -28,7 +28,7 @@ export default function EventCard({ event }: EventCardProps) {
       maxWidth={"700px"}
       aspectRatio={"4 / 3"}
       border="1px solid"
-      borderColor="card-border-3"
+      borderColor="primary-3"
       rounded="2xl"
       overflow="hidden"
       position="relative"
@@ -58,8 +58,10 @@ export default function EventCard({ event }: EventCardProps) {
         boxShadow="lg"
         backdropFilter="blur(16px)"
         backdropBlur="xl"
+        border={"1px solid"}
+        borderColor={"neutral-4"}
       >
-        <Flex color="secondary" alignItems="center" wrap="wrap">
+        <Flex color="accent-1" alignItems="center" wrap="wrap">
           <Flex alignItems="center" gap={1}>
             <Icon icon="lucide:map-pin" />
             <Text>{event.location}</Text>
@@ -73,10 +75,10 @@ export default function EventCard({ event }: EventCardProps) {
             <Text>{event.date}</Text>
           </Flex>
         </Flex>
-        <Text fontSize="1.6rem" fontWeight="bold" color="text-1">
+        <Text fontSize="1.6rem" fontWeight="bold" color="white">
           {event.title.toString().toUpperCase()}
         </Text>
-        <Text color="text-4" lineClamp={isDesktop ? 6 : 3}>
+        <Text color="white-80" lineClamp={isDesktop ? 6 : 3}>
           {event.description}
         </Text>
       </Flex>

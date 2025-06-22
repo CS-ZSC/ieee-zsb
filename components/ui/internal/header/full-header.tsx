@@ -25,10 +25,10 @@ function FullHeader() {
         width="full"
         minWidth="200px"
         boxShadow="lg"
-        bgColor={"card-bg-3"}
-        color={"white"}
+        bgColor={"primary-5"}
+        color={"neutral-1"}
         border="1px solid"
-        borderColor="card-border-3"
+        borderColor="primary-3"
         borderRadius="2xl"
         backdropFilter="blur(16px)"
         top={"var(--global-spacing)"}
@@ -76,7 +76,7 @@ function LinksNavigator() {
           ref={(el) => {
             if (el) buttonRefs.current[index] = el;
           }}
-          color={"white"}
+          color={"neutral-1"}
           size="sm"
           variant="ghost"
           fontWeight="bold"
@@ -105,7 +105,7 @@ function LinksNavigator() {
                 width: activeRect.width - 32,
                 height: "3px",
                 borderRadius: "8px",
-                backgroundColor: "white",
+                backgroundColor: "neutral-1",
               }}
             />
           )}

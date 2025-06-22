@@ -7,7 +7,7 @@ import AnimatedCard from "./animatedCard";
 export default function PageTitle({ title }: { title: string }) {
   return (
     <AnimatedCard>
-      <Text fontWeight={"bold"} fontSize={"3rem"} textAlign={"center"}>
+      <Text fontWeight={"bold"} fontSize={"3rem"} textAlign={"center"} color={"neutral-1"}>
         {title}
       </Text>
     </AnimatedCard>

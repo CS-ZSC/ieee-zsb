@@ -2,7 +2,6 @@ import React from "react";
 import { Flex, Grid } from "@chakra-ui/react";
 import Search from "./Search";
 import { Icon } from "@iconify/react";
-import VerticalDivider from "../vertical-divider";
 import Filter from "./filter";
 import dynamic from "next/dynamic";
 
@@ -17,10 +16,10 @@ interface Props {
 export default function NewsDisplayControl({ onSearch }: Props) {
   return (
     <Grid
-      bgColor={"card-bg-3"}
-      color={"white"}
+      bgColor={"primary-5"}
+      color={"neutral-1"}
       border="1px solid"
-      borderColor="card-border-3"
+      borderColor="primary-3"
       padding="calc(var(--card-padding) / 2)"
       rounded={"2xl"}
       gap={4}
@@ -41,15 +40,15 @@ export default function NewsDisplayControl({ onSearch }: Props) {
         gridArea="search"
         justifyContent="center"
         alignItems="center"
-        padding="calc(var(--card-padding) / 3)"
+        padding="calc(var(--card-padding) / 4) calc(var(--card-padding) / 3)"
         rounded="xl"
-        color="text-4"
+        color={"neutral-3"}
+        bgColor={"primary-12"}
         border="1px solid"
-        borderColor="card-border-3"
-        gap={3}
+        borderColor="primary-3"
+        gap={2}
       >
         <Icon icon="majesticons:search-line" width="2.2rem" />
-        <VerticalDivider backgroundColor="text-4" width="2px" height="1.8rem" />
         <Search onSearch={onSearch} />
       </Flex>
       <Flex justifyContent="flex-end" gridArea="actions" gap={2}>

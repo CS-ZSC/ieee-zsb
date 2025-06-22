@@ -35,7 +35,7 @@ export default function SloganTypingEffect() {
       // fontSize={{ base: "3rem", md: "5rem", lg: "5rem" }}
       fontWeight="bold"
       borderRight="2px solid"
-      borderColor={showCursor ? "secondary" : "transparent"}
+      borderColor={showCursor ? "white" : "transparent"}
       textAlign="center"
       margin="auto"
       marginBottom={5}
@@ -48,9 +48,9 @@ export default function SloganTypingEffect() {
           key={i}
           color={
             char === "O" || char === "W" || char === "N"
-              ? "#FFC900"
+              ? "accent-1"
               : colorMode === "light"
-                ? "primary"
+                ? "primary-1"
                 : "white"
           }
         >

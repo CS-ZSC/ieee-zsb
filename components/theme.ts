@@ -9,105 +9,141 @@ const config: SystemConfig = defineConfig({
   theme: {
     semanticTokens: {
       colors: {
-        // Background colors
-        bg: { value: { _light: "#f9fdff", _dark: "#00101a" } },
-        fg: { value: { _light: "#e0f2fa", _dark: "#e0f2fa" } },
+        // Background Colors
+        bg: { value: { _light: "#EDF8FF", _dark: "#00101a" } },
+        fg: { value: { _light: "#00101A", _dark: "#E0F2FA" } },
 
-        "natural-1": { value: { _light: "#FFFFFF", _dark: "#000000" } },
-        "natural-2": { value: { _light: "#000000", _dark: "#FFFFFF" } },
-
-        "primary-2": {
+        // Primary Colors
+        "primary-1": { value: { _light: "#006699", _dark: "#006699" } },
+        "primary-2": { value: { _light: "#0076B8", _dark: "#0076B8" } },
+        "primary-3": { value: { _light: "#C5DDE9", _dark: "#005481" } },
+        "primary-4": { value: { _light: "#003A5A", _dark: "#003A5A" } },
+        "primary-5": {
           value: {
-            _light: "rgba(6, 62, 91, 0.5)",
-            _dark: "rgba(0, 102, 156, 0.3)",
+            _light: "rgba(242, 251, 255, 0.8)",
+            _dark: "rgba(0, 34, 53, 0.8)",
+          },
+        },
+        "primary-6": {
+          value: {
+            _light: "rgba(0, 102, 153, 0.5)",
+            _dark: "rgba(0, 34, 53, 0.5)",
+          },
+        },
+        "primary-7": {
+          value: {
+            _light: "rgba(0, 102, 153, 0.2)",
+            _dark: "rgba(0, 34, 53, 0.2)",
+          },
+        },
+        "primary-8": { value: { _light: "#002235", _dark: "#A0D4EB" } },
+        "primary-9": { value: { _light: "#A0D4EB", _dark: "#002235" } },
+        "primary-10": {
+          value: {
+            _light: "rgba(0, 34, 53, 0.8)",
+            _dark: "rgba(0, 102, 153, 0.8)",
+          },
+        },
+        "primary-11": {
+          value: {
+            _light: "rgba(0, 34, 53, 0.5)",
+            _dark: "rgba(0, 102, 153, 0.5)",
+          },
+        },
+        "primary-12": {
+          value: {
+            _light: "rgba(172, 225, 255, 0.2)",
+            _dark: "rgba(2, 134, 200, 0.2)",
           },
         },
 
-        // Text colors
-        "text-1": { value: { _light: "#FFFFFF", _dark: "#FFFFFF" } },
-        "text-2": { value: { _light: "#E0F2FA", _dark: "#E0F2FA" } },
-        "text-3": { value: { _light: "#FFFFFF", _dark: "#A0D4EB" } },
-        "text-4": {
-          value: {
-            _light: "rgba(255, 255, 255, 0.8)",
-            _dark: "rgba(255, 255, 255, 0.8)",
-          },
-        },
-        "text-5": {
-          value: {
-            _light: "rgba(255, 255, 255, 0.5)",
-            _dark: "rgba(255, 255, 255, 0.5)",
-          },
-        },
-        "text-6": {
+        // Accent Colors
+        "accent-1": { value: { _light: "#FFC000", _dark: "#FFC000" } },
+        "accent-2": { value: { _light: "#FFE699", _dark: "#997300" } },
+        "accent-3": { value: { _light: "#997300", _dark: "#FFE699" } },
+
+        // Neutral Colors
+        "neutral-1": { value: { _light: "#000000", _dark: "#FFFFFF" } },
+        "neutral-2": {
           value: {
             _light: "rgba(0, 0, 0, 0.8)",
             _dark: "rgba(255, 255, 255, 0.8)",
           },
         },
-
-        // Card colors
-        "card-bg-1": { value: { _light: "#006699", _dark: "#002235" } },
-        "card-border-1": { value: { _light: "#1187C9", _dark: "#003A5A" } },
-        "card-bg-2": {
+        "neutral-3": {
           value: {
-            _light: "rgba(6, 62, 91, 0.8)",
-            _dark: "rgba(0, 102, 156, 0.8)",
+            _light: "rgba(0, 0, 0, 0.5)",
+            _dark: "rgba(255, 255, 255, 0.5)",
           },
         },
-        "card-border-2": {
+        "neutral-4": {
           value: {
-            _light: "#004B75",
-            _dark: "#0076B8",
+            _light: "rgba(0, 0, 0, 0.2)",
+            _dark: "rgba(255, 255, 255, 0.2)",
           },
         },
-        "card-bg-3": {
+        "neutral-5": { value: { _light: "#FFFFFF", _dark: "#000000" } },
+        "neutral-6": {
           value: {
-            _light: "rgba(0, 102, 156, 0.9)",
-            _dark: "rgba(0, 34, 53, 0.8)",
+            _light: "rgba(255, 255, 255, 0.8)",
+            _dark: "rgba(0, 0, 0, 0.8)",
           },
         },
-        "card-border-3": {
+        "neutral-7": {
           value: {
-            _light: "#1187C9",
-            _dark: "#003A5A",
+            _light: "rgba(255, 255, 255, 0.5)",
+            _dark: "rgba(0, 0, 0, 0.5)",
+          },
+        },
+        "neutral-8": {
+          value: {
+            _light: "rgba(255, 255, 255, 0.2)",
+            _dark: "rgba(0, 0, 0, 0.2)",
           },
         },
 
-        // Chip colors
-        "chip-bg-1": { value: { _light: "#ffc100", _dark: "#ffc100" } },
-        "chip-border-1": { value: { _light: "#664f00", _dark: "#664f00" } },
-        "chip-bg-2": { value: { _light: "#a0d4eb", _dark: "#a0d4eb" } },
-        "chip-border-3": { value: { _light: "#00669c", _dark: "#00669c" } },
-
-        // Buttons colors
-        "btn-bg-1": { value: { _light: "#004164", _dark: "#00669c" } },
-        "btn-text-1": { value: { _light: "#e0f2fa", _dark: "#e0f2fa" } },
-        "btn-bg-2": { value: { _light: "#a0d4eb", _dark: "#a0d4eb" } },
-        "btn-text-2": { value: { _light: "#00669c", _dark: "#00669c" } },
-        "btn-bg-3": { value: { _light: "#e0f2fa", _dark: "#e0f2fa" } },
-        "btn-text-3": { value: { _light: "#005481", _dark: "#005481" } },
-
-        // Basic colors
-        white: { value: { _light: "#ffffff", _dark: "#ffffff" } },
+        // Constant Colors
+        "light-blue": { value: { _light: "#A0D4EB", _dark: "#A0D4EB" } },
+        "night-blue": { value: { _light: "#00101A", _dark: "#00101A" } },
+        "white-blue": { value: { _light: "#E0F2FA", _dark: "#E0F2FA" } },
+        white: { value: { _light: "#FFFFFF", _dark: "#FFFFFF" } },
+        "white-80": {
+          value: {
+            _light: "rgba(255, 255, 255, 0.8)",
+            _dark: "rgba(255, 255, 255, 0.8)",
+          },
+        },
+        "white-50": {
+          value: {
+            _light: "rgba(255, 255, 255, 0.5)",
+            _dark: "rgba(255, 255, 255, 0.5)",
+          },
+        },
+        "white-20": {
+          value: {
+            _light: "rgba(255, 255, 255, 0.2)",
+            _dark: "rgba(255, 255, 255, 0.2)",
+          },
+        },
         black: { value: { _light: "#000000", _dark: "#000000" } },
-
-        // IEEE ZSB colors
-        primary: { value: { _light: "#00669c", _dark: "#00669c" } },
-        secondary: { value: { _light: "#ffc000", _dark: "#ffc000" } },
-
-        // IEEE ZSB Chapter colors
-        "cs-1": { value: { _light: "#354a5f", _dark: "#354a5f" } },
-        "cs-2": { value: { _light: "#d3d6db", _dark: "#d3d6db" } },
-
-        "ras-1": { value: { _light: "#f08114", _dark: "#f08114" } },
-        "ras-2": { value: { _light: "#f8e2cb", _dark: "#f8e2cb" } },
-
-        "pes-1": { value: { _light: "#6eb43f", _dark: "#6eb43f" } },
-        "pes-2": { value: { _light: "#e1ead5", _dark: "#e1ead5" } },
-
-        "wie-1": { value: { _light: "#802c92", _dark: "#802c92" } },
-        "wie-2": { value: { _light: "#e2d1e4", _dark: "#e2d1e4" } },
+        "black-80": {
+          value: {
+            _light: "rgba(0, 0, 0, 0.8)",
+            _dark: "rgba(0, 0, 0, 0.8)",
+          },
+        },
+        "black-50": {
+          value: {
+            _light: "rgba(0, 0, 0, 0.5)",
+            _dark: "rgba(0, 0, 0, 0.5)",
+          },
+        },
+        "black-20": {
+          value: {
+            _light: "rgba(0, 0, 0, 0.2)",
+            _dark: "rgba(0, 0, 0, 0.2)",
+          },
+        },
       },
     },
   },

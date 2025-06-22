@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { newsData } from "../../../components/ui/internal/news/news";
 import PageWrapper from "@/components/ui/internal/page-wrapper";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import Heading from "@/components/ui/internal/heading";
 import Description from "@/components/ui/internal/news/description";
 import ImageBox from "../../../components/ui/internal/news/image-box";
@@ -20,8 +20,7 @@ export default function NewsPage({
     return notFound();
   }
 
-  const allNews = newsData.news;
-  const newsItem = allNews.find((item) => item.id === newsId);
+  const newsItem = newsData.find((item) => item.id === newsId);
   let photoCounter = 1;
 
   if (!newsItem) {
@@ -43,22 +42,15 @@ export default function NewsPage({
           flexDirection={"column"}
           gap={"calc(var(--global-spacing) * 1.5)"}
         >
-          <Heading text={newsItem.title} color="natural-2" />
-          <Box
-            width={"full"}
-            // maxWidth={"850px"}
-            mx={"auto"}
-            position={"relative"}
-            bgImage={`url(${newsItem.mainPhoto})`}
-            bgSize="cover"
-            rounded="2xl"
-            border="1px solid"
-            borderColor="card-border-1"
-            style={{
-              aspectRatio: "16/9",
-            }}
-          >
+          <Heading text={newsItem.title} color="neutral-1" />
+          <Flex position={"relative"}>
+            <ImageBox
+              path={newsItem.mainPhoto}
+              alt={newsItem.title}
+              maxWidth="full"
+            />
             <Flex
+              zIndex={2}
               position={"absolute"}
               left={"var(--global-spacing)"}
               bottom={"var(--global-spacing)"}
@@ -66,23 +58,23 @@ export default function NewsPage({
               paddingX={"15px"}
               rounded={"lg"}
               border={"1px solid"}
-              borderColor={"card-border-3"}
-              backgroundColor={"card-bg-3"}
+              borderColor={"primary-3"}
+              backgroundColor={"primary-5"}
               justifyContent={"center"}
               alignItems={"center"}
               gap={3}
               maxWidth={`calc(100% - 2 * var(--global-spacing))`}
             >
-              <Text color={"text-4"}>
+              <Text color={"neutral-2"}>
                 {newsItem.dateCreated} - {newsItem.author}
               </Text>
-              <VerticalDivider />
+              <VerticalDivider backgroundColor="neutral-2"/>
               <Flex flexWrap={"wrap"} gap={2}>
-                <Tag text={newsItem.tags[0]} />
+                <Tag text={newsItem.tags[0]} color="neutral-2" />
                 {/* <Tag text={newsItem.tags[1]} /> */}
               </Flex>
             </Flex>
-          </Box>
+          </Flex>
 
           <Description
             description={newsItem.description}
@@ -94,7 +86,11 @@ export default function NewsPage({
           <div key={section.id}>
             {section.photo && (
               <Flex flexDirection={"column"} gap={2}>
-                <ImageBox path={section.photo} maxWidth="600px" />
+                <ImageBox
+                  path={section.photo}
+                  alt={section.photoDescription}
+                  maxWidth="full"
+                />
                 <Text
                   textAlign={"center"}
                   color={"natural-2"}

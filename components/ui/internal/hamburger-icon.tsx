@@ -49,7 +49,7 @@ function Bar({ width }: { width: number }) {
       w={width}
       h={"3px"}
       rounded={"2xl"}
-      bgColor={"white"}
+      bgColor={"neutral-1"}
       transition="all 0.2s ease-in-out"
     />
   );

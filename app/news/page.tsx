@@ -16,6 +16,7 @@ import {
 } from "@/atoms/atoms";
 import Loading from "../../components/ui/internal/news/loading";
 import PageTitle from "@/components/ui/internal/pageTitle";
+import AnimatedCard from "@/components/ui/internal/animatedCard";
 
 export default function Page() {
   const { isDesktop } = useWindowType();
@@ -26,7 +27,7 @@ export default function Page() {
 
   const selectedTags = filterItems.filter((_, index) => checkedItems[index]);
 
-  const filteredNews = newsData.news.filter((item) => {
+  const filteredNews = newsData.filter((item) => {
     const matchesSearch =
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.tags.some((tag) =>
@@ -59,25 +60,31 @@ export default function Page() {
       >
         <Flex flexDirection="column" justifyContent="center">
           <PageTitle title="News" />
-          <Text textAlign="center" fontSize="1.3rem">
-            {newsData.mainDescription}
-          </Text>
+          <AnimatedCard>
+            <Text textAlign="center" fontSize="1.3rem">
+              Discover the latest news about us!
+            </Text>
+          </AnimatedCard>
         </Flex>
 
         {/* Highlighted News */}
-        <Flex flexDirection={"column"} gap={"var(--global-spacing)"}>
-          {newsData.news.map((newsItem) =>
-            newsItem.highlightedItem ? (
-              isDesktop ? (
-                <FullNewsCard key={newsItem.id} newsObject={newsItem} />
-              ) : (
-                <NewsCard key={newsItem.id} newsObject={newsItem} />
-              )
-            ) : null
-          )}
-        </Flex>
+        <AnimatedCard>
+          <Flex flexDirection={"column"} gap={"var(--global-spacing)"}>
+            {newsData.map((newsItem) =>
+              newsItem.highlightedItem ? (
+                isDesktop ? (
+                  <FullNewsCard key={newsItem.id} newsObject={newsItem} />
+                ) : (
+                  <NewsCard key={newsItem.id} newsObject={newsItem} />
+                )
+              ) : null
+            )}
+          </Flex>
+        </AnimatedCard>
 
-        <NewsDisplayControl onSearch={setSearchQuery} />
+        <AnimatedCard>
+          <NewsDisplayControl onSearch={setSearchQuery} />
+        </AnimatedCard>
 
         {/*Filtered news*/}
         {filteredNews.length > 0 ? (
@@ -95,7 +102,9 @@ export default function Page() {
           </Flex>
         ) : (
           <Card>
-            <Text fontSize={"2xl"}>No news Found!</Text>
+            <Text fontSize={"2xl"} color={"neutral-1"}>
+              No news Found!
+            </Text>
           </Card>
         )}
       </Flex>

@@ -17,7 +17,7 @@ import Card from "@/components/ui/internal/card";
 import { LogoType } from "@/components/ui/internal/logo";
 import { useWindowType } from "@/hooks/use-window-type";
 import SocialMediaLinks from "@/components/ui/internal/social-media-links";
-import { Chapters } from "@/components/ui/internal/header/chapters";
+import Chapters from "@/components/ui/internal/header/chapters";
 import { useAtom } from "jotai";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
@@ -38,7 +38,6 @@ export default function Footer() {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  const textopacity = 0.8;
   return (
     <Flex paddingTop="var(--global-spacing)">
       <Card>
@@ -57,7 +56,7 @@ export default function Footer() {
         >
           {sections.map((section, i) => (
             <Stack key={section.title + i}>
-              <Heading color={"white"} opacity={textopacity} marginBottom={1}>
+              <Heading color={"neutral-1"} marginBottom={1}>
                 {section.title}
               </Heading>
               <Stack>
@@ -66,6 +65,7 @@ export default function Footer() {
                     <Flex
                       justifyContent="center"
                       alignItems="center"
+                      color={"neutral-2"}
                       gap={2}
                       cursor="pointer"
                       width={"fit-content"}
@@ -106,7 +106,8 @@ export default function Footer() {
                           <Box
                             key={chapter.id}
                             transition="opacity 0.2s ease-in-out"
-                            _hover={{ opacity: "0.7" }}
+                            color={"neutral-2"}
+                            _hover={{ color: "neutral-1" }}
                           >
                             <Link href={chapter.href}>
                               <motion.div
@@ -127,8 +128,9 @@ export default function Footer() {
                 {section.links.map((link, i) => (
                   <Box
                     key={i}
+                    color={"neutral-2"}
+                    _hover={{ color: "neutral-1" }}
                     transition="opacity 0.2s ease-in-out"
-                    _hover={{ opacity: "0.7" }}
                     width={"fit-content"}
                     marginTop={
                       !isOpen && link.href === "/committees" ? "-2" : "0"
@@ -149,10 +151,10 @@ export default function Footer() {
             alignItems="center"
             marginBottom={2}
           >
-            <Heading textAlign="center" opacity={textopacity}>
+            <Heading textAlign="center" color={"neutral-1"}>
               Follow Us
             </Heading>
-            <Heading textAlign="center" opacity={textopacity}>
+            <Heading textAlign="center" color={"neutral-1"}>
               Contact Us
             </Heading>
             <Flex
@@ -177,17 +179,18 @@ export default function Footer() {
               alignItems="center"
               gridRow={{ base: 4, md: "auto" }}
               transition="opacity 0.2s ease-in-out"
-              _hover={{ opacity: "0.7" }}
+              color={"neutral-2"}
+              _hover={{ color: "neutral-1" }}
             >
               <Link href="mailto:info@ieee-zsb.org">info@ieee-zsb.org</Link>
             </Flex>
           </Grid>
 
-          <Text textAlign={"center"} opacity={textopacity}>
+          <Text textAlign={"center"} color={"neutral-2"}>
             Designed and developed by IEEE-ZSB CS chapter &copy;{" "}
             {new Date().getFullYear()}
           </Text>
-          <Text textAlign={"center"} opacity={textopacity}>
+          <Text textAlign={"center"} color={"neutral-2"}>
             All rights reserved to IEEE-ZSB
           </Text>
         </Stack>
@@ -204,8 +207,8 @@ function MediaLinks({ icon }: { icon: string }) {
       padding={1}
       borderRadius={10}
       transition="all"
-      color="text-1"
-      _hover={{ color: "text-4" }}
+      color="neutral-2"
+      _hover={{ color: "neutral-1" }}
     >
       <Icon icon={icon} width={35} height={35} />
     </Flex>

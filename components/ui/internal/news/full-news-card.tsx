@@ -4,10 +4,11 @@ import React from "react";
 import Card from "@/components/ui/internal/card";
 import Tag from "@/components/ui/internal/tag";
 import type { NewsItem } from "@/components/ui/internal/news/news";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";
 import Description from "./description";
+import ImageBox from "./image-box";
 
 type Props = {
   newsObject: NewsItem;
@@ -39,7 +40,7 @@ export default function FullNewsCard({ newsObject }: Props) {
             paddingLeft={"calc(var(--global-spacing) * 1.5)"}
           >
             <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
-              <Text color={"text-5"}>
+              <Text color={"neutral-2"}>
                 {newsObject.dateCreated} - {newsObject.author}
               </Text>
               <Tag text={newsObject.tags[0]} />
@@ -48,7 +49,7 @@ export default function FullNewsCard({ newsObject }: Props) {
               <Text
                 fontSize="2rem"
                 fontWeight="bold"
-                color={"text-2"}
+                color={"neutral-1"}
                 textAlign="left"
               >
                 {newsObject.title}
@@ -56,19 +57,7 @@ export default function FullNewsCard({ newsObject }: Props) {
             </Flex>
             <Description description={newsObject.description} lineClamp="8" />
           </Flex>
-          <Box
-            width="100%"
-            maxWidth="60%"
-            position="relative"
-            bgImage={`url(${newsObject.mainPhoto})`}
-            bgSize="cover"
-            rounded="2xl"
-            border="1px solid"
-            borderColor="card-border-1"
-            style={{
-              aspectRatio: "16/9",
-            }}
-          />
+          <ImageBox path={newsObject.mainPhoto} alt={newsObject.title} maxWidth="60%" />
         </Flex>
       </Card>
     </Flex>

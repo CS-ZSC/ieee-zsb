@@ -1,13 +1,15 @@
-import { Box, Flex, Text, Button, VStack, HStack } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, HStack } from "@chakra-ui/react";
 import React, { Dispatch, useState } from "react";
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
-import { useRouter } from "next/navigation";
 import Heading from "@/components/ui/internal/heading";
 import type { NewsItem } from "@/components/ui/internal/news/news";
 import NewsCard from "@/components/ui/internal/news/news-card";
 import Description from "@/components/ui/internal/news/description";
+import Tag from "./tag";
+import ButtonLink from "./button-link";
+import ImageBox from "./news/image-box";
 
 // const ONE_SECOND = 1000;
 // const AUTO_DELAY = ONE_SECOND * 10;
@@ -52,7 +54,7 @@ export function Carousel({ newsItems }: { newsItems: NewsItem[] }) {
   }
 
   return (
-    <div>
+    <>
       {isDesktop ? (
         <FullCarousel
           newsItems={newsItems}
@@ -76,7 +78,7 @@ export function Carousel({ newsItems }: { newsItems: NewsItem[] }) {
           handleDotLeft={handleDotLeft}
         />
       )}
-    </div>
+    </>
   );
 }
 
@@ -91,6 +93,7 @@ function FullCarousel({
   handleDotRight,
   handleDotLeft,
 }: CarouselProps) {
+  const { isDesktop } = useWindowType();
   return (
     <Flex
       flexDirection="column"
@@ -98,15 +101,15 @@ function FullCarousel({
       overflow="hidden"
       rounded="2xl"
       border="1px solid"
-      borderColor="card-border-1"
-      bgColor="card-bg-1"
+      borderColor="primary-3"
+      bgColor="primary-5"
       padding="var(--global-spacing)"
       gap="16px"
     >
       <Text
         fontSize="2.5rem"
         fontWeight="bold"
-        color="text-1"
+        color="neutral-1"
         textAlign="center"
       >
         Latest News
@@ -119,11 +122,10 @@ function FullCarousel({
         zIndex={1}
         top="50%"
         transform="translateY(-50%)"
-        rounded="3xl"
-        backgroundColor="btn-bg-3"
-        color="btn-text-3"
-        w={8}
-        h={11}
+        rounded="10px"
+        backgroundColor="primary-1"
+        color="white"
+        padding={"10px 5px"}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -138,11 +140,10 @@ function FullCarousel({
         zIndex={1}
         top="50%"
         transform="translateY(-50%)"
-        rounded="3xl"
-        backgroundColor="btn-bg-3"
-        color="btn-text-3"
-        w={8}
-        h={11}
+        rounded="10px"
+        backgroundColor="primary-1"
+        color="white"
+        padding={"10px 5px"}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -177,6 +178,16 @@ function FullCarousel({
               style={{ width: "100%" }}
             >
               <VStack align="start">
+                <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
+                  <Text color={"neutral-3"}>
+                    {newsItems[currentIndex].dateCreated} -{" "}
+                    {newsItems[currentIndex].author}
+                  </Text>
+                  <Flex flexWrap={"wrap"} gap={2}>
+                    <Tag text={newsItems[currentIndex].tags[0]} />
+                    {/* <Tag text={newsObject.tags[1]} /> */}
+                  </Flex>
+                </Flex>
                 <Text
                   fontSize="2rem"
                   fontWeight="bold"
@@ -192,7 +203,7 @@ function FullCarousel({
               </VStack>
             </motion.div>
           </AnimatePresence>
-          <GoToNewsButton />
+          <ButtonLink link="/news" text="See all news" />
         </Flex>
         <Flex
           flex={1}
@@ -217,17 +228,9 @@ function FullCarousel({
                 maxWidth: "600px",
               }}
             >
-              <Box
-                width="100%"
-                position="relative"
-                bgImage={`url(${newsItems[currentIndex].mainPhoto})`}
-                bgSize="cover"
-                rounded="2xl"
-                border="1px solid"
-                borderColor="card-border-1"
-                style={{
-                  aspectRatio: "16/9",
-                }}
+              <ImageBox
+                path={newsItems[currentIndex].mainPhoto}
+                alt={newsItems[currentIndex].title}
               />
             </FlexMotion>
           </AnimatePresence>
@@ -288,13 +291,13 @@ function SmallCarousel({
       flexDirection="column"
       overflow="hidden"
       rounded="2xl"
+      bgColor="primary-5"
       border="1px solid"
-      borderColor="card-border-1"
-      bgColor="card-bg-1"
+      borderColor="primary-3"
       padding="var(--global-spacing)"
       gap="16px"
     >
-      <Heading text={"Latest News"} color="text-1" />
+      <Heading text={"Latest News"} color="neutral-1" />
       <Flex
         flexDirection={"column"}
         gap={5}
@@ -328,7 +331,11 @@ function SmallCarousel({
               }}
               transition={{ type: "spring", stiffness: 400, damping: 40 }}
             >
-              <NewsCard newsObject={item} />
+              <NewsCard
+                newsObject={item}
+                bgColor={"primary-12"}
+                tagColor={"primary-2"}
+              />
             </motion.div>
           ))}
         </motion.div>
@@ -342,7 +349,7 @@ function SmallCarousel({
         </Flex>
       </Flex>
       <Flex alignSelf={"center"} marginBottom={2}>
-        <GoToNewsButton />
+        <ButtonLink link="/news" text="See all news" />
       </Flex>
     </Flex>
   );
@@ -386,7 +393,7 @@ function Dots({
           }}
           height="10px"
           cursor="pointer"
-          bg={idx === currentIndex ? "secondary" : "text-4"}
+          bg={idx === currentIndex ? "accent-1" : "neutral-4"}
         />
       ))}
     </Flex>
@@ -422,25 +429,3 @@ const imageVariants = {
     opacity: 0,
   }),
 };
-
-function GoToNewsButton() {
-  const router = useRouter();
-
-  return (
-    <Button
-      justifySelf={"flex-end"}
-      backgroundColor="btn-bg-2"
-      color="btn-text-2"
-      borderRadius="5px"
-      width="fit-content"
-      fontWeight={"bold"}
-      paddingX={"5"}
-      paddingY={"5"}
-      _hover={{ opacity: "0.8" }}
-      onClick={() => router.push("/news")}
-    >
-      <Text>See all news</Text>
-      <Icon icon="lucide:circle-arrow-out-up-right" width={24} height={24} />
-    </Button>
-  );
-}

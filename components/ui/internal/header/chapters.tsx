@@ -4,20 +4,22 @@ interface Chapter {
   description: string;
   href: string;
   path: string;
-  secondaryPath: string;
+  whitePath: string;
+  blackPath: string;
   alt: string;
   identityColor: string;
   secondaryColor: string;
 }
 
-export const Chapters: Chapter[] = [
+const Chapters: Chapter[] = [
   {
     id: 1,
     name: "CS",
     description: "Computer Society Chapter",
     href: "/cs",
     path: "/Images/CS/IEEE CS.png",
-    secondaryPath: "/Images/CS/IEEE CS White.png",
+    whitePath: "/Images/CS/IEEE CS White.png",
+    blackPath: "/Images/CS/IEEE CS Black.png",
     alt: "CS Logo",
     identityColor: "#354a5f",
     secondaryColor: "#354a5f33",
@@ -28,7 +30,8 @@ export const Chapters: Chapter[] = [
     description: "Robotics & Automation Society Chapter",
     href: "/ras",
     path: "/Images/RAS/IEEE RAS.png",
-    secondaryPath: "/Images/RAS/IEEE RAS White.png",
+    whitePath: "/Images/RAS/IEEE RAS White.png",
+    blackPath: "/Images/RAS/IEEE RAS Black.png",
     alt: "RAS Logo",
     identityColor: "#f08114",
     secondaryColor: "#f0811433",
@@ -39,7 +42,8 @@ export const Chapters: Chapter[] = [
     description: "Power & Energy Society Chapter",
     href: "/pes",
     path: "/Images/PES/PES Logo Color.png",
-    secondaryPath: "/Images/PES/PES Logo White.png",
+    whitePath: "/Images/PES/PES Logo White.png",
+    blackPath: "/Images/PES/PES Logo Black.png",
     alt: "PES Logo",
     identityColor: "#6eb43f",
     secondaryColor: "#6eb43f33",
@@ -50,9 +54,12 @@ export const Chapters: Chapter[] = [
     description: "Women In Engineering Affinity Group",
     href: "/wie",
     path: "/Images/WIE/WIE LOGO.png",
-    secondaryPath: "/Images/WIE/WIE Logo White.png",
+    whitePath: "/Images/WIE/WIE Logo White.png",
+    blackPath: "/Images/WIE/WIE Logo Black.png",
     alt: "WIE Logo",
     identityColor: "#802c92",
     secondaryColor: "#802c9233",
   },
 ];
+
+export default Chapters;
