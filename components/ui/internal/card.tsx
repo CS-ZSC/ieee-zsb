@@ -18,10 +18,10 @@ export default function Card({
         w="full"
         align="center"
         justify="center"
-        bgColor="card-bg-3"
+        bgColor="primary-5"
         color="white"
         border="1px solid"
-        borderColor="card-border-3"
+        borderColor="primary-3"
         padding={padding}
         rounded="2xl"
         gapY={gap}

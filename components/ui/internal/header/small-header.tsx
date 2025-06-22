@@ -68,10 +68,10 @@ export default function SmallHeader() {
         position="fixed"
         shadow="lg"
         boxShadow="lg"
-        bgColor={"card-bg-3"}
-        color={"white"}
+        bgColor={"primary-5"}
+        color={"neutral-1"}
         border="1px solid"
-        borderColor="card-border-1"
+        borderColor={"primary-3"}
         backdropFilter="blur(16px)"
         backdropBlur="xl"
         left="50%"

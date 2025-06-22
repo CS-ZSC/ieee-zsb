@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
-import { Chapters } from "./chapters";
+import Chapters from "./chapters";
 import { Links } from "./links";
 import { useSetAtom, useAtom } from "jotai";
 import {
@@ -109,7 +109,7 @@ export default function SmallHeaderLinks() {
                     top: 0,
                     bottom: 0,
                     width: "3px",
-                    backgroundColor: "white",
+                    // backgroundColor: "neutral-1",
                     borderRadius: "5px",
                   }}
                 />

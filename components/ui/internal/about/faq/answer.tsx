@@ -25,7 +25,7 @@ export default function Answer({
             transition={{ duration: 0.2, ease: "easeInOut" }}
             style={{ overflow: "hidden", alignSelf: "start" }}
           >
-            <Text color="text-4" padding="var(--card-padding)">
+            <Text color="neutral-2" padding="var(--card-padding)">
               {answer}
             </Text>
           </MotionDiv>

@@ -9,7 +9,8 @@ export default function Search({ onSearch }: SearchProps) {
   return (
     <Input
       placeholder="Search"
-      _placeholder={{ color: "text-5" }}
+      _placeholder={{ color: "neutral-3" }}
+      color={"neutral-2"}
       name="news-search"
       width="full"
       outline="none"

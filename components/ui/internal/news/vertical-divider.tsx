@@ -8,7 +8,7 @@ interface VerticalDividerProps {
 }
 
 export default function VerticalDivider({
-  backgroundColor = "text-5",
+  backgroundColor = "neutral-1",
   width = "1px",
   height = "2.2rem",
 }: VerticalDividerProps) {

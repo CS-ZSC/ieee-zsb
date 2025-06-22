@@ -16,10 +16,10 @@ export default function PositionCard({ position }: Props) {
       align="stretch"
       justifyContent="start"
       padding={1}
-      bgColor="card-bg-3"
+      bgColor="primary-5"
       color="white"
       border="1px solid"
-      borderColor="card-border-3"
+      borderColor="primary-3"
       rounded="2xl"
       gap={isDesktop ? 2 : 1}
     >
@@ -36,18 +36,18 @@ export default function PositionCard({ position }: Props) {
         justify="space-between"
         flex={1}
       >
-        <Text fontWeight="bold" fontSize="1.3rem">
+        <Text fontWeight="bold" fontSize="1.3rem" color={"neutral-1"}>
           {position.name}
         </Text>
-        <Text fontSize="1.1rem" color="text-4">
+        <Text fontSize="1.1rem" color="neutral-2">
           {position.position}
         </Text>
-        <Box bgColor="card-bg-2" rounded="full" h="1px" />
+        <Box bgColor="primary-3" rounded="full" h="1px" />
 
         <Link href={position.linkedin}>
           <HStack
-            color="text-5"
-            _hover={{ color: "text-1" }}
+            color="neutral-3"
+            _hover={{ color: "neutral-1" }}
             transition={"all"}
           >
             <Icon icon="mage:linkedin" width={"1.5rem"} height={"1.5rem"} />
@@ -56,8 +56,8 @@ export default function PositionCard({ position }: Props) {
         </Link>
         <Link href={`mailto:${position.email}`}>
           <HStack
-            color="text-5"
-            _hover={{ color: "text-1" }}
+            color="neutral-3"
+            _hover={{ color: "neutral-1" }}
             transition={"all"}
           >
             <Icon

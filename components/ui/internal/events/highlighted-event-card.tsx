@@ -3,6 +3,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import { EventsData } from "./events";
 import Card from "../card";
 import { Icon } from "@iconify/react";
+import VerticalDivider from "../news/vertical-divider";
 
 interface EventCardProps {
   event: EventsData;
@@ -22,14 +23,15 @@ export default function HighlightedEventCard({ event }: EventCardProps) {
             textAlign={"center"}
             fontSize="1.6rem"
             fontWeight={"bold"}
+            color={"neutral-1"}
           >
             {event.currentEvent ? "Current event" : "Upcoming event"}
           </Text>
-          <Text paddingX={1} color={"text-4"}>
+          <Text paddingX={1} color={"neutral-2"}>
             {event.description}
           </Text>
           <Flex
-            bgColor={"primary-2"}
+            bgColor={"primary-12"}
             width={"full"}
             rounded={"xl"}
             paddingX={"calc(var(--card-padding))"}
@@ -37,19 +39,23 @@ export default function HighlightedEventCard({ event }: EventCardProps) {
             justifyContent={"space-between"}
             alignItems={"center"}
             wrap={"wrap"}
+            border={"1px solid"}
+            borderColor={"primary-3"}
           >
-            <Text fontSize={"1.6rem"} fontWeight={"bold"}>
+            <Text fontSize={"1.6rem"} fontWeight={"bold"} color={"neutral-1"}>
               {event.title.toString().toUpperCase()}
             </Text>
-            <Flex color={"secondary"} alignItems={"center"} wrap={"wrap"}>
+            <Flex
+              color={"accent-1"}
+              alignItems={"center"}
+              wrap={"wrap"}
+              gap={3}
+            >
               <Flex alignItems={"center"} gap={1}>
                 <Icon icon={"lucide:map-pin"} />
                 <Text>{event.location}</Text>
               </Flex>
-              <Icon
-                icon="hugeicons:solid-line-01"
-                style={{ transform: "rotate(90deg)" }}
-              />
+              <VerticalDivider backgroundColor="accent-1" />
               <Flex alignItems={"center"} gap={1}>
                 <Icon icon={"lucide:clock"} />
                 <Text>{event.date}</Text>

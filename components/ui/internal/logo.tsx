@@ -10,12 +10,12 @@ interface LogoOptions {
 export enum LogoType {
   Blue = "blue",
   White = "white",
+  Black = "black",
 }
 
-export default function Logo({ logoType, width, height }: LogoOptions) {
+export default function Logo({ width, height }: LogoOptions) {
   const { colorMode } = useColorMode();
-  const __logoType =
-    logoType || (colorMode === "light" ? LogoType.Blue : LogoType.White);
+  const __logoType = colorMode === "light" ? LogoType.Black : LogoType.White;
 
   return (
     <Link href="/" passHref>

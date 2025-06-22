@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
+import Card from "../../card";
 
 interface QuestionProps {
   question: string;
@@ -13,30 +14,27 @@ const MotionBox = motion.create(Box);
 
 export default function Question({ question, isOpen, onClick }: QuestionProps) {
   return (
-    <Flex
-      width="full"
-      justifyContent="space-between"
-      align="center"
-      gap={5}
-      onClick={onClick}
-      cursor="pointer"
-      bgColor="card-bg-3"
-      color="white"
-      border="1px solid"
-      borderColor="card-border-3"
-      padding={"var(--card-padding)"}
-      rounded="2xl"
-      gapY={10}
-    >
-      <Text fontWeight="bold" letterSpacing={1.5}>
-        {question}
-      </Text>
-      <MotionBox
-        animate={{ rotate: isOpen ? 180 : 0 }}
-        transition={{ duration: 0.25 }}
+    <Card padding={0}>
+      <Flex
+        width="full"
+        justifyContent="space-between"
+        align="center"
+        onClick={onClick}
+        cursor="pointer"
+        color="neutral-1"
+        gapY={10}
+        padding={"calc(var(--card-padding) * 0.8)"}
       >
-        <Icon icon="lucide:chevron-down" width="1.5rem" height="1.5rem" />
-      </MotionBox>
-    </Flex>
+        <Text fontWeight="bold" fontSize={"1.2rem"} letterSpacing={1.2}>
+          {question}
+        </Text>
+        <MotionBox
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.25 }}
+        >
+          <Icon icon="lucide:chevron-down" width="2rem" height="2rem" />
+        </MotionBox>
+      </Flex>
+    </Card>
   );
 }

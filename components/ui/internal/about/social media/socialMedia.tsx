@@ -17,10 +17,10 @@ export default function SocialMedia() {
         }}
         justifyContent="center"
         alignItems="center"
-        bgColor="card-bg-3"
+        bgColor="primary-5"
         color="white"
         border="1px solid"
-        borderColor="card-border-3"
+        borderColor="primary-3"
         rounded="2xl"
         padding={2}
         gap={2}
