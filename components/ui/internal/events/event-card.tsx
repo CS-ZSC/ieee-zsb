@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { Flex, Text, Image } from "@chakra-ui/react";
-import { EventsData } from "./events";
+import { EventsData } from "../../../../data/events";
 import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
 

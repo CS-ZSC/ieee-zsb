@@ -5,12 +5,16 @@ interface CardProps {
   children: React.ReactNode;
   padding?: string | number;
   gap?: string | number;
+  bgColor?: string;
+  rounded?: string;
 }
 
 export default function Card({
   children,
   padding = "var(--card-padding)",
   gap = 10,
+  bgColor = "primary-5",
+  rounded = "2xl",
 }: CardProps) {
   return (
     <Flex w="full" h="full">
@@ -18,12 +22,12 @@ export default function Card({
         w="full"
         align="center"
         justify="center"
-        bgColor="primary-5"
+        bgColor={bgColor}
         color="white"
         border="1px solid"
         borderColor="primary-3"
         padding={padding}
-        rounded="2xl"
+        rounded={rounded}
         gapY={gap}
       >
         {children}

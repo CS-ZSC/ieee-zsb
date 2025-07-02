@@ -6,7 +6,7 @@ import React from "react";
 import PageTitle from "@/components/ui/internal/pageTitle";
 import AnimatedCard from "@/components/ui/internal/animatedCard";
 import Container from "@/components/ui/internal/container";
-import eventsData from "@/components/ui/internal/events/events";
+import eventsData from "@/data/events";
 import HighlightedEventCard from "@/components/ui/internal/events/highlighted-event-card";
 import EventCard from "@/components/ui/internal/events/event-card";
 

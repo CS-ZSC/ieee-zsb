@@ -3,7 +3,7 @@
 import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { newsData } from "../../components/ui/internal/news/news";
+import { newsData } from "../../data/news";
 import { useWindowType } from "@/hooks/use-window-type";
 import NewsCard from "../../components/ui/internal/news/news-card";
 import FullNewsCard from "@/components/ui/internal/news/full-news-card";

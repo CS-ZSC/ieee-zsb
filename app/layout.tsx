@@ -4,7 +4,6 @@ import { Stack } from "@chakra-ui/react";
 import Header from "@/components/ui/internal/header";
 import Footer from "@/components/ui/internal/footer";
 import "./global.css";
-import { AnimatePresence } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export default function RootLayout({
             color={"natural-2"}
           >
             <Header />
-            <AnimatePresence mode="wait">{children}</AnimatePresence>
+            {children}
             <Footer />
           </Stack>
           <Toaster />
