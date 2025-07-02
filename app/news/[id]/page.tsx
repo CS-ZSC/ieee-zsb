@@ -1,13 +1,13 @@
 import { notFound } from "next/navigation";
-import { newsData } from "../../../components/ui/internal/news/news";
+import { newsData } from "@/data/news";
 import PageWrapper from "@/components/ui/internal/page-wrapper";
 import { Flex, Text } from "@chakra-ui/react";
 import Heading from "@/components/ui/internal/heading";
 import Description from "@/components/ui/internal/news/description";
-import ImageBox from "../../../components/ui/internal/news/image-box";
+import ImageBox from "@/components/ui/internal/news/image-box";
 import Tag from "@/components/ui/internal/tag";
 import { use } from "react";
-import VerticalDivider from "../../../components/ui/internal/news/vertical-divider";
+import VerticalDivider from "@/components/ui/internal/news/vertical-divider";
 
 export default function NewsPage({
   params,
@@ -68,7 +68,7 @@ export default function NewsPage({
               <Text color={"neutral-2"}>
                 {newsItem.dateCreated} - {newsItem.author}
               </Text>
-              <VerticalDivider backgroundColor="neutral-2"/>
+              <VerticalDivider backgroundColor="neutral-2" />
               <Flex flexWrap={"wrap"} gap={2}>
                 <Tag text={newsItem.tags[0]} color="neutral-2" />
                 {/* <Tag text={newsItem.tags[1]} /> */}

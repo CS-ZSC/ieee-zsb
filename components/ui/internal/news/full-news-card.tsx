@@ -3,7 +3,7 @@
 import React from "react";
 import Card from "@/components/ui/internal/card";
 import Tag from "@/components/ui/internal/tag";
-import type { NewsItem } from "@/components/ui/internal/news/news";
+import type { NewsItem } from "@/data/news";
 import { Flex, Text } from "@chakra-ui/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import { useRouter } from "next/navigation";
@@ -36,7 +36,7 @@ export default function FullNewsCard({ newsObject }: Props) {
             flexDirection={"column"}
             gap={isDesktop ? 2 : 1}
             justifyContent={"center"}
-            maxWidth={"40%"}
+            maxWidth={"60%"}
             paddingLeft={"calc(var(--global-spacing) * 1.5)"}
           >
             <Flex alignItems={"center"} gap={isDesktop ? 5 : 3}>
@@ -57,7 +57,12 @@ export default function FullNewsCard({ newsObject }: Props) {
             </Flex>
             <Description description={newsObject.description} lineClamp="8" />
           </Flex>
-          <ImageBox path={newsObject.mainPhoto} alt={newsObject.title} maxWidth="60%" />
+          <ImageBox
+            path={newsObject.mainPhoto}
+            alt={newsObject.title}
+            maxWidth="700px"
+            mx="0"
+          />
         </Flex>
       </Card>
     </Flex>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import Heading from "@/components/ui/internal/heading";
-import type { NewsItem } from "@/components/ui/internal/news/news";
+import type { NewsItem } from "@/data/news";
 import NewsCard from "@/components/ui/internal/news/news-card";
 import Description from "@/components/ui/internal/news/description";
 import Tag from "./tag";

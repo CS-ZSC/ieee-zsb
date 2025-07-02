@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Grid } from "@chakra-ui/react";
-import SocialMediaLinks from "../../social-media-links";
+import SocialMediaLinks from "@/data/social-media-links";
 import SocialMediaLinkItem from "./socialMediaLinkItem";
 import AnimatedCard from "../../animatedCard";
 

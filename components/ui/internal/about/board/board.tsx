@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import positions from "./positions";
-import PositionCard from "./positionCard";
+import executiveBoard from "@/data/executive-board";
+import PositionCard from "../../positionCard";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useWindowType } from "@/hooks/use-window-type";
 import AnimatedCard from "../../animatedCard";
@@ -24,24 +24,26 @@ export default function Board() {
         maxW={isDesktop ? "50%" : "500px"}
       >
         <AnimatedCard>
-          <PositionCard position={positions[0]} />
+          <PositionCard position={executiveBoard[0]} />
         </AnimatedCard>
       </GridItem>
 
-      {positions.slice(1).map((position, index) => (
+      {executiveBoard.slice(1).map((position, index) => (
         <GridItem
           key={index}
           w="full"
           maxW={
             isDesktop
-              ? index == positions.length - 2 && index % 2 == 0
+              ? index == executiveBoard.length - 2 && index % 2 == 0
                 ? "50%"
                 : "100%"
               : "500px"
           }
           justifySelf={"center"}
           colSpan={
-            index == positions.length - 2 && index % 2 == 0 ? [1, 1, 1, 2] : []
+            index == executiveBoard.length - 2 && index % 2 == 0
+              ? [1, 1, 1, 2]
+              : []
           }
         >
           <AnimatedCard>

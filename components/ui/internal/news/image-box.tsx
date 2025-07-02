@@ -6,6 +6,7 @@ interface ImageBoxProps {
   alt: string | undefined;
   maxWidth?: string;
   aspectRatio?: string;
+  mx?: string;
 }
 
 export default function ImageBox({
@@ -13,6 +14,7 @@ export default function ImageBox({
   alt = "Photo",
   maxWidth = "850px",
   aspectRatio = "16/9",
+  mx = "auto",
 }: ImageBoxProps) {
   return (
     <Image
@@ -20,7 +22,7 @@ export default function ImageBox({
       alt={alt}
       width="full"
       maxWidth={maxWidth}
-      mx="auto"
+      mx={mx}
       position="relative"
       objectFit="cover"
       border="1px solid"

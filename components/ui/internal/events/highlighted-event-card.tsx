@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
-import { EventsData } from "./events";
+import { EventsData } from "@/data/events";
 import Card from "../card";
 import { Icon } from "@iconify/react";
 import VerticalDivider from "../news/vertical-divider";

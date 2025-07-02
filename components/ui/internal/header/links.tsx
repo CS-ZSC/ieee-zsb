@@ -4,9 +4,11 @@ interface LinkItem {
   path: string;
 }
 
+let idCounter: number = 1;
+
 export const Links: LinkItem[] = [
-  { id: 1, name: "Committees", path: "/committees" },
-  { id: 2, name: "Events", path: "/events" },
-  { id: 3, name: "News", path: "/news" },
-  { id: 4, name: "About", path: "/about" },
+  { id: idCounter++, name: "Committees", path: "/committees" },
+  { id: idCounter++, name: "Events", path: "/events" },
+  { id: idCounter++, name: "News", path: "/news" },
+  { id: idCounter++, name: "About", path: "/about" },
 ];

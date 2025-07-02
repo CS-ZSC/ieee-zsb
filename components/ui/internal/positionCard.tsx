@@ -1,33 +1,39 @@
 import React from "react";
-import type { Position } from "./positions";
+import type { Position } from "@/data/position";
 import { Box, Text, Image, HStack, Flex } from "@chakra-ui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { useWindowType } from "@/hooks/use-window-type";
 interface Props {
   position: Position;
+  bgColor?: string;
 }
 
-export default function PositionCard({ position }: Props) {
+export default function PositionCard({
+  position,
+  bgColor = "primary-5",
+}: Props) {
   const { isDesktop } = useWindowType();
 
   return (
     <HStack
       align="stretch"
       justifyContent="start"
-      padding={1}
-      bgColor="primary-5"
+      padding={"4px"}
+      bgColor={bgColor}
       color="white"
       border="1px solid"
       borderColor="primary-3"
       rounded="2xl"
-      gap={isDesktop ? 2 : 1}
+      gap={isDesktop ? 3 : 2}
     >
       <Image
         borderRadius="10px"
         boxSize={isDesktop ? "160px" : "120px"}
         src={position.avatarSrc}
         alt={position.name}
+        _hover={{ scale: "1.06", borderRadius: "12px 0 0 12px" }}
+        transition={"all"}
       />
       <Flex
         paddingX={isDesktop ? 4 : 2}

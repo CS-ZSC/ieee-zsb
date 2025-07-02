@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
-import type { SocialMediaLink } from "../../social-media-links";
+import type { SocialMediaLink } from "@/data/social-media-links";
 
 interface SocialMediaLinkProps {
   link: SocialMediaLink;
