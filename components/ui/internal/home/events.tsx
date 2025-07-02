@@ -2,7 +2,7 @@ import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import Card from "@/components/ui/internal/card";
 import { useWindowType } from "@/hooks/use-window-type";
-import eventsData from "../../../../data/events";
+import eventsData from "@/data/events";
 import EventCard from "../events/event-card";
 import AnimatedCard from "../animatedCard";
 import ButtonLink from "../button-link";

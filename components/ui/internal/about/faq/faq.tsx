@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Flex } from "@chakra-ui/react";
 import Container from "../../container";
-import faqs from "../../../../../data/faqs";
+import faqs from "@/data/faqs";
 import Question from "./question";
 import Answer from "./answer";
 import AnimatedCard from "../../animatedCard";
