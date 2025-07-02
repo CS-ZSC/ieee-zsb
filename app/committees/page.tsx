@@ -7,9 +7,9 @@ import { useWindowType } from "@/hooks/use-window-type";
 import PageTitle from "@/components/ui/internal/pageTitle";
 import Container from "@/components/ui/internal/container";
 import AnimatedCard from "@/components/ui/internal/animatedCard";
-import CommitteesSelection from "../../components/ui/internal/committees/committees-selection";
+import CommitteesSelection from "@/components/ui/internal/committees/committees-selection";
 import committeesData from "@/data/committees";
-import Committee from "../../components/ui/internal/committees/committee";
+import Committee from "@/components/ui/internal/committees/committee";
 
 export default function Page() {
   const { isDesktop } = useWindowType();
