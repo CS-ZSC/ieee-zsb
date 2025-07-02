@@ -1,5 +1,5 @@
 import React from "react";
-import type { Position } from "../../../../../data/executive-board";
+import type { Position } from "@/data/position";
 import { Box, Text, Image, HStack, Flex } from "@chakra-ui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
