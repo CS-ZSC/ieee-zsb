@@ -1,4 +1,5 @@
-# Code of Conduct: Guidelines
+# Guidelines
+
 
 Consistent Git practices improve collaboration and project maintainability. Follow these guidelines for commit messages and branch naming.
 
