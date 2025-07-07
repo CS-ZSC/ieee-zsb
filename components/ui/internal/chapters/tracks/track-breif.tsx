@@ -9,10 +9,9 @@ export function TrackBrief({ name, description, imgSrc, showMore, setShowMore }:
     showMore: boolean;
     setShowMore: (value: boolean) => void;
 }) {
-    const { isDesktop } = useWindowType();
     return (
         <Card>
-            <HStack justify={"space-between"} w="full">
+            <HStack justify={"space-between"} w="full" spaceX={8}>
                 <Stack justify="space-between" h="full">
                     <Text>
                         {description}
@@ -33,9 +32,7 @@ export function TrackBrief({ name, description, imgSrc, showMore, setShowMore }:
                         {showMore ? "Show Less" : "Show More"}
                     </Button>
                 </Stack>
-                <Box>
-                    <Image src={imgSrc} alt={`${name} image`} w={isDesktop ? "320px" : "150px"} />
-                </Box>
+                <Image src={imgSrc} alt={`${name} image`} w="full" rounded="2xl" />
             </HStack>
         </Card>
     );
