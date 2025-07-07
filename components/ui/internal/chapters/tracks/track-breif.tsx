@@ -26,6 +26,7 @@ export function TrackBrief({ name, description, imgSrc, showMore, setShowMore }:
                         padding={"10px 20px"}
                         justifyContent={"center"}
                         textAlign="center"
+                        color="white"
                         transition="all"
                         _hover={{ backgroundColor: "primary-10" }}
                     >
