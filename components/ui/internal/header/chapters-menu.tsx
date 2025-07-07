@@ -97,7 +97,7 @@ export default function ChaptersMenu() {
                           src={
                             indicatorColor == "white"
                               ? chapter.whitePath
-                              : chapter.blackPath
+                              : chapter.path
                           }
                           alt={chapter.alt}
                           width={45}
