@@ -15,7 +15,7 @@ export function HeroCard({ logo, colorScheme }: { logo: string, colorScheme: str
             boxShadow={"0 4px 6px rgba(0, 0, 0, 0.1)"}
             height={isDesktop ? "800px" : "225px"}
         >
-            <Image src={logo} alt="Chapter Logo" width={isDesktop ? "400px": "100px"} />
+            <Image src={logo} alt="Chapter Logo" width={isDesktop ? "400px": "170px"} />
         </Flex>
     );
 }
