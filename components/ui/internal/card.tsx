@@ -23,7 +23,6 @@ export default function Card({
         align="center"
         justify="center"
         bgColor={bgColor}
-        color="white"
         border="1px solid"
         borderColor="primary-3"
         padding={padding}
