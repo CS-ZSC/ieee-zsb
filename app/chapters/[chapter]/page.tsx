@@ -3,6 +3,7 @@
 import Board from "@/components/ui/internal/chapters/board";
 import { Description } from "@/components/ui/internal/chapters/description";
 import { HeroCard } from "@/components/ui/internal/chapters/hero-card";
+import { Timeline } from "@/components/ui/internal/chapters/timeline/timeline";
 import { Tracks } from "@/components/ui/internal/chapters/tracks/tracks";
 import Container from "@/components/ui/internal/container";
 import NewsCard from "@/components/ui/internal/news/news-card";
@@ -70,6 +71,11 @@ export default function Chapter({ params }: { params: Promise<{ chapter: string 
                     <PageTitle title="Tracks" />
                     <Tracks tracks={chapterData?.tracks} color_scheme={chapterData?.color_scheme} />
                 </Container>}
+
+                <PageTitle title="Chapter Timeline" />
+
+                <Timeline seasons={chapterData?.seasons} />
+
             </Flex>
         </PageWrapper>
     )
