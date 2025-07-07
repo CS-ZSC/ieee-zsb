@@ -9,7 +9,7 @@ export function Track({ track, color_scheme }: { track: TrackData; color_scheme:
     const [showMore, setShowMore] = useState<boolean>(false);
     return (
         <Stack justify={"space-between"} h="full">
-            <Heading as="h2" size="lg">
+            <Heading ml={8} as="h2" size="2xl" fontWeight={"bold"}>
                 {track.name}
             </Heading>
             <TrackBrief
