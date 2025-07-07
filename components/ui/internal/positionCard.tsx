@@ -28,7 +28,7 @@ export default function PositionCard({
       gap={isDesktop ? 3 : 2}
     >
       <Image
-        borderRadius="10px"
+        rounded={"2xl"}
         boxSize={isDesktop ? "160px" : "120px"}
         src={position.avatarSrc}
         alt={position.name}
