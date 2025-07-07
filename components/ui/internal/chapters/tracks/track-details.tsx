@@ -51,7 +51,7 @@ function Activities({ activities }: { activities: { title: string, description: 
             <Heading justifySelf={"left"} px={6} size="2xl">
                 Activites
             </Heading>
-            <SimpleGrid justify={"center"} columns={isDesktop ? 3 : 2} gap={4}>
+            <SimpleGrid justify={"center"} columns={isDesktop ? 3 : 1} gap={4}>
                 {activities.map((activity, index) => (
                     <Card key={index} bgColor="primary-3" mt={4} mb={2} p={4}>
                         <Stack spacing={2} justify={"space-between"} h="full" textAlign={"center"}>
