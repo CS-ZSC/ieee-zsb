@@ -1,6 +1,5 @@
-import { Box, Button, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import Card from "../../card";
-import { useWindowType } from "@/hooks/use-window-type";
 
 export function TrackBrief({ name, description, imgSrc, showMore, setShowMore }: {
     name: string;
