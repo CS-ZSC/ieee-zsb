@@ -32,7 +32,12 @@ export function TrackBrief({ name, description, imgSrc, showMore, setShowMore }:
                         {showMore ? "Show Less" : "Show More"}
                     </Button>
                 </Stack>
-                <Image src={imgSrc} alt={`${name} image`} w="full" rounded="2xl" />
+                <Image
+                    src={imgSrc}
+                    alt={`${name} image`}
+                    w="full"
+                    rounded="2xl"
+                />
             </HStack>
         </Card>
     );
