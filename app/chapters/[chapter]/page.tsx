@@ -1,13 +1,12 @@
 "use client";
 
-import Board from "@/components/ui/internal/chapters/board";
 import { Description } from "@/components/ui/internal/chapters/description";
 import { HeroCard } from "@/components/ui/internal/chapters/hero-card";
 import { Timeline } from "@/components/ui/internal/chapters/timeline/timeline";
 import { Tracks } from "@/components/ui/internal/chapters/tracks/tracks";
 import Container from "@/components/ui/internal/container";
+import LeadersContainer from "@/components/ui/internal/leaders-container";
 import NewsCard from "@/components/ui/internal/news/news-card";
-// import News from "@/components/ui/internal/home/news";
 import PageWrapper from "@/components/ui/internal/page-wrapper";
 import PageTitle from "@/components/ui/internal/pageTitle";
 import { chaptersData } from "@/data/chapters";
@@ -65,7 +64,9 @@ export default function Chapter({ params }: { params: Promise<{ chapter: string 
                 </Container>}
                 <Container>
                     <PageTitle title="Board" />
-                    <Board board={chapterData?.board} />
+                    <LeadersContainer
+                        positions={chapterData?.board}
+                    />
                 </Container>
                 {chapterData?.tracks.length > 0 && <Container>
                     <PageTitle title="Tracks" />
