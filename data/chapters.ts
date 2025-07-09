@@ -17,6 +17,7 @@ export interface SeasonData {
     summary: string;
 }
 export interface ChapterData {
+    id: number;
     short_name: string;
     long_name: string;
     logo: string;
