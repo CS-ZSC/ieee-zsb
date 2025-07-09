@@ -133,7 +133,7 @@ const TimelineItem = ({ item, isTop }: { item: SeasonData, isTop: boolean }) => 
         </VStack >
     );
 };
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const TimelineCard = ({ summary, showFullText, toggleText }: { summary: string; showFullText: boolean; toggleText: () => void }) => {
     return (
         <Card>
@@ -142,7 +142,7 @@ const TimelineCard = ({ summary, showFullText, toggleText }: { summary: string; 
                 Season summary
             </Text>
             <Text fontSize="sm" mb={3}>
-                {showFullText ? summary : `${summary.substring(0, 70)}...`}
+                {showFullText ? summary : `${summary.substring(0, 200)}...`}
             </Text>
             <Button
                 variant="outline" mt={2}
