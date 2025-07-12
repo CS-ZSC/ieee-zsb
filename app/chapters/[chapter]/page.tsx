@@ -2,7 +2,7 @@
 
 import { Description } from "@/components/ui/internal/chapters/description";
 import { HeroCard } from "@/components/ui/internal/chapters/hero-card";
-import { Timeline } from "@/components/ui/internal/chapters/timeline/timeline";
+// import { Timeline } from "@/components/ui/internal/chapters/timeline/timeline";
 import { Tracks } from "@/components/ui/internal/chapters/tracks/tracks";
 import Container from "@/components/ui/internal/container";
 import LeadersContainer from "@/components/ui/internal/leaders-container";
@@ -16,72 +16,84 @@ import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
 import { notFound } from "next/navigation";
 import { use } from "react";
 
+export default function Chapter({
+  params,
+}: {
+  params: Promise<{ chapter: string }>;
+}) {
+  const { isDesktop } = useWindowType();
+  const { chapter } = use(params);
 
-export default function Chapter({ params }: { params: Promise<{ chapter: string }> }) {
-    const { isDesktop } = useWindowType();
-    const chapterList = [
-        "cs",
-        "pes",
-        "ras",
-        "wie"
-    ]
-    const { chapter } = use(params);
+  const chapterList = ["cs", "pes", "ras", "wie"];
 
-    if (!chapter || !chapterList.includes(chapter.toLowerCase())) {
-        notFound();
-    }
+  if (!chapter || !chapterList.includes(chapter.toLowerCase())) {
+    notFound();
+  }
 
-    const filteredNews = newsData.filter((item) => {
-        return item.tags.map(tag => tag.toUpperCase()).includes(chapter.toUpperCase());
-    });
+  const filteredNews = newsData.filter((item) => {
+    return item.tags
+      .map((tag) => tag.toUpperCase())
+      .includes(chapter.toUpperCase());
+  });
 
-    const chapterData = chaptersData.find((item) => item.short_name.toLowerCase() === chapter.toLowerCase());
-    
-    if (!chapterData) {
-        notFound()
-    }
+  const chapterData = chaptersData.find(
+    (item) => item.short_name.toLowerCase() === chapter.toLowerCase()
+  );
 
-    return (
-        <PageWrapper>
-            <Flex flexDirection={"column"} gap={12}>
-                <HeroCard logo={chapterData.logo} colorScheme={chapterData.color_scheme} />
-                {/* <Container> */}
-                <Box w="full">
-                    <Description
-                        about={chapterData.description.about}
-                        mission={chapterData.description.mission}
-                        vision={chapterData.description.vision}
-                        color={chapterData.color_scheme}
-                    />
-                </Box>
-                {filteredNews.length > 0 && <Container>
-                    <PageTitle title="Chapter News" />
-                    <SimpleGrid
-                        columns={isDesktop ? 2 : 1}
-                        paddingX={isDesktop ? 20 : "0px"}
-                        width="full"
-                        gap="var(--global-spacing)"
-                    >
-                        {filteredNews.map((newsItem) => (
-                            <NewsCard key={newsItem.id} newsObject={newsItem} />))}
-                    </SimpleGrid>
-                </Container>}
-                <Container>
-                    <PageTitle title="Board" />
-                    <LeadersContainer
-                        positions={chapterData.board}
-                    />
-                </Container>
-                {chapterData.tracks.length > 0 && <Container>
-                    <PageTitle title="Tracks" />
-                    <Tracks tracks={chapterData.tracks} color_scheme={chapterData.color_scheme} />
-                </Container>}
+  if (!chapterData) {
+    notFound();
+  }
 
-                <PageTitle title="Chapter Timeline" />
+  return (
+    <PageWrapper>
+      <Flex flexDirection={"column"} gap={12}>
+        <HeroCard
+          logo={chapterData.logo}
+          colorScheme={chapterData.color_scheme_1}
+        />
+        {/* <Container> */}
+        <Box w="full">
+          <Description
+            about={chapterData.description.about}
+            mission={chapterData.description.mission}
+            vision={chapterData.description.vision}
+            color={chapterData.color_scheme_1}
+          />
+        </Box>
+        {filteredNews.length > 0 && (
+          <Container>
+            <PageTitle title="Chapter News" />
+            <SimpleGrid
+              columns={isDesktop ? 2 : 1}
+              paddingX={isDesktop ? 20 : "0px"}
+              width="full"
+              gap="var(--global-spacing)"
+            >
+              {filteredNews.map((newsItem) => (
+                <NewsCard key={newsItem.id} newsObject={newsItem} />
+              ))}
+            </SimpleGrid>
+          </Container>
+        )}
 
-                <Timeline seasons={chapterData.seasons} />
+        <Container>
+          <PageTitle title="Board" />
+          <LeadersContainer positions={chapterData.board} />
+        </Container>
 
-            </Flex>
-        </PageWrapper>
-    )
+        {chapterData.tracks && chapterData.tracks.length > 0 && (
+          <Container>
+            <PageTitle title="Tracks" />
+            <Tracks
+              tracks={chapterData.tracks}
+              color_scheme={chapterData.color_scheme_1}
+            />
+          </Container>
+        )}
+
+        <PageTitle title="Chapter Timeline" />
+        {/* <Timeline seasons={chapterData.seasons} /> */}
+      </Flex>
+    </PageWrapper>
+  );
 }
