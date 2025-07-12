@@ -36,18 +36,22 @@ export default function Chapter({ params }: { params: Promise<{ chapter: string 
     });
 
     const chapterData = chaptersData.find((item) => item.short_name.toLowerCase() === chapter.toLowerCase());
+    
+    if (!chapterData) {
+        notFound()
+    }
 
     return (
         <PageWrapper>
             <Flex flexDirection={"column"} gap={12}>
-                <HeroCard logo={chapterData?.logo} colorScheme={chapterData?.color_scheme} />
+                <HeroCard logo={chapterData.logo} colorScheme={chapterData.color_scheme} />
                 {/* <Container> */}
                 <Box w="full">
                     <Description
-                        about={chapterData?.description.about}
-                        mission={chapterData?.description.mission}
-                        vision={chapterData?.description.vision}
-                        color={chapterData?.color_scheme}
+                        about={chapterData.description.about}
+                        mission={chapterData.description.mission}
+                        vision={chapterData.description.vision}
+                        color={chapterData.color_scheme}
                     />
                 </Box>
                 {filteredNews.length > 0 && <Container>
@@ -65,17 +69,17 @@ export default function Chapter({ params }: { params: Promise<{ chapter: string 
                 <Container>
                     <PageTitle title="Board" />
                     <LeadersContainer
-                        positions={chapterData?.board}
+                        positions={chapterData.board}
                     />
                 </Container>
-                {chapterData?.tracks.length > 0 && <Container>
+                {chapterData.tracks.length > 0 && <Container>
                     <PageTitle title="Tracks" />
-                    <Tracks tracks={chapterData?.tracks} color_scheme={chapterData?.color_scheme} />
+                    <Tracks tracks={chapterData.tracks} color_scheme={chapterData.color_scheme} />
                 </Container>}
 
                 <PageTitle title="Chapter Timeline" />
 
-                <Timeline seasons={chapterData?.seasons} />
+                <Timeline seasons={chapterData.seasons} />
 
             </Flex>
         </PageWrapper>
