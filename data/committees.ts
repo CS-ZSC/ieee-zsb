@@ -2,7 +2,7 @@ import type { Position } from "./position";
 
 export interface Activities {
   title: string;
-  content: string;
+  description: string;
 }
 
 export interface CommitteesData {
@@ -34,10 +34,10 @@ const committeesData: CommitteesData[] = [
     activities: [
       {
         title: "session",
-        content:
+        description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
       },
-      { title: "offline session", content: "Reliability" },
+      { title: "offline session", description: "Reliability" },
     ],
     board: [
       {
@@ -78,11 +78,11 @@ const committeesData: CommitteesData[] = [
     activities: [
       {
         title: "session",
-        content:
+        description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
       },
-      { title: "offline session", content: "Reliability" },
-      { title: "offline session", content: "Reliability" },
+      { title: "offline session", description: "Reliability" },
+      { title: "offline session", description: "Reliability" },
     ],
     board: [
       {
@@ -102,8 +102,8 @@ const committeesData: CommitteesData[] = [
     image: "/Fake-Images/4.webp",
     goals: ["test", "tester"],
     activities: [
-      { title: "session", content: "hard work" },
-      { title: "offline session", content: "Reliability" },
+      { title: "session", description: "hard work" },
+      { title: "offline session", description: "Reliability" },
     ],
     board: [
       {
@@ -129,11 +129,11 @@ const committeesData: CommitteesData[] = [
     activities: [
       {
         title: "session",
-        content:
+        description:
           "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
       },
-      { title: "offline session", content: "Reliability" },
-      { title: "offline session", content: "Reliability" },
+      { title: "offline session", description: "Reliability" },
+      { title: "offline session", description: "Reliability" },
     ],
     board: [
       {
@@ -160,8 +160,8 @@ const committeesData: CommitteesData[] = [
     image: "/Fake-Images/4.webp",
     goals: ["test", "tester"],
     activities: [
-      { title: "session", content: "hard work" },
-      { title: "offline session", content: "Reliability" },
+      { title: "session", description: "hard work" },
+      { title: "offline session", description: "Reliability" },
     ],
     board: [
       {
@@ -195,8 +195,8 @@ const committeesData: CommitteesData[] = [
     image: "/Fake-Images/4.webp",
     goals: ["test", "tester"],
     activities: [
-      { title: "session", content: "hard work" },
-      { title: "offline session", content: "Reliability" },
+      { title: "session", description: "hard work" },
+      { title: "offline session", description: "Reliability" },
     ],
     board: [
       {

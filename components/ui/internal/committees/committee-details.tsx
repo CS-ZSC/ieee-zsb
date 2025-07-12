@@ -40,12 +40,13 @@ export default function CommitteeDetails({
               <Flex flexDirection={"column"}>
                 <SectionTitle text="Goals" />
                 <Flex>
-                  <Card bgColor="primary-12" rounded="xl" gap={6}>
+                  <Card bgColor="primary-12" rounded="xl" gap={2}>
                     {committee.goals.map((goal, index) => (
                       <Text
                         key={index}
                         color={"neutral-2"}
                         borderLeft={index == 0 ? "2px solid" : ""}
+                        py={2}
                         borderColor={borderColor}
                         paddingLeft={"10px"}
                         alignSelf={"flex-start"}
@@ -69,17 +70,20 @@ export default function CommitteeDetails({
                     <Flex
                       key={index}
                       width={isDesktop ? `calc(100% / 3 - 14px)` : "300px"}
+                      textAlign={"center"}
                     >
                       <Card bgColor="primary-12" gap={2}>
                         <Text
                           color={"primary-8"}
                           fontSize={"2xl"}
                           fontWeight={"bold"}
+                          textTransform={"capitalize"}
                         >
+
                           {activity.title}
                         </Text>
                         <Text color={"neutral-2"} height={"full"}>
-                          {activity.content}
+                          {activity.description}
                         </Text>
                       </Card>
                     </Flex>
