@@ -8,6 +8,7 @@ import {
     Button,
     Flex,
     Stack,
+    List,
 } from '@chakra-ui/react';
 import Card from '../../card';
 import { useWindowType } from '@/hooks/use-window-type';
@@ -31,7 +32,6 @@ export function Timeline({ seasons }: { seasons: SeasonData[] }) {
                 overflowX={"auto"}
             >
 
-                {/* Timeline Content */}
                 <Flex
                     flex={1}
                     overflowX="auto"
@@ -69,7 +69,7 @@ export function Timeline({ seasons }: { seasons: SeasonData[] }) {
                         zIndex={1}
                     />
 
-                    <HStack overflowX={"auto"} h="fit-content" spacing={{ base: 2, md: 16 }} align="flex-start" px={{ base: 0, md: 8 }}>
+                    <HStack overflowX={"auto"} h="full" position={"relative"} spacing={{ base: 2, md: 16 }} align="flex-start" px={{ base: 0, md: 8 }}>
                         {seasons.map((item, index) => (
                             <TimelineItem key={item.year} item={item} isTop={index % 2 == 0} />
                         ))}
@@ -92,7 +92,7 @@ const TimelineItem = ({ item, isTop }: { item: SeasonData, isTop: boolean }) => 
     };
 
     return (
-        <VStack flexShrink={0} width={{ base: '200px', md: '250px' }} position="relative" zIndex={2}>
+        <VStack flexShrink={0} width={isDesktop ? "400px" : "250px"} zIndex={2} h={"full"}>
             <Stack
                 fontSize={isDesktop ? "2xl" : "lg"}
                 p={4}
@@ -107,22 +107,23 @@ const TimelineItem = ({ item, isTop }: { item: SeasonData, isTop: boolean }) => 
                 align={"center"}
                 justify={"center"}
                 position={"absolute"}
-                top={isDesktop ? "45%" : "46%"}
+                top={isDesktop ? "47%" : "47%"}
             >
                 <Text>
                     {item.year}
                 </Text>
             </Stack>
             <Stack flexDir={isTop ? "column-reverse" : "column"}
-                align={"center"} justify="center" width="full" height="full" spaceY={0} >
+                align={"center"} justify="center" width="full"  spaceY={0}>
                 <Box
                     width="2px"
                     height="100px"
                     bg="gray.600"
-                    mb={isTop ? "415px" : "0"}
-                    mt={isTop ? "0" : "415px"}
+                    mb={isTop ? "430px" : "0"}
+                    mt={isTop ? "0" : "430px"}
                 // display={"block"}
                 />
+
                 <TimelineCard
                     summary={item.summary}
                     showFullText={showFullText}
@@ -134,18 +135,17 @@ const TimelineItem = ({ item, isTop }: { item: SeasonData, isTop: boolean }) => 
     );
 };
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const TimelineCard = ({ summary, showFullText, toggleText }: { summary: string; showFullText: boolean; toggleText: () => void }) => {
+const TimelineCard = ({ summary, showFullText, toggleText }: { summary: string[]; showFullText: boolean; toggleText: () => void }) => {
     return (
         <Card>
-
-            <Text fontSize="md" fontWeight="semibold" mb={2}>
+            <Text fontSize="md" fontWeight="semibold">
                 Season summary
             </Text>
-            <Text fontSize="sm" mb={3}>
-                {showFullText ? summary : `${summary.substring(0, 200)}...`}
-            </Text>
+            <List.Root>
+                {summary.map((point, i) => <List.Item key={i}>{point}</List.Item>)}
+            </List.Root>
             <Button
-                variant="outline" mt={2}
+                variant="outline"
                 width={"fit"}
                 bgColor={"primary-1"}
                 paddingY={10}

@@ -4,7 +4,7 @@ import { Position } from "./position";
 export type TrackData = CommitteesData;
 export interface SeasonData {
 	year: number;
-	summary: string;
+	summary: string[];
 }
 export interface ChapterData {
     id: number;
@@ -135,18 +135,27 @@ export const chaptersData: ChapterData[] = [
 		seasons: [
 			{
 				year: 2024,
-				summary:
-					"The 2024 season for Computer Society focused heavily on AI integration and practical application. We successfully hosted a large-scale 'AI for Good' hackathon, attracting over 150 participants and generating innovative solutions for local community challenges. Our workshops on advanced machine learning techniques and ethical AI saw record attendance, and we collaborated with two major tech companies for exclusive industry talks and recruitment events.",
+				summary: [
+					"The 2024 season for Computer Society focused heavily on AI integration and practical application.",
+					"We successfully hosted a large-scale 'AI for Good' hackathon, attracting over 150 participants and generating innovative solutions for local community challenges.",
+					"Our workshops on advanced machine learning techniques and ethical AI saw record attendance, and we collaborated with two major tech companies for exclusive industry talks and recruitment events.",
+				],
 			},
 			{
 				year: 2023,
-				summary:
-					"In 2023, CS emphasized skill diversification and foundational knowledge. We launched a new series of 'Full-Stack Fundamentals' workshops, covering both front-end and back-end development, which became highly popular. Our competitive programming team achieved significant success in national competitions, and we initiated a peer-mentoring program that connected experienced members with newcomers, fostering a strong learning environment.",
+				summary: [
+					"Focused on web technologies and AI",
+					"Industry-leading workshops",
+					"Hands-on projects in full-stack and ML",
+				],
 			},
 			{
 				year: 2022,
-				summary:
-					"The 2022 season was a rebuilding year for Computer Society, focusing on expanding our member base and establishing key partnerships. We organized introductory workshops on Python and Java, attracting a large number of first-year students. We also established our first annual 'Codefest' event, a 24-hour coding marathon that became a staple in our yearly calendar, and secured partnerships with several local startups for internship opportunities.",
+				summary: [
+					"Launched cloud and mobile tracks",
+					"Record participation in workshops",
+					"Successful hackathons",
+				],
 			},
 		],
 	},
@@ -223,18 +232,27 @@ export const chaptersData: ChapterData[] = [
 		seasons: [
 			{
 				year: 2024,
-				summary:
-					"The 2024 season for PES focused on advanced smart grid solutions and energy efficiency. We organized a successful 'Future of Energy' summit with prominent speakers from utility companies and energy research institutions. Our members engaged in practical projects involving microgrid design and energy auditing, and we hosted a series of workshops on power electronics and grid modernization, attracting students and young professionals.",
+				summary: [
+					"The 2024 season for PES focused on advanced smart grid solutions and energy efficiency.",
+					"We organized a successful 'Future of Energy' summit with prominent speakers from utility companies and energy research institutions.",
+					"Our members engaged in practical projects involving microgrid design and energy auditing, and we hosted a series of workshops on power electronics and grid modernization, attracting students and young professionals.",
+				],
 			},
 			{
 				year: 2023,
-				summary:
-					"In 2023, PES emphasized renewable energy integration and sustainable practices. We conducted a major workshop series on solar PV system design and wind energy fundamentals, including site visits to local renewable energy farms. Our chapter also partnered with a research institute on a project focused on optimizing energy storage systems, providing members with invaluable research experience.",
+				summary: [
+					"Initiatives in renewable energy",
+					"Workshops on power system automation",
+					"Green energy solutions",
+				],
 			},
 			{
 				year: 2022,
-				summary:
-					"The 2022 season for PES was dedicated to building foundational knowledge in power systems. We offered introductory courses on electrical circuits and power system analysis, along with hands-on labs using simulation software. Our 'Powering the Future' seminar series, featuring guest lecturers from the energy sector, helped members understand real-world challenges and career opportunities in power engineering.",
+				summary: [
+					"Sustainable energy practices",
+					"Modern power systems focus",
+					"Industry collaboration and field training",
+				],
 			},
 		],
 	},
@@ -311,18 +329,28 @@ export const chaptersData: ChapterData[] = [
 		seasons: [
 			{
 				year: 2024,
-				summary:
-					"The 2024 season for RAS was marked by significant advancements in autonomous systems. We successfully launched our first 'AI Robotics Challenge', where teams developed intelligent robots for complex tasks. Workshops focused on advanced topics like SLAM (Simultaneous Localization and Mapping) and reinforcement learning for robotics. Our members also participated in international robotics competitions, bringing home several awards.",
+				summary: [
+					"The 2024 season for RAS was marked by significant advancements in autonomous systems.",
+					"We successfully launched our first 'AI Robotics Challenge', where teams developed intelligent robots for complex tasks.",
+					"Workshops focused on advanced topics like SLAM (Simultaneous Localization and Mapping) and reinforcement learning for robotics.",
+					"Our members also participated in international robotics competitions, bringing home several awards.",
+				],
 			},
 			{
 				year: 2023,
-				summary:
-					"In 2023, RAS emphasized practical robotics development and hardware integration. We held extensive hands-on sessions on building custom robotic platforms, from chassis design to motor control. The 'ROS Fundamentals' training attracted a large cohort, empowering members to develop sophisticated robotic applications. We also initiated a collaboration with a local manufacturing firm for an industrial automation project.",
+				summary: [
+					"Expanded robotics program",
+					"Autonomous systems and ROS workshops",
+					"International competition participation",
+				],
 			},
 			{
 				year: 2022,
-				summary:
-					"The 2022 season for RAS focused on introducing members to the core concepts of robotics. We conducted beginner-friendly workshops on Arduino programming and basic robot locomotion. Our 'Robotics Showcase Day' allowed members to present their initial projects, fostering interest and excitement in the field. We also hosted guest lectures from leading experts in industrial automation, providing insights into potential career paths.",
+				summary: [
+					"Advanced robotics curriculum",
+					"AI and computer vision integration",
+					"Drone and industrial automation projects",
+				],
 			},
 		],
 	},
@@ -399,18 +427,27 @@ export const chaptersData: ChapterData[] = [
 		seasons: [
 			{
 				year: 2024,
-				summary:
-					"The 2024 season for WIE focused on amplifying women's voices in STEM leadership. We hosted a powerful 'Inspiring Women Leaders' conference, featuring keynote speakers who are pioneers in their fields. Our mentorship program expanded significantly, pairing more students with industry professionals, and we organized workshops on negotiation skills and strategic career planning.",
+				summary: [
+					"The 2024 season for WIE focused on amplifying women's voices in STEM leadership.",
+					"We hosted a powerful 'Inspiring Women Leaders' conference, featuring keynote speakers who are pioneers in their fields.",
+					"Our mentorship program expanded significantly, pairing more students with industry professionals, and we organized workshops on negotiation skills and strategic career planning.",
+				],
 			},
 			{
 				year: 2023,
-				summary:
-					"In 2023, WIE concentrated on technical skill-building and networking for career advancement. We collaborated with other chapters to offer joint technical workshops tailored for women, such as 'Data Science for Beginners' and 'Cybersecurity Essentials.' Our 'Networking for Success' events provided valuable opportunities for members to connect with recruiters and professionals in various engineering disciplines.",
+				summary: [
+					"Mentorship program with industry leaders",
+					"Women in tech conference",
+					"Expanded professional development",
+				],
 			},
 			{
 				year: 2022,
-				summary:
-					"The 2022 season was a foundational year for WIE, aiming to build a strong community and raise awareness about gender diversity in engineering. We organized 'Introduction to Engineering' sessions for high school girls, and hosted monthly 'WIE Connect' gatherings, fostering a supportive environment for our members. We also launched our first annual 'Women in STEM' symposium, celebrating achievements and discussing challenges.",
+				summary: [
+					"New internship partnerships",
+					"Leadership training series",
+					"Increased community outreach",
+				],
 			},
 		],
 	},
