@@ -144,6 +144,19 @@ const config: SystemConfig = defineConfig({
             _dark: "rgba(0, 0, 0, 0.2)",
           },
         },
+
+        // Chapter Colors
+        "cs-1": { value: { _light: "#354A5F", _dark: "#354A5F" } },
+        "cs-2": { value: { _light: "#E3E2E2", _dark: "#E3E2E2" } },
+        
+        "ras-1": { value: { _light: "#F08114", _dark: "#F08114" } },
+        "ras-2": { value: { _light: "#007377", _dark: "#007377" } },
+        
+        "pes-1": { value: { _light: "#6EB43F", _dark: "#6EB43F" } },
+        "pes-2": { value: { _light: "#231F20", _dark: "#231F20" } },
+        
+        "wie-1": { value: { _light: "#802C92", _dark: "#802C92" } },
+        "wie-2": { value: { _light: "#FFC000", _dark: "#FFC000" } },
       },
     },
   },
