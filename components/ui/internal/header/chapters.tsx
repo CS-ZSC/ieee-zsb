@@ -18,7 +18,7 @@ const Chapters: Chapter[] = [
     description: "Computer Society Chapter",
     href: "/chapters/cs",
     path: "/Images/CS/IEEE-CS.svg",
-    whitePath: "/Images/CS/IEEE-CS-White.png",
+    whitePath: "/Images/CS/IEEE-CS-White.svg",
     blackPath: "/Images/CS/IEEE-CS-Black.svg",
     alt: "CS Logo",
     identityColor: "cs-1",

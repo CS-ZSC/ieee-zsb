@@ -31,7 +31,7 @@ export const chaptersData: ChapterData[] = [
     id: ++id,
     short_name: "CS",
     long_name: "Computer Society",
-    logo: "/Images/CS/IEEE-CS-White.png",
+    logo: "/Images/CS/IEEE-CS-White.svg",
     color_scheme_1: "cs-1",
     color_scheme_2: "cs-2",
     description: {
