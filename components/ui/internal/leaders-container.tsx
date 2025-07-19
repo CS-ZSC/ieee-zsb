@@ -7,7 +7,7 @@ import { useWindowType } from "@/hooks/use-window-type";
 
 interface Props {
   positions: Position[];
-  positionBgColor: string;
+  positionBgColor?: string;
 }
 
 export default function LeadersContainer({

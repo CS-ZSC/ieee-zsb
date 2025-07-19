@@ -38,27 +38,31 @@ export const sections: Section[] = [
     links: [
       {
         name: "Front-End",
-        href: "/cs/#frontend",
+        href: "/chapters/cs/#frontend",
       },
       {
         name: "Back-End",
-        href: "/cs/#backend",
+        href: "/chapters/cs/#backend",
+      },
+      {
+        name: "Mobile Development",
+        href: "/chapters/cs/#mobile-development",
       },
       {
         name: "Basic AI",
-        href: "/cs/#basic-ai",
+        href: "/chapters/cs/#basic-ai",
       },
       {
         name: "Advanced AI",
-        href: "/cs/#advanced-ai",
-      },
-      {
-        name: "Mobile",
-        href: "/cs/#mobile",
+        href: "/chapters/cs/#advanced-ai",
       },
       {
         name: "Cyber Security",
-        href: "/cs/#cyber-security",
+        href: "/chapters/cs/#cyber-security",
+      },
+      {
+        name: "Game Development",
+        href: "/chapters/cs/#game-development",
       },
     ],
   },
@@ -67,19 +71,19 @@ export const sections: Section[] = [
     links: [
       {
         name: "Embedded Systems",
-        href: "/ras/#embedded-systems",
+        href: "/chapters/ras/#embedded-systems",
       },
       {
         name: "ROS",
-        href: "/ras/#ros",
+        href: "/chapters/ras/#ros",
       },
       {
         name: "PCB Design",
-        href: "/ras/#pcb-design",
+        href: "/chapters/ras/#pcb-design",
       },
       {
         name: "Mechanical",
-        href: "/ras/#mechanical",
+        href: "/chapters/ras/#mechanical",
       },
     ],
   },
@@ -88,31 +92,31 @@ export const sections: Section[] = [
     links: [
       {
         name: "Basic Automation",
-        href: "/pes/#basic-automation",
+        href: "/chapters/pes/#basic-automation",
       },
       {
         name: "Advanced Automation",
-        href: "/pes/#advanced-utomation",
+        href: "/chapters/pes/#advanced-automation",
       },
       {
         name: "Basic Distribution",
-        href: "/pes/#basic-distribution",
+        href: "/chapters/pes/#basic-distribution",
       },
       {
         name: "Advanced Distribution",
-        href: "/pes/#advanced-distribution",
+        href: "/chapters/pes/#advanced-distribution",
       },
       {
         name: "Smart Home",
-        href: "/pes/#smart-home",
+        href: "/chapters/pes/#smart-home",
       },
       {
         name: "E-Mobility",
-        href: "/pes/#e-mobility",
+        href: "/chapters/pes/#e-mobility",
       },
       {
         name: "Mechanical",
-        href: "/pes/#mechanical",
+        href: "/chapters/pes/#mechanical",
       },
     ],
   },
