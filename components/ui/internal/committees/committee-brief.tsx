@@ -8,6 +8,7 @@ import ImageBox from "@/components/ui/internal/news/image-box";
 import Description from "@/components/ui/internal/news/description";
 
 interface CommitteeBriefProps {
+  name: string;
   description: string;
   image: string;
   isOpen: boolean;
@@ -15,6 +16,7 @@ interface CommitteeBriefProps {
 }
 
 export default function CommitteeBrief({
+  name,
   description,
   image,
   isOpen,
@@ -56,7 +58,7 @@ export default function CommitteeBrief({
         </Flex>
         <ImageBox
           path={image}
-          alt={description}
+          alt={name}
           mx={"0px"}
           maxWidth={isDesktop ? "500px" : "600px"}
         />
