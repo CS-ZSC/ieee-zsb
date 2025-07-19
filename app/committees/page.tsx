@@ -3,7 +3,6 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import PageWrapper from "@/components/ui/internal/page-wrapper";
-import { useWindowType } from "@/hooks/use-window-type";
 import PageTitle from "@/components/ui/internal/pageTitle";
 import Container from "@/components/ui/internal/container";
 import AnimatedCard from "@/components/ui/internal/animatedCard";
@@ -12,8 +11,6 @@ import committeesData from "@/data/committees";
 import Committee from "@/components/ui/internal/committees/committee";
 
 export default function Page() {
-  const { isDesktop } = useWindowType();
-
   return (
     <PageWrapper>
       <Flex
@@ -21,7 +18,7 @@ export default function Page() {
         justifyContent={"center"}
         alignItems={"center"}
         color={"neutral-1"}
-        gap={isDesktop ? 8 : 20}
+        gap={20}
       >
         <Flex justifyContent={"center"} flexFlow={"column"} maxWidth={"600px"}>
           <PageTitle title="Committees" />
