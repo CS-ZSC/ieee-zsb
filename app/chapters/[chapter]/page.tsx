@@ -91,7 +91,7 @@ export default function Chapter({
           </Container>
         )}
 
-        <PageTitle title="Chapter Timeline" />
+	{ /* <PageTitle title="Chapter Timeline" /> */ }
         {/* <Timeline seasons={chapterData.seasons} /> */}
       </Flex>
     </PageWrapper>
