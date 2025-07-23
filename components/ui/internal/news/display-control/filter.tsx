@@ -47,6 +47,9 @@ export default function Filter() {
           padding={"12px 14px"}
           outlineColor={"primary-3"}
           rounded={"10px"}
+          _hover={{
+            backgroundColor: open ? "primary-10" : "primary-12",
+          }}
         >
           <Flex
             gap={2}
