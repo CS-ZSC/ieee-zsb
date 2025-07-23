@@ -104,7 +104,7 @@ export default function Page() {
           <NewsDisplayControl onSearch={setSearchQuery} />
         </AnimatedCard>
 
-        {/*Filtered news*/}
+        {/*News after filtering and sorting*/}
         {filteredAndSortedNews.length > 0 ? (
           <Flex flexDirection="column" gap="var(--global-spacing)">
             <SimpleGrid
