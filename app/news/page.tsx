@@ -25,7 +25,7 @@ export default function Page() {
   const [checkedItems] = useAtom(newsFilterCheckedItemsAtom);
   const [filterItems] = useAtom(newsFilterLabelsAtom);
   const [isMounted, setIsMounted] = useState(false);
-const [sortType] = useAtom(sortTypeAtom);
+  const [sortType] = useAtom(sortTypeAtom);
   const selectedTags = filterItems.filter((_, index) => checkedItems[index]);
 
   const filteredAndSortedNews = newsData
