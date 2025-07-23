@@ -72,7 +72,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "frontend",
         description:
           "Master the art of crafting beautiful and interactive web interfaces. This track covers HTML, CSS, JavaScript, modern frameworks like React, and design principles. By the end, participants will be able to build responsive and accessible user experiences with real-world performance and design considerations.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/frontend.webp",
         goals: [
           "Learn the fundamentals of HTML, CSS, and JavaScript",
           "Build responsive web interfaces using modern frameworks like React or Vue",
@@ -112,7 +112,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "backend",
         description:
           "Build the backbone of web applications. This track focuses on server-side development, databases, APIs, and authentication. You'll gain experience in Node.js, Express, and MongoDB, with best practices in RESTful design and cloud deployment.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/backend.webp",
         goals: [
           "Understand how servers, databases, and APIs work together",
           "Build RESTful APIs using Node.js and Express",
@@ -152,7 +152,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "mobile-development",
         description:
           "Build mobile applications that run smoothly on Android and iOS devices. This track focuses on cross-platform frameworks like Flutter and React Native, covering UI development, state management, and native capabilities.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/mobile-development.webp",
         goals: [
           "Understand mobile app architecture and development lifecycle",
           "Build cross-platform apps using Flutter or React Native",
@@ -192,7 +192,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "basic-ai",
         description:
           "Explore the fundamentals of Artificial Intelligence through hands-on projects and beginner-friendly tools. This track introduces basic concepts in machine learning, data preprocessing, and simple model building using Python and libraries like Scikit-learn.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/basic-ai.webp",
         goals: [
           "Understand core concepts of machine learning and AI",
           "Learn to use Python and Scikit-learn for simple models",
@@ -232,7 +232,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "advanced-ai",
         description:
           "Go beyond the basics and tackle real-world challenges in deep learning, computer vision, and natural language processing. This track explores TensorFlow/PyTorch, model optimization, and advanced topics like transformers and generative AI.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/advanced-ai.webp",
         goals: [
           "Master advanced deep learning models and architectures",
           "Apply computer vision and NLP techniques using TensorFlow or PyTorch",
@@ -273,7 +273,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "cyber-security",
         description:
           "Understand the fundamentals of digital security and how to protect systems from vulnerabilities and attacks. This track includes network security, cryptography, ethical hacking, and real-world penetration testing practices.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/cyber-security.webp",
         goals: [
           "Learn core cybersecurity principles and common attack vectors",
           "Understand encryption, hashing, and authentication protocols",
@@ -313,7 +313,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "game-development",
         description:
           "Dive into the exciting world of Game Development and bring your creative ideas to life. This track covers the fundamentals of game engines, interactive mechanics, 2D/3D graphics, and scripting. Participants will learn to build games using tools like Unity or Unreal Engine, exploring game physics, animation, UI, and publishing strategies.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/game-development.webp",
         goals: [
           "Understand the core components of game engines including scenes, physics, and scripting",
           "Design and build interactive 2D and 3D games using Unity or Unreal Engine",
@@ -413,7 +413,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "embedded-systems",
         description:
           "Dive deep into the heart of hardware programming and embedded software. This track focuses on microcontrollers, sensor interfacing, real-time systems, and low-level hardware communication. You'll gain practical experience programming microcontrollers, working with embedded C/C++, and developing firmware for real-world applications.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/RAS/embedded-systems.webp",
         goals: [
           "Understand microcontroller architecture and low-level programming concepts",
           "Develop and deploy firmware using C/C++ and real-time operating systems (RTOS)",
@@ -453,7 +453,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "ros",
         description:
           "Delve into the powerful ecosystem of the Robot Operating System (ROS) to build intelligent and autonomous robotic systems. This track emphasizes modular software design, sensor integration, real-time data handling, and robot navigation. Participants will learn to simulate, test, and deploy robotic applications using ROS and Gazebo, bridging the gap between theory and practical robotics.",
-        image: "/Fake-Images/8.webp",
+        image: "/Tracks/RAS/ros.webp",
         goals: [
           "Understand the ROS architecture and its core concepts: nodes, topics, services, and actions",
           "Gain hands-on experience integrating sensors and actuators into robotic systems using ROS",
@@ -493,7 +493,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "pcb-design",
         description:
           "Learn how to design and manufacture printed circuit boards (PCBs), the backbone of every electronic system. This track covers circuit design, schematic capture, layout, simulation, and fabrication. Gain hands-on experience using industry-standard tools and create your own functional PCBs from scratch.",
-        image: "/Fake-Images/6.webp",
+        image: "/Tracks/RAS/pcb-design.webp",
         goals: [
           "Understand the principles of electronic circuit design and schematic drawing",
           "Master PCB layout techniques and industry standards for single/multi-layer boards",
@@ -529,11 +529,11 @@ export const chaptersData: ChapterData[] = [
       },
       {
         id: ++trackId,
-        name: "Mechanical Design",
+        name: "Mechanical",
         hashtag: "mechanical",
         description:
           "Explore the world of mechanical engineering and CAD-based design. This track focuses on mechanical components, 3D modeling, kinematics, and manufacturing techniques. Participants will learn to use modern CAD tools and build physical mechanisms through hands-on projects.",
-        image: "/Fake-Images/7.webp",
+        image: "/Tracks/RAS/mechanical.webp",
         goals: [
           "Master 3D CAD software for part design, assembly, and rendering",
           "Understand kinematic systems, gear trains, and motion constraints",
@@ -641,7 +641,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "basic-automation",
         description:
           "Gain foundational knowledge of automation systems in power and industrial applications. This track introduces PLCs, sensors, actuators, and control logic used in automation. Ideal for beginners seeking hands-on exposure to how machines and systems are controlled automatically.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/basic-automation.webp",
         goals: [
           "Understand the principles of automation and control systems",
           "Learn PLC programming and ladder logic basics",
@@ -681,7 +681,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "advanced-automation",
         description:
           "Explore advanced control strategies, industrial networks, SCADA systems, and smart manufacturing. This track builds on automation foundations and focuses on real-time control, process optimization, and IoT applications in industrial settings.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/advanced-automation.webp",
         goals: [
           "Implement advanced PLC logic and state machines",
           "Design and deploy SCADA/HMI systems for remote monitoring",
@@ -721,7 +721,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "basic-distribution",
         description:
           "Explore the foundational principles of electrical power distribution systems, including substations, protection devices, and transformers. Learn how electricity travels from the generation plant to end users.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/basic-distribution.webp",
         goals: [
           "Understand distribution network structure and equipment",
           "Learn basics of transformers, circuit breakers, and protective devices",
@@ -761,7 +761,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "advanced-distribution",
         description:
           "Dive deeper into smart grids, fault analysis, distributed generation, and protection coordination. This track covers advanced modeling and real-world distribution system optimization.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/advanced-distribution.webp",
         goals: [
           "Model advanced distribution systems with renewable integration",
           "Perform protection coordination and relay setting calculations",
@@ -801,7 +801,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "smart-home",
         description:
           "Build the homes of the future with automation, IoT, and energy management. This track focuses on smart sensors, voice control, lighting systems, and energy efficiency in residential applications.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/smart-home.webp",
         goals: [
           "Design smart lighting, HVAC, and energy monitoring systems",
           "Work with platforms like Arduino, Raspberry Pi, and Home Assistant",
@@ -841,7 +841,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "e-mobility",
         description:
           "Explore the future of electric transportation and charging infrastructure. This track covers EV systems, batteries, charging stations, power electronics, and grid impact of e-mobility.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/e-mobility.webp",
         goals: [
           "Understand EV architecture and key components",
           "Learn battery technology, BMS (Battery Management System), and charging protocols",
@@ -881,7 +881,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "mechanical",
         description:
           "Understand the mechanical aspects of power generation and energy systems. This track focuses on turbines, thermal systems, fluid mechanics, and maintenance of power plant equipment.",
-        image: "/Fake-Images/5.webp",
+        image: "/Tracks/PES/mechanical.webp",
         goals: [
           "Analyze mechanical systems in power plants (boilers, turbines, pumps)",
           "Understand thermal cycles (Rankine, Brayton) and efficiency improvements",
