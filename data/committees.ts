@@ -25,7 +25,7 @@ const committeesData: CommitteesData[] = [
     hashtag: "brand-ambassadors",
     description:
       "The Ambassadors team helps students discover what IEEE is, how it works globally, and what opportunities it offers at our Zagazig student branch. Members gain essential soft skills such as communication, leadership and presentation. They also explore personal branding through sessions on LinkedIn and how to represent themselves professionally. They attend focused sessions on planning, marketing basics, and content writing—helping them represent IEEE in a clear and professional way, and explain its message to others. To support their work, members use practical tools like Word, PowerPoint, Canva, and Google Sheets. What makes this team special is that every member gets a real leadership opportunity during the Ambassadors Program, which happens mid-season. Each member leads a group of new students—conducting interviews, delivering sessions, and guiding them through tasks. It's a guaranteed leadership experience that sets Ambassadors apart from other teams.Organizing the Ambassadors Program is one of the team's core responsibilities. It's fully planned and managed by the members from start to finish.",
-    image: "/Fake-Images/8.webp",
+    image: "/Committees/brand-ambassadors.webp",
     goals: [
       "Spread awareness about IEEE and the student branch among new students.",
       "Help team members grow through real leadership roles and soft skills development.",
