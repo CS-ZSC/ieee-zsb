@@ -30,7 +30,7 @@ export const newsData: NewsItem[] = [
       "Knowva proudly secured second place in the Language Learning Platforms track at Hackathon Banha 2025. After four intense days of dedication, collaboration, and tireless effort, our team successfully developed and presented a compelling concept that showcased innovative ways to demonstrate the role of artificial intelligence in language education. We explored how AI can be effectively integrated into learning processes to enhance engagement, personalization, and accessibility.",
     dateCreated: "11 Feb, 2025",
     author: "Ahmed Elsherbiny",
-    tags: ["Competitions", "General"],
+    tags: ["Competitions", "CS", "AI"],
     mainPhoto: "/News/knowva/1.webp",
     sections: [
       {
@@ -54,7 +54,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "27 Feb, 2025",
     author: "Marwan Tamer",
     tags: ["RAS", "Robotiva", "Competitions"],
-    mainPhoto: "/Fake-Images/5.webp",
+    mainPhoto: "/News/robotiva/soul.webp",
     sections: [
       {
         id: 0,
@@ -411,7 +411,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "23 Oct, 2024",
     author: "Samar Nafea",
     tags: ["General", "Interviews"],
-    mainPhoto: "",
+    mainPhoto: "/News/recruitment-2025/1.webp",
     sections: [
       {
         id: 0,
@@ -421,8 +421,6 @@ export const newsData: NewsItem[] = [
           "The main goal is to evaluate key soft skills such as communication, teamwork, leadership, adaptability, and initiative. Observers assess how well participants express their ideas, engage with others, and contribute to the overall group effort.",
           "This phase helps us identify candidates who not only show potential but also reflect the collaborative spirit of IEEE-ZSB.",
         ],
-        photo: "",
-        photoDescription: "",
       },
       {
         id: 1,
@@ -432,8 +430,6 @@ export const newsData: NewsItem[] = [
           "Each interview is conducted by a team leader or board member, lasting around 20 minutes. Candidates are asked track-specific questions along with a soft-skills check and a chance to ask questions themselves.",
           "The interview process allows us to understand how candidates think under pressure, how well they understand the field they applied to, and whether they align with the values of their intended team.",
         ],
-        photo: "",
-        photoDescription: "",
       },
       {
         id: 2,
@@ -442,8 +438,6 @@ export const newsData: NewsItem[] = [
           "Candidates who perform well in both stages are selected to join IEEE-ZSB as official team members. We look for individuals who combine technical capability with a collaborative mindset.",
           "This structured recruitment system ensures that new members are not only skilled but also aligned with our culture and ready to contribute to a high-performing environment.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -455,7 +449,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "8 Oct, 2024",
     author: "Samar Nafea",
     tags: ["General"],
-    mainPhoto: "",
+    mainPhoto: "/News/booth-2025/1.webp",
     sections: [
       {
         id: 0,
@@ -477,8 +471,8 @@ export const newsData: NewsItem[] = [
       "To prepare a new generation of passionate and skilled students, IEEE-ZSB launched the Brand Ambassadors Program—an introductory journey designed for early-year students to explore IEEE, gain soft and technical skills, and become future leaders within the student branch.",
     dateCreated: "15 Mar, 2024",
     author: "Samar Nafea",
-    tags: ["General", "Committees"],
-    mainPhoto: "",
+    tags: ["Committees", "General"],
+    mainPhoto: "/News/brand-ambassadors-2025/1.webp",
     sections: [
       {
         id: 0,
@@ -488,8 +482,6 @@ export const newsData: NewsItem[] = [
           "The program is structured in multiple phases, ensuring gradual and effective learning—from IEEE awareness to hands-on project work.",
           "In addition to these phases, some ambassadors program members also had the opportunity to volunteer in mega events like the MUTEX Summit, allowing them to gain real experience and actively participate in the branch's activities.",
         ],
-        photo: "",
-        photoDescription: "",
       },
       {
         id: 1,
@@ -498,8 +490,6 @@ export const newsData: NewsItem[] = [
           "The first phase focuses on introducing the students to IEEE as an international organization and to the unique structure and culture of the IEEE-ZSB student branch. Participants get to know the committees, values, and mission that drive our work.",
           "In parallel, students receive soft skills training, helping them improve in areas such as communication, presentation, collaboration, and personal branding—preparing them for active roles in the student ecosystem.",
         ],
-        photo: "",
-        photoDescription: "",
       },
       {
         id: 2,
@@ -508,8 +498,6 @@ export const newsData: NewsItem[] = [
           "After the foundation is set, each participant selects a technical or managerial track offered within IEEE-ZSB. Through guided sessions and basic hands-on tasks, they begin exploring the field that interests them most, such as Technical Track, Marketing, Event Management, Talent & Tech, Multimedia, or Business Development.",
           "Each track provides simplified content tailored to their level—focusing on practical, beginner-friendly learning without overwhelming the participants.",
         ],
-        photo: "",
-        photoDescription: "",
       },
       {
         id: 3,
@@ -518,8 +506,8 @@ export const newsData: NewsItem[] = [
           "The program concludes with a practical application phase. Each group or individual delivers a project, presentation, or participates in a challenge depending on the track they joined.",
           "This final step encourages creativity, and public speaking—allowing students to demonstrate what they've learned and to gain confidence in sharing it with others.",
         ],
-        photo: "",
-        photoDescription: "",
+        photo: "/News/brand-ambassadors-2025/2.webp",
+        photoDescription: "Brand Ambassadors Program participants in Problem Solving Contest",
       },
       {
         id: 4,
@@ -530,8 +518,6 @@ export const newsData: NewsItem[] = [
           "In the RAS Chapter, participants worked on a Line Following Robot project. The program ended with a friendly competition between teams to test and demonstrate their robot designs.",
           "Across both technical chapters and managerial committees, many participants delivered presentations during different phases of the program—enhancing their public speaking and confidence in explaining ideas.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -543,7 +529,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "6 Feb, 2025",
     author: "Samar Nafea",
     tags: ["General", "Development"],
-    mainPhoto: "",
+    mainPhoto: "/News/development-program-2025/1.webp",
     sections: [
       {
         id: 0,
@@ -551,8 +537,6 @@ export const newsData: NewsItem[] = [
         descriptions: [
           "The Development Program is an internal training series focused on enhancing the soft skills of current IEEE-ZSB members throughout the season.The sessions include key topics such as presentation skills, communication, planning, CV writing, leadership, and LinkedIn. The structure and number of sessions vary from season to season, and the schedule is arranged collaboratively with the participants.The goal is to empower members with practical skills that support their work within IEEE-ZSB and benefit them in their future careers.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -564,7 +548,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "15 Mar, 2025",
     author: "Samar Nafea",
     tags: ["General", "Ramadan", "Iftar"],
-    mainPhoto: "",
+    mainPhoto: "/News/ramadan-iftar-2025/1.webp",
     sections: [
       {
         id: 0,
@@ -574,8 +558,6 @@ export const newsData: NewsItem[] = [
           "The organizing team arranges the venue and meals in advance, and each attendee confirms their order before the event. Everyone gathers before Maghrib, shares the meal together, and enjoys the special spirit of the month.",
           "After eating, the evening continues with casual games, simple activities, and sometimes a surprise visit from alumni members. It's a relaxed and joyful time for the whole branch to connect outside the workspace.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -587,7 +569,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "15 Feb, 2024",
     author: "Samar Nafea",
     tags: ["General", "Meeting"],
-    mainPhoto: "",
+    mainPhoto: "/News/general-meeting-2024/1.webp",
     sections: [
       {
         id: 0,
@@ -597,8 +579,6 @@ export const newsData: NewsItem[] = [
           "It includes engaging activities, interactive topics, and open discussions that help build connections between technical and managerial teams.",
           "The general meeting is always a great reminder of the collaborative and inclusive culture within the branch.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -610,7 +590,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "15 May, 2025",
     author: "Samar Nafea",
     tags: ["General", "Branch Identity"],
-    mainPhoto: "",
+    mainPhoto: "/News/packages-2025/1.webp",
     sections: [
       {
         id: 0,
@@ -621,8 +601,6 @@ export const newsData: NewsItem[] = [
           "Members who want to receive the package can reserve theirs in advance, and everything is carefully prepared to ensure quality and consistency.",
           "It's more than just items — it's about belonging, pride, and representing IEEE-ZSB wherever you go.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -633,17 +611,15 @@ export const newsData: NewsItem[] = [
       "In the 2024-2025 season, IEEE-ZSB updated the former Talent Management team and introduced it under a new name: T&T — short for 'Talent & Tech'.",
     dateCreated: "16 Oct, 2024",
     author: "Samar Nafea",
-    tags: ["Committees", "T&T"],
-    mainPhoto: "",
+    tags: ["Committees", "Talent&Tech", "T&T"],
+    mainPhoto: "/Committees/talent&tech.webp",
     sections: [
       {
         id: 0,
         heading: "Supporting People, Building Tools",
         descriptions: [
-          "The team’s main role is to support members by following up with them, making sure everyone is active and doing well, and helping anyone facing issues. This season, T&T also started working on technical tasks by creating tools that help the whole branch. One example is the registration app they built for IEEE-ZSB. The team combines both people support and technical development, making it a valuable part of the branch.",
+          "The team's main role is to support members by following up with them, making sure everyone is active and doing well, and helping anyone facing issues. This season, T&T also started working on technical tasks by creating tools that help the whole branch. One example is the registration app they built for IEEE-ZSB. The team combines both people support and technical development, making it a valuable part of the branch.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
@@ -655,7 +631,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "12 Aug, 2024",
     author: "Samar Nafea",
     tags: ["Competitions", "Autonomous Systems"],
-    mainPhoto: "",
+    mainPhoto: "/News/ev-2024/1.webp",
     sections: [
       {
         id: 0,
@@ -663,8 +639,6 @@ export const newsData: NewsItem[] = [
         descriptions: [
           "EVER V is an annual electric vehicle competition with three main tracks: Concept, Dynamic, and Autonomous. IEEE-ZSB joined the Autonomous Track, focusing on software for self-driving cars using a simulation platform (CoppeliaSim). The team developed AI algorithms capable of interpreting sensor and camera data to autonomously navigate a virtual vehicle without human input. This hands-on experience in autonomous driving and real-time decision-making allowed IEEE-ZSB members to apply their knowledge in AI, sensor integration, and vehicle control, while also building strong connections with professionals in the EV and AI domains.",
         ],
-        photo: "",
-        photoDescription: "",
       },
     ],
   },
