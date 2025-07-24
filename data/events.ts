@@ -24,7 +24,6 @@ const eventsData: EventsData[] = [
     location: "Zagazig University",
     date: "Suspended",
     photo: "/Fake-Images/8.webp",
-    link: "https://mutex.ieee-zsb.org",
   },
   {
     id: idCounter++,
@@ -36,7 +35,6 @@ const eventsData: EventsData[] = [
     location: "Zagazig University",
     date: "22/4/2025",
     photo: "/Fake-Images/7.webp",
-    link: "/pes/pes-day",
   },
   {
     id: idCounter++,
@@ -46,8 +44,7 @@ const eventsData: EventsData[] = [
       "MUTEX is the biggest annual technological event in the Delta region, hosted by IEEE Zagazig SB. The event focuses on introducing the latest technologies to the audience and setting a clear path for them to follow. This year, MUTEX is different. In addition to sessions and workshops on the latest technologies, we will have competitions in three different fields: a Problem Solving Contest, a Formula Firefighting Robot Competition, and a Smart Homes Hackathon.",
     location: "Zagazig University",
     date: "10/8/2024",
-    photo: "/Fake-Images/6.webp",
-    link: "https://mutex.ieee-zsb.org",
+    photo: "/Events/mutex-2024.webp",
   },
   {
     id: idCounter++,
@@ -56,7 +53,7 @@ const eventsData: EventsData[] = [
       "Tech 101 was an event created for everyone interested in technology and programming. It aimed to help participants choose their field wisely and guide them on how to start. To ensure they were on the right path, having a strong foundation was essential, and this was the event's primary goal. This was achieved through a series of technical workshops in the following fields: Artificial Intelligence, Smart Homes, Distribution, Industrial Automation, Mechanical Design, Backend Development, Frontend Development, Electronics, Networking, and Cyber Security. Participants had the opportunity to learn from experts who have studied and worked in these fields, saving them a lot of time and effort. The event lasted for 10 days.",
     location: "Zagazig University",
     date: "15/2/2024",
-    photo: "/Fake-Images/5.webp",
+    photo: "/Events/tech-101.webp",
   },
   {
     id: idCounter++,
@@ -65,7 +62,7 @@ const eventsData: EventsData[] = [
       "Career Hacks was an online event tailored to help students find their career paths and unleash their true potential. Event Objectives: Learned about the benefits of AI and how to use it in career placement. Helped participants decide their career paths. Provided guidance on building a strong CV. Taught participants how to establish a strong LinkedIn account. The event offered valuable insights and practical tips to assist students in navigating their professional journeys effectively.",
     location: "Online",
     date: "3/8/2023",
-    photo: "/Fake-Images/4.webp",
+    photo: "/Events/career-hacks.webp",
   },
   {
     id: idCounter++,
@@ -73,8 +70,8 @@ const eventsData: EventsData[] = [
     description:
       "The third edition of MUTEX expanded significantly, with over 1880 registered participants and space for more than 680 attendees. MUTEX'19 covered five new topics from IEEE Future Directions through talks and hands-on workshops. The event featured a panel discussion with tech startups sharing their success stories and a talk about Technology Innovation & Entrepreneurship Center programs for youth.",
     location: "Zagazig University",
-    date: "Unknown",
-    photo: "/Fake-Images/8.webp",
+    date: "16/3/2019",
+    photo: "/Events/mutex-2019.webp",
   },
   {
     id: idCounter++,
@@ -82,8 +79,8 @@ const eventsData: EventsData[] = [
     description:
       "The second edition of MUTEX expanded significantly, with over 1100 registered participants and space for more than 550 attendees. MUTEX'18 covered new tracks from IEEE Future Directions, attracting top sponsors and media partners. The National Telecommunication Regulatory Authority (NTRA) was our main sponsor, with Vodafone as our golden sponsor, alongside more than five media partners. As we grow older, the event grows bigger with us and our partners.",
     location: "Zagazig University",
-    date: "Unknown",
-    photo: "/Fake-Images/7.webp",
+    date: "13/3/2018",
+    photo: "/Events/mutex-2018.webp",
   },
   {
     id: idCounter++,
@@ -91,8 +88,8 @@ const eventsData: EventsData[] = [
     description:
       "The first edition of MUTEX marked the launch of the Computer Society Zagazig Chapter. This groundbreaking event introduced new technical topics to over 350 attendees, targeting engineers with majors in Computer Science and Communication. For the first time in Zagazig, the event partnered with many multinational companies, providing an unparalleled platform for knowledge and networking.",
     location: "Zagazig University",
-    date: "Unknown",
-    photo: "/Fake-Images/6.webp",
+    date: "2/3/2017",
+    photo: "/Events/mutex-2017.webp",
   },
 ];
 
