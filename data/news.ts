@@ -403,4 +403,269 @@ export const newsData: NewsItem[] = [
       },
     ],
   },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB Recruitment",
+    description:
+      "As part of our structured recruitment process, IEEE-ZSB conducted a two-stage interview system to select new members. This process included a Group Discussion phase to assess collaboration and communication, followed by One-to-One (O2O) Interviews to evaluate technical skills and how well the candidate fits into the team.",
+    dateCreated: "23 Oct, 2024",
+    author: "Samar Nafea",
+    tags: ["General", "Interviews"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Stage 1: Group Discussion",
+        descriptions: [
+          "The group discussion is the initial phase for applicants who passed form filtration. Candidates are divided into unfamiliar groups and participate in structured activities including self-introductions, individual tasks, and collaborative group challenges.",
+          "The main goal is to evaluate key soft skills such as communication, teamwork, leadership, adaptability, and initiative. Observers assess how well participants express their ideas, engage with others, and contribute to the overall group effort.",
+          "This phase helps us identify candidates who not only show potential but also reflect the collaborative spirit of IEEE-ZSB.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+      {
+        id: 1,
+        heading: "Stage 2: One-to-One Interviews",
+        descriptions: [
+          "Applicants who pass the group discussion are invited to O2O interviews. This phase focuses on individual evaluation based on technical knowledge, problem-solving ability, and team fit.",
+          "Each interview is conducted by a team leader or board member, lasting around 20 minutes. Candidates are asked track-specific questions along with a soft-skills check and a chance to ask questions themselves.",
+          "The interview process allows us to understand how candidates think under pressure, how well they understand the field they applied to, and whether they align with the values of their intended team.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+      {
+        id: 2,
+        heading: "Final Outcome",
+        descriptions: [
+          "Candidates who perform well in both stages are selected to join IEEE-ZSB as official team members. We look for individuals who combine technical capability with a collaborative mindset.",
+          "This structured recruitment system ensures that new members are not only skilled but also aligned with our culture and ready to contribute to a high-performing environment.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB Booth",
+    description:
+      "The IEEE-ZSB Student Branch organized an offline booth to engage with students, raise awareness about IEEE, and highlight the opportunities available through branch membership.",
+    dateCreated: "8 Oct, 2024",
+    author: "Samar Nafea",
+    tags: ["General"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Booth Highlights",
+        descriptions: [
+          "The booth focused on introducing IEEE-ZSB's mission and showcasing previous and upcoming activities like workshops, competitions, and technical events.",
+          "Students interacted with the team, asked questions about joining IEEE, and explored different committees and chapters.",
+          "The booth created a great opportunity to engage students early, making them feel welcomed and informed about what IEEE-ZSB can offer.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "Brand Ambassadors Program",
+    description:
+      "To prepare a new generation of passionate and skilled students, IEEE-ZSB launched the Brand Ambassadors Program—an introductory journey designed for early-year students to explore IEEE, gain soft and technical skills, and become future leaders within the student branch.",
+    dateCreated: "15 Mar, 2024",
+    author: "Samar Nafea",
+    tags: ["General", "Committees"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "What is the Brand Ambassadors Program?",
+        descriptions: [
+          "The Brand Ambassadors Program is a short-term developmental initiative that spans approximately three months. It acts as a mini version of the full season, aimed at equipping early-year students with the essential knowledge and experience needed to integrate into the IEEE-ZSB community.",
+          "The program is structured in multiple phases, ensuring gradual and effective learning—from IEEE awareness to hands-on project work.",
+          "In addition to these phases, some ambassadors program members also had the opportunity to volunteer in mega events like the MUTEX Summit, allowing them to gain real experience and actively participate in the branch's activities.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+      {
+        id: 1,
+        heading: "Phase One",
+        descriptions: [
+          "The first phase focuses on introducing the students to IEEE as an international organization and to the unique structure and culture of the IEEE-ZSB student branch. Participants get to know the committees, values, and mission that drive our work.",
+          "In parallel, students receive soft skills training, helping them improve in areas such as communication, presentation, collaboration, and personal branding—preparing them for active roles in the student ecosystem.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+      {
+        id: 2,
+        heading: "Phase Two",
+        descriptions: [
+          "After the foundation is set, each participant selects a technical or managerial track offered within IEEE-ZSB. Through guided sessions and basic hands-on tasks, they begin exploring the field that interests them most, such as Technical Track, Marketing, Event Management, Talent & Tech, Multimedia, or Business Development.",
+          "Each track provides simplified content tailored to their level—focusing on practical, beginner-friendly learning without overwhelming the participants.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+      {
+        id: 3,
+        heading: "Final Phase",
+        descriptions: [
+          "The program concludes with a practical application phase. Each group or individual delivers a project, presentation, or participates in a challenge depending on the track they joined.",
+          "This final step encourages creativity, and public speaking—allowing students to demonstrate what they've learned and to gain confidence in sharing it with others.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+      {
+        id: 4,
+        heading: "Program Achievements 2023-2024",
+        descriptions: [
+          "The last round of the Brand Ambassadors Program concluded with practical and competitive activities that showcased what participants learned during the journey.",
+          "In the CS Chapter, students participated in a Problem Solving Contest that encouraged logical thinking and team collaboration. Each CS sub-track also wrapped up with hands-on projects where participants applied their technical knowledge in creative ways.",
+          "In the RAS Chapter, participants worked on a Line Following Robot project. The program ended with a friendly competition between teams to test and demonstrate their robot designs.",
+          "Across both technical chapters and managerial committees, many participants delivered presentations during different phases of the program—enhancing their public speaking and confidence in explaining ideas.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB Development Program",
+    description:
+      "The IEEE-ZSB Development Program is a comprehensive internal training initiative designed to equip members with essential soft skills that complement their technical expertise. Through a carefully planned series of interactive workshops and sessions, the program aims to enhance critical abilities such as effective communication, leadership, time management, and professional networking. It also covers practical career-building skills like CV writing, personal branding, and LinkedIn optimization. By fostering these competencies, the program not only strengthens members' contributions within IEEE-ZSB but also prepares them for success in future academic, professional, and personal endeavors.",
+    dateCreated: "6 Feb, 2025",
+    author: "Samar Nafea",
+    tags: ["General", "Development"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Program Objectives & Topics",
+        descriptions: [
+          "The Development Program is an internal training series focused on enhancing the soft skills of current IEEE-ZSB members throughout the season.The sessions include key topics such as presentation skills, communication, planning, CV writing, leadership, and LinkedIn. The structure and number of sessions vary from season to season, and the schedule is arranged collaboratively with the participants.The goal is to empower members with practical skills that support their work within IEEE-ZSB and benefit them in their future careers.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB Ramadan Iftar",
+    description:
+      "As part of our social traditions, IEEE-ZSB organized its annual Ramadan Iftar to bring members together for a warm evening of connection, food, and shared memories",
+    dateCreated: "15 Mar, 2025",
+    author: "Samar Nafea",
+    tags: ["General", "Ramadan", "Iftar"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Iftar Highlights",
+        descriptions: [
+          "The iftar gathering is a seasonal event where members from all committees and tracks meet in an informal setting during Ramadan. It's not held on a fixed date, but we coordinate together to choose a suitable day for everyone.",
+          "The organizing team arranges the venue and meals in advance, and each attendee confirms their order before the event. Everyone gathers before Maghrib, shares the meal together, and enjoys the special spirit of the month.",
+          "After eating, the evening continues with casual games, simple activities, and sometimes a surprise visit from alumni members. It's a relaxed and joyful time for the whole branch to connect outside the workspace.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB General Meeting",
+    description:
+      "The IEEE-ZSB General Meeting is a key mid-season event aimed at uniting all committees, tracks, and members under one roof to promote stronger internal collaboration and a deeper sense of community. Unlike kick-off meetings held at the beginning of the season, this gathering is strategically scheduled once members have had time to settle into their roles. It serves as a platform to evaluate progress, celebrate achievements, and realign on shared goals. Through team-building activities, interactive discussions, and cross-functional engagement, the meeting fosters mutual understanding between technical and managerial teams, reinforcing the collaborative and inclusive spirit that defines IEEE-ZSB.",
+    dateCreated: "15 Feb, 2024",
+    author: "Samar Nafea",
+    tags: ["General", "Meeting"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Structure & Goals",
+        descriptions: [
+          "To strengthen internal communication and team bonding, IEEE-ZSB organizes a General Meeting during the season that brings together all committees and tracks.This meeting is not held at the beginning of the season but takes place after some time once members are familiar with their teams.",
+          "It includes engaging activities, interactive topics, and open discussions that help build connections between technical and managerial teams.",
+          "The general meeting is always a great reminder of the collaborative and inclusive culture within the branch.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB Packages",
+    description:
+      "To make each member feel more connected to the branch, IEEE-ZSB offers customized membership packages that reflect the branch's unique identity and spirit.",
+    dateCreated: "15 May, 2025",
+    author: "Samar Nafea",
+    tags: ["General", "Branch Identity"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Package Details",
+        descriptions: [
+          "Each season, IEEE-ZSB designs special packages that members can request. These packages often include items like branded pens, notebooks, stickers, ID, T-shirts, mugs, keychains, bracelets, and more — all designed with the branch's visual identity and logo.",
+          "The contents may vary from one season to another based on availability, design updates, and what feels meaningful to members that year.",
+          "Members who want to receive the package can reserve theirs in advance, and everything is carefully prepared to ensure quality and consistency.",
+          "It's more than just items — it's about belonging, pride, and representing IEEE-ZSB wherever you go.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "The New Face of Talent at IEEE-ZSB",
+    description:
+      "In the 2024-2025 season, IEEE-ZSB updated the former Talent Management team and introduced it under a new name: T&T — short for 'Talent & Tech'.",
+    dateCreated: "16 Oct, 2024",
+    author: "Samar Nafea",
+    tags: ["Committees", "T&T"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "Supporting People, Building Tools",
+        descriptions: [
+          "The team’s main role is to support members by following up with them, making sure everyone is active and doing well, and helping anyone facing issues. This season, T&T also started working on technical tasks by creating tools that help the whole branch. One example is the registration app they built for IEEE-ZSB. The team combines both people support and technical development, making it a valuable part of the branch.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    title: "IEEE-ZSB in EVER V",
+    description:
+      "IEEE-ZSB Student Branch participated in the Autonomous Track of the EVER V 2024 Electric Vehicle Rally, held in El Alamein, showcasing innovation in AI and autonomous vehicle simulation.",
+    dateCreated: "12 Aug, 2024",
+    author: "Samar Nafea",
+    tags: ["Competitions", "Autonomous Systems"],
+    mainPhoto: "",
+    sections: [
+      {
+        id: 0,
+        heading: "IEEE-ZSB's Contribution in EVER V",
+        descriptions: [
+          "EVER V is an annual electric vehicle competition with three main tracks: Concept, Dynamic, and Autonomous. IEEE-ZSB joined the Autonomous Track, focusing on software for self-driving cars using a simulation platform (CoppeliaSim). The team developed AI algorithms capable of interpreting sensor and camera data to autonomously navigate a virtual vehicle without human input. This hands-on experience in autonomous driving and real-time decision-making allowed IEEE-ZSB members to apply their knowledge in AI, sensor integration, and vehicle control, while also building strong connections with professionals in the EV and AI domains.",
+        ],
+        photo: "",
+        photoDescription: "",
+      },
+    ],
+  },
 ];
