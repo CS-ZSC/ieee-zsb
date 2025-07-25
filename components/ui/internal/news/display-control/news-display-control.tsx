@@ -4,6 +4,7 @@ import Search from "./Search";
 import { Icon } from "@iconify/react";
 import Filter from "./filter";
 import dynamic from "next/dynamic";
+import Sort from "./sort";
 
 const Category = dynamic(() => import("./category"), {
   ssr: false,
@@ -53,6 +54,7 @@ export default function NewsDisplayControl({ onSearch }: Props) {
       </Flex>
       <Flex justifyContent="flex-end" gridArea="actions" gap={2}>
         <Filter />
+        <Sort />
       </Flex>
     </Grid>
   );

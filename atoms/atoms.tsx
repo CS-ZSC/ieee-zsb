@@ -78,3 +78,29 @@ export const filteredNewsCountAtom = atom(
     }
   }
 );
+
+export type SortType = "newest" | "oldest" | "alpha" | "reverseAlpha";
+
+const SORT_VALUES: SortType[] = ["newest", "oldest", "alpha", "reverseAlpha"];
+
+const STORAGE_KEY = "newsSortType";
+
+const getStoredSortType = (): SortType => {
+  if (typeof window !== "undefined") {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored && SORT_VALUES.includes(stored as SortType)) {
+      return stored as SortType;
+    }
+  }
+  return "newest";
+};
+
+export const sortTypeAtom = atom(
+  getStoredSortType(),
+  (get, set, newValue: SortType) => {
+    set(sortTypeAtom, newValue);
+    if (typeof window !== "undefined") {
+      localStorage.setItem(STORAGE_KEY, newValue);
+    }
+  }
+);

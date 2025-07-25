@@ -3,10 +3,7 @@ import { chakra, Box, Text, Button, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useAtom } from "jotai";
-import {
-  newsFilterCheckedItemsAtom,
-  newsFilterLabelsAtom,
-} from "@/atoms/atoms";
+import { sortTypeAtom } from "@/atoms/atoms";
 
 const MotionBox = chakra(motion.div);
 const MotionList = chakra(motion.ul);
@@ -22,19 +19,19 @@ const wrapperVariants = {
   },
 };
 
-export default function Filter() {
+const sortOptions = [
+  { label: "Newest", value: "newest" },
+  { label: "Oldest", value: "oldest" },
+  { label: "A → Z", value: "alpha" },
+  { label: "Z → A", value: "reverseAlpha" },
+] as const;
+
+export default function Sort() {
   const [open, setOpen] = useState(false);
-  const [checkedNewsItems, setCheckedNewsItems] = useAtom(
-    newsFilterCheckedItemsAtom
-  );
-  const [filterItems] = useAtom(newsFilterLabelsAtom);
+  const [sortType, setSortType] = useAtom(sortTypeAtom);
 
-  const filterNewsItems: string[] = filterItems;
-
-  const handleCheckboxChange = (index: number) => {
-    const updatedItems = [...checkedNewsItems];
-    updatedItems[index] = !updatedItems[index];
-    setCheckedNewsItems(updatedItems);
+  const handleSortChange = (value: typeof sortType) => {
+    setSortType(value);
   };
 
   return (
@@ -57,8 +54,8 @@ export default function Filter() {
             color={"neutral-1"}
             transition={"all"}
           >
-            <Text fontSize={"1.2rem"}>Filter</Text>
-            <Icon icon={"lucide:filter"}></Icon>
+            <Text fontSize={"1.2rem"}>Sort</Text>
+            <Icon icon={"lucide:arrow-up-down"} />
           </Flex>
         </Button>
 
@@ -73,30 +70,32 @@ export default function Filter() {
           rounded="2xl"
           position="absolute"
           top="140%"
-          left="50%"
+          left="70%"
           overflow="hidden"
           zIndex={2}
           backgroundColor={"primary-5"}
           border={"1px solid"}
           borderColor={"primary-3"}
         >
-          {checkedNewsItems.map((isChecked, index) => (
-            <chakra.li key={index} listStyleType="none">
+          {sortOptions.map((option) => (
+            <chakra.li key={option.value} listStyleType="none">
               <label>
                 <Flex
                   alignItems={"center"}
                   gap={4}
                   cursor={"pointer"}
-                  className="checkboxes-container"
+                  className="radioes-container"
                   position={"relative"}
                 >
                   <input
-                    type="checkbox"
-                    checked={isChecked}
-                    onChange={() => handleCheckboxChange(index)}
+                    type="radio"
+                    name="sort"
+                    value={option.value}
+                    checked={sortType === option.value}
+                    onChange={() => handleSortChange(option.value)}
                   />
-                  <span className="checkbox-container"></span>
-                  <Text>{filterNewsItems[index]}</Text>
+                  <span className="radio-container"></span>
+                  <Text>{option.label}</Text>
                 </Flex>
               </label>
             </chakra.li>
