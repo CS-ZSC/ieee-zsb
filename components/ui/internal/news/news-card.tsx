@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useWindowType } from "@/hooks/use-window-type";
 import type { NewsItem } from "@/data/news";
@@ -8,6 +8,7 @@ import Tag from "@/components/ui/internal/tag";
 import { useRouter } from "next/navigation";
 import Description from "./description";
 import AnimatedCard from "../animatedCard";
+import ImageBox from "./image-box";
 
 type Props = {
   newsObject: NewsItem;
@@ -39,17 +40,11 @@ export default function NewsCard({
         borderColor="primary-3"
         rounded={"2xl"}
       >
-        <Box
-          width="full"
-          position={"relative"}
-          bgImage={`url(${newsObject.mainPhoto})`}
-          bgSize="cover"
-          roundedTop="2xl"
-          borderBottom="1px solid"
-          borderColor="primary-3"
-          style={{
-            aspectRatio: "16/9",
-          }}
+        <ImageBox
+          path={newsObject.mainPhoto}
+          alt={newsObject.title}
+          maxWidth="full"
+          roundedBottom="0"
         />
         <Flex
           flexDirection={"column"}
