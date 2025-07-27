@@ -1,10 +1,9 @@
 "use client"
 
 import ButtonLink from '@/components/ui/internal/button-link'
-import Card from '@/components/ui/internal/card';
 import Logo from '@/components/ui/internal/logo'
 import { useWindowType } from '@/hooks/use-window-type';
-import { Box, Flex, Heading, HStack, Link, Separator, Stack, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Link, Stack, Text } from '@chakra-ui/react'
 
 export default function NotFound() {
     const { isDesktop } = useWindowType();
