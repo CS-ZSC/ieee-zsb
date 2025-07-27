@@ -2928,7 +2928,8 @@ https-proxy-agent@^7.0.5:
     "@emotion/react" "^11.14.0"
     "@emotion/styled" "^11.14.0"
     "@iconify/react" "^5.2.0"
-    ieee-zsb "file:C:/Users/Ahmed/AppData/Local/Yarn/Cache/v6/npm-ieee-zsb-0.1.0-3fd36b55-e86e-4348-a6ab-e03659c16468-1751314470096/node_modules/ieee-zsb"
+    framer-motion "^12.20.1"
+    ieee-zsb "file:../../../../.cache/yarn/v6/npm-ieee-zsb-0.1.0-87b74771-aa4d-4d54-8ca5-83038381c6c8-1753634428447/node_modules/ieee-zsb"
     jotai "^2.12.1"
     next "15.1.0"
     next-themes "^0.4.6"
@@ -2936,7 +2937,6 @@ https-proxy-agent@^7.0.5:
     react-dom "^19.0.0"
     react-icons "^5.5.0"
     react-intersection-observer "^9.16.0"
-    react-spinners "^0.15.0"
 
 ignore@^5.2.0, ignore@^5.2.4, ignore@^5.3.1:
   version "5.3.2"
@@ -3716,10 +3716,10 @@ react-is@^16.13.1, react-is@^16.7.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-spinners@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.npmjs.org/react-spinners/-/react-spinners-0.15.0.tgz"
-  integrity sha512-ZO3/fNB9Qc+kgpG3SfdlMnvTX6LtLmTnOogb3W6sXIaU/kZ1ydEViPfZ06kSOaEsor58C/tzXw2wROGQu3X2pA==
+react-spinners@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/react-spinners/-/react-spinners-0.17.0.tgz#d518913e2192afaae76c5b781929ea3bd7b1910e"
+  integrity sha512-L/8HTylaBmIWwQzIjMq+0vyaRXuoAevzWoD35wKpNTxxtYXWZp+xtgkfD7Y4WItuX0YvdxMPU79+7VhhmbmuTQ==
 
 react@^19.0.0:
   version "19.0.0"
