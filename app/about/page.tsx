@@ -21,7 +21,7 @@ export default function page() {
           <Faq />
         </Container>
         <Container>
-          <PageTitle title="Board" />
+          <PageTitle title="Executive Board" />
           <Board />
         </Container>
         <Container>
