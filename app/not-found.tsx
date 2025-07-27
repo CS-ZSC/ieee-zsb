@@ -4,20 +4,26 @@ import ButtonLink from '@/components/ui/internal/button-link'
 import Card from '@/components/ui/internal/card';
 import Logo from '@/components/ui/internal/logo'
 import { useWindowType } from '@/hooks/use-window-type';
-import { Box, Heading, Link, Stack, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, HStack, Link, Separator, Stack, Text } from '@chakra-ui/react'
 
 export default function NotFound() {
     const { isDesktop } = useWindowType();
     return (
         <Stack w="full" h="full" justifyContent="center" alignItems="center" spaceY={8}>
-            <Box width={isDesktop ? "400px" : "220px"}>
-                <Logo />
-            </Box>
+            <Flex direction={isDesktop ? "row" : "column"} align={"center"} justify={"center"} spaceX={isDesktop ? 2 : 0} spaceY={isDesktop ? 0 : 2}>
+
+                <Box width={isDesktop ? "400px" : "220px"} borderRightColor={"primary-2"} borderRightWidth={isDesktop ? 4 : 0} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
+                    <Logo />
+                </Box>
+                <Box width={isDesktop ? "400px" : "fit-content"} textAlign={"center"} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
+                    <Heading fontSize={isDesktop ? "9xl" : "5xl"}>404</Heading>
+                </Box>
+            </Flex>
             <Box maxW={"720px"} paddingX={isDesktop ? 0 : "var(--global-spacing)"}>
 
                 <Stack justify={"center"} align="center" spaceY={8}>
                     <Heading size="4xl">
-                        404: Signal Not Found
+                        Signal Not Found
                     </Heading>
                     <Box
                         ml={4} borderLeftColor="primary-1" borderLeftWidth={4} paddingLeft={4} py={2}

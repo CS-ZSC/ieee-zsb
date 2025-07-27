@@ -1,7 +1,7 @@
 "use client";
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
-import { useColorMode } from "@/components/ui/color-mode";
+import { useColorModeValue } from "@/components/ui/color-mode";
 interface LogoOptions {
   type: LogoType;
   width: number;
@@ -10,8 +10,8 @@ interface LogoOptions {
 export type LogoType = "black" | "white" | "blue";
 
 export default function Logo({ width, height, type }: LogoOptions) {
-  const { colorMode } = useColorMode();
-  const logoType: LogoType = type ?? colorMode === "light" ? "black" : "white";
+  const color = useColorModeValue("black", "white");
+  const logoType: LogoType = type ?? color;
 
   return (
     <Link href="/" passHref>
