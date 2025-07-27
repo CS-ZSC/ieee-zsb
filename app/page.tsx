@@ -10,12 +10,12 @@ import News from "@/components/ui/internal/home/news";
 export default function Home() {
   return (
     <PageWrapper>
-      <HeroSection />
       <Flex
         flexDirection={"column"}
         paddingBottom={"0px"}
         gap={"var(--global-spacing)"}
       >
+        <HeroSection />
         <Brief />
         <News />
         <Events />

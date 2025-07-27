@@ -10,7 +10,6 @@ import SloganTypingEffect from "./slogan-typing-effect";
 export default function HeroSection() {
   const { colorMode } = useColorMode();
   const { isDesktop } = useWindowType();
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
   const [isMounted, setIsMounted] = useState(false);
   const gradientRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,13 +18,6 @@ export default function HeroSection() {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (isMounted) {
-      setImageSrc(
-        `/Images/IEEE/ieee-logo-${colorMode === "light" ? "blue" : "white"}.svg`
-      );
-    }
-  }, [colorMode, isMounted]);
 
   useEffect(() => {
     if (!isMounted) return;
@@ -73,10 +65,11 @@ export default function HeroSection() {
       position="relative"
       rounded="2xl"
       color="natural-2"
+      bgColor={"primary-1"}
       width="full"
-      height={isDesktop ? `calc(100vh)` : "auto"}
-      marginTop={isDesktop ? `calc(-100px - var(--global-spacing))` : "-60px"}
-      >
+      height={isDesktop ? `calc(90vh)` : "auto"}
+      marginTop={isDesktop ? `calc(-10px - var(--global-spacing))` : "-60px"}
+    >
       {colorMode === "dark" && (
         <>
           <Box
@@ -89,7 +82,7 @@ export default function HeroSection() {
             zIndex={-1}
             opacity={0.8}
             boxShadow="0 0 30vw 10vw #79D2FA99"
-            />
+          />
           <Box
             position="absolute"
             borderRadius="full"
@@ -100,7 +93,7 @@ export default function HeroSection() {
             zIndex={-1}
             opacity={0.8}
             boxShadow="0 0 30vw 10vw #79D2FA99"
-            />
+          />
           <Box
             ref={gradientRef}
             position="absolute"
@@ -113,7 +106,7 @@ export default function HeroSection() {
             willChange="transform"
             opacity={0}
             transition="opacity 0.1s ease-out"
-            />
+          />
         </>
       )}
       <Box
@@ -126,15 +119,13 @@ export default function HeroSection() {
         alignItems="center"
         justifyContent="center"
       >
-        {imageSrc && (
-          <Image
-            alt="IEEE-ZSB Logo"
-            src={imageSrc}
-            width={700}
-            height={450}
-            priority
-          />
-        )}
+        <Image
+          alt="IEEE-ZSB Logo"
+          src={"/Images/IEEE/ieee-logo-white.svg"}
+          width={700}
+          height={450}
+          priority
+        />
       </Box>
       <Box>
         <SloganTypingEffect />
