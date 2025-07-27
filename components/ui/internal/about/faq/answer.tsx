@@ -17,7 +17,7 @@ export default function Answer({
   return (
     <AnimatePresence initial={false}>
       {isOpen && (
-        <Card padding={0}>
+        <Card padding={0} bgColor="primary-12">
           <MotionDiv
             initial={{ height: 0 }}
             animate={{ height: contentRef.current?.scrollHeight || "auto" }}
