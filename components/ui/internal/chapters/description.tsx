@@ -30,7 +30,7 @@ export function Description({ vision, mission, about, color }: {
                             ml={4} borderLeftColor={color} borderLeftWidth={4} paddingLeft={4} py={2}
                         >
 
-                            <Text>
+                            <Text fontSize={"lg"}>
                                 {text}
                             </Text>
                         </Box>

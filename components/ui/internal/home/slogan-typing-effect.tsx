@@ -49,9 +49,7 @@ export default function SloganTypingEffect() {
           color={
             char === "O" || char === "W" || char === "N"
               ? "accent-1"
-              : colorMode === "light"
-                ? "primary-1"
-                : "white"
+              : "white"
           }
         >
           {char}
