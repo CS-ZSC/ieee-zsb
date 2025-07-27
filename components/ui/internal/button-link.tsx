@@ -26,7 +26,7 @@ export default function ButtonLink({
       textAlign="center"
       transition="all"
       _hover={{ backgroundColor: "primary-10" }}
-      >
+    >
       <LinkOverlay
         href={link}
         color={"white"}

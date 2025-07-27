@@ -14,7 +14,6 @@ import {
 import Link from "next/link";
 import Logo from "@/components/ui/internal/logo";
 import Card from "@/components/ui/internal/card";
-import { LogoType } from "@/components/ui/internal/logo";
 import { useWindowType } from "@/hooks/use-window-type";
 import SocialMediaLinks from "@/data/social-media-links";
 import Chapters from "@/components/ui/internal/header/chapters";
@@ -42,7 +41,7 @@ export default function Footer() {
     <Flex paddingTop="var(--global-spacing)">
       <Card>
         <Logo
-          logoType={LogoType.White}
+          logoType={"white"}
           width={isDesktop ? 180 : 110}
           height={isDesktop ? 110 : 65}
         />

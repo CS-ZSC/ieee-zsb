@@ -7,7 +7,6 @@ import { SmallHeaderAtom } from "@/atoms/atoms";
 import { Flex } from "@chakra-ui/react";
 import HamburgerIcon from "@/components/ui/internal/hamburger-icon";
 import Logo from "@/components/ui/internal/logo";
-import { LogoType } from "@/components/ui/internal/logo";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import SmallHeaderLinks from "./small-header-links";
 
@@ -90,7 +89,7 @@ export default function SmallHeader() {
           w="full"
           h="35px"
         >
-          <Logo logoType={LogoType.White} width={75} height={38} />
+          <Logo logoType="white" width={75} height={38} />
           <div ref={toggleRef}>
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
           </div>
