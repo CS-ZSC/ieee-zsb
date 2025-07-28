@@ -89,7 +89,7 @@ export default function SmallHeader() {
           w="full"
           h="35px"
         >
-          <Logo type="white" width={75} height={38} />
+          <Logo width={75} height={38} />
           <div ref={toggleRef}>
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
           </div>

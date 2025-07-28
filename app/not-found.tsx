@@ -11,11 +11,11 @@ export default function NotFound() {
         <Stack w="full" h="full" justifyContent="center" alignItems="center" spaceY={8}>
             <Flex direction={isDesktop ? "row" : "column"} align={"center"} justify={"center"} spaceX={isDesktop ? 2 : 0} spaceY={isDesktop ? 0 : 2}>
 
-                <Box width={isDesktop ? "400px" : "220px"} borderRightColor={"primary-2"} borderRightWidth={isDesktop ? 4 : 0} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
+                <Box width={isDesktop ? "400px" : "320px"} borderRightColor={"primary-2"} borderRightWidth={isDesktop ? 4 : 0} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
                     <Logo type={"blue"} />
                 </Box>
-                <Box width={isDesktop ? "400px" : "fit-content"} textAlign={"center"} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
-                    <Heading fontSize={isDesktop ? "9xl" : "5xl"}>404</Heading>
+                <Box width={isDesktop ? "400px" : "fit-content"} textAlign={"center"} paddingLeft={isDesktop ? 4 : 0} pt={isDesktop ? 0 : 8} pb={isDesktop ? 0 : -4}>
+                    <Heading fontSize={"9xl"}>404</Heading>
                 </Box>
             </Flex>
             <Box maxW={"720px"} paddingX={isDesktop ? 0 : "var(--global-spacing)"}>
@@ -29,7 +29,7 @@ export default function NotFound() {
                     >
                         <Text fontSize={"lg"}>
                             Oops! Looks like you&apos;ve wandered off the IEEE circuit.
-                            Even our best engineers can&apos;t find this page. Maybe it&apos;s hiding in a <Link textDecoration={"underline"} href='https://en.wikipedia.org/wiki/Faraday_cage'>Faraday cage</Link>?
+                            Even our best engineers can&apos;t find this page. Maybe it&apos;s hiding in a <Link textDecorationStyle={"wavy"} textDecoration={"underline"} href='https://en.wikipedia.org/wiki/Faraday_cage' target="_blank">Faraday cage</Link>?
                         </Text>
                     </Box>
 

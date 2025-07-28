@@ -41,7 +41,6 @@ export default function Footer() {
     <Flex paddingTop="var(--global-spacing)">
       <Card>
         <Logo
-          type={"white"}
           width={isDesktop ? 180 : 110}
           height={isDesktop ? 110 : 65}
         />
