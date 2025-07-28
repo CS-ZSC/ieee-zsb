@@ -34,7 +34,7 @@ function FullHeader() {
         zIndex={5}
       >
         <HStack justifyContent="space-between" alignItems="center" width="full">
-          <Logo logoType={"white"} width={85} height={50} />
+          <Logo type={"white"} width={85} height={50} />
           <HStack>
             <ChaptersMenu />
             <LinksNavigator />

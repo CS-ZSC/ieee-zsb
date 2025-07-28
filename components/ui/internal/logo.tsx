@@ -3,9 +3,9 @@ import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 import { useColorModeValue } from "@/components/ui/color-mode";
 interface LogoOptions {
-  type: LogoType;
-  width: number;
-  height: number;
+  type?: LogoType;
+  width?: number;
+  height?: number;
 }
 export type LogoType = "black" | "white" | "blue";
 
@@ -18,8 +18,8 @@ export default function Logo({ width, height, type }: LogoOptions) {
       <Image
         src={`/Images/IEEE/ieee-logo-${logoType}.svg`}
         alt="IEEE-ZSB Logo"
-        width={width}
-        height={height}
+        width={width ?? "auto"}
+        height={height ?? "auto"}
         transition="all 0.2s ease-in-out"
         _hover={{ opacity: 0.9 }}
       />

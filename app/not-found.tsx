@@ -12,7 +12,7 @@ export default function NotFound() {
             <Flex direction={isDesktop ? "row" : "column"} align={"center"} justify={"center"} spaceX={isDesktop ? 2 : 0} spaceY={isDesktop ? 0 : 2}>
 
                 <Box width={isDesktop ? "400px" : "220px"} borderRightColor={"primary-2"} borderRightWidth={isDesktop ? 4 : 0} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
-                    <Logo />
+                    <Logo type={"blue"} />
                 </Box>
                 <Box width={isDesktop ? "400px" : "fit-content"} textAlign={"center"} paddingLeft={isDesktop ? 4 : 0} py={isDesktop ? 2 : 0}>
                     <Heading fontSize={isDesktop ? "9xl" : "5xl"}>404</Heading>
