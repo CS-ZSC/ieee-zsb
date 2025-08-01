@@ -25,7 +25,7 @@ export function HeroCard({
       <Image
         src={logo}
         alt="Chapter Logo"
-        width={isDesktop ? "400px" : "170px"}
+        height={isDesktop ? "400px" : "170px"}
       />
     </Flex>
   );
