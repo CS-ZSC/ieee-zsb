@@ -5,6 +5,7 @@ import Header from "@/components/ui/internal/header";
 import Footer from "@/components/ui/internal/footer";
 import "./global.css";
 import { Toaster } from "@/components/ui/toaster";
+import GoToTopButton from "@/components/ui/internal/go-to-top-button";
 
 export const metadata: Metadata = {
   title: "IEEE ZSB",
@@ -18,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        data-new-gr-c-s-check-loaded="8.932.0"
-        data-gr-ext-installed=""
-
-      >
+      <body data-new-gr-c-s-check-loaded="8.932.0" data-gr-ext-installed="">
         <Provider>
           <Stack
             gap={0}
@@ -34,10 +31,11 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <GoToTopButton />
           </Stack>
           <Toaster />
         </Provider>
       </body>
-    </html >
+    </html>
   );
 }
