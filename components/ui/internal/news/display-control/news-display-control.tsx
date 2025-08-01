@@ -52,7 +52,7 @@ export default function NewsDisplayControl({ onSearch }: Props) {
         <Icon icon="majesticons:search-line" width="2.2rem" />
         <Search onSearch={onSearch} />
       </Flex>
-      <Flex justifyContent="flex-end" gridArea="actions" gap={2}>
+      <Flex justifyContent="flex-end" gridArea="actions" gap={3}>
         <Filter />
         <Sort />
       </Flex>
