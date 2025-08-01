@@ -18,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body
+        data-new-gr-c-s-check-loaded="8.932.0"
+        data-gr-ext-installed=""
+
+      >
         <Provider>
           <Stack
             gap={0}
@@ -34,6 +38,6 @@ export default function RootLayout({
           <Toaster />
         </Provider>
       </body>
-    </html>
+    </html >
   );
 }
