@@ -66,7 +66,7 @@ export default function Sort() {
           display="flex"
           flexDirection="column"
           gap={2}
-          p={"var(--global-spacing)"}
+          p={3}
           rounded="2xl"
           position="absolute"
           top="140%"
