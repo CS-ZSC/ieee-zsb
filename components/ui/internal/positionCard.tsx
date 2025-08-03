@@ -4,6 +4,8 @@ import { Box, Text, Image, HStack, Flex } from "@chakra-ui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { useWindowType } from "@/hooks/use-window-type";
+import { toaster } from "@/components/ui/toaster";
+
 interface Props {
   position: Position;
   bgColor?: string;
@@ -14,6 +16,17 @@ export default function PositionCard({
   bgColor = "primary-5",
 }: Props) {
   const { isDesktop } = useWindowType();
+
+  const handleCopy = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(position.email);
+    toaster.create({
+      title: "Email copied!",
+      description: `${position.email} has been copied to your clipboard.`,
+      type: "success",
+      meta: { closable: true },
+    });
+  };
 
   return (
     <HStack
@@ -50,7 +63,7 @@ export default function PositionCard({
         </Text>
         <Box bgColor="primary-3" rounded="full" h="1px" />
 
-        <Link href={position.linkedin}>
+        <Link href={position.linkedin} target="_blank">
           <HStack
             color="neutral-3"
             _hover={{ color: "neutral-1" }}
@@ -60,20 +73,21 @@ export default function PositionCard({
             <Text>Linkedin</Text>
           </HStack>
         </Link>
-        <Link href={`mailto:${position.email}`}>
-          <HStack
-            color="neutral-3"
-            _hover={{ color: "neutral-1" }}
-            transition={"all"}
-          >
-            <Icon
-              icon="ic:outline-alternate-email"
-              width={"1.5rem"}
-              height={"1.5rem"}
-            />
-            <Text>Email</Text>
-          </HStack>
-        </Link>
+        <HStack
+          as="button"
+          onClick={handleCopy}
+          color="neutral-3"
+          _hover={{ color: "neutral-1" }}
+          transition="all"
+          cursor={"pointer"}
+        >
+          <Icon
+            icon="ic:outline-alternate-email"
+            width="1.5rem"
+            height="1.5rem"
+          />
+          <Text>Email</Text>
+        </HStack>
       </Flex>
     </HStack>
   );
