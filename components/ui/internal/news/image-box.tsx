@@ -7,6 +7,7 @@ interface ImageBoxProps {
   maxWidth?: string;
   aspectRatio?: string;
   mx?: string;
+  roundedBottom?: string;
 }
 
 export default function ImageBox({
@@ -15,6 +16,7 @@ export default function ImageBox({
   maxWidth = "850px",
   aspectRatio = "16/9",
   mx = "auto",
+  roundedBottom = "2xl",
 }: ImageBoxProps) {
   return (
     <Image
@@ -28,6 +30,8 @@ export default function ImageBox({
       border="1px solid"
       borderColor="primary-3"
       rounded="2xl"
+      roundedBottom={roundedBottom}
+      loading="lazy"
       style={{
         aspectRatio: aspectRatio,
       }}
