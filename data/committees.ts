@@ -21,23 +21,36 @@ let idCounter: number = 1;
 const committeesData: CommitteesData[] = [
   {
     id: idCounter++,
-    name: "Ambassadors",
-    hashtag: "ambassadors",
+    name: "Brand Ambassadors",
+    hashtag: "brand-ambassadors",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus veritatis esse facilis quasi? Earum alias ipsa explicabo molestias delectus adipisci aliquid esse rerum sunt inventore! Harum, vel? Asperiores, alias et.",
-    image: "/Fake-Images/8.webp",
+      "The Ambassadors team helps students discover what IEEE is, how it works globally, and what opportunities it offers at our Zagazig student branch. Members gain essential soft skills such as communication, leadership and presentation. They also explore personal branding through sessions on LinkedIn and how to represent themselves professionally. They attend focused sessions on planning, marketing basics, and content writing—helping them represent IEEE in a clear and professional way, and explain its message to others. To support their work, members use practical tools like Word, PowerPoint, Canva, and Google Sheets. What makes this team special is that every member gets a real leadership opportunity during the Ambassadors Program, which happens mid-season. Each member leads a group of new students—conducting interviews, delivering sessions, and guiding them through tasks. It's a guaranteed leadership experience that sets Ambassadors apart from other teams.Organizing the Ambassadors Program is one of the team's core responsibilities. It's fully planned and managed by the members from start to finish.",
+    image: "/Committees/brand-ambassadors.webp",
     goals: [
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+      "Spread awareness about IEEE and the student branch among new students.",
+      "Help team members grow through real leadership roles and soft skills development.",
     ],
     activities: [
       {
-        title: "session",
+        title: "Soft Skills Sessions",
         description:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+          "Training on communication, presentation, leadership, and other key skills to support personal growth.",
       },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Personal Branding & Self-Marketing",
+        description:
+          "Members learn how to present themselves professionally by building strong LinkedIn profiles, writing effective CVs, and understanding basic marketing skills that help them stand out and communicate their value.",
+      },
+      {
+        title: "Ambassadors Program",
+        description:
+          "A learning journey for new students. Team members lead the program, conduct interviews, give sessions, and guide participants through tasks.",
+      },
+      {
+        title: "Spreading IEEE Awareness",
+        description:
+          "Team members connect with students through creative posts, booth activities, and direct interactions to introduce what IEEE is, how it works globally and locally, and how students can benefit from joining.",
+      },
     ],
     board: [
       {
@@ -68,21 +81,28 @@ const committeesData: CommitteesData[] = [
     name: "Business Development",
     hashtag: "business-development",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus veritatis esse facilis quasi? Earum alias ipsa explicabo molestias delectus adipisci aliquid esse rerum sunt inventore! Harum, vel? Asperiores, alias et.",
-    image: "/Fake-Images/4.webp",
+      "The BD team at IEEE-ZSB is responsible for the external representation of the student branch. It combines the roles of both Public Relations and Fundraising. The team ensures a strong presence for the branch by handling partnerships and outreach with other entities. It's also responsible for securing financial and in-kind support by forming sponsorship deals and building long-term collaborations.",
+    image: "/Committees/business-development.webp",
     goals: [
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+      "Establish and maintain strong partnerships with external organizations, companies, and NGOs to support IEEE-ZSB initiatives.",
+      "Secure financial support that contribute to the growth and sustainability of the student branch's activities.",
     ],
     activities: [
       {
-        title: "session",
+        title: "Opportunity Scouting",
         description:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+          "Actively seeking new opportunities that can benefit the branch in terms of growth, exposure, and resources.",
       },
-      { title: "offline session", description: "Reliability" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "External Representation",
+        description:
+          "Professionally representing IEEE-ZSB in external communications, meetings, and public appearances to uphold the branch's reputation and help build credibility.",
+      },
+      {
+        title: "Relationship Management",
+        description:
+          "Handling and maintaining external relations to ensure positive engagement and continuous support from outside entities.",
+      },
     ],
     board: [
       {
@@ -98,12 +118,30 @@ const committeesData: CommitteesData[] = [
     id: idCounter++,
     name: "Event Management",
     hashtag: "event-management",
-    description: "Lorem",
-    image: "/Fake-Images/4.webp",
-    goals: ["test", "tester"],
+    description:
+      "The Event Management Committee at IEEE ZSB is responsible for planning, organizing, and executing all events held under the branch. From technical workshops and competitions to social gatherings and mega conferences, the committee ensures that every detail is wellprepared and smoothly delivered. Members of the committee handle logistics, coordination, venue setup, time management, and follow-up tasks making sure that each event reflects the professionalism and values of IEEE.",
+    image: "/Committees/event-management.webp",
+    goals: [
+      "Ensure the smooth execution of all IEEE ZSB events through effective planning and coordination.",
+      "Enhance attendee experience by focusing on logistics, time management, and clear communication.",
+      " Support other committees by managing the operational side of their events.",
+    ],
     activities: [
-      { title: "session", description: "hard work" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Pre-Event Planning",
+        description:
+          "Drafting timelines, assigning responsibilities, preparing materials, and reserving venues.",
+      },
+      {
+        title: "On-Ground Coordination",
+        description:
+          "Managing time schedules, guiding attendees, supporting speakers, and solving any real-time issues.",
+      },
+      {
+        title: "Post-Event Evaluation",
+        description:
+          "Collecting feedback, preparing reports, and recommending improvements for future events.",
+      },
     ],
     board: [
       {
@@ -119,21 +157,33 @@ const committeesData: CommitteesData[] = [
     id: idCounter++,
     name: "Marketing",
     hashtag: "marketing",
-    description: "Lorem",
-    image: "/Fake-Images/4.webp",
+    description:
+      "The Marketing Committee at IEEE ZSB is the voice behind everything you see and feel about us. We create and manage creative campaigns that promote our events, initiatives, and values. From writing catchy and engaging content for social media to building full communication strategies, we make sure every message hits the right audience. With a mix of creativity, strategy, and data-driven thinking, we turn ideas into stories that connect making sure IEEE ZSB is always seen, heard, and remembered.",
+    image: "/Committees/marketing.webp",
     goals: [
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+      "Develop effective marketing and communication strategies for IEEE ZSB initiatives",
+      "Strengthen the brand presence across social media and other channels",
+      "Enhance audience engagement through creative content and storytelling",
+      "Leverage analytics and data-driven decisions to improve campaign performance",
+      "Foster teamwork and creativity within the committee to deliver impactful campaigns",
     ],
     activities: [
       {
-        title: "session",
-        description:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+        title: "Workshop",
+        description: "Social media marketing fundamentals and content creation",
       },
-      { title: "offline session", description: "Reliability" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Offline Session",
+        description: "Building complete communication strategies for events",
+      },
+      {
+        title: "Hands-on Activity",
+        description: "Designing and analyzing a full marketing campaign",
+      },
+      {
+        title: "Brainstorming Session",
+        description: "Creative storytelling and brand identity development",
+      },
     ],
     board: [
       {
@@ -156,12 +206,33 @@ const committeesData: CommitteesData[] = [
     id: idCounter++,
     name: "Multimedia",
     hashtag: "multimedia",
-    description: "Lorem",
-    image: "/Fake-Images/4.webp",
-    goals: ["test", "tester"],
+    description:
+      "The Multimedia Committee is the creative powerhouse behind IEEE ZSB's visual identity. We capture, design, and produce all kinds of content — from videos and photos to graphics and event coverage. Our photographers freeze moments that tell stories. Our graphic designers craft visuals that communicate ideas with clarity and style. And our videographers bring events to life through cinematic edits and storytelling. Whether it's a highlight reel, a campaign post, or a full media production — we make sure IEEE ZSB is seen, heard, and remembered. We turn ideas into visuals that inspire.",
+    image: "/Committees/multimedia.webp",
+    goals: [
+      "Develop advanced skills in photography, videography, and graphic design",
+      "Create visually compelling content that strengthens IEEE ZSB's brand identity",
+      "Master editing tools and techniques for professional-quality production",
+      "Ensure high-quality event coverage to document and promote IEEE ZSB activities",
+      "Collaborate effectively as a creative team to deliver impactful visual storytelling",
+    ],
     activities: [
-      { title: "session", description: "hard work" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Workshop",
+        description: "Photography basics and storytelling through images",
+      },
+      {
+        title: "Hands-on Session",
+        description: "Videography techniques and cinematic editing",
+      },
+      {
+        title: "Offline Session",
+        description: "Graphic design fundamentals and advanced tools",
+      },
+      {
+        title: "Practical Project",
+        description: "Full event coverage and content production for IEEE ZSB",
+      },
     ],
     board: [
       {
@@ -191,12 +262,34 @@ const committeesData: CommitteesData[] = [
     id: idCounter++,
     name: "Talent & Tech",
     hashtag: "talent&tech",
-    description: "Lorem",
-    image: "/Fake-Images/4.webp",
-    goals: ["test", "tester"],
+    description:
+      "Talent & Tech is a hybrid team that merges talent management with technical solutions. It was previously called Talent Management, but now it also works on tools and systems to help the branch work better. The team supports members, helps them grow, and makes sure they're doing well. Members also learn about HR topics like recruitment, workforce planning, and employee development, and they use real platforms like Workable. On the tech side, they build tools like the registration app to serve the branch's needs.",
+    image: "/Committees/talent&tech.webp",
+    goals: [
+      "Help branch members if they face any problems and work on making the branch a better place for everyone to learn and grow.",
+      "Create simple tools and systems to make the branch work easier and more organized.",
+    ],
     activities: [
-      { title: "session", description: "hard work" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Recruitment & Selection Training",
+        description:
+          "Hands-on sessions covering CV screening, recruitment methods, interview types, and how to use platforms like Workable effectively.",
+      },
+      {
+        title: "Advanced Workforce Planning",
+        description:
+          "Exploring modern trends in workforce planning and applying them practically to real scenarios within the branch.",
+      },
+      {
+        title: "Employee Development Programs",
+        description:
+          "Sessions on compensation, benefits, training, and growth strategies — equipping members with strong HR knowledge.",
+      },
+      {
+        title: "Technical Development",
+        description:
+          "Creating internal platforms like registration tools and performance trackers to support team operations.",
+      },
     ],
     board: [
       {

@@ -38,6 +38,7 @@ export default function Committee({
           {committee.name}
         </Heading>
         <CommitteeBrief
+          name={committee.name}
           description={committee.description}
           image={committee.image}
           isOpen={isOpen}
