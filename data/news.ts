@@ -136,7 +136,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "4 Mar, 2025",
     author: "Marwan Tamer",
     tags: ["RAS", "PCB", "New Track"],
-    mainPhoto: "/News/pcb-track/1.webp",
+    mainPhoto: "/Tracks/RAS/pcb-design.webp",
     sections: [
       {
         id: 0,
@@ -164,7 +164,7 @@ export const newsData: NewsItem[] = [
     dateCreated: "1 May, 2025",
     author: "Marwan Tamer",
     tags: ["RAS", "PCB", "Workshops"],
-    mainPhoto: "/Fake-Images/8.webp",
+    mainPhoto: "/News/pcb-track/1.webp",
     sections: [
       {
         id: 0,
