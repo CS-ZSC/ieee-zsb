@@ -157,21 +157,33 @@ const committeesData: CommitteesData[] = [
     id: idCounter++,
     name: "Marketing",
     hashtag: "marketing",
-    description: "Lorem",
+    description:
+      "The Marketing Committee at IEEE ZSB is the voice behind everything you see and feel about us. We create and manage creative campaigns that promote our events, initiatives, and values. From writing catchy and engaging content for social media to building full communication strategies, we make sure every message hits the right audience. With a mix of creativity, strategy, and data-driven thinking, we turn ideas into stories that connect making sure IEEE ZSB is always seen, heard, and remembered.",
     image: "/Committees/marketing.webp",
     goals: [
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+      "Develop effective marketing and communication strategies for IEEE ZSB initiatives",
+      "Strengthen the brand presence across social media and other channels",
+      "Enhance audience engagement through creative content and storytelling",
+      "Leverage analytics and data-driven decisions to improve campaign performance",
+      "Foster teamwork and creativity within the committee to deliver impactful campaigns",
     ],
     activities: [
       {
-        title: "session",
-        description:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error cumque natus placeat nesciunt dolorem eum aliquid doloremque at omnis sint sit molestias, quisquam, magni voluptatibus porro dolore obcaecati veritatis. Vitae.",
+        title: "Workshop",
+        description: "Social media marketing fundamentals and content creation",
       },
-      { title: "offline session", description: "Reliability" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Offline Session",
+        description: "Building complete communication strategies for events",
+      },
+      {
+        title: "Hands-on Activity",
+        description: "Designing and analyzing a full marketing campaign",
+      },
+      {
+        title: "Brainstorming Session",
+        description: "Creative storytelling and brand identity development",
+      },
     ],
     board: [
       {
@@ -194,12 +206,33 @@ const committeesData: CommitteesData[] = [
     id: idCounter++,
     name: "Multimedia",
     hashtag: "multimedia",
-    description: "Lorem",
+    description:
+      "The Multimedia Committee is the creative powerhouse behind IEEE ZSB's visual identity. We capture, design, and produce all kinds of content — from videos and photos to graphics and event coverage. Our photographers freeze moments that tell stories. Our graphic designers craft visuals that communicate ideas with clarity and style. And our videographers bring events to life through cinematic edits and storytelling. Whether it's a highlight reel, a campaign post, or a full media production — we make sure IEEE ZSB is seen, heard, and remembered. We turn ideas into visuals that inspire.",
     image: "/Committees/multimedia.webp",
-    goals: ["test", "tester"],
+    goals: [
+      "Develop advanced skills in photography, videography, and graphic design",
+      "Create visually compelling content that strengthens IEEE ZSB's brand identity",
+      "Master editing tools and techniques for professional-quality production",
+      "Ensure high-quality event coverage to document and promote IEEE ZSB activities",
+      "Collaborate effectively as a creative team to deliver impactful visual storytelling",
+    ],
     activities: [
-      { title: "session", description: "hard work" },
-      { title: "offline session", description: "Reliability" },
+      {
+        title: "Workshop",
+        description: "Photography basics and storytelling through images",
+      },
+      {
+        title: "Hands-on Session",
+        description: "Videography techniques and cinematic editing",
+      },
+      {
+        title: "Offline Session",
+        description: "Graphic design fundamentals and advanced tools",
+      },
+      {
+        title: "Practical Project",
+        description: "Full event coverage and content production for IEEE ZSB",
+      },
     ],
     board: [
       {
