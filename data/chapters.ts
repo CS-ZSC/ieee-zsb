@@ -133,20 +133,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Mohamed Emad",
+            name: "Khaled Mahmoud",
             position: "Head",
             avatarSrc:
               "/Images/board/chapters/cs/tracks-heads/backend/head.webp",
-            linkedin: "https://www.linkedin.com/in/mohamed-emad/",
-            email: "mohamed.emad@ieee-zsb.org",
+            linkedin: "https://www.linkedin.com/in/khaled-mahmoud-",
+            email: "khaild22k12m71f@gmail.com",
           },
           {
-            name: "Mohamed Emad",
+            name: "Asmaa Saleh",
             position: "Vice Head",
             avatarSrc:
               "/Images/board/chapters/cs/tracks-heads/backend/vice-head-1.webp",
-            linkedin: "https://www.linkedin.com/in/mohamed-emad/",
-            email: "mohamed.emad@ieee-zsb.org",
+            linkedin: "https://www.linkedin.com/in/asmaa-saleh185",
+            email: "asmaasaleh185@gmail.com",
           },
         ],
       },
@@ -176,11 +176,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Aya Tarek",
+            name: "Ibrahim Eid",
             position: "Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/41.jpg",
-            linkedin: "https://www.linkedin.com/in/aya-tarek/",
-            email: "aya.tarek@ieee-zsb.org",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/mobile-dev/head.webp",
+            linkedin: "https://www.linkedin.com/in/ibrahimeideng",
+            email: "ebrahimeid1134@gmail.com",
           },
         ],
       },
@@ -209,11 +210,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Habiba Osama",
+            name: "Ali Dosoky",
             position: "Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/56.jpg",
-            linkedin: "https://www.linkedin.com/in/habiba-osama/",
-            email: "habiba.osama@ieee-zsb.org",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/basic-ai/head.webp",
+            linkedin: "https://www.linkedin.com/in/ali-dosoqi/",
+            email: "amjdos0190edu@gmail.com",
           },
         ],
       },
@@ -249,11 +251,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ziad Khaled",
+            name: "Ahmed Almohamdy",
             position: "Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/33.jpg",
-            linkedin: "https://www.linkedin.com/in/ziad-khaled/",
-            email: "ziad.khaled@ieee-zsb.org",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/advanced-ai/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedalmohamdy/",
+            email: "ahmedalmohamdy.work@gmail.com",
+          },
+          {
+            name: "Ahmed Sharaf",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/advanced-ai/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedsharaf9/",
+            email: "ahmed.sharaf.connect@gmail.com",
           },
         ],
       },
@@ -288,11 +299,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Omar Nabil",
+            name: "Ahmed Ali",
             position: "Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/17.jpg",
-            linkedin: "https://www.linkedin.com/in/omar-nabil/",
-            email: "omar.nabil@ieee-zsb.org",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/cyber-security/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmed-ali-abd-elrahman",
+            email: "aali571110@gmail.com",
+          },
+          {
+            name: "Sayed Ahmed",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/cyber-security/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/elsayed-ahmed-elsayed",
+            email: "sayedahmed.ieee.25@gmail.com",
           },
         ],
       },
@@ -328,11 +348,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ahmed Alaa",
+            name: "Salma Swailem",
             position: "Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/45.jpg",
-            linkedin: "https://www.linkedin.com/in/ahmed-alaa-ros/",
-            email: "ahmed.alaa@ieee-zsb.org",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/game-dev/head.webp",
+            linkedin: "https://www.linkedin.com/in/salma-swailem/",
+            email: "salma.4sa.u@gmail.com",
           },
         ],
       },
@@ -427,11 +448,21 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Salma Hussein",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/11.jpg",
-            linkedin: "https://www.linkedin.com/in/salma-hussein/",
-            email: "salma.hussein@ieee-zsb.org",
+            name: "Tasnem Sabry",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/embedded-systems/head.webp",
+            linkedin: "https://www.linkedin.com/in/tasnem-sabry-124142254/",
+            email: "tasnemmobasher9@gmail.com",
+          },
+          {
+            name: "Ahmed Yasser",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/embedded-systems/vice-head-1.webp",
+            linkedin:
+              "https://www.linkedin.com/in/ahmed-yasser-elgayar-942466253/",
+            email: "ahmedyasserprince@gmail.com",
           },
         ],
       },
@@ -466,11 +497,11 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ahmed Alaa",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/45.jpg",
-            linkedin: "https://www.linkedin.com/in/ahmed-alaa-ros/",
-            email: "ahmed.alaa@ieee-zsb.org",
+            name: "Ahmed Medhat",
+            position: "Head",
+            avatarSrc: "/Images/board/chapters/ras/tracks-heads/ros/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmed-medhat-212847271/",
+            email: "ahmedmedhat749d1@gmail.com",
           },
         ],
       },
@@ -509,11 +540,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Mohamed Yasser",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/21.jpg",
-            linkedin: "https://www.linkedin.com/in/mohamed-yasser/",
-            email: "mohamed.yasser@ieee-zsb.org",
+            name: "Abdrlrahman Elghandour",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/pcb-design/head.webp",
+            linkedin: "https://www.linkedin.com/in/el-ghandour/",
+            email: "elghaandourrr@gmail.com",
+          },
+          {
+            name: "Mohamed Gamal",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/pcb-design/vice-head-1.webp",
+            linkedin: "http://www.linkedin.com/in/mohamed-gamal-xv",
+            email: "mg355059@gmail.com",
           },
         ],
       },
@@ -536,11 +576,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Nourhan Fathy",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/24.jpg",
-            linkedin: "https://www.linkedin.com/in/nourhan-fathy/",
-            email: "nourhan.fathy@ieee-zsb.org",
+            name: "Abdallah Galal",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/mechanical/head.webp",
+            linkedin: "https://www.linkedin.com/in/abdallah-galal-a39115297?",
+            email: "abdallahgalal.eng@gmail.com",
           },
         ],
       },
@@ -637,11 +678,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Mariam Hossam",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/36.jpg",
-            linkedin: "https://www.linkedin.com/in/mariam-hossam/",
-            email: "mariam.hossam@ieee-zsb.org",
+            name: "Ziad Ahmed",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/basic-automation/head.webp",
+            linkedin: "http://linkedin.com/in/ziadahmed90",
+            email: "Ziad20155555@gmail.com ",
           },
         ],
       },
@@ -669,11 +711,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Hassan Mahmoud",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/48.jpg",
-            linkedin: "https://www.linkedin.com/in/hassan-mahmoud/",
-            email: "hassan.mahmoud@ieee-zsb.org",
+            name: "Ahmed Saeed",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/advanced-automation/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmed-saeed12/",
+            email: "ahmedsaeeed907@gmail.com",
+          },
+          {
+            name: "Amr Rady",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/advanced-automation/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/amr-rady/",
+            email: "amr.raadyy@gmail.com",
           },
         ],
       },
@@ -701,11 +752,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Salem Reda",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/30.jpg",
-            linkedin: "https://www.linkedin.com/in/salem-reda/",
-            email: "salem.reda@ieee-zsb.org",
+            name: "Mahmoud Elkhwaga",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/basic-distribution/head.webp",
+            linkedin: "https://www.linkedin.com/in/mahmoud-shehta/",
+            email: "Mahmoudshehta103@gmail.com",
           },
         ],
       },
@@ -733,11 +785,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Nour El-Din Ali",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/28.jpg",
-            linkedin: "https://www.linkedin.com/in/nour-eldin-ali/",
-            email: "nour.eldin@ieee-zsb.org",
+            name: "Eslam Heikal",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/advanced-distribution/head.webp",
+            linkedin: "https://www.linkedin.com/in/eslamheikal/",
+            email: "eslam.heikal@ieee-zsb.org",
           },
         ],
       },
@@ -763,11 +816,11 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Aya Mostafa",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/32.jpg",
-            linkedin: "https://www.linkedin.com/in/aya-mostafa/",
-            email: "aya.mostafa@ieee-zsb.org",
+            name: "Abdelrahman Ali",
+            position: "Head",
+            avatarSrc: "/Images/board/chapters/pes/tracks-heads/smart-home/head.webp",
+            linkedin: "https://www.linkedin.com/in/abdelrahmanali11/",
+            email: "workworkey@gmail.com",
           },
         ],
       },
@@ -791,11 +844,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ahmed Saber",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/49.jpg",
-            linkedin: "https://www.linkedin.com/in/ahmed-saber/",
-            email: "ahmed.saber@ieee-zsb.org",
+            name: "Ahmed Elsayed",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/e-mobility/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedelsayed1133/",
+            email: "ahmedazd267@gmail.com",
           },
         ],
       },
@@ -822,11 +876,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Nada Ashraf",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/22.jpg",
-            linkedin: "https://www.linkedin.com/in/nada-ashraf/",
-            email: "nada.ashraf@ieee-zsb.org",
+            name: "Mahmoud Mostafa",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/mechanical/vice-head-1.webp",
+            linkedin: "http://www.linkedin.com/in/ma7moud-mostafa-el-kial",
+            email: "elkial1582@gmail.com",
           },
         ],
       },
