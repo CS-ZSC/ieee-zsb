@@ -165,6 +165,7 @@ function FullCarousel({
           flexDirection={"column"}
           minH={"100%"}
           padding={"var(--global-spacing)"}
+          gap={5}
         >
           <AnimatePresence custom={direction} mode="wait">
             <motion.div

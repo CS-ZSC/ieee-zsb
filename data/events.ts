@@ -14,17 +14,17 @@ export interface EventsData {
 let idCounter: number = 1;
 
 const eventsData: EventsData[] = [
-  {
-    id: idCounter++,
-    homeItem: true,
-    upcomingEvent: true,
-    title: "Mutex 2025",
-    description:
-      "MUTEX is the biggest annual technological event in the Delta region, hosted by IEEE Zagazig SB. The event focuses on introducing the latest technologies to the audience and setting a clear path for them to follow. This year, MUTEX is different. In addition to sessions and workshops on the latest technologies, we will have competitions in three different fields: a Problem Solving Contest, a Formula Firefighting Robot Competition, and a Smart Homes Hackathon.",
-    location: "Zagazig University",
-    date: "Suspended",
-    photo: "/Fake-Images/8.webp",
-  },
+  // {
+  //   id: idCounter++,
+  //   homeItem: true,
+  //   upcomingEvent: true,
+  //   title: "Mutex 2025",
+  //   description:
+  //     "MUTEX is the biggest annual technological event in the Delta region, hosted by IEEE Zagazig SB. The event focuses on introducing the latest technologies to the audience and setting a clear path for them to follow. This year, MUTEX is different. In addition to sessions and workshops on the latest technologies, we will have competitions in three different fields: a Problem Solving Contest, a Formula Firefighting Robot Competition, and a Smart Homes Hackathon.",
+  //   location: "Zagazig University",
+  //   date: "Suspended",
+  //   photo: "/Fake-Images/8.webp",
+  // },
   {
     id: idCounter++,
     homeItem: true,
@@ -34,7 +34,7 @@ const eventsData: EventsData[] = [
       "On PES Day 2025, we celebrated the importance of power and energy innovation in shaping the future. The event featured technical workshops, inspiring talks from industry professionals, and engaging activities that emphasized sustainability and clean energy. Students and professionals came together to explore emerging technologies and their applications in solving real-world energy challenges.",
     location: "Zagazig University",
     date: "22/4/2025",
-    photo: "/Fake-Images/7.webp",
+    photo: "/Events/pes-day-2025.webp",
   },
   {
     id: idCounter++,
@@ -57,6 +57,7 @@ const eventsData: EventsData[] = [
   },
   {
     id: idCounter++,
+    homeItem: true,
     title: "Career Hacks",
     description:
       "Career Hacks was an online event tailored to help students find their career paths and unleash their true potential. Event Objectives: Learned about the benefits of AI and how to use it in career placement. Helped participants decide their career paths. Provided guidance on building a strong CV. Taught participants how to establish a strong LinkedIn account. The event offered valuable insights and practical tips to assist students in navigating their professional journeys effectively.",

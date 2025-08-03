@@ -25,29 +25,6 @@ export const newsData: NewsItem[] = [
   {
     id: idCounter++,
     homeItem: true,
-    title: "Knowva attained the glory in Hackathon Banha 2025",
-    description:
-      "Knowva proudly secured second place in the Language Learning Platforms track at Hackathon Banha 2025. After four intense days of dedication, collaboration, and tireless effort, our team successfully developed and presented a compelling concept that showcased innovative ways to demonstrate the role of artificial intelligence in language education. We explored how AI can be effectively integrated into learning processes to enhance engagement, personalization, and accessibility.",
-    dateCreated: "11 Feb, 2025",
-    author: "Ahmed Elsherbiny",
-    tags: ["Competitions", "CS", "AI"],
-    mainPhoto: "/News/knowva/1.webp",
-    sections: [
-      {
-        id: 1,
-        heading: "What is Knowva?",
-        descriptions: [
-          "Knowva is an AI-driven language learning platform that transforms the often overwhelming journey of picking up a new language into a personalized and engaging experience. It's designed to adapt to each learner's unique pace, preferences, and goals—making the path to fluency feel more intuitive and motivating.",
-          "Through intelligent features like adaptive placement testing, dynamically tailored content, skill-building exercises, and a responsive AI chatbot, Knowva offers a truly holistic and immersive learning environment. The AI chatbot acts as your personal language coach—ready to answer questions, adjust your learning roadmap, provide guidance, and simulate realistic conversations. It doesn't just teach you words—it helps you understand context, refine pronunciation, and receive real-time feedback, ensuring steady improvement with every interaction.",
-        ],
-        photo: "/News/knowva/2.webp",
-        photoDescription: "IEEE ZSB supporters.",
-      },
-    ],
-  },
-  {
-    id: idCounter++,
-    homeItem: true,
     title: "Robotiva Finals Triumph",
     description:
       "Our IEEE RAS chapter sent five teams to the prestigious Robotiva competition, and all five teams made it to the finals! With SOUL winning 1st place and Intellibots securing 2nd, RAS once again proved that dedication, teamwork, and relentless learning lead to excellence. This victory isn't just a trophy—it's a statement of what we stand for.",
@@ -125,6 +102,29 @@ export const newsData: NewsItem[] = [
           "A Remotely Operated underwater Vehicle (ROV) is a tethered mobile robot commonly used to perform dangerous missions in submarine industries such as offshore hydrocarbon extraction and subsea installations, as well as in military and scientific services. Due to its sophisticated design, an ROV can maneuver efficiently in deep ocean environments.",
           "ROVs use thrusters for movement and rely on sensory systems to make informed decisions during missions. These systems may include LIDAR, SONAR, or cameras to provide vision and spatial awareness.",
         ],
+      },
+    ],
+  },
+  {
+    id: idCounter++,
+    homeItem: true,
+    title: "Knowva attained the glory in Hackathon Banha 2025",
+    description:
+      "Knowva proudly secured second place in the Language Learning Platforms track at Hackathon Banha 2025. After four intense days of dedication, collaboration, and tireless effort, our team successfully developed and presented a compelling concept that showcased innovative ways to demonstrate the role of artificial intelligence in language education. We explored how AI can be effectively integrated into learning processes to enhance engagement, personalization, and accessibility.",
+    dateCreated: "11 Feb, 2025",
+    author: "Ahmed Elsherbiny",
+    tags: ["Competitions", "CS", "AI"],
+    mainPhoto: "/News/knowva/1.webp",
+    sections: [
+      {
+        id: 1,
+        heading: "What is Knowva?",
+        descriptions: [
+          "Knowva is an AI-driven language learning platform that transforms the often overwhelming journey of picking up a new language into a personalized and engaging experience. It's designed to adapt to each learner's unique pace, preferences, and goals—making the path to fluency feel more intuitive and motivating.",
+          "Through intelligent features like adaptive placement testing, dynamically tailored content, skill-building exercises, and a responsive AI chatbot, Knowva offers a truly holistic and immersive learning environment. The AI chatbot acts as your personal language coach—ready to answer questions, adjust your learning roadmap, provide guidance, and simulate realistic conversations. It doesn't just teach you words—it helps you understand context, refine pronunciation, and receive real-time feedback, ensuring steady improvement with every interaction.",
+        ],
+        photo: "/News/knowva/2.webp",
+        photoDescription: "IEEE ZSB supporters.",
       },
     ],
   },
@@ -524,6 +524,7 @@ export const newsData: NewsItem[] = [
   },
   {
     id: idCounter++,
+    homeItem: true,
     title: "IEEE-ZSB Development Program",
     description:
       "The IEEE-ZSB Development Program is a comprehensive internal training initiative designed to equip members with essential soft skills that complement their technical expertise. Through a carefully planned series of interactive workshops and sessions, the program aims to enhance critical abilities such as effective communication, leadership, time management, and professional networking. It also covers practical career-building skills like CV writing, personal branding, and LinkedIn optimization. By fostering these competencies, the program not only strengthens members' contributions within IEEE-ZSB but also prepares them for success in future academic, professional, and personal endeavors.",
@@ -626,6 +627,7 @@ export const newsData: NewsItem[] = [
   },
   {
     id: idCounter++,
+    homeItem: true,
     title: "IEEE-ZSB in EVER V",
     description:
       "IEEE-ZSB Student Branch participated in the Autonomous Track of the EVER V 2024 Electric Vehicle Rally, held in El Alamein, showcasing innovation in AI and autonomous vehicle simulation.",
