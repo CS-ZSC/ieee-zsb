@@ -1,9 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Text } from "@chakra-ui/react";
-import { useColorMode } from "../../color-mode";
 export default function SloganTypingEffect() {
-  const { colorMode } = useColorMode();
 
   const slogan = "#we_OWN_it";
   const [displayText, setDisplayText] = useState("");
@@ -49,9 +47,7 @@ export default function SloganTypingEffect() {
           color={
             char === "O" || char === "W" || char === "N"
               ? "accent-1"
-              : colorMode === "light"
-                ? "primary-1"
-                : "white"
+              : "white"
           }
         >
           {char}

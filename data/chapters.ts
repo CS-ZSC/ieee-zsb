@@ -36,11 +36,11 @@ export const chaptersData: ChapterData[] = [
     color_scheme_2: "cs-2",
     description: {
       about:
-        "The IEEE Computer Society (CS) is the premier source for information, inspiration, and collaboration in computer science and engineering. Our chapter provides a platform for students to dive deep into the ever-evolving world of technology, from web development to artificial intelligence. Through hands-on workshops, technical sessions, and industry connections, we empower students to become the next generation of tech innovators.",
+        "The IEEE Computer Society Chapter is a student-led technical chapter operating under the IEEE Zagazig Student Branch. As part of the world's leading organization for computer science and engineering, we provide a hands-on platform for students passionate about technology. From web development and mobile apps to artificial intelligence, machine learning, and cybersecurity, our chapter empowers members to explore and apply emerging technologies. Through workshops, hackathons, open-source projects, and coding competitions, we bridge the gap between classroom learning and practical experience.",
       vision:
-        "To be the leading hub for technological innovation and learning in computer science, fostering a community where students can transform their passion for technology into real-world expertise. We aim to create an environment where creativity meets technical excellence, preparing our members for the challenges of tomorrow's digital world.",
+        "To be a leading student driven hub for technological exploration, creativity, and collaboration where innovation thrives and technical skills are transformed into real world impact.",
       mission:
-        "To empower students with cutting-edge technical knowledge, practical skills, and professional connections in computer science. We are committed to providing high-quality technical education, fostering innovation, and creating opportunities for personal and professional growth through workshops, projects, and industry engagement.",
+        "We aim to create an active and friendly space where students can learn modern tech skills, work on real projects, and connect with others who share the same passion. We organize practical workshops and team activities to help students grow, be creative, and get ready for future jobs in the tech world.",
     },
     board: [
       {
@@ -71,38 +71,39 @@ export const chaptersData: ChapterData[] = [
         name: "Front-End",
         hashtag: "frontend",
         description:
-          "Master the art of crafting beautiful and interactive web interfaces. This track covers HTML, CSS, JavaScript, modern frameworks like React, and design principles. By the end, participants will be able to build responsive and accessible user experiences with real-world performance and design considerations.",
-        image: "/Fake-Images/4.webp",
+          "Frontend development focuses on building the user-facing part of websites and applications, ensuring they are visually appealing, responsive, and intuitive. This track provides a solid foundation in web development and advances to building fully functional applications. It includes comprehensive training in the Tailwind CSS library for efficient and modern UI design and focuses on Next.js, built on React.js, to develop scalable single-page applications (SPAs) with an emphasis on performance, accessibility, and best practices.",
+        image: "/Tracks/CS/frontend.webp",
         goals: [
-          "Learn the fundamentals of HTML, CSS, and JavaScript",
-          "Build responsive web interfaces using modern frameworks like React or Vue",
-          "Apply UI/UX principles for usability and accessibility",
-          "Gain practical experience with version control, APIs, and deployment",
+          "Master the use of JavaScript to build dynamic, interactive, and efficient web features",
+          "Learn and apply the Tailwind CSS library to design modern, responsive, and accessible user interfaces",
+          "Build high-quality single-page applications (SPAs) using Next.js and React.js, while understanding the differences between rendering strategies and when to use such as Client-Side Rendering (CSR), Server-Side Rendering (SSR), Static Site Generation (SSG), and Incremental Static Regeneration (ISR) in Next.js",
+          "Practice integrating third-party APIs to extend application functionality and improve user experiences",
         ],
         activities: [
           {
-            title: "Frontend Fundamentals",
+            title: "Mini Projects",
             description:
-              "Covers core HTML, CSS, JavaScript, DOM manipulation, and responsive design using Flexbox and Grid.",
+              "Create mini games and applications using JavaScript to strengthen problem solving skills and deepen understanding of the language.",
           },
           {
-            title: "React Workshop",
+            title: "Project-Based Learning",
             description:
-              "Hands-on project-based sessions using React.js to build dynamic web apps with routing, state management, and API integration.",
+              "Work on real world projects to gain hands-on experience and apply learned concepts.",
           },
           {
-            title: "Frontend Challenge Day",
+            title: "Collaboration Sessions",
             description:
-              "Time-limited team-based challenge to build a complete responsive web app. Judged on design, code quality, and user experience.",
+              "Participate in both offline and online sessions to discuss project progress, solve challenges, and collaborate effectively.",
           },
         ],
         board: [
           {
-            name: "Yasmine Samir",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/65.jpg",
-            linkedin: "https://www.linkedin.com/in/yasmine-samir/",
-            email: "yasmine.samir@ieee-zsb.org",
+            name: "Ahmed Elsherbiny",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/frontend/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedelsherbiny74/",
+            email: "ahmedelsherbiny7474@gmail.com",
           },
         ],
       },
@@ -111,38 +112,41 @@ export const chaptersData: ChapterData[] = [
         name: "Back-End",
         hashtag: "backend",
         description:
-          "Build the backbone of web applications. This track focuses on server-side development, databases, APIs, and authentication. You'll gain experience in Node.js, Express, and MongoDB, with best practices in RESTful design and cloud deployment.",
-        image: "/Fake-Images/4.webp",
+          "Welcome to the Plumbers Alley — a place where you can learn something new or take your existing skills to the next level. Here, you'll work on exciting projects that bridge real-world needs in imaginative scenarios, helping you perform at your best. See you in the next adventure, passionate plumber! ",
+        image: "/Tracks/CS/backend.webp",
         goals: [
-          "Understand how servers, databases, and APIs work together",
-          "Build RESTful APIs using Node.js and Express",
-          "Integrate authentication and security into web backends",
-          "Deploy and scale web applications using cloud services",
+          "Become a Backend Engineer with strong foundations — not only skilled at the job but also has fallen in love with his work",
+          "Learn & Practice on Database language and how it works",
+          "Get your hands dirty with two different frameworks: one opinionated and one unopinionated",
         ],
         activities: [
           {
-            title: "API Development Workshop",
+            title: "Doing Research",
             description:
-              "Build secure RESTful APIs using Node.js and Express. Connect to MongoDB, handle errors, and create real-world endpoints.",
+              "Stay aware of the theoretical aspects of each technology at every milestone ",
           },
           {
-            title: "Authentication & Authorization",
+            title: "Offline Session",
             description:
-              "Learn to implement user auth with JWT, OAuth, and session-based strategies. Secure routes and manage permissions.",
-          },
-          {
-            title: "Backend Deployment Bootcamp",
-            description:
-              "Deploy your applications to the cloud using platforms like Heroku, Vercel, or AWS. Learn CI/CD basics and environment config.",
+              "Discuss the completed projects in a professional and structured manner",
           },
         ],
         board: [
           {
-            name: "Mohamed Emad",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/52.jpg",
-            linkedin: "https://www.linkedin.com/in/mohamed-emad/",
-            email: "mohamed.emad@ieee-zsb.org",
+            name: "Khaled Mahmoud",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/backend/head.webp",
+            linkedin: "https://www.linkedin.com/in/khaled-mahmoud-",
+            email: "khaild22k12m71f@gmail.com",
+          },
+          {
+            name: "Asmaa Saleh",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/backend/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/asmaa-saleh185",
+            email: "asmaasaleh185@gmail.com",
           },
         ],
       },
@@ -151,38 +155,33 @@ export const chaptersData: ChapterData[] = [
         name: "Mobile Development",
         hashtag: "mobile-development",
         description:
-          "Build mobile applications that run smoothly on Android and iOS devices. This track focuses on cross-platform frameworks like Flutter and React Native, covering UI development, state management, and native capabilities.",
-        image: "/Fake-Images/4.webp",
+          "Welcome to the world of Mobile Development — where creativity meets performance. This journey is designed to equip you with the essential skills needed to build polished, user-friendly mobile applications that perform seamlessly across devices. Whether you're crafting smooth interfaces or integrating complex APIs, this track will take your development career to the next level.",
+        image: "/Tracks/CS/mobile-development.webp",
         goals: [
-          "Understand mobile app architecture and development lifecycle",
-          "Build cross-platform apps using Flutter or React Native",
-          "Manage state, navigation, and backend integration",
-          "Deploy apps to the Play Store and App Store",
+          "Build a strong foundation in both Android and iOS development using modern tools and languages",
+          "Gain hands-on experience with Flutter and understand how cross-platform frameworks operate",
+          "Learn to structure scalable mobile applications and follow clean architecture principles",
         ],
         activities: [
           {
-            title: "Flutter Basics",
+            title: "Session",
             description:
-              "Introduction to Dart and Flutter widgets. Build your first mobile app with layouts, navigation, and interactivity.",
+              "Learn about mobile development concepts, tools, and ecosystems through interactive technical sessions",
           },
           {
-            title: "State Management in Apps",
+            title: "Offline Session",
             description:
-              "Explore provider, bloc, and hooks in Flutter or Redux in React Native to manage complex application state.",
-          },
-          {
-            title: "App Publishing Bootcamp",
-            description:
-              "Prepare and publish your app to Android/iOS stores. Learn about app signing, testing, and release channels.",
+              "Discuss the completed projects in a professional and structured manner",
           },
         ],
         board: [
           {
-            name: "Aya Tarek",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/41.jpg",
-            linkedin: "https://www.linkedin.com/in/aya-tarek/",
-            email: "aya.tarek@ieee-zsb.org",
+            name: "Ibrahim Eid",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/mobile-dev/head.webp",
+            linkedin: "https://www.linkedin.com/in/ibrahimeideng",
+            email: "ebrahimeid1134@gmail.com",
           },
         ],
       },
@@ -191,38 +190,32 @@ export const chaptersData: ChapterData[] = [
         name: "Basic AI",
         hashtag: "basic-ai",
         description:
-          "Explore the fundamentals of Artificial Intelligence through hands-on projects and beginner-friendly tools. This track introduces basic concepts in machine learning, data preprocessing, and simple model building using Python and libraries like Scikit-learn.",
-        image: "/Fake-Images/4.webp",
+          "This committee helps members explore the field of data analysis and understand how data can be turned into useful information. You'll learn how to collect, clean, and study data to find patterns and make smart decisions. Through hands-on projects, you'll use tools like Excel or Python to work with real data. The team also shares knowledge through research, discussions, and regular practice sessions. It's a great way to build strong data analysis skills and solve real-world problems using data.",
+        image: "/Tracks/CS/basic-ai.webp",
         goals: [
-          "Understand core concepts of machine learning and AI",
-          "Learn to use Python and Scikit-learn for simple models",
-          "Get familiar with data preparation and feature engineering",
-          "Apply classification, regression, and clustering in real problems",
+          "Get your hands on different types of tools: one focused on spreadsheets, the other on code-based analysis.",
+          "Become a Data Analyst with strong foundations — not just good at the work, but truly passionate about turning data into insights.",
         ],
         activities: [
           {
-            title: "AI Basics Workshop",
+            title: "Dive into sheets",
             description:
-              "Introduction to machine learning concepts and workflow. Build your first model with Scikit-learn using real datasets.",
+              "try and use new datasets to get them clean and enhance the software skills",
           },
           {
-            title: "Data Preprocessing Lab",
+            title: "Offline Session",
             description:
-              "Learn how to clean, normalize, and transform data using Pandas and Scikit-learn pipelines.",
-          },
-          {
-            title: "Mini AI Projects",
-            description:
-              "Group projects applying AI to tasks like spam detection, digit recognition, or movie recommendation.",
+              "Discuss the completed projects in a structured manner and how to improve it",
           },
         ],
         board: [
           {
-            name: "Habiba Osama",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/56.jpg",
-            linkedin: "https://www.linkedin.com/in/habiba-osama/",
-            email: "habiba.osama@ieee-zsb.org",
+            name: "Ali Dosoky",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/basic-ai/head.webp",
+            linkedin: "https://www.linkedin.com/in/ali-dosoqi/",
+            email: "amjdos0190edu@gmail.com",
           },
         ],
       },
@@ -231,79 +224,95 @@ export const chaptersData: ChapterData[] = [
         name: "Advanced AI",
         hashtag: "advanced-ai",
         description:
-          "Go beyond the basics and tackle real-world challenges in deep learning, computer vision, and natural language processing. This track explores TensorFlow/PyTorch, model optimization, and advanced topics like transformers and generative AI.",
-        image: "/Fake-Images/4.webp",
+          "The Advanced AI Track offers a comprehensive journey designed to equip participants with the essential knowledge and practical skills required to excel in Artificial Intelligence. Starting with foundational data preprocessing techniques and essential mathematical concepts, learners progressively delve into supervised and unsupervised machine learning methods, mastering algorithms and models widely utilized in the industry. Participants will then explore advanced topics in deep learning, including Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), and Recurrent Neural Networks (RNN). The track further provides specialized training in cutting-edge Computer Vision applications, from image classification to facial recognition, and Natural Language Processing (NLP), covering tasks such as text classification, sentiment analysis, and chatbot creation. Each stage includes dedicated hands-on projects, enabling learners to consolidate their knowledge and build practical, real-world expertise.",
+        image: "/Tracks/CS/advanced-ai.webp",
         goals: [
-          "Master advanced deep learning models and architectures",
-          "Apply computer vision and NLP techniques using TensorFlow or PyTorch",
-          "Understand training optimization, overfitting, and performance tuning",
-          "Build intelligent systems like chatbots, object detectors, and generative models",
+          "Equip learners with essential AI skills",
+          "Bridge theory and practical applications",
+          "Prepare industry-ready professionals",
+          "Foster analytical and problem-solving skills",
         ],
         activities: [
           {
-            title: "Deep Learning Crash Course",
+            title: "Hands-on Workshops",
             description:
-              "Train deep neural networks using PyTorch or TensorFlow. Cover CNNs, RNNs, and modern architectures.",
+              "Interactive coding labs focused on real-world AI projects",
           },
           {
-            title: "Computer Vision Workshop",
+            title: "Project-Based Learning",
             description:
-              "Work on object detection and image classification with OpenCV and CNNs. Apply real-world image datasets.",
+              "Applying theory through structured end-to-end projects",
           },
           {
-            title: "NLP & Chatbot Project",
+            title: "Collaborative Tasks",
             description:
-              "Learn natural language processing with HuggingFace Transformers. Build a chatbot using pre-trained models and fine-tuning.",
+              "Team-oriented assignments enhancing problem-solving and teamwork",
           },
         ],
         board: [
           {
-            name: "Ziad Khaled",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/33.jpg",
-            linkedin: "https://www.linkedin.com/in/ziad-khaled/",
-            email: "ziad.khaled@ieee-zsb.org",
+            name: "Ahmed Almohamdy",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/advanced-ai/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedalmohamdy/",
+            email: "ahmedalmohamdy.work@gmail.com",
+          },
+          {
+            name: "Ahmed Sharaf",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/advanced-ai/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedsharaf9/",
+            email: "ahmed.sharaf.connect@gmail.com",
           },
         ],
       },
-
       {
         id: ++trackId,
         name: "Cyber Security",
         hashtag: "cyber-security",
         description:
-          "Understand the fundamentals of digital security and how to protect systems from vulnerabilities and attacks. This track includes network security, cryptography, ethical hacking, and real-world penetration testing practices.",
-        image: "/Fake-Images/4.webp",
+          "The Cyber Security Committee focuses on building awareness, skills, and hands-on knowledge in the field of cyber security. We aim to educate students through practical training and real-world applications that go beyond traditional classroom learning.",
+        image: "/Tracks/CS/cyber-security.webp",
         goals: [
-          "Learn core cybersecurity principles and common attack vectors",
-          "Understand encryption, hashing, and authentication protocols",
-          "Get hands-on experience in ethical hacking and penetration testing",
-          "Use tools like Wireshark, Metasploit, and Burp Suite",
+          "Deliver hands-on Cyber Security training sessions throughout the semester to empower students with real skills.",
+          "Promote awareness about the importance of digital security across the university and local tech community.",
+          "Build a strong foundation in Cyber Security for students interested in ethical hacking, defense systems, and secure programming.",
         ],
         activities: [
           {
-            title: "Cybersecurity Basics",
+            title: "Intro to Cyber Security",
             description:
-              "Introduction to key security concepts like CIA triad, threat modeling, and common vulnerabilities (OWASP Top 10).",
+              "Educational sessions that cover the basics of cyber security with an emphasis on practical application.",
           },
           {
-            title: "Ethical Hacking Lab",
+            title: "Capture the Flag (CTF) Practice",
             description:
-              "Simulate real attacks in a controlled lab environment. Use Kali Linux, Nmap, Metasploit to identify and exploit vulnerabilities.",
+              "Hands-on challenges to help members apply their skills in real-world hacking simulations and problem-solving.",
           },
           {
-            title: "Capture The Flag (CTF)",
+            title: "Security Audits Workshops",
             description:
-              "Interactive CTF-style competition testing real-world hacking skills in web security, cryptography, and reverse engineering.",
+              "Interactive workshops teaching students how to analyze and improve security in systems and applications.",
           },
         ],
         board: [
           {
-            name: "Omar Nabil",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/17.jpg",
-            linkedin: "https://www.linkedin.com/in/omar-nabil/",
-            email: "omar.nabil@ieee-zsb.org",
+            name: "Ahmed Ali",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/cyber-security/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmed-ali-abd-elrahman",
+            email: "aali571110@gmail.com",
+          },
+          {
+            name: "Sayed Ahmed",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/cyber-security/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/elsayed-ahmed-elsayed",
+            email: "sayedahmed.ieee.25@gmail.com",
           },
         ],
       },
@@ -313,7 +322,7 @@ export const chaptersData: ChapterData[] = [
         hashtag: "game-development",
         description:
           "Dive into the exciting world of Game Development and bring your creative ideas to life. This track covers the fundamentals of game engines, interactive mechanics, 2D/3D graphics, and scripting. Participants will learn to build games using tools like Unity or Unreal Engine, exploring game physics, animation, UI, and publishing strategies.",
-        image: "/Fake-Images/4.webp",
+        image: "/Tracks/CS/game-development.webp",
         goals: [
           "Understand the core components of game engines including scenes, physics, and scripting",
           "Design and build interactive 2D and 3D games using Unity or Unreal Engine",
@@ -339,11 +348,12 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ahmed Alaa",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/45.jpg",
-            linkedin: "https://www.linkedin.com/in/ahmed-alaa-ros/",
-            email: "ahmed.alaa@ieee-zsb.org",
+            name: "Salma Swailem",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/cs/tracks-heads/game-dev/head.webp",
+            linkedin: "https://www.linkedin.com/in/salma-swailem/",
+            email: "salma.4sa.u@gmail.com",
           },
         ],
       },
@@ -384,11 +394,11 @@ export const chaptersData: ChapterData[] = [
     color_scheme_2: "ras-2",
     description: {
       about:
-        "The IEEE Robotics & Automation Society (RAS) chapter is your gateway to the exciting world of robotics and autonomous systems. We provide hands-on experience in building and programming robots, exploring automation technologies, and developing innovative solutions. Our community brings together students passionate about creating intelligent machines that can interact with and improve our world.",
+        "IEEE ZSB RAS is the Robotics & Automation student chapter at Zagazig University, led by a dedicated board of track heads in Embedded Systems, ROS, Mechanical Design and PCB Design. We deliver hands-on workshops—from microcontroller programming and Gazebo simulations to advanced control algorithms—and organize season-long competitions like FFR and MATE ROV to sharpen skills and secure top regional rankings. Through collaborative projects, technical seminars and industry mentorship, we turn curiosity into capability, preparing members to innovate, compete and lead in the rapidly evolving field of robotics and automation.",
       vision:
-        "To be the cornerstone of robotics innovation and education, fostering an environment where students can transform their ideas into functioning autonomous systems. We aim to prepare the next generation of robotics engineers who will shape the future of automation and artificial intelligence.",
+        "Our vision is to become the premier hub for robotics and automation—where passionate members evolve into technically-adept professionals and fierce competitors. We inspire curiosity and drive innovation, cultivating a collaborative spirit that not only advances cutting-edge research but also secures top honors in local and regional competitions. By fostering technical excellence, strategic teamwork, and a winning mindset, we prepare our members to lead—and triumph—in the global robotics community.",
       mission:
-        "To advance robotics education and research by providing practical experience, theoretical knowledge, and networking opportunities. We focus on developing well-rounded engineers capable of designing, building, and programming autonomous systems while promoting collaboration and innovation in robotics.",
+        "Our Mission is to empower and guide our members along the path of robotics and automation by providing hands-on experience, fostering a deep understanding of core concepts, and preparing them to excel in competitions. We are dedicated to building their knowledge in related fields such as PCB design, embedded systems,ROS, and mechanical design. Through continuous learning, practical projects, and supportive mentorship, we aim to cultivate skilled, innovative, and confident robotics enthusiasts.",
     },
     board: [
       {
@@ -412,38 +422,47 @@ export const chaptersData: ChapterData[] = [
         name: "Embedded Systems",
         hashtag: "embedded-systems",
         description:
-          "Dive deep into the heart of hardware programming and embedded software. This track focuses on microcontrollers, sensor interfacing, real-time systems, and low-level hardware communication. You'll gain practical experience programming microcontrollers, working with embedded C/C++, and developing firmware for real-world applications.",
-        image: "/Fake-Images/5.webp",
+          "The embedded systems is a special system that interacts with the physical world. We are designing intelligent systems to do certain function to ensure reliability and efficiency in performing tasks. the main objective is to build a real-time system to ensure accuracy and speed. Our mission is to achieve a low cost system and optimize the software to fit the available resources. Participants engage in interactive sessions led by a professional instructor and attend workshops that offer hands-on experience with microcontrollers. To further enhance their practical skills, they are encouraged to take part in real-world projects and competitions. These activities not only strengthen technical proficiency but also cultivate teamwork and collaboration toward achieving shared goals.",
+        image: "/Tracks/RAS/embedded-systems.webp",
         goals: [
-          "Understand microcontroller architecture and low-level programming concepts",
-          "Develop and deploy firmware using C/C++ and real-time operating systems (RTOS)",
-          "Interface with sensors and peripherals using protocols like UART, SPI, and I2C",
-          "Build efficient, low-power embedded applications for real-world scenarios",
+          "Make the members be aware of the market and the field that is open for opportunities and the popular projects in the industry.",
+          "Building strong base in programming using C language and data structures .",
+          "The ability to interface with the Microcontroller and communication protocols between MCUs and working with layered architecture, also writing low level drivers.",
         ],
         activities: [
           {
-            title: "Microcontroller Bootcamp",
+            title: "Offline Sessions",
             description:
-              "Learn the fundamentals of embedded systems development using popular microcontrollers such as STM32 and ESP32. Topics include GPIO, timers, ADC, UART, and real-world project implementation.",
+              "Topics are discussed in detail during offline sessions, and tasks are assigned to enhance participants' problem-solving skills.",
           },
           {
-            title: "Sensor Interfacing Lab",
+            title: "Workshop",
             description:
-              "Hands-on lab sessions where students learn to interface and program various sensors including temperature, motion, and distance sensors using embedded C/C++.",
+              "Making workshop for microcontrollers interfacing with all peripherals",
           },
           {
-            title: "RTOS Programming Workshop",
+            title: "Projects",
             description:
-              "Learn the basics of real-time systems and implement multitasking, scheduling, and synchronization using FreeRTOS on microcontrollers.",
+              "Splitting the members into teams at the end of any stage to build a ( software or hardware or both) project and having presentations for discussion.",
           },
         ],
         board: [
           {
-            name: "Salma Hussein",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/11.jpg",
-            linkedin: "https://www.linkedin.com/in/salma-hussein/",
-            email: "salma.hussein@ieee-zsb.org",
+            name: "Tasnem Sabry",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/embedded-systems/head.webp",
+            linkedin: "https://www.linkedin.com/in/tasnem-sabry-124142254/",
+            email: "tasnemmobasher9@gmail.com",
+          },
+          {
+            name: "Ahmed Yasser",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/embedded-systems/vice-head-1.webp",
+            linkedin:
+              "https://www.linkedin.com/in/ahmed-yasser-elgayar-942466253/",
+            email: "ahmedyasserprince@gmail.com",
           },
         ],
       },
@@ -452,38 +471,37 @@ export const chaptersData: ChapterData[] = [
         name: "ROS",
         hashtag: "ros",
         description:
-          "Delve into the powerful ecosystem of the Robot Operating System (ROS) to build intelligent and autonomous robotic systems. This track emphasizes modular software design, sensor integration, real-time data handling, and robot navigation. Participants will learn to simulate, test, and deploy robotic applications using ROS and Gazebo, bridging the gap between theory and practical robotics.",
-        image: "/Fake-Images/8.webp",
+          "Robot Operating System is an open-source framework for developing robot software. It provides tools, libraries, and conventions to help developers build complex and intelligent robot systems. ROS supports sensor integration, motor control, computer vision, navigation, and motion planning.",
+        image: "/Tracks/RAS/ros.webp",
         goals: [
-          "Understand the ROS architecture and its core concepts: nodes, topics, services, and actions",
-          "Gain hands-on experience integrating sensors and actuators into robotic systems using ROS",
-          "Simulate and visualize robot behavior using tools like Gazebo and RViz",
-          "Implement autonomous navigation, path planning, and SLAM algorithms",
+          "Build real or simulated robot systems means learning how to design, program, and test robots either in the real world (using hardware) or virtually (using simulation tools like Gazebo)",
+          "Communicate Between Robots means Learn multi-robot communication — making robots share data and work together (especially useful in swarm robotics or factories)",
+          "Use SLAM & Navigation means Understand how to make a robot build a map of its environment and navigate autonomously (using SLAM and path planning)",
         ],
         activities: [
           {
-            title: "ROS Basics Bootcamp",
+            title: "Offline Session",
             description:
-              "Learn the fundamentals of ROS including package creation, node communication, publishing/subscribing to topics, and using the ROS filesystem. Includes real-world simulations with turtlesim and Gazebo.",
+              "Introduction to Object-Oriented Programming (OOP) in Python and how it's applied within the ROS ecosystem.",
           },
           {
-            title: "Sensor & Actuator Integration",
+            title: "Project",
             description:
-              "Hands-on experience with integrating IMUs, LIDAR, cameras, and motor drivers in ROS. Work on real hardware and simulated environments for testing.",
+              "Building a University System Project to apply Object-Oriented Programming (OOP) concepts in Python and strengthen software development skills.",
           },
           {
-            title: "Autonomous Navigation Workshop",
+            title: "Offline Session",
             description:
-              "Develop robot autonomy with the ROS Navigation Stack. Implement path planning, obstacle avoidance, and SLAM (Simultaneous Localization and Mapping) in indoor environments.",
+              "Hands-on session on Linux fundamentals and command-line tools essential for working with ROS.",
           },
         ],
         board: [
           {
-            name: "Ahmed Alaa",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/45.jpg",
-            linkedin: "https://www.linkedin.com/in/ahmed-alaa-ros/",
-            email: "ahmed.alaa@ieee-zsb.org",
+            name: "Ahmed Medhat",
+            position: "Head",
+            avatarSrc: "/Images/board/chapters/ras/tracks-heads/ros/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmed-medhat-212847271/",
+            email: "ahmedmedhat749d1@gmail.com",
           },
         ],
       },
@@ -491,79 +509,79 @@ export const chaptersData: ChapterData[] = [
         id: ++trackId,
         name: "PCB Design",
         hashtag: "pcb-design",
-        description:
-          "Learn how to design and manufacture printed circuit boards (PCBs), the backbone of every electronic system. This track covers circuit design, schematic capture, layout, simulation, and fabrication. Gain hands-on experience using industry-standard tools and create your own functional PCBs from scratch.",
-        image: "/Fake-Images/6.webp",
+        description: `The IEEE Student Branch's PCB Committee teaches you how to design, test, and build professional circuit boards (PCBs). We help members learn to create strong and dependable PCBs for things like embedded systems, robots, and other electronics. You'll get hands-on experience with every step of hardware development. This includes learning how to draw schematics, choose the right parts based on their electrical features and what's available, and carefully arrange the board parts for best performance and easy manufacturing. We also focus on "Design for Manufacturability" (DFM) to make sure designs are not only functional but also cheap and easy to produce. Members will become good at using industry tools like Altium Designer, which is important for professional PCB work, and learn key prototyping methods to check their designs. Our training prepares members for jobs in hardware engineering and electronics design by teaching them real-world industry practices.`,
+        image: "/Tracks/RAS/pcb-design.webp",
         goals: [
-          "Understand the principles of electronic circuit design and schematic drawing",
-          "Master PCB layout techniques and industry standards for single/multi-layer boards",
-          "Use EDA tools such as KiCad or Altium for schematic capture and PCB routing",
-          "Fabricate and test real PCBs through prototyping and soldering workshops",
+          "Develop a deep understanding of electronic hardware design",
+          "Enable Members to design, assemble, and test real-world PCBs",
+          "Prepare Members for careers in electronics and embedded hardware",
         ],
         activities: [
           {
-            title: "Schematic & Simulation Bootcamp",
+            title: "signals and pcb routing",
             description:
-              "Introduction to circuit design and simulation using tools like Proteus or LTSpice. Learn to analyze circuits before moving to layout.",
+              "We conducted a session on PCB routing and traces, where we discussed several important topics such as crosstalk, signal types, and common issues you might face during routing. The session also included some general concepts in electronics to help participants better understand how to design reliable and efficient PCBs.",
           },
           {
-            title: "PCB Layout Workshop",
+            title: "soldering",
             description:
-              "Hands-on workshop for creating PCB layouts in KiCad/Altium. Cover footprint assignment, routing, DRC checks, and export for fabrication.",
+              "The next session was about soldering. At the beginning, participants gave presentations about their previous work, which was related to the last session on crosstalk and PCB routing. After the presentations, we spent the rest of the time practicing soldering.",
           },
           {
-            title: "PCB Prototyping Day",
+            title: "First project",
             description:
-              "Design, print, and assemble your own PCB. Includes etching demos or third-party fabrication ordering, soldering, and testing.",
+              "The following session was about a voltage regulator project, where the output voltage could be adjusted using a variable resistor. In this session, participants applied everything they had learned so far — from soldering to practical circuit implementation.",
+          },
+          {
+            title: "Microcontroller",
+            description:
+              "The next session was a deep dive into microcontrollers, where we discussed the different types of microcontrollers and the differences between the various types of pins, such as input/output, analog, PWM, and communication pins.",
           },
         ],
         board: [
           {
-            name: "Mohamed Yasser",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/21.jpg",
-            linkedin: "https://www.linkedin.com/in/mohamed-yasser/",
-            email: "mohamed.yasser@ieee-zsb.org",
+            name: "Abdrlrahman Elghandour",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/pcb-design/head.webp",
+            linkedin: "https://www.linkedin.com/in/el-ghandour/",
+            email: "elghaandourrr@gmail.com",
+          },
+          {
+            name: "Mohamed Gamal",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/pcb-design/vice-head-1.webp",
+            linkedin: "http://www.linkedin.com/in/mohamed-gamal-xv",
+            email: "mg355059@gmail.com",
           },
         ],
       },
       {
         id: ++trackId,
-        name: "Mechanical Design",
+        name: "Mechanical",
         hashtag: "mechanical",
         description:
-          "Explore the world of mechanical engineering and CAD-based design. This track focuses on mechanical components, 3D modeling, kinematics, and manufacturing techniques. Participants will learn to use modern CAD tools and build physical mechanisms through hands-on projects.",
-        image: "/Fake-Images/7.webp",
+          "The Mechanical track is responsible for the design and analysis of mechanical systems in robotics projects. Members learn essential tools and techniques used in the industry such as 3D modeling, simulation, and technical drawing",
+        image: "/Tracks/RAS/mechanical.webp",
         goals: [
-          "Master 3D CAD software for part design, assembly, and rendering",
-          "Understand kinematic systems, gear trains, and motion constraints",
-          "Learn prototyping and fabrication techniques using 3D printing and machining",
-          "Develop collaborative design and problem-solving skills in mechanical teams",
+          "Learn SolidWorks from basic to advanced levels, including 3D modeling, assemblies, and sheet metal design",
+          "Understand mechanical analysis using ANSYS",
+          "Explore aerodynamic design concepts such as airfoils",
+          "Apply mechanical concepts to real robotic systems",
         ],
         activities: [
-          {
-            title: "CAD Masterclass",
-            description:
-              "Learn how to model and assemble mechanical parts using SolidWorks or Fusion 360. Covers basic to advanced modeling techniques.",
-          },
-          {
-            title: "Kinematics in Mechanisms",
-            description:
-              "Explore the design of linkages, gear systems, and motion analysis for robotic and mechanical systems.",
-          },
-          {
-            title: "Rapid Prototyping Workshop",
-            description:
-              "Create and test your mechanical designs through 3D printing and hands-on assembly. Includes real-world design case studies.",
-          },
+          { title: "Offline Session", description: "AutoCAD" },
+          { title: "Offline Session", description: "ANSYS + Airfoil Session" },
         ],
         board: [
           {
-            name: "Nourhan Fathy",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/24.jpg",
-            linkedin: "https://www.linkedin.com/in/nourhan-fathy/",
-            email: "nourhan.fathy@ieee-zsb.org",
+            name: "Abdallah Galal",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/ras/tracks-heads/mechanical/head.webp",
+            linkedin: "https://www.linkedin.com/in/abdallah-galal-a39115297?",
+            email: "abdallahgalal.eng@gmail.com",
           },
         ],
       },
@@ -605,11 +623,11 @@ export const chaptersData: ChapterData[] = [
     color_scheme_2: "pes-2",
     description: {
       about:
-        "The IEEE Power & Energy Society (PES) is at the forefront of electrical power and energy innovation. Our chapter connects students with the latest developments in sustainable energy, smart grids, and power systems. Through practical experience and theoretical knowledge, we prepare future engineers to tackle global energy challenges and drive the transition to renewable energy sources.",
+        "The IEEE Power & Energy Society (PES) is the leading source for knowledge, collaboration, and innovation in the fields of power and energy. Our chapter provides students with opportunities to explore the dynamic world of electrical power systems, renewable energy, and smart grid technologies. Through technical workshops, hands-on projects, and industry engagement, we equip students with the skills and insight to drive the future of sustainable energy.",
       vision:
-        "To lead the transformation of the power and energy sector by nurturing innovative minds capable of developing sustainable solutions for global energy challenges. We envision a future where clean, efficient energy systems power our world, designed and maintained by engineers we help develop today.",
+        "To be a premier hub for learning and innovation in the power and energy sector, inspiring students to develop solutions that shape a cleaner, more reliable, and sustainable energy future. We aim to cultivate a community where knowledge and creativity come together to address global energy challenges.",
       mission:
-        "To cultivate expertise in power engineering and sustainable energy technologies through practical education, research opportunities, and industry collaboration. We strive to bridge the gap between academic knowledge and industrial applications, preparing our members to shape the future of energy systems.",
+        "To empower students with practical skills, technical expertise, and industry connections in power and energy engineering. We are dedicated to providing impactful learning experiences through workshops, research projects, and professional networking opportunities that prepare our members to excel in the evolving energy landscape.",
     },
     board: [
       {
@@ -620,18 +638,18 @@ export const chaptersData: ChapterData[] = [
         email: "ali.abdelaziz@ieee-zsb.org",
       },
       {
-        name: "Ziad Elharony",
-        position: "Vice Chairperson",
-        avatarSrc: "/Images/board/chapters/pes/vice-chairperson-1.webp",
-        linkedin: "https://www.linkedin.com/in/ziad-elharony-308139249",
-        email: "ziad.elharony@ieee-zsb.org",
-      },
-      {
         name: "Eslam Mahmoud",
         position: "Vice Chairperson",
-        avatarSrc: "/Images/board/chapters/pes/vice-chairperson-2.webp",
+        avatarSrc: "/Images/board/chapters/pes/vice-chairperson-1.webp",
         linkedin: "https://www.linkedin.com/in/eslam-mahmoud-magdy",
         email: "eslam.mahmoud@ieee-zsb.org",
+      },
+      {
+        name: "Ziad Elharony",
+        position: "Vice Chairperson",
+        avatarSrc: "/Images/board/chapters/pes/vice-chairperson-2.webp",
+        linkedin: "https://www.linkedin.com/in/ziad-elharony-308139249",
+        email: "ziad.elharony@ieee-zsb.org",
       },
     ],
     tracks: [
@@ -640,38 +658,32 @@ export const chaptersData: ChapterData[] = [
         name: "Basic Automation",
         hashtag: "basic-automation",
         description:
-          "Gain foundational knowledge of automation systems in power and industrial applications. This track introduces PLCs, sensors, actuators, and control logic used in automation. Ideal for beginners seeking hands-on exposure to how machines and systems are controlled automatically.",
-        image: "/Fake-Images/5.webp",
+          "An introductory track that teaches the fundamentals of automation systems, focusing on Classic Control principles and PLC Basics. Suitable for students starting their journey in industrial automation.",
+        image: "/Tracks/PES/basic-automation.webp",
         goals: [
-          "Understand the principles of automation and control systems",
-          "Learn PLC programming and ladder logic basics",
-          "Interface sensors and actuators in basic industrial setups",
-          "Simulate and test automation sequences using virtual labs",
+          "Understand classic control circuits",
+          "Learn how to program basic PLC functions",
         ],
         activities: [
           {
-            title: "PLC Programming Workshop",
+            title: "Session",
             description:
-              "Hands-on introduction to ladder logic programming using Siemens or Allen-Bradley PLCs. Practice creating basic automation sequences.",
+              "Introduction to Classic Control components and logic design",
           },
           {
-            title: "Sensor & Actuator Lab",
+            title: "Offline Session",
             description:
-              "Explore various industrial sensors and actuators. Connect and test them with microcontrollers and PLCs in basic scenarios.",
-          },
-          {
-            title: "Automation Simulation Day",
-            description:
-              "Use TIA Portal or Factory I/O to simulate real-world automation systems and develop small automated processes.",
+              "Hands-on workshop for PLC wiring and basic programming",
           },
         ],
         board: [
           {
-            name: "Mariam Hossam",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/36.jpg",
-            linkedin: "https://www.linkedin.com/in/mariam-hossam/",
-            email: "mariam.hossam@ieee-zsb.org",
+            name: "Ziad Ahmed",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/basic-automation/head.webp",
+            linkedin: "http://linkedin.com/in/ziadahmed90",
+            email: "Ziad20155555@gmail.com ",
           },
         ],
       },
@@ -680,38 +692,39 @@ export const chaptersData: ChapterData[] = [
         name: "Advanced Automation",
         hashtag: "advanced-automation",
         description:
-          "Explore advanced control strategies, industrial networks, SCADA systems, and smart manufacturing. This track builds on automation foundations and focuses on real-time control, process optimization, and IoT applications in industrial settings.",
-        image: "/Fake-Images/5.webp",
+          "A professional-level track designed to enhance knowledge in advanced PLC programming, HMI systems, and SCADA integration. This track prepares participants for real-world industrial automation projects.",
+        image: "/Tracks/PES/advanced-automation.webp",
         goals: [
-          "Implement advanced PLC logic and state machines",
-          "Design and deploy SCADA/HMI systems for remote monitoring",
-          "Integrate industrial networks and communication protocols (e.g., Modbus, Profibus)",
-          "Apply IoT and AI for predictive maintenance and automation intelligence",
+          "Build advanced PLC programs",
+          "Understand the Concepts of Data Blocks and Function Blocks",
+          "Build HMI and SCADA Systems",
         ],
         activities: [
           {
-            title: "SCADA & HMI Workshop",
-            description:
-              "Learn how to build a full SCADA system using WinCC or Ignition. Create dashboards to monitor and control live automation data.",
+            title: "Session",
+            description: "Advanced ladder logic and function blocks",
           },
           {
-            title: "Industrial Networking Lab",
-            description:
-              "Practice configuring industrial Ethernet, Modbus, and Profibus systems for communication between PLCs and sensors.",
-          },
-          {
-            title: "Smart Factory Challenge",
-            description:
-              "Group project simulating smart manufacturing. Apply AI/ML tools for predictive maintenance or energy optimization.",
+            title: "Session",
+            description: "SCADA project implementation and visualization",
           },
         ],
         board: [
           {
-            name: "Hassan Mahmoud",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/48.jpg",
-            linkedin: "https://www.linkedin.com/in/hassan-mahmoud/",
-            email: "hassan.mahmoud@ieee-zsb.org",
+            name: "Ahmed Saeed",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/advanced-automation/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmed-saeed12/",
+            email: "ahmedsaeeed907@gmail.com",
+          },
+          {
+            name: "Amr Rady",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/advanced-automation/vice-head-1.webp",
+            linkedin: "https://www.linkedin.com/in/amr-rady/",
+            email: "amr.raadyy@gmail.com",
           },
         ],
       },
@@ -720,38 +733,31 @@ export const chaptersData: ChapterData[] = [
         name: "Basic Distribution",
         hashtag: "basic-distribution",
         description:
-          "Explore the foundational principles of electrical power distribution systems, including substations, protection devices, and transformers. Learn how electricity travels from the generation plant to end users.",
-        image: "/Fake-Images/5.webp",
+          "This track covers the core concepts of electrical power distribution, including lighting systems, power planning, and safety standards. It's ideal for students aiming to understand infrastructure projects.",
+        image: "/Tracks/PES/basic-distribution.webp",
         goals: [
-          "Understand distribution network structure and equipment",
-          "Learn basics of transformers, circuit breakers, and protective devices",
-          "Analyze power flow in low and medium voltage systems",
-          "Use simulation software for distribution network modeling",
+          "Understand lighting and power design",
+          "Apply standards in electrical distribution",
         ],
         activities: [
           {
-            title: "Substation Tour & Analysis",
+            title: "session",
             description:
-              "Virtual or physical tour of a local substation with equipment explanation and protective relay demonstrations.",
+              "Lighting design principles and tools like DIALux and AutoCAD",
           },
           {
-            title: "Transformer Basics Workshop",
-            description:
-              "Hands-on training and simulations about transformer operation, types, and protection strategies.",
-          },
-          {
-            title: "Distribution Design Lab",
-            description:
-              "Design a simple LV/MV distribution network using ETAP or similar tools. Focus on load estimation and feeder design.",
+            title: "session",
+            description: "distribution system planning and Project Lifecycle",
           },
         ],
         board: [
           {
-            name: "Salem Reda",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/30.jpg",
-            linkedin: "https://www.linkedin.com/in/salem-reda/",
-            email: "salem.reda@ieee-zsb.org",
+            name: "Mahmoud Elkhwaga",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/basic-distribution/head.webp",
+            linkedin: "https://www.linkedin.com/in/mahmoud-shehta/",
+            email: "Mahmoudshehta103@gmail.com",
           },
         ],
       },
@@ -760,38 +766,31 @@ export const chaptersData: ChapterData[] = [
         name: "Advanced Distribution",
         hashtag: "advanced-distribution",
         description:
-          "Dive deeper into smart grids, fault analysis, distributed generation, and protection coordination. This track covers advanced modeling and real-world distribution system optimization.",
-        image: "/Fake-Images/5.webp",
+          "Advanced Distribution track delves into low current systems, fire alarm systems, and Revit MEP design. It's tailored for students interested in building services and smart infrastructure.",
+        image: "/Tracks/PES/advanced-distribution.webp",
         goals: [
-          "Model advanced distribution systems with renewable integration",
-          "Perform protection coordination and relay setting calculations",
-          "Analyze fault conditions and apply real-time monitoring systems",
-          "Understand distributed generation and power flow challenges",
+          "Design fire alarm systems",
+          "Implement low current solutions",
+          "using REVIT in Distribution Design",
         ],
         activities: [
           {
-            title: "Protection Coordination Workshop",
-            description:
-              "Learn to coordinate fuses, relays, and breakers in a distribution network. Use ETAP or DIGSILENT for simulations.",
+            title: "Session",
+            description: "Overview of low current and ELV systems",
           },
           {
-            title: "Distributed Generation Case Study",
-            description:
-              "Explore solar/wind integration and its impact on grid stability and power quality.",
-          },
-          {
-            title: "Fault Analysis Bootcamp",
-            description:
-              "Simulate symmetrical and unsymmetrical faults. Assess their impact on equipment and protection systems.",
+            title: "Session",
+            description: "Fire alarm design and Revit workshop",
           },
         ],
         board: [
           {
-            name: "Nour El-Din Ali",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/28.jpg",
-            linkedin: "https://www.linkedin.com/in/nour-eldin-ali/",
-            email: "nour.eldin@ieee-zsb.org",
+            name: "Eslam Heikal",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/advanced-distribution/head.webp",
+            linkedin: "https://www.linkedin.com/in/eslamheikal/",
+            email: "eslam.heikal@ieee-zsb.org",
           },
         ],
       },
@@ -800,38 +799,28 @@ export const chaptersData: ChapterData[] = [
         name: "Smart Home",
         hashtag: "smart-home",
         description:
-          "Build the homes of the future with automation, IoT, and energy management. This track focuses on smart sensors, voice control, lighting systems, and energy efficiency in residential applications.",
-        image: "/Fake-Images/5.webp",
+          "This track introduces students to the future of home automation using KNX technology, IoT applications, and smart system design. It bridges electrical and digital systems for intelligent environments.",
+        image: "/Tracks/PES/smart-home.webp",
         goals: [
-          "Design smart lighting, HVAC, and energy monitoring systems",
-          "Work with platforms like Arduino, Raspberry Pi, and Home Assistant",
-          "Integrate voice control (Alexa, Google Assistant)",
-          "Understand wireless protocols (Zigbee, Z-Wave, WiFi, Bluetooth)",
+          "Gain a solid understanding of KNX protocols and their applications in smart home systems",
+          "Learn to design and implement efficient topologies for home automation",
+          "Explore IoT concepts and how they integrate with smart home technologies",
         ],
         activities: [
+          { title: "Session", description: "Understand KNX protocols" },
+          { title: "Session", description: "Topology and ETS 6 Programming" },
           {
-            title: "Smart Home Starter Kit Workshop",
-            description:
-              "Build a smart lighting and temperature control system using ESP32 and sensors. Configure remote access and app integration.",
-          },
-          {
-            title: "Voice Assistant Integration",
-            description:
-              "Use APIs to control devices through Google Assistant or Alexa. Explore IFTTT and automation rules.",
-          },
-          {
-            title: "Energy Monitoring Lab",
-            description:
-              "Install and program smart plugs and meters. Analyze energy data and automate energy-saving actions.",
+            title: "Session",
+            description: "IoT Concepts in Smart Home Applications",
           },
         ],
         board: [
           {
-            name: "Aya Mostafa",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/32.jpg",
-            linkedin: "https://www.linkedin.com/in/aya-mostafa/",
-            email: "aya.mostafa@ieee-zsb.org",
+            name: "Abdelrahman Ali",
+            position: "Head",
+            avatarSrc: "/Images/board/chapters/pes/tracks-heads/smart-home/head.webp",
+            linkedin: "https://www.linkedin.com/in/abdelrahmanali11/",
+            email: "workworkey@gmail.com",
           },
         ],
       },
@@ -840,38 +829,27 @@ export const chaptersData: ChapterData[] = [
         name: "E-Mobility",
         hashtag: "e-mobility",
         description:
-          "Explore the future of electric transportation and charging infrastructure. This track covers EV systems, batteries, charging stations, power electronics, and grid impact of e-mobility.",
-        image: "/Fake-Images/5.webp",
-        goals: [
-          "Understand EV architecture and key components",
-          "Learn battery technology, BMS (Battery Management System), and charging protocols",
-          "Analyze charging station integration and load balancing",
-          "Explore smart charging, V2G (Vehicle to Grid), and infrastructure planning",
-        ],
+          "A future-driven track focused on the electrical side of automotive engineering. Learn power electronics, model-based design, and electric drivetrain systems tailored for electric vehicle innovation.",
+        image: "/Tracks/PES/e-mobility.webp",
+        goals: ["Design electric drive systems", "Apply MBD in EV development"],
         activities: [
           {
-            title: "EV System Design Workshop",
-            description:
-              "Overview of EV components, including drivetrain, inverter, and charger. Explore simulation tools like MATLAB/Simulink for EV modeling.",
+            title: "Session",
+            description: "Basics of electric powertrains and inverters",
           },
           {
-            title: "Charging Infrastructure Lab",
-            description:
-              "Design and simulate EV charging networks. Discuss smart chargers, billing systems, and grid impact.",
-          },
-          {
-            title: "Battery Tech Bootcamp",
-            description:
-              "Hands-on with battery cells, BMS design, and testing. Understand thermal management and safety challenges.",
+            title: "Session",
+            description: "Model-based simulations using MATLAB Simulink",
           },
         ],
         board: [
           {
-            name: "Ahmed Saber",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/men/49.jpg",
-            linkedin: "https://www.linkedin.com/in/ahmed-saber/",
-            email: "ahmed.saber@ieee-zsb.org",
+            name: "Ahmed Elsayed",
+            position: "Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/e-mobility/head.webp",
+            linkedin: "https://www.linkedin.com/in/ahmedelsayed1133/",
+            email: "ahmedazd267@gmail.com",
           },
         ],
       },
@@ -880,38 +858,30 @@ export const chaptersData: ChapterData[] = [
         name: "Mechanical",
         hashtag: "mechanical",
         description:
-          "Understand the mechanical aspects of power generation and energy systems. This track focuses on turbines, thermal systems, fluid mechanics, and maintenance of power plant equipment.",
-        image: "/Fake-Images/5.webp",
+          "Mechanical Track explores the design of renewable energy systems and internal combustion engines, using powerful tools like SolidWorks and ANSYS for simulation and design verification.",
+        image: "/Tracks/PES/mechanical.webp",
         goals: [
-          "Analyze mechanical systems in power plants (boilers, turbines, pumps)",
-          "Understand thermal cycles (Rankine, Brayton) and efficiency improvements",
-          "Simulate fluid flow and heat transfer in power systems",
-          "Apply maintenance and reliability engineering to energy systems",
+          "Design mechanical renewable systems",
+          "Simulate components using SolidWorks and ANSYS",
         ],
         activities: [
           {
-            title: "Thermal Power Systems Workshop",
-            description:
-              "Learn steam cycle fundamentals, component functions, and performance metrics for thermal power plants.",
+            title: "session",
+            description: "Introduction to SolidWorks and energy system design",
           },
           {
-            title: "CFD & Simulation Lab",
-            description:
-              "Use software like ANSYS or OpenFOAM to simulate flow and heat transfer in pipes, exchangers, and turbines.",
-          },
-          {
-            title: "Power Plant Maintenance Tour",
-            description:
-              "Visit or virtually tour power generation facilities. Understand preventive maintenance schedules and mechanical reliability techniques.",
+            title: "session",
+            description: "ANSYS mechanical simulation for engine components",
           },
         ],
         board: [
           {
-            name: "Nada Ashraf",
-            position: "Track Head",
-            avatarSrc: "https://randomuser.me/api/portraits/women/22.jpg",
-            linkedin: "https://www.linkedin.com/in/nada-ashraf/",
-            email: "nada.ashraf@ieee-zsb.org",
+            name: "Mahmoud Mostafa",
+            position: "Vice Head",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/mechanical/vice-head-1.webp",
+            linkedin: "http://www.linkedin.com/in/ma7moud-mostafa-el-kial",
+            email: "elkial1582@gmail.com",
           },
         ],
       },
@@ -943,7 +913,6 @@ export const chaptersData: ChapterData[] = [
       },
     ],
   },
-
   {
     id: ++id,
     short_name: "WIE",

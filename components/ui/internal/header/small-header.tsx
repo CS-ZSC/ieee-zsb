@@ -4,10 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { SmallHeaderAtom } from "@/atoms/atoms";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import HamburgerIcon from "@/components/ui/internal/hamburger-icon";
 import Logo from "@/components/ui/internal/logo";
-import { LogoType } from "@/components/ui/internal/logo";
 import { ColorModeButton } from "@/components/ui/color-mode";
 import SmallHeaderLinks from "./small-header-links";
 
@@ -18,6 +17,12 @@ export default function SmallHeader() {
   const [isMounted, setIsMounted] = useState(false);
   const toggleRef = useRef<HTMLDivElement | null>(null);
   const headerRef = useRef<HTMLDivElement | null>(null);
+
+  const handleClickOnLogo = () => {
+    setIsOpen(false);
+    localStorage.setItem("SmallHeaderAtom", "false");
+  };
+
   useEffect(() => {
     setIsMounted(true);
     const storedValue = localStorage.getItem("SmallHeaderAtom");
@@ -90,7 +95,9 @@ export default function SmallHeader() {
           w="full"
           h="35px"
         >
-          <Logo logoType={LogoType.White} width={75} height={38} />
+          <Box onClick={handleClickOnLogo} cursor="pointer">
+            <Logo width={75} height={38} />
+          </Box>
           <div ref={toggleRef}>
             <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
           </div>

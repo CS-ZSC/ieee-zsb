@@ -47,6 +47,9 @@ export default function Filter() {
           padding={"12px 14px"}
           outlineColor={"primary-3"}
           rounded={"10px"}
+          _hover={{
+            backgroundColor: open ? "primary-10" : "primary-12",
+          }}
         >
           <Flex
             gap={2}
@@ -66,7 +69,7 @@ export default function Filter() {
           display="flex"
           flexDirection="column"
           gap={2}
-          p={"var(--global-spacing)"}
+          p={3}
           rounded="2xl"
           position="absolute"
           top="140%"

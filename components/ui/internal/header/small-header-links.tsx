@@ -46,42 +46,45 @@ export default function SmallHeaderLinks() {
           flexDirection="column"
           gap={2}
           paddingLeft={4}
-          fontWeight="normal"
           zIndex={-50}
         >
-          {Chapters.map((chapter) => (
-            <Link
-              key={chapter.id}
-              href={chapter.href}
-              onClick={handleLinkClick}
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{
+              height: isOpen ? "auto" : 0,
+              opacity: isOpen ? 1 : 0,
+            }}
+            transition={{ duration: 0.2 }}
+          >
+            <Flex
+              flexDirection="column"
+              gap={2}
+              fontWeight="normal"
+              zIndex={-50}
+              visibility={isOpen ? "visible" : "hidden"}
             >
-              <motion.div
-                style={{
-                  position: "relative",
-                  transition: "all 0.3s ease-in-out",
-                }}
-              >
-                {pathname === chapter.href && (
-                  <motion.div
-                    layoutId="activeLinkBorder"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "100%" }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    style={{
-                      position: "absolute",
-                      left: -10,
-                      top: 0,
-                      bottom: 0,
-                      width: "3px",
-                      borderRadius: "5px",
-                      backgroundColor: "white",
-                    }}
-                  />
-                )}
-                {chapter.name}
-              </motion.div>
-            </Link>
-          ))}
+              {Chapters.map((chapter) => (
+                <Box
+                  key={chapter.id}
+                  transition="opacity 0.2s ease-in-out"
+                  color={"neutral-2"}
+                  _hover={{ color: "neutral-1" }}
+                  onClick={handleLinkClick}
+                >
+                  <Link href={chapter.href}>
+                    <motion.div
+                      style={{
+                        position: "relative",
+                        transition: "all 0.3s ease-in-out",
+                      }}
+                    >
+                      {chapter.name}
+                    </motion.div>
+                  </Link>
+                </Box>
+              ))}
+            </Flex>
+          </motion.div>
         </Flex>
       </motion.div>
 

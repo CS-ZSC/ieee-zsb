@@ -34,7 +34,7 @@ export default function CommitteeDetails({
             animate={{ height: contentRef.current?.scrollHeight || "auto" }}
             exit={{ height: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            style={{ overflow: "hidden", alignSelf: "start" }}
+            style={{ overflow: "hidden", alignSelf: "start", width: "100%" }}
           >
             <Flex flexDirection={"column"} gap={5}>
               <Flex flexDirection={"column"}>
@@ -79,7 +79,6 @@ export default function CommitteeDetails({
                           fontWeight={"bold"}
                           textTransform={"capitalize"}
                         >
-
                           {activity.title}
                         </Text>
                         <Text color={"neutral-2"} height={"full"}>

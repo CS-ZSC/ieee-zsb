@@ -26,7 +26,7 @@ const faqs: FAQ[] = [
   {
     question: "When and how can I apply for a member in IEEE-ZSB?",
     answer:
-      "Any student from any college or department can apply to join IEEE ZSB — there are no restrictions. Recruitment opens once a year, and the announcement will be shared on all our official social media platforms. Just stay tuned! When it’s time, you’ll fill out an online application form, and you may be contacted via email for the next procedures.",
+      "You can apply to become a member of IEEE-ZSB during our annual recruitment period, which is announced on our official social media channels. Simply fill out the online application form provided in the announcement. All students from any college or department are welcome to apply, and after submitting your application, you will receive further instructions by email regarding the next steps.",
   },
 ];
 
