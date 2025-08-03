@@ -583,28 +583,28 @@ export const newsData: NewsItem[] = [
       },
     ],
   },
-  {
-    id: idCounter++,
-    title: "IEEE-ZSB Packages",
-    description:
-      "To make each member feel more connected to the branch, IEEE-ZSB offers customized membership packages that reflect the branch's unique identity and spirit.",
-    dateCreated: "15 May, 2025",
-    author: "Samar Nafea",
-    tags: ["General", "Branch Identity"],
-    mainPhoto: "/News/packages-2025/1.webp",
-    sections: [
-      {
-        id: 0,
-        heading: "Package Details",
-        descriptions: [
-          "Each season, IEEE-ZSB designs special packages that members can request. These packages often include items like branded pens, notebooks, stickers, ID, T-shirts, mugs, keychains, bracelets, and more — all designed with the branch's visual identity and logo.",
-          "The contents may vary from one season to another based on availability, design updates, and what feels meaningful to members that year.",
-          "Members who want to receive the package can reserve theirs in advance, and everything is carefully prepared to ensure quality and consistency.",
-          "It's more than just items — it's about belonging, pride, and representing IEEE-ZSB wherever you go.",
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: idCounter++,
+  //   title: "IEEE-ZSB Packages",
+  //   description:
+  //     "To make each member feel more connected to the branch, IEEE-ZSB offers customized membership packages that reflect the branch's unique identity and spirit.",
+  //   dateCreated: "15 May, 2025",
+  //   author: "Samar Nafea",
+  //   tags: ["General", "Branch Identity"],
+  //   mainPhoto: "/News/packages-2025/1.webp",
+  //   sections: [
+  //     {
+  //       id: 0,
+  //       heading: "Package Details",
+  //       descriptions: [
+  //         "Each season, IEEE-ZSB designs special packages that members can request. These packages often include items like branded pens, notebooks, stickers, ID, T-shirts, mugs, keychains, bracelets, and more — all designed with the branch's visual identity and logo.",
+  //         "The contents may vary from one season to another based on availability, design updates, and what feels meaningful to members that year.",
+  //         "Members who want to receive the package can reserve theirs in advance, and everything is carefully prepared to ensure quality and consistency.",
+  //         "It's more than just items — it's about belonging, pride, and representing IEEE-ZSB wherever you go.",
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: idCounter++,
     title: "The New Face of Talent at IEEE-ZSB",
