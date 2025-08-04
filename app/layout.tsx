@@ -13,15 +13,14 @@ export const metadata: Metadata = {
   description: `With over ${new Date().getFullYear() - 1999} years of impactful experience, the IEEE Zagazig University Student Branch (ZSB) stands as one of the first and most influential branches in Egypt. While based at Zagazig University, our influence extends nationwide through a variety of workshops, events, and initiatives that explore the evolving role of technology in all aspects of life.`,
   openGraph: {
     title: "IEEE ZSB",
-    description:
-      "One of the first and most influential IEEE student branches in Egypt. Discover our national impact in tech, events, and innovation.",
+    description: `With over ${new Date().getFullYear() - 1999} years of impactful experience, the IEEE Zagazig University Student Branch (ZSB) stands as one of the first and most influential branches in Egypt. While based at Zagazig University, our influence extends nationwide through a variety of workshops, events, and initiatives that explore the evolving role of technology in all aspects of life.`,
     url: "https://ieee-zsb.org/",
     siteName: "IEEE ZSB",
     images: [
       {
         url: "https://ieee-zsb.org/ieee-preview.png",
-        width: 1366,
-        height: 768,
+        width: 1200,
+        height: 630,
         alt: "IEEE ZSB Social Preview",
       },
     ],
