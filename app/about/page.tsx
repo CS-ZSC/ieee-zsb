@@ -5,7 +5,6 @@ import PageTitle from "@/components/ui/internal/pageTitle";
 import Container from "@/components/ui/internal/container";
 import About from "@/components/ui/internal/about/about";
 import Faq from "@/components/ui/internal/about/faq/faq";
-import Board from "@/components/ui/internal/about/board/board";
 import SocialMedia from "@/components/ui/internal/about/social media/socialMedia";
 
 export default function page() {
@@ -19,10 +18,6 @@ export default function page() {
         <Container>
           <PageTitle title="FAQ" />
           <Faq />
-        </Container>
-        <Container>
-          <PageTitle title="Executive Board" />
-          <Board />
         </Container>
         <Container>
           <PageTitle title="Connect with us on social media" />
