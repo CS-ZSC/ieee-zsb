@@ -540,7 +540,7 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Abdrlrahman Elghandour",
+            name: "Abdelrahman Ahmed",
             position: "Head",
             avatarSrc:
               "/Images/board/chapters/ras/tracks-heads/pcb-design/head.webp",
