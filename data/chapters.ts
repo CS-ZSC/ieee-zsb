@@ -301,20 +301,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ahmed Ali",
+            name: "Sayed Ahmed",
             position: "Head",
             avatarSrc:
               "/Images/board/chapters/cs/tracks-heads/cyber-security/head.webp",
-            linkedin: "https://www.linkedin.com/in/ahmed-ali-abd-elrahman",
-            email: "aali571110@gmail.com",
+            linkedin: "https://www.linkedin.com/in/elsayed-ahmed-elsayed",
+            email: "sayedahmed.ieee.25@gmail.com",
           },
           {
-            name: "Sayed Ahmed",
+            name: "Ahmed Ali",
             position: "Vice Head",
             avatarSrc:
               "/Images/board/chapters/cs/tracks-heads/cyber-security/vice-head-1.webp",
-            linkedin: "https://www.linkedin.com/in/elsayed-ahmed-elsayed",
-            email: "sayedahmed.ieee.25@gmail.com",
+            linkedin: "https://www.linkedin.com/in/ahmed-ali-abd-elrahman",
+            email: "aali571110@gmail.com",
           },
         ],
       },
@@ -713,20 +713,20 @@ export const chaptersData: ChapterData[] = [
         ],
         board: [
           {
-            name: "Ahmed Saeed",
+            name: "Amr Rady",
             position: "Head",
             avatarSrc:
               "/Images/board/chapters/pes/tracks-heads/advanced-automation/head.webp",
-            linkedin: "https://www.linkedin.com/in/ahmed-saeed12/",
-            email: "ahmedsaeeed907@gmail.com",
+            linkedin: "https://www.linkedin.com/in/amr-rady/",
+            email: "amr.raadyy@gmail.com",
           },
           {
-            name: "Amr Rady",
+            name: "Ahmed Saeed",
             position: "Vice Head",
             avatarSrc:
               "/Images/board/chapters/pes/tracks-heads/advanced-automation/vice-head-1.webp",
-            linkedin: "https://www.linkedin.com/in/amr-rady/",
-            email: "amr.raadyy@gmail.com",
+            linkedin: "https://www.linkedin.com/in/ahmed-saeed12/",
+            email: "ahmedsaeeed907@gmail.com",
           },
         ],
       },
@@ -820,7 +820,8 @@ export const chaptersData: ChapterData[] = [
           {
             name: "Abdelrahman Ali",
             position: "Head",
-            avatarSrc: "/Images/board/chapters/pes/tracks-heads/smart-home/head.webp",
+            avatarSrc:
+              "/Images/board/chapters/pes/tracks-heads/smart-home/head.webp",
             linkedin: "https://www.linkedin.com/in/abdelrahmanali11/",
             email: "workworkey@gmail.com",
           },
