@@ -2,10 +2,12 @@ import { CommitteesData } from "./committees";
 import { Position } from "./position";
 
 export type TrackData = CommitteesData;
+
 export interface SeasonData {
   year: number;
   summary: string[];
 }
+
 export interface ChapterData {
   id: number;
   short_name: string;
