@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "IEEE ZSB",
     images: [
       {
-        url: "https://ieee-zsb.org/ieee-preview.png",
+        url: "https://ieee-zsb.org/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "IEEE ZSB Social Preview",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "IEEE ZSB",
     description:
       "A legacy of innovation and collaboration - IEEE ZSB at Zagazig University.",
-    images: ["https://ieee-zsb.org/ieee-preview.png"],
+    images: ["https://ieee-zsb.org/opengraph-image.png"],
   },
 };
 
