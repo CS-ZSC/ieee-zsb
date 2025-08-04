@@ -6,7 +6,6 @@ import Footer from "@/components/ui/internal/footer";
 import "./global.css";
 import { Toaster } from "@/components/ui/toaster";
 import GoToTopButton from "@/components/ui/internal/go-to-top-button";
-import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "IEEE ZSB",
@@ -54,7 +53,6 @@ export default function RootLayout({
           >
             <Header />
             {children}
-            <Analytics />
             <Footer />
             <GoToTopButton />
           </Stack>
