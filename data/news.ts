@@ -309,47 +309,47 @@ export const newsData: NewsItem[] = [
       },
     ],
   },
-  {
-    id: idCounter++,
-    title: "PES Entrepreneurship Competition",
-    description:
-      "An electrifying journey where engineering students transformed bold renewable energy ideas into real-world prototypes. From intensive bootcamps to investor-ready pitches, this competition empowered the next generation of innovators to step beyond the classroom and into the world of impact-driven entrepreneurship.",
-    dateCreated: "4 July, 2025",
-    author: "Kyrillos Nabil",
-    tags: ["PES", "Competition"],
-    mainPhoto: "/News/pes-competition/1.webp",
-    sections: [
-      {
-        id: 0,
-        heading: "It all started with a simple “what if.”",
-        descriptions: [
-          "What if the university wasn't just about lectures and labs — but a place to launch something real? That question lit the fuse. And soon, the Chapter kicked off its first entrepreneurship competition.",
-          "The goal? Help students move from solving equations to solving actual problems. Teams were invited to come up with bold, renewable energy solutions — the kind of ideas that could make a real impact.",
-          "It wasn't the usual tech talk. It was fresh, fast, and a little risky. For a chapter used to circuits and conferences, this was a chance to break the nerd mold — and think like founders.",
-          "Reactions? Mixed. Some were curious. Others were skeptical.",
-          "It started with a spark. But sparks spread. And just like that, a quiet idea turned into something a lot louder.",
-        ],
-      },
-      {
-        id: 1,
-        heading:
-          "Before the competition even kicked off, things got serious — fast",
-        descriptions: [
-          "A business bootcamp warmed things up, covering the basics: market needs, business strategies, problem-solving, and how to think like a founder. Then came team formation, idea picking, and days of back-and-forth between brainstorming and building.",
-          "Bit by bit, concepts turned into models. Late nights, group chats, rough sketches — all leading to one moment: Pitching Day. By the end, 14 teams submitted their ideas. The lineup was wild — from sand batteries to piezoelectric tiles, smart restaurant systems, and even biomass energy converters. Each project brought something new to the table, and every team came in ready to make their mark.",
-        ],
-      },
-      {
-        id: 2,
-        heading: "Pitching Day didn't disappoint",
-        descriptions: [
-          "The atmosphere was electric, and the teams went beyond expectations — not just in ideas, but in how they delivered them. Three standout projects took home awards for Best Idea, Best Business Model, and Best Presentation — but every team walked away with something.",
-          "Some ideas sparked more than applause — they caught the attention of real investors. A few teams even received early funding offers, opening the door to take their projects beyond campus walls.",
-          "They came in with ideas. They left with experience, momentum, and maybe even the first page of something real.",
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: idCounter++,
+  //   title: "PES Entrepreneurship Competition",
+  //   description:
+  //     "An electrifying journey where engineering students transformed bold renewable energy ideas into real-world prototypes. From intensive bootcamps to investor-ready pitches, this competition empowered the next generation of innovators to step beyond the classroom and into the world of impact-driven entrepreneurship.",
+  //   dateCreated: "4 July, 2025",
+  //   author: "Kyrillos Nabil",
+  //   tags: ["PES", "Competition"],
+  //   mainPhoto: "/News/pes-competition/1.webp",
+  //   sections: [
+  //     {
+  //       id: 0,
+  //       heading: "It all started with a simple “what if.”",
+  //       descriptions: [
+  //         "What if the university wasn't just about lectures and labs — but a place to launch something real? That question lit the fuse. And soon, the Chapter kicked off its first entrepreneurship competition.",
+  //         "The goal? Help students move from solving equations to solving actual problems. Teams were invited to come up with bold, renewable energy solutions — the kind of ideas that could make a real impact.",
+  //         "It wasn't the usual tech talk. It was fresh, fast, and a little risky. For a chapter used to circuits and conferences, this was a chance to break the nerd mold — and think like founders.",
+  //         "Reactions? Mixed. Some were curious. Others were skeptical.",
+  //         "It started with a spark. But sparks spread. And just like that, a quiet idea turned into something a lot louder.",
+  //       ],
+  //     },
+  //     {
+  //       id: 1,
+  //       heading:
+  //         "Before the competition even kicked off, things got serious — fast",
+  //       descriptions: [
+  //         "A business bootcamp warmed things up, covering the basics: market needs, business strategies, problem-solving, and how to think like a founder. Then came team formation, idea picking, and days of back-and-forth between brainstorming and building.",
+  //         "Bit by bit, concepts turned into models. Late nights, group chats, rough sketches — all leading to one moment: Pitching Day. By the end, 14 teams submitted their ideas. The lineup was wild — from sand batteries to piezoelectric tiles, smart restaurant systems, and even biomass energy converters. Each project brought something new to the table, and every team came in ready to make their mark.",
+  //       ],
+  //     },
+  //     {
+  //       id: 2,
+  //       heading: "Pitching Day didn't disappoint",
+  //       descriptions: [
+  //         "The atmosphere was electric, and the teams went beyond expectations — not just in ideas, but in how they delivered them. Three standout projects took home awards for Best Idea, Best Business Model, and Best Presentation — but every team walked away with something.",
+  //         "Some ideas sparked more than applause — they caught the attention of real investors. A few teams even received early funding offers, opening the door to take their projects beyond campus walls.",
+  //         "They came in with ideas. They left with experience, momentum, and maybe even the first page of something real.",
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: idCounter++,
     title: "PES Nights: A Step Toward a Smarter, Sustainable Future",
@@ -379,30 +379,30 @@ export const newsData: NewsItem[] = [
       },
     ],
   },
-  {
-    id: idCounter++,
-    title: "PES Opening",
-    description:
-      "On the 25th of November, the IEEE ZSC PES community launched its new season with energy, excitement, and a clear vision. The PES Opening Day wasn't just a gathering—it was a declaration of purpose, collaboration, and growth.",
-    dateCreated: "25 Nov, 2024",
-    author: "Baraa Abdelmonem",
-    tags: ["PES"],
-    mainPhoto: "/News/pes-opening/1.webp",
-    sections: [
-      {
-        id: 0,
-        heading: "Opening day details",
-        descriptions: [
-          "We began by introducing the new board, whose passion and leadership will guide the chapter forward. Their enthusiasm set the tone for what promises to be a transformative season. A dynamic lineup of interactive activities allowed members to engage, connect, and immerse themselves in the PES experience. In a heartfelt icebreaker, each member stepped up to the stage to introduce themselves—sparking real connections and building a powerful sense of belonging.",
-          "We also took a meaningful look back at the previous generation's accomplishments. Their legacy inspired us to raise the bar—to innovate more, dream bigger, and define our goals with clarity and boldness.",
-          "Then came the big reveal: the four key tracks that will shape our initiatives this season: Automation - Leveraging cutting-edge technologies for smarter energy systems, Distribution - Enhancing power flow management and efficiency, Smart Homes - Innovating to create sustainable and connected living spaces, E-Mobility - Accelerating the transition to green, electric transportation",
-          "This season's goals are centered on empowering students by providing a supportive environment, encouraging critical thinking, and enhancing practical skills through immersive workshops and hands-on experiences.",
-          "But perhaps most importantly, the PES Opening was a reminder of what makes this community special. It's not only about engineering solutions—it's about the people behind them, coming together to dream, design, and drive change. The spark we lit on Opening Day is just the beginning.",
-          "With such an inspiring start, the IEEE ZSC PES chapter is ready to light the way forward together.",
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: idCounter++,
+  //   title: "PES Opening",
+  //   description:
+  //     "On the 25th of November, the IEEE ZSC PES community launched its new season with energy, excitement, and a clear vision. The PES Opening Day wasn't just a gathering—it was a declaration of purpose, collaboration, and growth.",
+  //   dateCreated: "25 Nov, 2024",
+  //   author: "Baraa Abdelmonem",
+  //   tags: ["PES"],
+  //   mainPhoto: "/News/pes-opening/1.webp",
+  //   sections: [
+  //     {
+  //       id: 0,
+  //       heading: "Opening day details",
+  //       descriptions: [
+  //         "We began by introducing the new board, whose passion and leadership will guide the chapter forward. Their enthusiasm set the tone for what promises to be a transformative season. A dynamic lineup of interactive activities allowed members to engage, connect, and immerse themselves in the PES experience. In a heartfelt icebreaker, each member stepped up to the stage to introduce themselves—sparking real connections and building a powerful sense of belonging.",
+  //         "We also took a meaningful look back at the previous generation's accomplishments. Their legacy inspired us to raise the bar—to innovate more, dream bigger, and define our goals with clarity and boldness.",
+  //         "Then came the big reveal: the four key tracks that will shape our initiatives this season: Automation - Leveraging cutting-edge technologies for smarter energy systems, Distribution - Enhancing power flow management and efficiency, Smart Homes - Innovating to create sustainable and connected living spaces, E-Mobility - Accelerating the transition to green, electric transportation",
+  //         "This season's goals are centered on empowering students by providing a supportive environment, encouraging critical thinking, and enhancing practical skills through immersive workshops and hands-on experiences.",
+  //         "But perhaps most importantly, the PES Opening was a reminder of what makes this community special. It's not only about engineering solutions—it's about the people behind them, coming together to dream, design, and drive change. The spark we lit on Opening Day is just the beginning.",
+  //         "With such an inspiring start, the IEEE ZSC PES chapter is ready to light the way forward together.",
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: idCounter++,
     title: "IEEE-ZSB Recruitment",
@@ -471,7 +471,7 @@ export const newsData: NewsItem[] = [
       "To prepare a new generation of passionate and skilled students, IEEE-ZSB launched the Brand Ambassadors Program—an introductory journey designed for early-year students to explore IEEE, gain soft and technical skills, and become future leaders within the student branch.",
     dateCreated: "15 Mar, 2024",
     author: "Samar Nafea",
-    tags: ["Committees", "General"],
+    tags: ["Committees"],
     mainPhoto: "/News/brand-ambassadors-2025/1.webp",
     sections: [
       {
@@ -610,7 +610,7 @@ export const newsData: NewsItem[] = [
     id: idCounter++,
     title: "The New Face of Talent at IEEE-ZSB",
     description:
-      "In the 2024-2025 season, IEEE-ZSB updated the former Talent Management team and introduced it under a new name: T&T — short for 'Talent & Tech'.",
+      `In the 2024-2025 season, IEEE-ZSB updated the former Talent Management team and introduced it under a new name: T&T — short for "Talent & Tech".`,
     dateCreated: "16 Oct, 2024",
     author: "Samar Nafea",
     tags: ["Committees", "Talent&Tech", "T&T"],
@@ -630,7 +630,7 @@ export const newsData: NewsItem[] = [
     homeItem: true,
     title: "IEEE-ZSB in EVER V",
     description:
-      "IEEE-ZSB Student Branch participated in the Autonomous Track of the EVER V 2024 Electric Vehicle Rally, held in El Alamein, showcasing innovation in AI and autonomous vehicle simulation.",
+      "IEEE-ZSB participated in the Autonomous Track of the EVER V 2024 Electric Vehicle Rally, held in El Alamein, showcasing innovation in AI and autonomous vehicle simulation.",
     dateCreated: "12 Aug, 2024",
     author: "Samar Nafea",
     tags: ["Competitions", "Autonomous Systems"],
