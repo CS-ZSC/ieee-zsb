@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body data-new-gr-c-s-check-loaded="8.932.0" data-gr-ext-installed="">
         <Provider>
           <Stack
