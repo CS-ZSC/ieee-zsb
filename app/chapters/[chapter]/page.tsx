@@ -12,7 +12,7 @@ import PageTitle from "@/components/ui/internal/pageTitle";
 import { chaptersData } from "@/data/chapters";
 import { newsData } from "@/data/news";
 import { useWindowType } from "@/hooks/use-window-type";
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { notFound } from "next/navigation";
 import { use } from "react";
 
@@ -63,16 +63,21 @@ export default function Chapter({
         {filteredNews.length > 0 && (
           <Container>
             <PageTitle title="Chapter News" />
-            <SimpleGrid
-              columns={isDesktop ? 2 : 1}
-              paddingX={isDesktop ? 20 : "0px"}
+            <Flex
+              columns={isDesktop ? (filteredNews.length > 2 ? 2 : 1) : 1}
+              paddingX={"0px"}
               width="full"
-              gap="var(--global-spacing)"
+              gap={"20px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexWrap={"wrap"}
             >
               {filteredNews.map((newsItem) => (
-                <NewsCard key={newsItem.id} newsObject={newsItem} />
+                <Box key={newsItem.id} alignSelf={"stretch"} maxW={"590px"}>
+                  <NewsCard newsObject={newsItem} />
+                </Box>
               ))}
-            </SimpleGrid>
+            </Flex>
           </Container>
         )}
 
@@ -91,7 +96,7 @@ export default function Chapter({
           </Container>
         )}
 
-	{ /* <PageTitle title="Chapter Timeline" /> */ }
+        {/* <PageTitle title="Chapter Timeline" /> */}
         {/* <Timeline seasons={chapterData.seasons} /> */}
       </Flex>
     </PageWrapper>
