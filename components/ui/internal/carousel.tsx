@@ -1,5 +1,5 @@
 import { Box, Flex, Text, VStack, HStack } from "@chakra-ui/react";
-import React, { Dispatch, useState } from "react";
+import React, { Dispatch, useEffect, useState } from "react";
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { useWindowType } from "@/hooks/use-window-type";
@@ -11,8 +11,8 @@ import Tag from "./tag";
 import ButtonLink from "./button-link";
 import ImageBox from "./news/image-box";
 
-// const ONE_SECOND = 1000;
-// const AUTO_DELAY = ONE_SECOND * 10;
+const ONE_SECOND = 1000;
+const AUTO_DELAY = ONE_SECOND * 5;
 const DRAG_BUFFER = 50;
 
 interface CarouselProps {
@@ -87,6 +87,7 @@ const FlexMotion = motion.create(Flex);
 function FullCarousel({
   newsItems,
   currentIndex,
+  setCurrentIndex,
   direction,
   handleNext,
   handlePrev,
@@ -94,6 +95,17 @@ function FullCarousel({
   handleDotLeft,
 }: CarouselProps) {
   const { isDesktop } = useWindowType();
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      setCurrentIndex((pv) => {
+        if (pv === newsItems.length - 1) return 0;
+        return pv + 1;
+      });
+    }, AUTO_DELAY);
+
+    return () => clearInterval(intervalRef);
+  }, [newsItems.length, setCurrentIndex]);
+
   return (
     <Flex
       flexDirection="column"
@@ -250,27 +262,27 @@ function FullCarousel({
 function SmallCarousel({
   newsItems,
   currentIndex,
-  // setCurrentIndex,
+  setCurrentIndex,
   handleNext,
   handlePrev,
   handleDotRight,
   handleDotLeft,
 }: CarouselProps) {
   const dragX = useMotionValue(0);
-  const [, setIsDragging] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
 
-  // useEffect(() => {
-  //   if (isDragging) return;
+  useEffect(() => {
+    if (isDragging) return;
 
-  //   const intervalRef = setInterval(() => {
-  //     setCurrentIndex((pv) => {
-  //       if (pv === newsItems.length - 1) return 0;
-  //       return pv + 1;
-  //     });
-  //   }, AUTO_DELAY);
+    const intervalRef = setInterval(() => {
+      setCurrentIndex((pv) => {
+        if (pv === newsItems.length - 1) return 0;
+        return pv + 1;
+      });
+    }, AUTO_DELAY);
 
-  //   return () => clearInterval(intervalRef);
-  // }, [isDragging, setCurrentIndex]);
+    return () => clearInterval(intervalRef);
+  }, [isDragging, newsItems.length, setCurrentIndex]);
 
   function onDragStart() {
     setIsDragging(true);
